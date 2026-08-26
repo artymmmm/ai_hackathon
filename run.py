@@ -70,6 +70,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--ids-file", default=None, help="файл со списком doc_id: фиксированный набор для сравнения моделей")
     p.add_argument("--price-in", type=float, default=None, help="цена за 1M входных токенов, USD")
     p.add_argument("--price-out", type=float, default=None, help="цена за 1M выходных токенов, USD")
+    p.add_argument("--provider", default=None,
+                   help="OpenRouter: фиксация провайдера-исполнителя, через запятую "
+                        "(обязательно для воспроизводимого сравнения моделей)")
+    p.add_argument("--allow-fallbacks", action="store_true",
+                   help="разрешить уход к другому провайдеру при недоступности заданного")
     return p.parse_args(argv)
 
 
@@ -82,6 +87,8 @@ def main(argv: list[str] | None = None) -> None:
         api_key_env=args.api_key_env, temperature=args.temperature, max_tokens=args.max_tokens,
         max_concurrency=args.max_concurrency, dry_run=args.dry_run, cache_path=args.cache_path,
         price_per_1m_input=args.price_in, price_per_1m_output=args.price_out,
+        provider_order=tuple(x.strip() for x in args.provider.split(",")) if args.provider else None,
+        allow_fallbacks=args.allow_fallbacks,
     )
     llm = LLMClient(llm_config)
     plugin = load_plugin(args.case)

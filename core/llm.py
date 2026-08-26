@@ -79,6 +79,16 @@ class LLMConfig:
     cache_path: str = "out/llm_cache.sqlite3"
     price_per_1m_input: float | None = None
     price_per_1m_output: float | None = None
+    provider_order: tuple[str, ...] | None = None
+    """OpenRouter: жёсткий порядок провайдеров-исполнителей.
+
+    Без фиксации OpenRouter волен отдать запросы одной и той же «модели» разным провайдерам,
+    у которых отличаются квантизация и настройки — тогда сравнение моделей между собой
+    измеряет не модель, а маршрутизацию. Для воспроизводимого бенчмарка задавать обязательно.
+    Игнорируется всеми бэкендами кроме `openai_compat`.
+    """
+    allow_fallbacks: bool = True
+    """False вместе с `provider_order` — запрет уходить к другому провайдеру при недоступности."""
 
 
 @dataclass
@@ -323,6 +333,17 @@ class LLMClient:
                 completion_tokens=completion_tokens, total_tokens=prompt_tokens + completion_tokens,
                 cost_usd=0.0, cached=False, latency_ms=latency_ms, raw={"dry_run": True},
             )
+
+        # Спецификация провайдера идёт в тело запроса И в ключ кеша: ответы разных
+        # провайдеров одной модели нельзя считать взаимозаменяемыми.
+        if self.config.backend == "openai_compat" and self.config.provider_order:
+            extra_params = {
+                **extra_params,
+                "provider": {
+                    "order": list(self.config.provider_order),
+                    "allow_fallbacks": self.config.allow_fallbacks,
+                },
+            }
 
         assert self._cache is not None
         key = _cache_key(model, system, prompt, temperature, max_tokens, extra_params)
