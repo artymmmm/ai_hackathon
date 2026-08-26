@@ -1,0 +1,62 @@
+{
+  "tag": "deepseek-sensitive",
+  "n": 150,
+  "n_vulnerable_gold": 50,
+  "llm_only": {
+    "precision": 0.4839,
+    "recall": 0.3,
+    "f1": 0.3704,
+    "fpr": 0.16,
+    "tp": 15,
+    "fp": 16,
+    "fn": 35,
+    "tn": 84
+  },
+  "logreg_only": {
+    "precision": 0.8182,
+    "recall": 0.36,
+    "f1": 0.5,
+    "fpr": 0.04,
+    "tp": 18,
+    "fp": 4,
+    "fn": 32,
+    "tn": 96
+  },
+  "union": {
+    "precision": 0.5682,
+    "recall": 0.5,
+    "f1": 0.5319,
+    "fpr": 0.19,
+    "tp": 25,
+    "fp": 19,
+    "fn": 25,
+    "tn": 81,
+    "cwe_correct": 2,
+    "cwe_comparable": 14
+  },
+  "intersection": {
+    "precision": 0.8889,
+    "recall": 0.16,
+    "f1": 0.2712,
+    "fpr": 0.01,
+    "tp": 8,
+    "fp": 1,
+    "fn": 42,
+    "tn": 99,
+    "cwe_correct": 2,
+    "cwe_comparable": 8
+  },
+  "weighted": {
+    "precision": 0.6389,
+    "recall": 0.46,
+    "f1": 0.5349,
+    "fpr": 0.13,
+    "tp": 23,
+    "fp": 13,
+    "fn": 27,
+    "tn": 87,
+    "best_w_llm": 0.5,
+    "cwe_correct": 2,
+    "cwe_comparable": 13
+  }
+}

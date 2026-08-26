@@ -139,14 +139,20 @@ def run_config(sample_df: pd.DataFrame, ctx: PipelineContext, *, system_prompt: 
 
 
 def eval_against_gold(verdicts: list, gold: dict) -> dict:
-    y_true, y_pred = [], []
+    y_true, y_pred, y_raw = [], [], []
     for v in verdicts:
         g = gold.get(v.doc_id)
         if g is None or g["label"] is None:
             continue
         y_true.append(g["label"])
         y_pred.append(v.verdict if v.verdict in _LABELS else "secure")  # uncertain->secure, как evaluate.py
+        y_raw.append(v.verdict)
     m = _metrics(y_true, y_pred)
+    # БАГ (исправлено): _metrics считает n_uncertain по y_pred, где "uncertain" уже заменён на
+    # "secure" строкой выше — там его не может быть по построению, счётчик всегда был 0.
+    # Настоящая эскалация — по сырым вердиктам ДО замены.
+    m["n_uncertain"] = sum(1 for r in y_raw if r == "uncertain")
+    m["escalation_rate"] = round(m["n_uncertain"] / len(y_raw), 3) if y_raw else 0.0
     correct, comparable = _cwe_accuracy(verdicts, gold)
     m["cwe_correct"] = correct
     m["cwe_comparable"] = comparable

@@ -1,0 +1,599 @@
+[
+  {
+    "doc_id": "186120",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Есть потенциальный null deref, если web_contents пуст, но неизвестно, гарантирует ли вызывающий код непустой unique_ptr. Поэтому вердикт uncertain.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "FrameImpl::FrameImpl(std::unique_ptr<content::WebContents> web_contents,\n                     chromium::web::FrameObserverPtr observer)\n    : web_contents_(std::move(web_contents)), observer_(std::move(observer)) {\n  Observe(web_contents.get());\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, может ли web_contents быть nullptr в точке вызова. Если вызывающий код всегда передает валидный объект, то код безопасен; иначе возможен null deref в Observe.",
+      "truncated": false,
+      "original_length": 248,
+      "input_assumptions": "Конструктор FrameImpl принимает unique_ptr<WebContents> и observer. Предполагается, что web_contents не равен nullptr, так как unique_ptr может быть пустым, но Observe(web_contents.get()) разыменовывает указатель внутри Observe, что может привести к null deref, если unique_ptr пуст. Также предполагается, что observer валиден, но он не используется в этом фрагменте.",
+      "null_risk_pointers": "web_contents.get() — может быть nullptr, если unique_ptr пуст; передается в Observe без проверки.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "143602",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Основной риск — потенциальный null deref для rwhi, если RenderWidgetHostImpl::From может вернуть NULL. Однако в контексте Chromium эта функция обычно гарантирует не NULL для валидного RenderWidgetHost, поэтому вердикт зависит от внешних инвариантов. Также нет явных проблем с границами буферов.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void RenderWidgetHostImpl::CompositorFrameDrawn(\n    const std::vector<ui::LatencyInfo>& latency_info) {\n  for (size_t i = 0; i < latency_info.size(); i++) {\n    std::set<RenderWidgetHostImpl*> rwhi_set;\n    for (const auto& lc : latency_info[i].latency_components()) {\n      if (lc.first.first == ui::INPUT_EVENT_LATENCY_BEGIN_RWH_COMPONENT ||\n          lc.first.first == ui::WINDOW_SNAPSHOT_FRAME_NUMBER_COMPONENT ||\n          lc.first.first == ui::TAB_SHOW_COMPONENT) {\n        int routing_id = lc.first.second & 0xffffffff;\n        int process_id = (lc.first.second >> 32) & 0xffffffff;\n        RenderWidgetHost* rwh =\n            RenderWidgetHost::FromID(process_id, routing_id);\n        if (!rwh) {\n          continue;\n        }\n        RenderWidgetHostImpl* rwhi = RenderWidgetHostImpl::From(rwh);\n        if (rwhi_set.insert(rwhi).second)\n          rwhi->FrameSwapped(latency_info[i]);\n      }\n    }\n  }\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста о гарантиях RenderWidgetHostImpl::From: может ли она вернуть NULL для валидного RenderWidgetHost? Если да, то это null deref. Также нужно знать, не инвалидируется ли rwhi внутри FrameSwapped, но это менее вероятно.",
+      "truncated": false,
+      "original_length": 914,
+      "input_assumptions": "Функция предполагает, что latency_info — валидный вектор, элементы которого содержат latency_components() с парами (component_id, value), где value кодирует process_id и routing_id в 64-битном целом. Предполагается, что RenderWidgetHost::FromID возвращает корректный указатель или NULL, и что RenderWidgetHostImpl::From(rwh) возвращает валидный указатель. Также предполагается, что FrameSwapped не приводит к инвалидации rwhi внутри цикла.",
+      "null_risk_pointers": "rwh — может быть NULL, но проверяется перед использованием. rwhi — результат RenderWidgetHostImpl::From(rwh), предполагается не NULL, но нет явной проверки; если From может вернуть NULL, то разыменование в rwhi->FrameSwapped будет null deref.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "187288",
+    "verdict": "secure",
+    "confidence": 0.95,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Конструктор только инициализирует члены класса, используя безопасные обертки (MakeUnique) и new. Нет операций с буферами, указателями без проверки или других потенциально опасных действий. Утечек ресурсов нет, так как владение передается умным указателям.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "NetworkThrottleManagerImpl::NetworkThrottleManagerImpl()\n: lifetime_median_estimate_(PercentileEstimator::kMedianPercentile,\nkInitialMedianInMs),\noutstanding_recomputation_timer_(\n          base::MakeUnique<base::Timer>(false /* retain_user_task */,\nfalse /* is_repeating */)),\ntick_clock_(new base::DefaultTickClock()),\nweak_ptr_factory_(this) {}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 348,
+      "input_assumptions": "Конструктор NetworkThrottleManagerImpl инициализирует члены класса. Предполагается, что lifetime_median_estimate_ инициализируется корректно, outstanding_recomputation_timer_ создается через MakeUnique (не NULL), tick_clock_ создается через new (не NULL), weak_ptr_factory_ инициализируется с this. Нет внешних входов, требующих проверки.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "169289",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Основной риск — потенциальное null-разыменование screen_space_rect_run_loop_, но безопасность зависит от того, гарантирует ли вызывающий код его инициализацию. Без контекста вызова нельзя однозначно утверждать уязвимость.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void SynchronizeVisualPropertiesMessageFilter::OnUpdatedFrameRectOnUI(\n    const gfx::Rect& rect) {\n  last_rect_ = rect;\n  if (!screen_space_rect_received_) {\n    screen_space_rect_received_ = true;\n    screen_space_rect_run_loop_->QuitWhenIdle();\n  }\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, инициализируется ли screen_space_rect_run_loop_ до вызова этой функции (например, в конструкторе или в ResetRectRunLoop). Если инициализация гарантирована, код безопасен; если нет — возможен null_deref.",
+      "truncated": false,
+      "original_length": 254,
+      "input_assumptions": "Функция предполагает, что screen_space_rect_run_loop_ уже инициализирован (не NULL) к моменту вызова, и что вызов происходит на UI-потоке. Также предполагается, что rect является валидным объектом gfx::Rect.",
+      "null_risk_pointers": "screen_space_rect_run_loop_ — указатель, который разыменовывается через ->QuitWhenIdle() без проверки на NULL. Если он не был инициализирован (например, в конструкторе или перед вызовом), это приведет к null-разыменованию.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "165881",
+    "verdict": "uncertain",
+    "confidence": 0.7,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Код содержит несколько потенциальных разыменований NULL без проверки (main_frame, widget, render_view, GetRenderWidget), но безопасность зависит от внешних инвариантов вызывающего кода (например, гарантируется ли, что render_view() и webview() всегда валидны). В системном коде Chromium такие инварианты часто гарантируются, но без контекста вызова нельзя утверждать, что это безопасно.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "RenderWidgetFullscreenPepper* RenderFrameImpl::CreatePepperFullscreenContainer(\n    PepperPluginInstanceImpl* plugin) {\n  blink::WebURL main_frame_url;\n  WebFrame* main_frame = render_view()->webview()->MainFrame();\n  if (main_frame->IsWebLocalFrame())\n    main_frame_url = main_frame->ToWebLocalFrame()->GetDocument().Url();\n\n  mojom::WidgetPtr widget_channel;\n  mojom::WidgetRequest widget_channel_request =\n      mojo::MakeRequest(&widget_channel);\n\n  int32_t fullscreen_widget_routing_id = MSG_ROUTING_NONE;\n  if (!RenderThreadImpl::current_render_message_filter()\n           ->CreateFullscreenWidget(render_view()->GetRoutingID(),\n                                    std::move(widget_channel),\n                                    &fullscreen_widget_routing_id)) {\n    return nullptr;\n  }\n  RenderWidget::ShowCallback show_callback =\n      base::BindOnce(&RenderViewImpl::ShowCreatedFullscreenWidget,\n                     render_view()->GetWeakPtr());\n\n  RenderWidgetFullscreenPepper* widget = RenderWidgetFullscreenPepper::Create(\n      fullscreen_widget_routing_id, std::move(show_callback),\n      GetRenderWidget()->compositor_deps(), plugin, std::move(main_frame_url),\n      GetRenderWidget()->GetWebScreenInfo(), std::move(widget_channel_request));\n  widget->Show(blink::kWebNavigationPolicyCurrentTab);\n  return widget;\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста: гарантируется ли вызывающим кодом, что render_view(), webview(), MainFrame() и GetRenderWidget() возвращают не-null указатели, и что RenderWidgetFullscreenPepper::Create() не возвращает nullptr. Если эти инварианты гарантированы, код безопасен; иначе возможен null_deref.",
+      "truncated": false,
+      "original_length": 1332,
+      "input_assumptions": "Функция предполагает, что render_view() и его webview() не равны nullptr, что MainFrame() возвращает валидный указатель, что GetRenderWidget() возвращает валидный указатель, и что RenderWidgetFullscreenPepper::Create() возвращает валидный указатель (не nullptr). Также предполагается, что plugin является валидным указателем.",
+      "null_risk_pointers": "main_frame (результат MainFrame()), widget (результат Create()), render_view(), GetRenderWidget() — все могут быть nullptr, но проверки отсутствуют.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "183907",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Есть потенциальные разыменования NULL (settings, defaultSpellCheckingLanguages, client), но безопасность зависит от внешних инвариантов: гарантирует ли WebKit, что settings() и webSettings не NULL, и что свойство spell-checking-languages всегда установлено. Без контекста вызова нельзя однозначно утверждать уязвимость.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "static void webkit_web_view_update_settings(WebKitWebView* webView)\n{\nWebKitWebViewPrivate* priv = webView->priv;\nWebKitWebSettings* webSettings = priv->webSettings.get();\nSettings* settings = core(webView)->settings();\n\ngchar* defaultEncoding, *cursiveFontFamily, *defaultFontFamily, *fantasyFontFamily, *monospaceFontFamily, *sansSerifFontFamily, *serifFontFamily, *userStylesheetUri, *defaultSpellCheckingLanguages;\ngboolean autoLoadImages, autoShrinkImages, printBackgrounds,\nenableScripts, enablePlugins, enableDeveloperExtras, resizableTextAreas,\nenablePrivateBrowsing, enableCaretBrowsing, enableHTML5Database, enableHTML5LocalStorage,\nenableXSSAuditor, enableSpatialNavigation, enableFrameFlattening, javascriptCanOpenWindows,\njavaScriptCanAccessClipboard, enableOfflineWebAppCache,\nenableUniversalAccessFromFileURI, enableFileAccessFromFileURI,\nenableDOMPaste, tabKeyCyclesThroughElements, enableWebGL,\nenableSiteSpecificQuirks, usePageCache, enableJavaApplet,\n        enableHyperlinkAuditing, enableFullscreen, enableDNSPrefetching;\n\nWebKitEditingBehavior editingBehavior;\n\ng_object_get(webSettings,\n\"default-encoding\", &defaultEncoding,\n\"cursive-font-family\", &cursiveFontFamily,\n\"default-font-family\", &defaultFontFamily,\n\"fantasy-font-family\", &fantasyFontFamily,\n\"monospace-font-family\", &monospaceFontFamily,\n\"sans-serif-font-family\", &sansSerifFontFamily,\n\"serif-font-family\", &serifFontFamily,\n\"auto-load-images\", &autoLoadImages,\n\"auto-shrink-images\", &autoShrinkImages,\n\"print-backgrounds\", &printBackgrounds,\n\"enable-scripts\", &enableScripts,\n\"enable-plugins\", &enablePlugins,\n\"resizable-text-areas\", &resizableTextAreas,\n\"user-stylesheet-uri\", &userStylesheetUri,\n\"enable-developer-extras\", &enableDeveloperExtras,\n\"enable-private-browsing\", &enablePrivateBrowsing,\n\"enable-caret-browsing\", &enableCaretBrowsing,\n\"enable-html5-database\", &enableHTML5Database,\n\"enable-html5-local-storage\", &enableHTML5LocalStorage,\n\"enable-xss-auditor\", &enableXSSAuditor,\n\"enable-spatial-navigation\", &enableSpatialNavigation,\n\"enable-frame-flattening\", &enableFrameFlattening,\n\"javascript-can-open-windows-automatically\", &javascriptCanOpenWindows,\n\"javascript-can-access-clipboard\", &javaScriptCanAccessClipboard,\n\"enable-offline-web-application-cache\", &enableOfflineWebAppCache,\n\"editing-behavior\", &editingBehavior,\n\"enable-universal-access-from-file-uris\", &enableUniversalAccessFromFileURI,\n\"enable-file-access-from-file-uris\", &enableFileAccessFromFileURI,\n\"enable-dom-paste\", &enableDOMPaste,\n\"tab-key-cycles-through-elements\", &tabKeyCyclesThroughElements,\n\"enable-site-specific-quirks\", &enableSiteSpecificQuirks,\n\"enable-page-cache\", &usePageCache,\n\"enable-java-applet\", &enableJavaApplet,\n\"enable-hyperlink-auditing\", &enableHyperlinkAuditing,\n\"spell-checking-languages\", &defaultSpellCheckingLanguages,\n\"enable-fullscreen\", &enableFullscreen,\n\"enable-dns-prefetching\", &enableDNSPrefetching,\n\"enable-webgl\", &enableWebGL,\nNULL);\n\nsettings->setDefaultTextEncodingName(defaultEncoding);\nsettings->setCursiveFontFamily(cursiveFontFamily);\nsettings->setStandardFontFamily(defaultFontFamily);\nsettings->setFantasyFontFamily(fantasyFontFamily);\nsettings->setFixedFontFamily(monospaceFontFamily);\nsettings->setSansSerifFontFamily(sansSerifFontFamily);\nsettings->setSerifFontFamily(serifFontFamily);\nsettings->setLoadsImagesAutomatically(autoLoadImages);\nsettings->setShrinksStandaloneImagesToFit(autoShrinkImages);\nsettings->setShouldPrintBackgrounds(printBackgrounds);\nsettings->setJavaScriptEnabled(enableScripts);\nsettings->setPluginsEnabled(enablePlugins);\nsettings->setTextAreasAreResizable(resizableTextAreas);\nsettings->setUserStyleSheetLocation(KURL(KURL(), userStylesheetUri));\nsettings->setDeveloperExtrasEnabled(enableDeveloperExtras);\nsettings->setPrivateBrowsingEnabled(enablePrivateBrowsing);\nsettings->setCaretBrowsingEnabled(enableCaretBrowsing);\n#if ENABLE(DATABASE)\nAbstractDatabase::setIsAvailable(enableHTML5Database);\n#endif\nsettings->setLocalStorageEnabled(enableHTML5LocalStorage);\nsettings->setXSSAuditorEnabled(enableXSSAuditor);\nsettings->setSpatialNavigationEnabled(enableSpatialNavigation);\nsettings->setFrameFlatteningEnabled(enableFrameFlattening);\nsettings->setJavaScriptCanOpenWindowsAutomatically(javascriptCanOpenWindows);\nsettings->setJavaScriptCanAccessClipboard(javaScriptCanAccessClipboard);\nsettings->setOfflineWebApplicationCacheEnabled(enableOfflineWebAppCache);\nsettings->setEditingBehaviorType(static_cast<WebCore::EditingBehaviorType>(editingBehavior));\nsettings->setAllowUniversalAccessFromFileURLs(enableUniversalAccessFromFileURI);\nsettings->setAllowFileAccessFromFileURLs(enableFileAccessFromFileURI);\nsettings->setDOMPasteAllowed(enableDOMPaste);\nsettings->setNeedsSiteSpecificQuirks(enableSiteSpecificQuirks);\nsettings->setUsesPageCache(usePageCache);\nsettings->setJavaEnabled(enableJavaApplet);\nsettings->setHyperlinkAuditingEnabled(enableHyperlinkAuditing);\nsettings->setDNSPrefetchingEnabled(enableDNSPrefetching);\n\n#if ENABLE(FULLSCREEN_API)\nsettings->setFullScreenEnabled(enableFullscreen);\n#endif\n\n#if ENABLE(SPELLCHECK)\n    WebKit::EditorClient* client = static_cast<WebKit::EditorClient*>(core(webView)->editorClient());\n    static_cast<WebKit::TextCheckerClientEnchant*>(client->textChecker())->updateSpellCheckingLanguage(defaultSpellCheckingLanguages);\n#endif\n\n#if ENABLE(WEBGL)\nsettings->setWebGLEnabled(enableWebGL);\n#endif\n\nPage* page = core(webView);\nif (page)\npage->setTabKeyCyclesThroughElements(tabKeyCyclesThroughElements);\n\ng_free(defaultEncoding);\ng_free(cursiveFontFamily);\ng_free(defaultFontFamily);\ng_free(fantasyFontFamily);\ng_free(monospaceFontFamily);\ng_free(sansSerifFontFamily);\ng_free(serifFontFamily);\ng_free(userStylesheetUri);\n\nwebkit_web_view_screen_changed(GTK_WIDGET(webView), NULL);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста: гарантируется ли, что core(webView)->settings() и priv->webSettings не NULL, и что свойство spell-checking-languages всегда имеет значение. Если вызывающий код гарантирует эти инварианты, код безопасен; иначе возможен null_deref.",
+      "truncated": false,
+      "original_length": 5785,
+      "input_assumptions": "Функция предполагает, что webView не NULL, priv->webSettings не NULL, core(webView)->settings() не NULL. Также предполагается, что g_object_get корректно заполняет все переданные указатели, включая строки, выделенные через g_strdup, и что defaultSpellCheckingLanguages не NULL при использовании в updateSpellCheckingLanguage.",
+      "null_risk_pointers": "defaultSpellCheckingLanguages (может быть NULL, если свойство не установлено, но передается в updateSpellCheckingLanguage без проверки), userStylesheetUri (может быть NULL, но передается в KURL(KURL(), userStylesheetUri) без проверки), settings (результат core(webView)->settings() может быть NULL, но разыменовывается без проверки), client (в блоке SPELLCHECK может быть NULL, но разыменовывается).",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "109073",
+    "verdict": "secure",
+    "confidence": 0.9,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Код не содержит операций с буферами, индексами или указателями, которые могли бы привести к переполнению или разыменованию NULL. Проверка CHECK гарантирует валидность идентификатора перед использованием. Утечек ресурсов нет, так как возвращается новый объект, который будет управляться вызывающим кодом.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "WebStorageNamespace* RenderViewImpl::createSessionStorageNamespace(\n    unsigned quota) {\n  CHECK(session_storage_namespace_id_ !=\n        dom_storage::kInvalidSessionStorageNamespaceId);\n  return new WebStorageNamespaceImpl(session_storage_namespace_id_);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 259,
+      "input_assumptions": "Функция предполагает, что session_storage_namespace_id_ является валидным идентификатором (не равен kInvalidSessionStorageNamespaceId), что проверяется через CHECK. Также предполагается, что new WebStorageNamespaceImpl не вернет NULL (в C++ new бросает исключение при ошибке, если не используется nothrow).",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "187034",
+    "verdict": "vulnerable",
+    "confidence": 0.8,
+    "action": "block",
+    "evidence": [
+      "null_deref",
+      "use_after_free"
+    ],
+    "rationale": "Код содержит потенциальное разыменование нулевого указателя (mojo_state_ и context_ без проверки) и риск использования после освобождения из-за асинхронного выполнения задач с Unretained указателями, которые могут быть обнулены до выполнения задачи.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void DOMStorageContextWrapper::Shutdown() {\n  DCHECK(context_.get());\n  mojo_task_runner_->PostTask(\n      FROM_HERE, base::BindOnce(&LocalStorageContextMojo::ShutdownAndDelete,\n                                base::Unretained(mojo_state_)));\n  mojo_state_ = nullptr;\nif (mojo_session_state_) {\nmojo_task_runner_->PostTask(\nFROM_HERE, base::BindOnce(&SessionStorageContextMojo::ShutdownAndDelete,\nbase::Unretained(mojo_session_state_)));\nmojo_session_state_ = nullptr;\n}\nmemory_pressure_listener_.reset();\n  context_->task_runner()->PostShutdownBlockingTask(\n      FROM_HERE, DOMStorageTaskRunner::PRIMARY_SEQUENCE,\n      base::BindOnce(&DOMStorageContextImpl::Shutdown, context_));\n}\n",
+      "cwe_id": "CWE-416",
+      "cwe_id_raw": "CWE-416",
+      "cwe_name": "Use After Free",
+      "exploitation_mechanism": "После вызова PostTask для mojo_state_ указатель mojo_state_ устанавливается в nullptr, но задача может быть выполнена позже. Если между этим и выполнением задачи произойдёт повторный вызов Shutdown (или другой код обратится к mojo_state_), то возможно использование после освобождения. Аналогично для mojo_session_state_. Также context_ используется без проверки на nullptr в release-сборках, что может привести к разыменованию нулевого указателя.",
+      "patched_code": "void DOMStorageContextWrapper::Shutdown() {\n  DCHECK(context_.get());\n  if (mojo_state_) {\n    mojo_task_runner_->PostTask(\n        FROM_HERE, base::BindOnce(&LocalStorageContextMojo::ShutdownAndDelete,\n                                  base::Unretained(mojo_state_)));\n    mojo_state_ = nullptr;\n  }\n  if (mojo_session_state_) {\n    mojo_task_runner_->PostTask(\n        FROM_HERE, base::BindOnce(&SessionStorageContextMojo::ShutdownAndDelete,\n                                  base::Unretained(mojo_session_state_)));\n    mojo_session_state_ = nullptr;\n  }\n  memory_pressure_listener_.reset();\n  if (context_) {\n    context_->task_runner()->PostShutdownBlockingTask(\n        FROM_HERE, DOMStorageTaskRunner::PRIMARY_SEQUENCE,\n        base::BindOnce(&DOMStorageContextImpl::Shutdown, context_));\n  }\n}",
+      "patch_rationale": "Добавлены проверки на nullptr перед использованием mojo_state_ и context_, чтобы избежать разыменования нулевого указателя и гарантировать, что задачи не будут поставлены с невалидными указателями.",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 685,
+      "input_assumptions": "Функция предполагает, что context_ не равен nullptr (проверяется DCHECK, но не в release), mojo_task_runner_ валиден, mojo_state_ и mojo_session_state_ могут быть nullptr или указывать на живые объекты, которые будут удалены асинхронно через PostTask. Также предполагается, что context_ жив до завершения задачи.",
+      "null_risk_pointers": "mojo_state_ (разыменовывается через base::Unretained без проверки на nullptr перед PostTask), mojo_session_state_ (проверяется перед использованием), context_ (используется без проверки, только DCHECK).",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "143229",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Код не содержит явных операций с буферами или длинами, но отсутствует проверка на NULL для layoutView(), что может привести к разыменованию NULL, если инвариант нарушен. Однако в контексте Document обычно layout view гарантированно существует, поэтому вердикт зависит от внешних гарантий.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void Document::notifyLayoutTreeOfSubtreeChanges()\n{\n    if (!layoutView()->wasNotifiedOfSubtreeChange())\n        return;\n\n    m_lifecycle.advanceTo(DocumentLifecycle::InLayoutSubtreeChange);\n\n    layoutView()->handleSubtreeModifications();\n    DCHECK(!layoutView()->wasNotifiedOfSubtreeChange());\n\n    m_lifecycle.advanceTo(DocumentLifecycle::LayoutSubtreeChangeClean);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста: гарантируется ли, что layoutView() не NULL в этой точке жизненного цикла Document. Если вызывающий код гарантирует это, код безопасен; иначе возможен null_deref.",
+      "truncated": false,
+      "original_length": 372,
+      "input_assumptions": "Функция предполагает, что layoutView() возвращает валидный (не NULL) указатель на LayoutView, и что объект Document находится в корректном состоянии жизненного цикла, позволяющем вызовы advanceTo. Также предполагается, что handleSubtreeModifications() не изменяет состояние так, что последующий DCHECK может не выполниться.",
+      "null_risk_pointers": "layoutView() — результат вызова, который может вернуть NULL, но в данном контексте (Document::notifyLayoutTreeOfSubtreeChanges) предполагается, что layout view существует. Однако явной проверки на NULL нет, что может быть рискованно, если инвариант нарушен.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "185238",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Фрагмент не содержит операций с памятью, указателями или буферами; он лишь вызывает другую функцию с константами. Безопасность зависит от реализации вызываемой функции и определения kSamplesPerSecond, которые не видны в фрагменте.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void TestPlaybackRate(double playback_rate) {\n    static const int kDefaultBufferSize = kSamplesPerSecond / 10;\n    static const int kDefaultFramesRequested = 5 * kSamplesPerSecond;\n\nTestPlaybackRate(playback_rate, kDefaultBufferSize,\nkDefaultFramesRequested);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Недостаточно контекста: неизвестна реализация вызываемой функции TestPlaybackRate(playback_rate, buffer_size, frames_requested) и значение kSamplesPerSecond. Если вызываемая функция некорректно обрабатывает размеры буфера, возможны уязвимости, но в данном фрагменте их нет.",
+      "truncated": false,
+      "original_length": 263,
+      "input_assumptions": "Функция TestPlaybackRate принимает double playback_rate и вызывает перегруженную/другую функцию TestPlaybackRate с тремя аргументами, передавая статические константы kDefaultBufferSize и kDefaultFramesRequested. Предполагается, что kSamplesPerSecond определён и положителен, и что вызываемая функция существует и корректно обрабатывает эти аргументы.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "185326",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Код содержит DCHECK, который в release-сборке может быть отключен, и нет явной проверки sender на NULL перед использованием в сравнении. Однако безопасность зависит от того, гарантирует ли вызывающий код, что sender всегда валиден и равен stop_button_. Без контекста вызова нельзя однозначно утверждать уязвимость.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void CastCastView::ButtonPressed(views::Button* sender,\nconst ui::Event& event) {\nDCHECK(sender == stop_button_);\n  StopCast();\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, гарантирует ли вызывающий код, что sender не NULL и всегда равен stop_button_. Если вызывающий код доверенный и всегда передает корректный указатель, то код безопасен; в противном случае возможен null_deref в release-сборке.",
+      "truncated": false,
+      "original_length": 130,
+      "input_assumptions": "Функция предполагает, что sender является указателем на stop_button_ (проверяется DCHECK), и что StopCast() безопасна для вызова в данном контексте. Также предполагается, что sender не равен NULL, но DCHECK в release-сборке может быть отключен.",
+      "null_risk_pointers": "sender (переданный параметр, может быть NULL, если вызывающий код передаст NULL; DCHECK не защищает в release)",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "109013",
+    "verdict": "secure",
+    "confidence": 0.9,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Код не содержит операций с памятью, проверок границ или разыменований указателей. Все используемые объекты создаются локально и передаются по значению или константной ссылке. Нет видимых рисков безопасности.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void RenderViewImpl::PpapiPluginCancelComposition() {\n  Send(new ViewHostMsg_ImeCancelComposition(routing_id()));\n  const ui::Range range(ui::Range::InvalidRange());\n  const std::vector<gfx::Rect> empty_bounds;\n  UpdateCompositionInfo(range, empty_bounds);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 259,
+      "input_assumptions": "Функция не принимает аргументов. Предполагается, что routing_id() возвращает корректный идентификатор, а Send() и UpdateCompositionInfo() безопасны для переданных значений. range и empty_bounds создаются локально и не зависят от внешних данных.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "168751",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Функция может вернуть nullptr, если legacy_widget_input_handler_ не инициализирован, но безопасность зависит от того, проверяет ли вызывающий код возвращаемое значение. Без контекста вызова нельзя утверждать, что это уязвимость.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "mojom::WidgetInputHandler* RenderWidgetHostImpl::GetWidgetInputHandler() {\n  if (associated_widget_input_handler_)\n    return associated_widget_input_handler_.get();\n  if (widget_input_handler_)\n    return widget_input_handler_.get();\n  return legacy_widget_input_handler_.get();\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, гарантирует ли вызывающий код, что legacy_widget_input_handler_ всегда инициализирован, или проверяет возвращаемый указатель на nullptr перед использованием. Если вызывающий код доверенный и всегда проверяет, то это безопасно; в противном случае возможен null_deref.",
+      "truncated": false,
+      "original_length": 282,
+      "input_assumptions": "Функция предполагает, что по крайней мере один из трех членов (associated_widget_input_handler_, widget_input_handler_, legacy_widget_input_handler_) не равен nullptr, либо что legacy_widget_input_handler_ гарантированно инициализирован. Также предполагается, что возвращаемый указатель не будет разыменован без проверки вызывающим кодом.",
+      "null_risk_pointers": "legacy_widget_input_handler_ — возвращается без проверки на nullptr; если он не инициализирован, возвращается nullptr. associated_widget_input_handler_ и widget_input_handler_ проверяются перед возвратом, но legacy_widget_input_handler_ не проверяется.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "185419",
+    "verdict": "secure",
+    "confidence": 0.9,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Фрагмент просто вызывает ExtractPrefString с константным ключом и возвращает результат. Нет операций с буферами, указателями или длинами, которые могли бы привести к уязвимости. Всё безопасно.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "std::string MasterPreferences::GetCompressedVariationsSeed() const {\n  return ExtractPrefString(prefs::kVariationsCompressedSeed);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 133,
+      "input_assumptions": "Функция предполагает, что объект MasterPreferences корректен и метод ExtractPrefString существует и безопасно обрабатывает переданный ключ. Возвращаемое значение std::string копируется, что безопасно.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "185976",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Основной риск — отсутствие проверки inspectedContext на NULL и потенциально невалидный v8::Local<v8::Value> в SetAccessorProperty, но безопасность зависит от внешнего контекста вызова (гарантируется ли не-NULL inspectedContext и корректность v8::Local).",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "v8::Local<v8::Object> V8Console::createConsole(InspectedContext* inspectedContext, bool hasMemoryAttribute)\n{\nv8::Local<v8::Context> context = inspectedContext->context();\nv8::Context::Scope contextScope(context);\nv8::Isolate* isolate = context->GetIsolate();\nv8::MicrotasksScope microtasksScope(isolate, v8::MicrotasksScope::kDoNotRunMicrotasks);\n\nv8::Local<v8::Object> console = v8::Object::New(isolate);\n\ncreateBoundFunctionProperty(context, console, \"debug\", V8Console::debugCallback);\ncreateBoundFunctionProperty(context, console, \"error\", V8Console::errorCallback);\ncreateBoundFunctionProperty(context, console, \"info\", V8Console::infoCallback);\ncreateBoundFunctionProperty(context, console, \"log\", V8Console::logCallback);\ncreateBoundFunctionProperty(context, console, \"warn\", V8Console::warnCallback);\ncreateBoundFunctionProperty(context, console, \"dir\", V8Console::dirCallback);\ncreateBoundFunctionProperty(context, console, \"dirxml\", V8Console::dirxmlCallback);\ncreateBoundFunctionProperty(context, console, \"table\", V8Console::tableCallback);\ncreateBoundFunctionProperty(context, console, \"trace\", V8Console::traceCallback);\ncreateBoundFunctionProperty(context, console, \"group\", V8Console::groupCallback);\ncreateBoundFunctionProperty(context, console, \"groupCollapsed\", V8Console::groupCollapsedCallback);\ncreateBoundFunctionProperty(context, console, \"groupEnd\", V8Console::groupEndCallback);\ncreateBoundFunctionProperty(context, console, \"clear\", V8Console::clearCallback);\ncreateBoundFunctionProperty(context, console, \"count\", V8Console::countCallback);\ncreateBoundFunctionProperty(context, console, \"assert\", V8Console::assertCallback);\ncreateBoundFunctionProperty(context, console, \"markTimeline\", V8Console::markTimelineCallback);\ncreateBoundFunctionProperty(context, console, \"profile\", V8Console::profileCallback);\ncreateBoundFunctionProperty(context, console, \"profileEnd\", V8Console::profileEndCallback);\ncreateBoundFunctionProperty(context, console, \"timeline\", V8Console::timelineCallback);\ncreateBoundFunctionProperty(context, console, \"timelineEnd\", V8Console::timelineEndCallback);\ncreateBoundFunctionProperty(context, console, \"time\", V8Console::timeCallback);\ncreateBoundFunctionProperty(context, console, \"timeEnd\", V8Console::timeEndCallback);\ncreateBoundFunctionProperty(context, console, \"timeStamp\", V8Console::timeStampCallback);\n\n    bool success = console->SetPrototype(context, v8::Object::New(isolate)).FromMaybe(false);\n    DCHECK(success);\nif (hasMemoryAttribute)\nconsole->SetAccessorProperty(toV8StringInternalized(isolate, \"memory\"), V8_FUNCTION_NEW_REMOVE_PROTOTYPE(context, V8Console::memoryGetterCallback, console, 0).ToLocalChecked(), V8_FUNCTION_NEW_REMOVE_PROTOTYPE(context, V8Console::memorySetterCallback, v8::Local<v8::Value>(), 0).ToLocalChecked(), static_cast<v8::PropertyAttribute>(v8::None), v8::DEFAULT);\n\nconsole->SetPrivate(context, inspectedContextPrivateKey(isolate), v8::External::New(isolate, inspectedContext));\nreturn console;\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, гарантирует ли вызывающий код, что inspectedContext не NULL и что v8::Local<v8::Value>() допустим в данном контексте V8 API. Также неясно, обрабатывает ли createBoundFunctionProperty ошибки внутри себя.",
+      "truncated": false,
+      "original_length": 2995,
+      "input_assumptions": "Функция предполагает, что inspectedContext не равен NULL и что его метод context() возвращает валидный v8::Local<v8::Context>. Также предполагается, что все вызовы createBoundFunctionProperty и SetAccessorProperty успешны, хотя их возвращаемые значения не проверяются. inspectedContextPrivateKey(isolate) должен возвращать валидный ключ.",
+      "null_risk_pointers": "inspectedContext (не проверяется на NULL перед разыменованием), console (результат v8::Object::New, может быть пустым, но обычно не NULL), v8::Local<v8::Value> в SetAccessorProperty (передается v8::Local<v8::Value>() — пустой Local, что может быть невалидным).",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "120384",
+    "verdict": "secure",
+    "confidence": 0.95,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Фрагмент представляет собой тривиальный геттер, возвращающий логическое поле. Нет операций с памятью, указателями, индексами или вводом, поэтому уязвимостей нет.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "  bool swipe_down() const { return swipe_down_; }\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 50,
+      "input_assumptions": "Функция-член swipe_down() не принимает аргументов и возвращает значение поля swipe_down_. Предполагается, что объект, для которого вызывается метод, существует и поле swipe_down_ инициализировано.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "155664",
+    "verdict": "secure",
+    "confidence": 0.95,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Функция не выполняет никаких операций с памятью, указателями или длинами; возвращает константу. Уязвимостей нет.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "bool AuthenticatorGenericErrorSheetModel::IsBackButtonVisible() const {\n  return false;\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 90,
+      "input_assumptions": "Функция не принимает аргументов и не использует внешнее состояние, кроме неявного this. Возвращает константу false.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "148687",
+    "verdict": "secure",
+    "confidence": 0.9,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Функция просто вызывает Signal() на объекте синхронизации, без работы с памятью, указателями или длинами. Нет видимых рисков безопасности.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void SkiaOutputSurfaceImplTest::UnblockMainThread() {\n  DCHECK(!wait_.IsSignaled());\n  wait_.Signal();\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 105,
+      "input_assumptions": "Функция предполагает, что объект wait_ существует и инициализирован, и что он не находится в сигнализированном состоянии до вызова Signal().",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "154666",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Функция делегирует всю проверку границ и NULL в GenHelper, который не показан. Без знания реализации GenHelper нельзя утверждать, что защита есть. Сходство с примерами из корпуса (где проверка n < 0 присутствует) не гарантирует, что GenHelper её выполняет. Поэтому вердикт uncertain.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "error::Error GLES2DecoderPassthroughImpl::DoGenRenderbuffers(\n    GLsizei n,\n    volatile GLuint* renderbuffers) {\n  return GenHelper(n, renderbuffers, &resources_->renderbuffer_id_map,\n                   [this](GLsizei n, GLuint* renderbuffers) {\n                     api()->glGenRenderbuffersEXTFn(n, renderbuffers);\n                   });\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Отсутствует реализация GenHelper, которая определяет, проверяются ли n < 0 и NULL для renderbuffers. Если GenHelper не проверяет, возможен out-of-bounds write (CWE-787) или null deref. Нужен контекст вызова и реализация GenHelper.",
+      "truncated": false,
+      "original_length": 344,
+      "input_assumptions": "Функция предполагает, что n >= 0 (GLsizei знаковый), и что указатель renderbuffers указывает на массив размером не менее n элементов. Также предполагается, что GenHelper корректно обрабатывает отрицательные n и проверяет указатель.",
+      "null_risk_pointers": "renderbuffers (volatile GLuint*) — может быть NULL, но передаётся в GenHelper без проверки; однако GenHelper, судя по контексту, может проверять. Внутри лямбды renderbuffers передаётся в glGenRenderbuffersEXTFn, но это происходит после обработки GenHelper.",
+      "unchecked_lengths": "n — используется как количество элементов для записи в renderbuffers; нет явной проверки n < 0 или размера буфера, но это делегировано GenHelper."
+    }
+  },
+  {
+    "doc_id": "185125",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Функция не содержит явных проверок на NULL для context и callbacks, но это может быть гарантировано вызывающим кодом (например, ASSERT в вызывающей функции). Также нет проверки на то, что postTask безопасен в данном контексте, но это зависит от реализации ExecutionContext. Поэтому вердикт uncertain.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void LocalFileSystem::fileSystemNotAllowedInternal(\nPassRefPtrWillBeRawPtr<ExecutionContext> context,\n    PassRefPtr<CallbackWrapper> callbacks)\n{\ncontext->postTask(createCrossThreadTask(&reportFailure, callbacks->release(), FileError::ABORT_ERR));\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста вызова: гарантируется ли, что context и callbacks не NULL, и что postTask безопасен в данном потоке/контексте. Если вызывающий код гарантирует эти инварианты, код безопасен; иначе возможен null_deref.",
+      "truncated": false,
+      "original_length": 251,
+      "input_assumptions": "Функция предполагает, что context и callbacks не равны NULL, и что callbacks->release() возвращает валидный указатель. Также предполагается, что context->postTask безопасен для вызова в текущем потоке.",
+      "null_risk_pointers": "context, callbacks",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "158156",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [],
+    "rationale": "Функция разыменовывает указатель message_loop_runner_ без проверки на NULL, но безопасность зависит от того, гарантирует ли вызывающий код инициализацию этого указателя. Внешний контекст не предоставлен, поэтому вердикт uncertain.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "  void Wait() {\n    message_loop_runner_->Run();\n  }\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестно, инициализируется ли message_loop_runner_ перед вызовом Wait() и может ли быть NULL. Если вызывающий код гарантирует инициализацию, код безопасен; в противном случае возможен null_deref.",
+      "truncated": false,
+      "original_length": 53,
+      "input_assumptions": "Функция Wait() предполагает, что message_loop_runner_ является корректно инициализированным указателем на объект, поддерживающий метод Run(), и что вызов Run() безопасен в текущем контексте (не приведет к бесконечному ожиданию или другим проблемам).",
+      "null_risk_pointers": "message_loop_runner_",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "104395",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "null_deref"
+    ],
+    "rationale": "Функция разыменовывает style без проверки на NULL, но неизвестно, гарантирует ли вызывающий код, что style всегда не NULL. Поэтому вердикт uncertain, а не vulnerable.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "inline static PassRefPtr<CSSPrimitiveValue> zoomAdjustedNumberValue(double value, const RenderStyle* style)\n{\n    return cssValuePool().createValue(value / style->effectiveZoom(), CSSPrimitiveValue::CSS_NUMBER);\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Неизвестен контекст вызова: гарантируется ли, что style не NULL (например, проверяется перед вызовом). Если style может быть NULL, это приведет к null-разыменованию.",
+      "truncated": false,
+      "original_length": 214,
+      "input_assumptions": "Функция предполагает, что style не равен NULL, так как разыменовывает style->effectiveZoom() без проверки. Также предполагается, что cssValuePool() возвращает корректный объект, и что value является конечным числом.",
+      "null_risk_pointers": "style (указатель на RenderStyle) — разыменовывается без проверки на NULL.",
+      "unchecked_lengths": "нет таких"
+    }
+  },
+  {
+    "doc_id": "159030",
+    "verdict": "uncertain",
+    "confidence": 0.6,
+    "action": "manual_review",
+    "evidence": [
+      "out_of_bounds_read"
+    ],
+    "rationale": "Есть потенциальный риск выхода за границы при доступе к pages_[current_page], если next_page_to_search_ или last_page_to_search_ невалидны (например, из-за некорректного old_selection). Однако это зависит от внешнего контекста: гарантирует ли вызывающий код корректность old_selection и инварианты pages_. Без этого контекста нельзя однозначно утверждать уязвимость.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "void PDFiumEngine::StartFind(const std::string& text, bool case_sensitive) {\n  DCHECK(!text.empty());\n\n  if (pages_.empty())\n    return;\n\n  bool first_search = (current_find_text_ != text);\n  int character_to_start_searching_from = 0;\n  if (first_search) {\n    std::vector<PDFiumRange> old_selection = selection_;\n    StopFind();\n    current_find_text_ = text;\n\n    if (old_selection.empty()) {\n      next_page_to_search_ = 0;\n      last_page_to_search_ = pages_.size() - 1;\n      last_character_index_to_search_ = -1;\n    } else {\n      next_page_to_search_ = old_selection[0].page_index();\n      last_character_index_to_search_ = old_selection[0].char_index();\n      character_to_start_searching_from = old_selection[0].char_index();\n      last_page_to_search_ = next_page_to_search_;\n    }\n  }\n\n  int current_page = next_page_to_search_;\n\n  if (pages_[current_page]->available()) {\n    base::string16 str = base::UTF8ToUTF16(text);\n    if (0) {\n      SearchUsingPDFium(str, case_sensitive, first_search,\n                        character_to_start_searching_from, current_page);\n    } else {\n      SearchUsingICU(str, case_sensitive, first_search,\n                     character_to_start_searching_from, current_page);\n    }\n\n    if (!IsPageVisible(current_page))\n      pages_[current_page]->Unload();\n  }\n\n  if (next_page_to_search_ != last_page_to_search_ ||\n      (first_search && last_character_index_to_search_ != -1)) {\n    ++next_page_to_search_;\n  }\n\n  if (next_page_to_search_ == static_cast<int>(pages_.size()))\n    next_page_to_search_ = 0;\n  bool end_of_search =\n      next_page_to_search_ == last_page_to_search_ &&\n      ((pages_.size() == 1 && last_character_index_to_search_ == -1) ||\n       (pages_.size() == 1 && !first_search) ||\n       (pages_.size() > 1 && current_page == next_page_to_search_));\n\n  if (end_of_search) {\n    client_->NotifyNumberOfFindResultsChanged(find_results_.size(), true);\n  } else {\n    pp::CompletionCallback callback =\n        find_factory_.NewCallback(&PDFiumEngine::ContinueFind);\n    pp::Module::Get()->core()->CallOnMainThread(0, callback,\n                                                case_sensitive ? 1 : 0);\n  }\n}\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "Не хватает контекста о том, как формируется old_selection и гарантируется ли, что page_index() в PDFiumRange всегда в пределах pages_. Также неясно, может ли next_page_to_search_ быть инициализирован значением, выходящим за границы, при первом поиске, если pages_ не пуст, но old_selection содержит некорректные данные.",
+      "truncated": false,
+      "original_length": 2172,
+      "input_assumptions": "Функция предполагает, что pages_ не пуст (проверяется), next_page_to_search_ и last_page_to_search_ находятся в допустимых пределах [0, pages_.size()-1], и что old_selection[0] существует, если old_selection не пуст. Также предполагается, что text не пуст (DCHECK).",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "Индексы next_page_to_search_, last_page_to_search_, current_page используются для доступа к pages_[current_page] без проверки границ, но они инициализируются из pages_.size() и old_selection[0].page_index(), что может быть вне диапазона, если old_selection содержит некорректные индексы. Также last_character_index_to_search_ используется в сравнениях, но не для индексации."
+    }
+  },
+  {
+    "doc_id": "185114",
+    "verdict": "secure",
+    "confidence": 0.95,
+    "action": "pass",
+    "evidence": [],
+    "rationale": "Пустой деструктор не выполняет никаких операций, поэтому нет риска разыменования указателей, выхода за границы или других уязвимостей. Код безопасен.",
+    "artifacts": {
+      "source": "llm_reviewer",
+      "code": "~CreateFileResult()\n        {\n        }\n",
+      "cwe_id": null,
+      "cwe_id_raw": "",
+      "cwe_name": "неизвестный CWE или не найден в локальном справочнике",
+      "exploitation_mechanism": "",
+      "patched_code": "",
+      "patch_rationale": "",
+      "uncertain_reason": "",
+      "truncated": false,
+      "original_length": 40,
+      "input_assumptions": "Фрагмент содержит только пустой деструктор класса CreateFileResult. Предполагается, что класс не владеет ресурсами, требующими освобождения, или они освобождаются в других местах.",
+      "null_risk_pointers": "нет таких",
+      "unchecked_lengths": "нет таких"
+    }
+  }
+]

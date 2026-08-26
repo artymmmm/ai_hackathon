@@ -1,0 +1,761 @@
+{
+  "no_cards": {
+    "n": 41,
+    "correct": 3,
+    "accuracy": 0.073,
+    "rows": [
+      {
+        "unique_id": "179721",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-404",
+        "correct": false
+      },
+      {
+        "unique_id": "187288",
+        "gold_cwe": "CWE-311",
+        "pred_cwe": "CWE-665",
+        "correct": false
+      },
+      {
+        "unique_id": "181024",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "178828",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-190",
+        "correct": false
+      },
+      {
+        "unique_id": "181777",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182416",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "183206",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "183419",
+        "gold_cwe": "CWE-476",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "71857",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-190",
+        "correct": false
+      },
+      {
+        "unique_id": "66318",
+        "gold_cwe": "CWE-674",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "181360",
+        "gold_cwe": "CWE-404",
+        "pred_cwe": "CWE-416",
+        "correct": false
+      },
+      {
+        "unique_id": "182006",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "29969",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "183051",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "182060",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "185326",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-754",
+        "correct": false
+      },
+      {
+        "unique_id": "178922",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-190",
+        "correct": false
+      },
+      {
+        "unique_id": "182410",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "182881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "180123",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "181051",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "178183",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-250",
+        "correct": false
+      },
+      {
+        "unique_id": "181397",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "185976",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-754",
+        "correct": false
+      },
+      {
+        "unique_id": "181433",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "180825",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "53312",
+        "gold_cwe": "CWE-388",
+        "pred_cwe": "CWE-754",
+        "correct": false
+      },
+      {
+        "unique_id": "180059",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "179607",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "178070",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-754",
+        "correct": false
+      },
+      {
+        "unique_id": "185238",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-628",
+        "correct": false
+      },
+      {
+        "unique_id": "178755",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182627",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "178602",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-134",
+        "correct": false
+      },
+      {
+        "unique_id": "177803",
+        "gold_cwe": "CWE-17",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "185114",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-404",
+        "correct": false
+      },
+      {
+        "unique_id": "185125",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-416",
+        "correct": false
+      },
+      {
+        "unique_id": "186120",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-416",
+        "correct": false
+      },
+      {
+        "unique_id": "181881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "183907",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "178356",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-697",
+        "correct": false
+      }
+    ]
+  },
+  "with_cards": {
+    "n": 41,
+    "correct": 5,
+    "accuracy": 0.122,
+    "rows": [
+      {
+        "unique_id": "179721",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "187288",
+        "gold_cwe": "CWE-311",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "181024",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "178828",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "181777",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182416",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "183206",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "183419",
+        "gold_cwe": "CWE-476",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "71857",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-190",
+        "correct": false
+      },
+      {
+        "unique_id": "66318",
+        "gold_cwe": "CWE-674",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "181360",
+        "gold_cwe": "CWE-404",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "182006",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "29969",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "183051",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "182060",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "185326",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "178922",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "182410",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "182881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "180123",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "181051",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "178183",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "181397",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "185976",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "181433",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "180825",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "53312",
+        "gold_cwe": "CWE-388",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "180059",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "179607",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "178070",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "185238",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "178755",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182627",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "178602",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-134",
+        "correct": false
+      },
+      {
+        "unique_id": "177803",
+        "gold_cwe": "CWE-17",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "185114",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "185125",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "186120",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "181881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "183907",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "178356",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-20",
+        "correct": true
+      }
+    ]
+  },
+  "with_cards_and_cert": {
+    "n": 41,
+    "correct": 6,
+    "accuracy": 0.146,
+    "rows": [
+      {
+        "unique_id": "179721",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "187288",
+        "gold_cwe": "CWE-311",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "181024",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "178828",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "181777",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182416",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "183206",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-125",
+        "correct": true
+      },
+      {
+        "unique_id": "183419",
+        "gold_cwe": "CWE-476",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "71857",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-190",
+        "correct": false
+      },
+      {
+        "unique_id": "66318",
+        "gold_cwe": "CWE-674",
+        "pred_cwe": "CWE-476",
+        "correct": false
+      },
+      {
+        "unique_id": "181360",
+        "gold_cwe": "CWE-404",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "182006",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "29969",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "183051",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "182060",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "185326",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "178922",
+        "gold_cwe": "CWE-189",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "182410",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "182881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "180123",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "181051",
+        "gold_cwe": "CWE-125",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "178183",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "181397",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "185976",
+        "gold_cwe": "CWE-79",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "181433",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "180825",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "53312",
+        "gold_cwe": "CWE-388",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "180059",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "179607",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-787",
+        "correct": false
+      },
+      {
+        "unique_id": "178070",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "185238",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-120",
+        "correct": false
+      },
+      {
+        "unique_id": "178755",
+        "gold_cwe": "CWE-200",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "182627",
+        "gold_cwe": "CWE-362",
+        "pred_cwe": "CWE-125",
+        "correct": false
+      },
+      {
+        "unique_id": "178602",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-134",
+        "correct": false
+      },
+      {
+        "unique_id": "177803",
+        "gold_cwe": "CWE-17",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "185114",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-119",
+        "correct": true
+      },
+      {
+        "unique_id": "185125",
+        "gold_cwe": "CWE-119",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "186120",
+        "gold_cwe": "CWE-264",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "181881",
+        "gold_cwe": "CWE-190",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      },
+      {
+        "unique_id": "183907",
+        "gold_cwe": "CWE-399",
+        "pred_cwe": "CWE-20",
+        "correct": false
+      },
+      {
+        "unique_id": "178356",
+        "gold_cwe": "CWE-20",
+        "pred_cwe": "CWE-119",
+        "correct": false
+      }
+    ]
+  }
+}
