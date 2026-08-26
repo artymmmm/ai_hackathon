@@ -1,0 +1,832 @@
+{
+  "119": {
+    "cwe_id": "CWE-119",
+    "name": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+    "description": "The product performs operations on a memory buffer, but it reads from or writes to a memory location outside the buffer's intended boundary. This may result in read or write operations on unexpected memory locations that could be linked to other variables, data structures, or internal program data.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality",
+          "Availability"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands",
+          "Modify Memory"
+        ]
+      },
+      {
+        "scope": [
+          "Availability",
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Memory",
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (CPU)",
+          "DoS: Resource Consumption (Memory)"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Memory"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "118"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "20"
+      }
+    ],
+    "mitigations": [
+      "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n",
+      "Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. Examples include the Safe C String Library (SafeStr) by Messier and Viega [REF-"
+    ],
+    "prompt_text": "CWE-119 — Improper Restriction of Operations within the Bounds of a Memory Buffer The product performs operations on a memory buffer, but it reads from or writes to a memory location outside the buffer's intended boundary. This may result in read or write operations on unexpected memory locations that could be linked to other variables, data structures, or internal program data. Связанные CWE: ChildOf CWE-118, ChildOf CWE-20. Отличие от смежных: Родовая (абстрактная) категория «нарушение границ буфера» — используй, только если непонятно, чтение это или запись; если понятно — указывай 787 или 125, они точнее. Типичное исправление: Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n"
+  },
+  "120": {
+    "cwe_id": "CWE-120",
+    "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+    "description": "The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality",
+          "Availability"
+        ],
+        "impact": [
+          "Modify Memory",
+          "Execute Unauthorized Code or Commands"
+        ]
+      },
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "Modify Memory",
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (CPU)"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "787"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "787"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "787"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "123"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "20"
+      }
+    ],
+    "mitigations": [
+      "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n",
+      "Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. Examples include the Safe C String Library (SafeStr) by Messier and Viega [REF-"
+    ],
+    "prompt_text": "CWE-120 — Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') The product copies an input buffer to an output buffer without verifying that the size of the input buffer is less than the size of the output buffer. Связанные CWE: ChildOf CWE-787, ChildOf CWE-119, ChildOf CWE-787, ChildOf CWE-787, CanPrecede CWE-123, ChildOf CWE-20. Отличие от смежных: Частный случай 787/119: конкретно небезопасное КОПИРОВАНИЕ без проверки размера входа (strcpy/sprintf/strcat без длины) — если видишь именно такой паттерн вызова, используй 120, а не общий 119. Типичное исправление: Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n"
+  },
+  "125": {
+    "cwe_id": "CWE-125",
+    "name": "Out-of-bounds Read",
+    "description": "The product reads data past the end, or before the beginning, of the intended buffer.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Memory"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Bypass Protection Mechanism"
+        ]
+      },
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart"
+        ]
+      },
+      {
+        "scope": [
+          "Other"
+        ],
+        "impact": [
+          "Varies by Context"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      }
+    ],
+    "mitigations": [
+      "Assume all input is malicious. Use an \"accept known good\" input validation strategy, i.e., use a list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to speci",
+      "Use a language that provides appropriate memory abstractions."
+    ],
+    "prompt_text": "CWE-125 — Out-of-bounds Read The product reads data past the end, or before the beginning, of the intended buffer. Связанные CWE: ChildOf CWE-119, ChildOf CWE-119, ChildOf CWE-119, ChildOf CWE-119. Отличие от смежных: Конкретно ЧТЕНИЕ за пределы буфера (out-of-bounds read) — обычно утечка памяти/инфы или падение, реже RCE. Не путать с 787: если функция только читает (не пишет) за границу — это 125, не 787/119. Типичное исправление: Assume all input is malicious. Use an \"accept known good\" input validation strategy, i.e., use a list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to speci"
+  },
+  "190": {
+    "cwe_id": "CWE-190",
+    "name": "Integer Overflow or Wraparound",
+    "description": "The product performs a calculation that can produce an integer overflow or wraparound when the logic assumes that the resulting value will always be larger than the original value. This occurs when an integer value is incremented to a value that is too large to store in the associated representation. When this occurs, the value may become a very small or negative number.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (Memory)",
+          "DoS: Instability"
+        ]
+      },
+      {
+        "scope": [
+          "Integrity"
+        ],
+        "impact": [
+          "Modify Memory"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality",
+          "Availability",
+          "Access Control"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands",
+          "Bypass Protection Mechanism"
+        ]
+      },
+      {
+        "scope": [
+          "Availability",
+          "Other"
+        ],
+        "impact": [
+          "Alter Execution Logic",
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (CPU)"
+        ]
+      },
+      {
+        "scope": [
+          "Access Control"
+        ],
+        "impact": [
+          "Bypass Protection Mechanism"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "682"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "682"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "20"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "119"
+      }
+    ],
+    "mitigations": [
+      "Ensure that all protocols are strictly defined, such that all out-of-bounds behavior can be identified simply, and require strict conformance to the protocol.",
+      "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. If possible, choose a language or compiler that performs automatic bounds checking."
+    ],
+    "prompt_text": "CWE-190 — Integer Overflow or Wraparound The product performs a calculation that can produce an integer overflow or wraparound when the logic assumes that the resulting value will always be larger than the original value. This occurs when an integer value is incremented to a value that is too large to store in the associated representation. When this occurs, the value may become a very small or negative number. Связанные CWE: ChildOf CWE-682, ChildOf CWE-682, ChildOf CWE-20, CanPrecede CWE-119. Типичное исправление: Ensure that all protocols are strictly defined, such that all out-of-bounds behavior can be identified simply, and require strict conformance to the protocol."
+  },
+  "20": {
+    "cwe_id": "CWE-20",
+    "name": "Improper Input Validation",
+    "description": "The product receives input or data, but it does not validate or incorrectly validates that the input has the properties that are required to process the data safely and correctly.",
+    "extended_description": "Input validation is a frequently-used technique for checking potentially dangerous inputs in order to ensure that the inputs are safe for processing within the code, or when communicating with other components. Input can consist of: raw data - strings, numbers, parameters, file contents, etc. metadata - information about the raw data, such as headers or size Data can be simple or structured. Struc",
+    "consequences": [
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (CPU)",
+          "DoS: Resource Consumption (Memory)"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Memory",
+          "Read Files or Directories"
+        ]
+      },
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality",
+          "Availability"
+        ],
+        "impact": [
+          "Modify Memory",
+          "Execute Unauthorized Code or Commands"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "707"
+      },
+      {
+        "nature": "PeerOf",
+        "cwe_id": "345"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "22"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "41"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "74"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "770"
+      }
+    ],
+    "mitigations": [
+      "Consider using language-theoretic security (LangSec) techniques that characterize inputs using a formal language and build \"recognizers\" for that language. This effectively requires parsing to be a distinct layer that ef",
+      "Use an input validation framework such as Struts or the OWASP ESAPI Validation API. Note that using a framework does not automatically address all input validation problems; be mindful of weaknesses that could arise from"
+    ],
+    "prompt_text": "CWE-20 — Improper Input Validation The product receives input or data, but it does not validate or incorrectly validates that the input has the properties that are required to process the data safely and correctly. Связанные CWE: ChildOf CWE-707, PeerOf CWE-345, CanPrecede CWE-22, CanPrecede CWE-41, CanPrecede CWE-74, CanPrecede CWE-119, CanPrecede CWE-770. Отличие от смежных: Ещё более широкий родитель: любая недостаточная валидация входа, которая может порождать 119/787/125/120 (и не только их — инъекции, path traversal и т.п.). Используй 20, если проблема в самой проверке входа, а не в конкретном буферном паттерне ниже по потоку. Типичное исправление: Consider using language-theoretic security (LangSec) techniques that characterize inputs using a formal language and build \"recognizers\" for that language. This effectively requires parsing to be a distinct layer that ef"
+  },
+  "200": {
+    "cwe_id": "CWE-200",
+    "name": "Exposure of Sensitive Information to an Unauthorized Actor",
+    "description": "The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information.",
+    "extended_description": "There are many different kinds of mistakes that introduce information exposures. The severity of the error can range widely, depending on the context in which the product operates, the type of sensitive information that is revealed, and the benefits it may provide to an attacker. Some kinds of sensitive information include: private, personal information, such as personal messages, financial data, ",
+    "consequences": [
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Application Data"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "668"
+      }
+    ],
+    "mitigations": [
+      "Compartmentalize the system to have \"safe\" areas where trust boundaries can be unambiguously drawn. Do not allow sensitive data to go outside of the trust boundary and always be careful when interfacing with a compartmen"
+    ],
+    "prompt_text": "CWE-200 — Exposure of Sensitive Information to an Unauthorized Actor The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information. Связанные CWE: ChildOf CWE-668. Типичное исправление: Compartmentalize the system to have \"safe\" areas where trust boundaries can be unambiguously drawn. Do not allow sensitive data to go outside of the trust boundary and always be careful when interfacing with a compartmen"
+  },
+  "269": {
+    "cwe_id": "CWE-269",
+    "name": "Improper Privilege Management",
+    "description": "The product does not properly assign, modify, track, or check privileges for an actor, creating an unintended sphere of control for that actor.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Access Control"
+        ],
+        "impact": [
+          "Gain Privileges or Assume Identity"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "284"
+      }
+    ],
+    "mitigations": [
+      "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+      "Follow the principle of least privilege when assigning access rights to entities in a software system."
+    ],
+    "prompt_text": "CWE-269 — Improper Privilege Management The product does not properly assign, modify, track, or check privileges for an actor, creating an unintended sphere of control for that actor. Связанные CWE: ChildOf CWE-284. Типичное исправление: Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software."
+  },
+  "284": {
+    "cwe_id": "CWE-284",
+    "name": "Improper Access Control",
+    "description": "The product does not restrict or incorrectly restricts access to a resource from an unauthorized actor.",
+    "extended_description": "Access control involves the use of several protection mechanisms such as: Authentication (proving the identity of an actor) Authorization (ensuring that a given actor can access a resource), and Accountability (tracking of activities that were performed) When any mechanism is not applied or otherwise fails, attackers can compromise the security of the product by gaining privileges, reading sensiti",
+    "consequences": [
+      {
+        "scope": [
+          "Other"
+        ],
+        "impact": [
+          "Varies by Context"
+        ]
+      }
+    ],
+    "related_weaknesses": [],
+    "mitigations": [
+      "Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software.",
+      "Compartmentalize the system to have \"safe\" areas where trust boundaries can be unambiguously drawn. Do not allow sensitive data to go outside of the trust boundary and always be careful when interfacing with a compartmen"
+    ],
+    "prompt_text": "CWE-284 — Improper Access Control The product does not restrict or incorrectly restricts access to a resource from an unauthorized actor. Типичное исправление: Very carefully manage the setting, management, and handling of privileges. Explicitly manage trust zones in the software."
+  },
+  "362": {
+    "cwe_id": "CWE-362",
+    "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+    "description": "The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence operating concurrently.",
+    "extended_description": "A race condition occurs within concurrent environments, and it is effectively a property of a code sequence. Depending on the context, a code sequence may be in the form of a function call, a small number of instructions, a series of program invocations, etc. A race condition violates these properties, which are closely related: Exclusivity - the code sequence is given exclusive access to the shar",
+    "consequences": [
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Resource Consumption (CPU)",
+          "DoS: Resource Consumption (Memory)",
+          "DoS: Resource Consumption (Other)"
+        ]
+      },
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Instability"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality",
+          "Integrity"
+        ],
+        "impact": [
+          "Read Files or Directories",
+          "Read Application Data"
+        ]
+      },
+      {
+        "scope": [
+          "Access Control"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands",
+          "Gain Privileges or Assume Identity",
+          "Bypass Protection Mechanism"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "662"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "416"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "476"
+      }
+    ],
+    "mitigations": [
+      "In languages that support it, use synchronization primitives. Only wrap these around critical code to minimize the impact on performance.",
+      "Use thread-safe capabilities such as the data access abstraction in Spring."
+    ],
+    "prompt_text": "CWE-362 — Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') The product contains a concurrent code sequence that requires temporary, exclusive access to a shared resource, but a timing window exists in which the shared resource can be modified by another code sequence operating concurrently. Связанные CWE: ChildOf CWE-662, CanPrecede CWE-416, CanPrecede CWE-476. Типичное исправление: In languages that support it, use synchronization primitives. Only wrap these around critical code to minimize the impact on performance."
+  },
+  "400": {
+    "cwe_id": "CWE-400",
+    "name": "Uncontrolled Resource Consumption",
+    "description": "The product does not properly control the allocation and maintenance of a limited resource.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart",
+          "DoS: Resource Consumption (CPU)",
+          "DoS: Resource Consumption (Memory)",
+          "DoS: Resource Consumption (Other)"
+        ]
+      },
+      {
+        "scope": [
+          "Access Control",
+          "Other"
+        ],
+        "impact": [
+          "Bypass Protection Mechanism",
+          "Other"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "664"
+      }
+    ],
+    "mitigations": [
+      "Design throttling mechanisms into the system architecture. The best protection is to limit the amount of resources that an unauthorized user can cause to be expended. A strong authentication and access control model will",
+      "Mitigation of resource exhaustion attacks requires that the target system either: recognizes the attack and denies that user further access for a given amount of time, or uniformly throttles all requests in order to make"
+    ],
+    "prompt_text": "CWE-400 — Uncontrolled Resource Consumption The product does not properly control the allocation and maintenance of a limited resource. Связанные CWE: ChildOf CWE-664. Типичное исправление: Design throttling mechanisms into the system architecture. The best protection is to limit the amount of resources that an unauthorized user can cause to be expended. A strong authentication and access control model will"
+  },
+  "404": {
+    "cwe_id": "CWE-404",
+    "name": "Improper Resource Shutdown or Release",
+    "description": "The product does not release or incorrectly releases a resource before it is made available for re-use.",
+    "extended_description": "When a resource is created or allocated, the developer is responsible for properly releasing the resource as well as accounting for all potential paths of expiration or invalidation, such as a set period of time or revocation.",
+    "consequences": [
+      {
+        "scope": [
+          "Availability",
+          "Other"
+        ],
+        "impact": [
+          "DoS: Resource Consumption (Other)",
+          "Varies by Context"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Application Data"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "664"
+      },
+      {
+        "nature": "PeerOf",
+        "cwe_id": "405"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "619"
+      }
+    ],
+    "mitigations": [
+      "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, languages such as Java, Ruby, and Lisp perform automatic garbage collection that rele",
+      "It is good practice to be responsible for freeing all resources you allocate and to be consistent with how and where you free memory in a function. If you allocate memory that you intend to free upon completion of the fu"
+    ],
+    "prompt_text": "CWE-404 — Improper Resource Shutdown or Release The product does not release or incorrectly releases a resource before it is made available for re-use. Связанные CWE: ChildOf CWE-664, PeerOf CWE-405, CanPrecede CWE-619. Типичное исправление: Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, languages such as Java, Ruby, and Lisp perform automatic garbage collection that rele"
+  },
+  "415": {
+    "cwe_id": "CWE-415",
+    "name": "Double Free",
+    "description": "The product calls free() twice on the same memory address.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality",
+          "Availability"
+        ],
+        "impact": [
+          "Modify Memory",
+          "Execute Unauthorized Code or Commands"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "825"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "1341"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "666"
+      },
+      {
+        "nature": "PeerOf",
+        "cwe_id": "416"
+      },
+      {
+        "nature": "PeerOf",
+        "cwe_id": "123"
+      }
+    ],
+    "mitigations": [
+      "Choose a language that provides automatic memory management.",
+      "Ensure that each allocation is freed only once. After freeing a chunk, set the pointer to NULL to ensure the pointer cannot be freed again. In complicated error conditions, be sure that clean-up routines respect the stat"
+    ],
+    "prompt_text": "CWE-415 — Double Free The product calls free() twice on the same memory address. Связанные CWE: ChildOf CWE-825, ChildOf CWE-1341, ChildOf CWE-672, ChildOf CWE-672, ChildOf CWE-672, ChildOf CWE-666, PeerOf CWE-416, PeerOf CWE-123. Типичное исправление: Choose a language that provides automatic memory management."
+  },
+  "416": {
+    "cwe_id": "CWE-416",
+    "name": "Use After Free",
+    "description": "The product reuses or references memory after it has been freed. At some point afterward, the memory may be allocated again and saved in another pointer, while the original pointer references a location somewhere within the new allocation. Any operations using the original pointer are no longer valid because the memory \"belongs\" to the code that operates on the new pointer.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Integrity"
+        ],
+        "impact": [
+          "Modify Memory"
+        ]
+      },
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart"
+        ]
+      },
+      {
+        "scope": [
+          "Confidentiality"
+        ],
+        "impact": [
+          "Read Memory"
+        ]
+      },
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality",
+          "Availability"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "825"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "672"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "120"
+      },
+      {
+        "nature": "CanPrecede",
+        "cwe_id": "123"
+      }
+    ],
+    "mitigations": [
+      "Choose a language that provides automatic memory management.",
+      "When freeing pointers, be sure to set them to NULL once they are freed. However, the utilization of multiple or complex data structures may lower the usefulness of this strategy."
+    ],
+    "prompt_text": "CWE-416 — Use After Free The product reuses or references memory after it has been freed. At some point afterward, the memory may be allocated again and saved in another pointer, while the original pointer references a location somewhere within the new allocation. Any operations using the original pointer are no longer valid because the memory \"belongs\" to the code that operates on the new pointer. Связанные CWE: ChildOf CWE-825, ChildOf CWE-672, ChildOf CWE-672, ChildOf CWE-672, CanPrecede CWE-120, CanPrecede CWE-123. Типичное исправление: Choose a language that provides automatic memory management."
+  },
+  "476": {
+    "cwe_id": "CWE-476",
+    "name": "NULL Pointer Dereference",
+    "description": "The product dereferences a pointer that it expects to be valid but is NULL.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart"
+        ]
+      },
+      {
+        "scope": [
+          "Integrity",
+          "Confidentiality"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands",
+          "Read Memory",
+          "Modify Memory"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "710"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "754"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "754"
+      }
+    ],
+    "mitigations": [
+      "For any pointers that could have been modified or provided from a function that can return NULL, check the pointer for NULL before use. When working with a multithreaded or otherwise asynchronous environment, ensure that",
+      "Select a programming language that is not susceptible to these issues."
+    ],
+    "prompt_text": "CWE-476 — NULL Pointer Dereference The product dereferences a pointer that it expects to be valid but is NULL. Связанные CWE: ChildOf CWE-710, ChildOf CWE-754, ChildOf CWE-754. Типичное исправление: For any pointers that could have been modified or provided from a function that can return NULL, check the pointer for NULL before use. When working with a multithreaded or otherwise asynchronous environment, ensure that"
+  },
+  "59": {
+    "cwe_id": "CWE-59",
+    "name": "Improper Link Resolution Before File Access ('Link Following')",
+    "description": "The product attempts to access a file based on the filename, but it does not properly prevent that filename from identifying a link or shortcut that resolves to an unintended resource.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Confidentiality",
+          "Integrity",
+          "Access Control"
+        ],
+        "impact": [
+          "Read Files or Directories",
+          "Modify Files or Directories",
+          "Bypass Protection Mechanism"
+        ]
+      },
+      {
+        "scope": [
+          "Other"
+        ],
+        "impact": [
+          "Execute Unauthorized Code or Commands"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "706"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "706"
+      }
+    ],
+    "mitigations": [
+      "Follow the principle of least privilege when assigning access rights to entities in a software system. Denying access to a file can prevent an attacker from replacing that file with a link to a sensitive file. Ensure goo"
+    ],
+    "prompt_text": "CWE-59 — Improper Link Resolution Before File Access ('Link Following') The product attempts to access a file based on the filename, but it does not properly prevent that filename from identifying a link or shortcut that resolves to an unintended resource. Связанные CWE: ChildOf CWE-706, ChildOf CWE-706. Типичное исправление: Follow the principle of least privilege when assigning access rights to entities in a software system. Denying access to a file can prevent an attacker from replacing that file with a link to a sensitive file. Ensure goo"
+  },
+  "787": {
+    "cwe_id": "CWE-787",
+    "name": "Out-of-bounds Write",
+    "description": "The product writes data past the end, or before the beginning, of the intended buffer.",
+    "extended_description": "",
+    "consequences": [
+      {
+        "scope": [
+          "Integrity"
+        ],
+        "impact": [
+          "Modify Memory",
+          "Execute Unauthorized Code or Commands"
+        ]
+      },
+      {
+        "scope": [
+          "Availability"
+        ],
+        "impact": [
+          "DoS: Crash, Exit, or Restart"
+        ]
+      },
+      {
+        "scope": [
+          "Other"
+        ],
+        "impact": [
+          "Unexpected State"
+        ]
+      }
+    ],
+    "related_weaknesses": [
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      },
+      {
+        "nature": "ChildOf",
+        "cwe_id": "119"
+      }
+    ],
+    "mitigations": [
+      "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n",
+      "Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. Examples include the Safe C String Library (SafeStr) by Messier and Viega [REF-"
+    ],
+    "prompt_text": "CWE-787 — Out-of-bounds Write The product writes data past the end, or before the beginning, of the intended buffer. Связанные CWE: ChildOf CWE-119, ChildOf CWE-119, ChildOf CWE-119, ChildOf CWE-119. Отличие от смежных: Конкретно ЗАПИСЬ за пределы буфера (переполнение при записи, out-of-bounds write) — самый опасный случай, часто ведёт к RCE через перезапись соседней памяти/указателей. Типичное исправление: Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid. For example, many languages that perform their own memory management, such as Java and Perl, are n"
+  }
+}

@@ -1,0 +1,774 @@
+{
+ "ARR00-C": {
+  "name": "Understand how arrays work",
+  "cwes": [
+   "CWE-119",
+   "CWE-129"
+  ]
+ },
+ "ARR01-C": {
+  "name": "Do not apply the sizeof operator to a pointer when taking the size of an array",
+  "cwes": [
+   "CWE-467"
+  ]
+ },
+ "ARR02-C": {
+  "name": "Explicitly specify array bounds, even if implicitly defined by an initializer",
+  "cwes": [
+   "CWE-665"
+  ]
+ },
+ "ARR30-C": {
+  "name": "Do not form or use out-of-bounds pointers or array subscripts",
+  "cwes": [
+   "CWE-119",
+   "CWE-123",
+   "CWE-125",
+   "CWE-129",
+   "CWE-786"
+  ]
+ },
+ "ARR32-C": {
+  "name": "Ensure size arguments for variable length arrays are in a valid range",
+  "cwes": [
+   "CWE-758"
+  ]
+ },
+ "ARR36-C": {
+  "name": "Do not subtract or compare two pointers that do not refer to the same array",
+  "cwes": [
+   "CWE-469"
+  ]
+ },
+ "ARR38-C": {
+  "name": "Guarantee that library functions do not form invalid pointers",
+  "cwes": [
+   "CWE-119",
+   "CWE-121",
+   "CWE-123",
+   "CWE-125",
+   "CWE-129",
+   "CWE-805"
+  ]
+ },
+ "ARR39-C": {
+  "name": "Do not add or subtract a scaled integer to a pointer",
+  "cwes": [
+   "CWE-468"
+  ]
+ },
+ "CON31-C": {
+  "name": "Do not destroy a mutex while it is locked",
+  "cwes": [
+   "CWE-667"
+  ]
+ },
+ "CON32-C": {
+  "name": "Prevent data races when accessing bit-fields from multiple threads",
+  "cwes": [
+   "CWE-366"
+  ]
+ },
+ "CON33-C": {
+  "name": "Avoid race conditions when using library functions",
+  "cwes": [
+   "CWE-330",
+   "CWE-377",
+   "CWE-676"
+  ]
+ },
+ "CON40-C": {
+  "name": "Do not refer to an atomic variable twice in an expression",
+  "cwes": [
+   "CWE-366"
+  ]
+ },
+ "CON43-C": {
+  "name": "Do not allow data races in multithreaded code",
+  "cwes": [
+   "CWE-366"
+  ]
+ },
+ "DCL06-C": {
+  "name": "Use meaningful symbolic constants to represent literal values in program logic",
+  "cwes": [
+   "CWE-547"
+  ]
+ },
+ "DCL10-C": {
+  "name": "Maintain the contract between the writer and caller of variadic functions",
+  "cwes": [
+   "CWE-628"
+  ]
+ },
+ "DCL30-C": {
+  "name": "Declare objects with appropriate storage durations",
+  "cwes": [
+   "CWE-562"
+  ]
+ },
+ "ENV01-C": {
+  "name": "Do not make assumptions about the size of an environment variable",
+  "cwes": [
+   "CWE-119"
+  ]
+ },
+ "ENV02-C": {
+  "name": "Beware of multiple environment variables with the same effective name",
+  "cwes": [
+   "CWE-462"
+  ]
+ },
+ "ENV03-C": {
+  "name": "Sanitize the environment when invoking external programs",
+  "cwes": [
+   "CWE-426",
+   "CWE-78",
+   "CWE-88"
+  ]
+ },
+ "ENV32-C": {
+  "name": "All exit handlers must return normally",
+  "cwes": [
+   "CWE-705"
+  ]
+ },
+ "ENV33-C": {
+  "name": "Do not call system()",
+  "cwes": [
+   "CWE-676",
+   "CWE-78",
+   "CWE-88"
+  ]
+ },
+ "ERR00-C": {
+  "name": "Adopt and implement a consistent and comprehensive error-handling policy",
+  "cwes": [
+   "CWE-391",
+   "CWE-544"
+  ]
+ },
+ "ERR04-C": {
+  "name": "Choose an appropriate termination strategy",
+  "cwes": [
+   "CWE-705"
+  ]
+ },
+ "ERR07-C": {
+  "name": "Prefer functions that support error checking over equivalent functions that don't",
+  "cwes": [
+   "CWE-20",
+   "CWE-676"
+  ]
+ },
+ "ERR30-C": {
+  "name": "Set errno to zero before calling a library function known to set errno,  and check errno only after the function returns a value indicating failure",
+  "cwes": [
+   "CWE-456"
+  ]
+ },
+ "ERR33-C": {
+  "name": "Detect and handle standard library errors",
+  "cwes": [
+   "CWE-252",
+   "CWE-253",
+   "CWE-391"
+  ]
+ },
+ "ERR34-C": {
+  "name": "Detect errors when converting a string to a number",
+  "cwes": [
+   "CWE-391",
+   "CWE-676",
+   "CWE-758"
+  ]
+ },
+ "EXP00-C": {
+  "name": "Use parentheses for precedence of operation",
+  "cwes": [
+   "CWE-783"
+  ]
+ },
+ "EXP05-C": {
+  "name": "Do not cast away a const qualification",
+  "cwes": [
+   "CWE-704"
+  ]
+ },
+ "EXP08-C": {
+  "name": "Ensure pointer arithmetic is used correctly",
+  "cwes": [
+   "CWE-468"
+  ]
+ },
+ "EXP30-C": {
+  "name": "Do not depend on the order of evaluation for side effects",
+  "cwes": [
+   "CWE-758"
+  ]
+ },
+ "EXP33-C": {
+  "name": "Do not read uninitialized memory",
+  "cwes": [
+   "CWE-758",
+   "CWE-908"
+  ]
+ },
+ "EXP34-C": {
+  "name": "Do not dereference null pointers",
+  "cwes": [
+   "CWE-476",
+   "CWE-690"
+  ]
+ },
+ "EXP37-C": {
+  "name": "Call functions with the correct number and type of arguments",
+  "cwes": [
+   "CWE-628",
+   "CWE-685",
+   "CWE-686"
+  ]
+ },
+ "EXP39-C": {
+  "name": "Do not access a variable through a pointer of an incompatible type",
+  "cwes": [
+   "CWE-119",
+   "CWE-125",
+   "CWE-704",
+   "CWE-843"
+  ]
+ },
+ "EXP45-C": {
+  "name": "Do not perform assignments in selection statements",
+  "cwes": [
+   "CWE-480",
+   "CWE-481"
+  ]
+ },
+ "EXP46-C": {
+  "name": "Do not use a bitwise operator with a Boolean-like operand",
+  "cwes": [
+   "CWE-480"
+  ]
+ },
+ "FIO01-C": {
+  "name": "Be careful using functions that use file names for identification",
+  "cwes": [
+   "CWE-367",
+   "CWE-676"
+  ]
+ },
+ "FIO02-C": {
+  "name": "Canonicalize path names originating from untrusted sources",
+  "cwes": [
+   "CWE-22",
+   "CWE-41",
+   "CWE-59"
+  ]
+ },
+ "FIO05-C": {
+  "name": "Identify files using multiple file attributes",
+  "cwes": [
+   "CWE-37",
+   "CWE-38",
+   "CWE-39",
+   "CWE-62",
+   "CWE-64",
+   "CWE-65"
+  ]
+ },
+ "FIO06-C": {
+  "name": "Create files with appropriate access permissions",
+  "cwes": [
+   "CWE-276",
+   "CWE-279",
+   "CWE-732"
+  ]
+ },
+ "FIO15-C": {
+  "name": "Ensure that file operations are performed in a secure directory",
+  "cwes": [
+   "CWE-379",
+   "CWE-552"
+  ]
+ },
+ "FIO30-C": {
+  "name": "Exclude user input from format strings",
+  "cwes": [
+   "CWE-134",
+   "CWE-20"
+  ]
+ },
+ "FIO32-C": {
+  "name": "Do not perform operations on devices that are only appropriate for files",
+  "cwes": [
+   "CWE-67"
+  ]
+ },
+ "FIO34-C": {
+  "name": "Distinguish between characters read from a file and EOF or WEOF",
+  "cwes": [
+   "CWE-197"
+  ]
+ },
+ "FIO37-C": {
+  "name": "Do not assume that fgets() or fgetws() returns a nonempty string when successful",
+  "cwes": [
+   "CWE-119",
+   "CWE-241"
+  ]
+ },
+ "FIO39-C": {
+  "name": "Do not alternately input and output from a stream without an intervening flush or positioning call",
+  "cwes": [
+   "CWE-664"
+  ]
+ },
+ "FIO42-C": {
+  "name": "Close files when they are no longer needed",
+  "cwes": [
+   "CWE-403",
+   "CWE-404",
+   "CWE-459",
+   "CWE-771",
+   "CWE-772",
+   "CWE-773",
+   "CWE-775"
+  ]
+ },
+ "FIO46-C": {
+  "name": "Do not access a closed file",
+  "cwes": [
+   "CWE-666",
+   "CWE-672",
+   "CWE-758",
+   "CWE-910"
+  ]
+ },
+ "FIO47-C": {
+  "name": "Use valid format strings",
+  "cwes": [
+   "CWE-134",
+   "CWE-685",
+   "CWE-686"
+  ]
+ },
+ "FLP03-C": {
+  "name": "Detect and handle floating point errors",
+  "cwes": [
+   "CWE-369"
+  ]
+ },
+ "FLP32-C": {
+  "name": "Prevent or detect domain and range errors in math functions",
+  "cwes": [
+   "CWE-391",
+   "CWE-682"
+  ]
+ },
+ "FLP34-C": {
+  "name": "Ensure that floating point conversions are within range of the new type",
+  "cwes": [
+   "CWE-197",
+   "CWE-681"
+  ]
+ },
+ "INT02-C": {
+  "name": "Understand integer conversion rules",
+  "cwes": [
+   "CWE-192",
+   "CWE-197"
+  ]
+ },
+ "INT05-C": {
+  "name": "Do not use input functions to convert character data if they cannot handle all possible inputs",
+  "cwes": [
+   "CWE-192",
+   "CWE-197"
+  ]
+ },
+ "INT07-C": {
+  "name": "Use only explicitly signed or unsigned char type for numeric values",
+  "cwes": [
+   "CWE-682"
+  ]
+ },
+ "INT13-C": {
+  "name": "Use bitwise operators only on unsigned operands",
+  "cwes": [
+   "CWE-682"
+  ]
+ },
+ "INT15-C": {
+  "name": "Use intmax_t or uintmax_t for formatted IO on programmer-defined integer types",
+  "cwes": [
+   "CWE-681"
+  ]
+ },
+ "INT18-C": {
+  "name": "Evaluate integer expressions in a larger size before comparing or assigning to that size",
+  "cwes": [
+   "CWE-190"
+  ]
+ },
+ "INT30-C": {
+  "name": "Ensure that unsigned integer operations do not wrap",
+  "cwes": [
+   "CWE-131",
+   "CWE-190",
+   "CWE-191",
+   "CWE-680"
+  ]
+ },
+ "INT31-C": {
+  "name": "Ensure that integer conversions do not result in lost or misinterpreted data",
+  "cwes": [
+   "CWE-192",
+   "CWE-194",
+   "CWE-195",
+   "CWE-197",
+   "CWE-681",
+   "CWE-704"
+  ]
+ },
+ "INT32-C": {
+  "name": "Ensure that operations on signed integers do not result in overflow",
+  "cwes": [
+   "CWE-129",
+   "CWE-190",
+   "CWE-191",
+   "CWE-680"
+  ]
+ },
+ "INT33-C": {
+  "name": "Ensure that division and remainder operations do not result in divide-by-zero errors",
+  "cwes": [
+   "CWE-369",
+   "CWE-682"
+  ]
+ },
+ "INT34-C": {
+  "name": "Do not shift an expression by a negative number of bits or by greater than or equal  to the number of bits that exist in the operand",
+  "cwes": [
+   "CWE-682",
+   "CWE-758"
+  ]
+ },
+ "INT35-C": {
+  "name": "Evaluate integer expressions in a larger size before comparing or assigning to that size",
+  "cwes": [
+   "CWE-190",
+   "CWE-681"
+  ]
+ },
+ "INT36-C": {
+  "name": "Converting a pointer to integer or integer to pointer",
+  "cwes": [
+   "CWE-587",
+   "CWE-704",
+   "CWE-758"
+  ]
+ },
+ "MEM00-C": {
+  "name": "Allocate and free memory in the same module, at the same level of abstraction",
+  "cwes": [
+   "CWE-415",
+   "CWE-416"
+  ]
+ },
+ "MEM01-C": {
+  "name": "Store a new value in pointers immediately after free()",
+  "cwes": [
+   "CWE-415",
+   "CWE-416"
+  ]
+ },
+ "MEM03-C": {
+  "name": "Clear sensitive information stored in reusable resources returned for reuse",
+  "cwes": [
+   "CWE-226",
+   "CWE-244"
+  ]
+ },
+ "MEM04-C": {
+  "name": "Do not perform zero length allocations",
+  "cwes": [
+   "CWE-687"
+  ]
+ },
+ "MEM06-C": {
+  "name": "Ensure that sensitive data is not written out to disk",
+  "cwes": [
+   "CWE-528",
+   "CWE-591"
+  ]
+ },
+ "MEM07-C": {
+  "name": "Ensure that the arguments to calloc(), when multiplied, do not wrap",
+  "cwes": [
+   "CWE-128",
+   "CWE-190"
+  ]
+ },
+ "MEM10-C": {
+  "name": "Define and use a pointer validation function",
+  "cwes": [
+   "CWE-20"
+  ]
+ },
+ "MEM30-C": {
+  "name": "Do not access freed memory",
+  "cwes": [
+   "CWE-415",
+   "CWE-416",
+   "CWE-666",
+   "CWE-672",
+   "CWE-758"
+  ]
+ },
+ "MEM31-C": {
+  "name": "Free dynamically allocated memory when no longer needed",
+  "cwes": [
+   "CWE-401",
+   "CWE-404",
+   "CWE-415",
+   "CWE-459",
+   "CWE-771",
+   "CWE-772"
+  ]
+ },
+ "MEM34-C": {
+  "name": "Only free memory allocated dynamically",
+  "cwes": [
+   "CWE-590"
+  ]
+ },
+ "MEM35-C": {
+  "name": "Allocate sufficient memory for an object",
+  "cwes": [
+   "CWE-131",
+   "CWE-190",
+   "CWE-467",
+   "CWE-680",
+   "CWE-789"
+  ]
+ },
+ "MSC00-C": {
+  "name": "Compile cleanly at high warning levels",
+  "cwes": [
+   "CWE-563",
+   "CWE-570",
+   "CWE-571"
+  ]
+ },
+ "MSC06-C": {
+  "name": "Be aware of compiler optimization when dealing with sensitive data",
+  "cwes": [
+   "CWE-14"
+  ]
+ },
+ "MSC07-C": {
+  "name": "Detect and remove dead code",
+  "cwes": [
+   "CWE-561"
+  ]
+ },
+ "MSC10-C": {
+  "name": "Character Encoding - UTF8 Related Issues",
+  "cwes": [
+   "CWE-176"
+  ]
+ },
+ "MSC14-C": {
+  "name": "Do not introduce unnecessary platform dependencies",
+  "cwes": [
+   "CWE-758"
+  ]
+ },
+ "MSC15-C": {
+  "name": "Do not depend on undefined behavior",
+  "cwes": [
+   "CWE-758"
+  ]
+ },
+ "MSC30-C": {
+  "name": "Do not use the rand() function for generating pseudorandom numbers",
+  "cwes": [
+   "CWE-327",
+   "CWE-330",
+   "CWE-338",
+   "CWE-676"
+  ]
+ },
+ "MSC32-C": {
+  "name": "Properly seed pseudorandom number generators",
+  "cwes": [
+   "CWE-327",
+   "CWE-330",
+   "CWE-331"
+  ]
+ },
+ "MSC37-C": {
+  "name": "Ensure that control never reaches the end of a non-void function",
+  "cwes": [
+   "CWE-758"
+  ]
+ },
+ "POS01-C": {
+  "name": "Check for the existence of links when dealing with files",
+  "cwes": [
+   "CWE-59"
+  ]
+ },
+ "POS02-C": {
+  "name": "Follow the principle of least privilege",
+  "cwes": [
+   "CWE-272"
+  ]
+ },
+ "POS30-C": {
+  "name": "Use the readlink() function properly",
+  "cwes": [
+   "CWE-170"
+  ]
+ },
+ "POS33-C": {
+  "name": "Do not use vfork()",
+  "cwes": [
+   "CWE-242"
+  ]
+ },
+ "POS34-C": {
+  "name": "Do not call putenv() with a pointer to an automatic variable as the argument",
+  "cwes": [
+   "CWE-562",
+   "CWE-686"
+  ]
+ },
+ "POS35-C": {
+  "name": "Avoid race conditions while checking for the existence of a symbolic link",
+  "cwes": [
+   "CWE-363"
+  ]
+ },
+ "POS36-C": {
+  "name": "Observe correct revocation order while relinquishing privileges",
+  "cwes": [
+   "CWE-696"
+  ]
+ },
+ "POS37-C": {
+  "name": "Ensure that privilege relinquishment is successful",
+  "cwes": [
+   "CWE-273"
+  ]
+ },
+ "POS48-C": {
+  "name": "Do not unlock or destroy another POSIX thread's mutex",
+  "cwes": [
+   "CWE-667"
+  ]
+ },
+ "POS54-C": {
+  "name": "Detect and handle POSIX library errors",
+  "cwes": [
+   "CWE-252",
+   "CWE-253",
+   "CWE-391"
+  ]
+ },
+ "PRE09-C": {
+  "name": "Do not replace secure functions with less secure functions",
+  "cwes": [
+   "CWE-684"
+  ]
+ },
+ "SIG00-C": {
+  "name": "Mask signals handled by noninterruptible signal handlers",
+  "cwes": [
+   "CWE-432",
+   "CWE-662"
+  ]
+ },
+ "SIG30-C": {
+  "name": "Call only asynchronous-safe functions within signal handlers",
+  "cwes": [
+   "CWE-479"
+  ]
+ },
+ "SIG31-C": {
+  "name": "Do not access or modify shared objects in signal handlers",
+  "cwes": [
+   "CWE-662",
+   "CWE-828"
+  ]
+ },
+ "SIG34-C": {
+  "name": "Do not call signal() from within interruptible signal handlers",
+  "cwes": [
+   "CWE-479"
+  ]
+ },
+ "STR02-C": {
+  "name": "Sanitize data passed to complex subsystems",
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ]
+ },
+ "STR03-C": {
+  "name": "Do not inadvertently truncate a null-terminated byte string",
+  "cwes": [
+   "CWE-170",
+   "CWE-464"
+  ]
+ },
+ "STR06-C": {
+  "name": "Do not assume that strtok() leaves the parse string unchanged",
+  "cwes": [
+   "CWE-464"
+  ]
+ },
+ "STR31-C": {
+  "name": "Guarantee that storage for strings has sufficient space for character data and the null terminator",
+  "cwes": [
+   "CWE-119",
+   "CWE-120",
+   "CWE-121",
+   "CWE-122",
+   "CWE-123",
+   "CWE-125",
+   "CWE-193",
+   "CWE-676"
+  ]
+ },
+ "STR32-C": {
+  "name": "Do not pass a non-null-terminated character sequence to a library function that expects a string",
+  "cwes": [
+   "CWE-119",
+   "CWE-123",
+   "CWE-125",
+   "CWE-170"
+  ]
+ },
+ "STR34-C": {
+  "name": "Cast characters to unsigned types before converting to larger integer sizes",
+  "cwes": [
+   "CWE-704"
+  ]
+ },
+ "STR37-C": {
+  "name": "Arguments to character handling functions must be representable as an unsigned char",
+  "cwes": [
+   "CWE-686",
+   "CWE-704"
+  ]
+ },
+ "WIN30-C": {
+  "name": "Properly pair allocation and deallocation functions",
+  "cwes": [
+   "CWE-590",
+   "CWE-762"
+  ]
+ }
+}

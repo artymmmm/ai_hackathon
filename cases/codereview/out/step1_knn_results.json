@@ -1,0 +1,207 @@
+{
+  "n_train_pool": 16973,
+  "n_train_pool_vulnerable": 724,
+  "n_eval": 150,
+  "n_eval_vulnerable": 50,
+  "feature_shape_pool": [
+    16973,
+    100000
+  ],
+  "feature_shape_eval": [
+    150,
+    100000
+  ],
+  "cv_selection": {
+    "all_candidates": [
+      {
+        "model": "logreg",
+        "params": {
+          "C": 1.0
+        },
+        "cv": {
+          "threshold": 0.5974,
+          "precision": 0.2762063227953411,
+          "recall": 0.2292817679558011,
+          "f1": 0.25056603773584907,
+          "fpr": 0.026770878207889717,
+          "tp": 166,
+          "fp": 435,
+          "fn": 558,
+          "tn": 15814
+        }
+      },
+      {
+        "model": "logreg",
+        "params": {
+          "C": 0.1
+        },
+        "cv": {
+          "threshold": 0.6156,
+          "precision": 0.21460176991150443,
+          "recall": 0.26795580110497236,
+          "f1": 0.2383292383292383,
+          "fpr": 0.04369499661517632,
+          "tp": 194,
+          "fp": 710,
+          "fn": 530,
+          "tn": 15539
+        }
+      },
+      {
+        "model": "knn",
+        "params": {
+          "k": 5
+        },
+        "cv": {
+          "threshold": 0.2358,
+          "precision": 0.24079320113314448,
+          "recall": 0.23480662983425415,
+          "f1": 0.23776223776223773,
+          "fpr": 0.032986645332020434,
+          "tp": 170,
+          "fp": 536,
+          "fn": 554,
+          "tn": 15713
+        }
+      },
+      {
+        "model": "logreg",
+        "params": {
+          "C": 10.0
+        },
+        "cv": {
+          "threshold": 0.3561,
+          "precision": 0.21948356807511737,
+          "recall": 0.25828729281767954,
+          "f1": 0.23730964467005075,
+          "fpr": 0.04092559542125669,
+          "tp": 187,
+          "fp": 665,
+          "fn": 537,
+          "tn": 15584
+        }
+      },
+      {
+        "model": "knn",
+        "params": {
+          "k": 15
+        },
+        "cv": {
+          "threshold": 0.1984,
+          "precision": 0.24405705229793978,
+          "recall": 0.212707182320442,
+          "f1": 0.22730627306273063,
+          "fpr": 0.029355652655548035,
+          "tp": 154,
+          "fp": 477,
+          "fn": 570,
+          "tn": 15772
+        }
+      },
+      {
+        "model": "knn",
+        "params": {
+          "k": 51
+        },
+        "cv": {
+          "threshold": 0.1179,
+          "precision": 0.1918781725888325,
+          "recall": 0.2610497237569061,
+          "f1": 0.22118197776477475,
+          "fpr": 0.04898763000800049,
+          "tp": 189,
+          "fp": 796,
+          "fn": 535,
+          "tn": 15453
+        }
+      },
+      {
+        "model": "knn",
+        "params": {
+          "k": 31
+        },
+        "cv": {
+          "threshold": 0.1598,
+          "precision": 0.24333333333333335,
+          "recall": 0.20165745856353592,
+          "f1": 0.22054380664652568,
+          "fpr": 0.027940180934211335,
+          "tp": 146,
+          "fp": 454,
+          "fn": 578,
+          "tn": 15795
+        }
+      }
+    ],
+    "best": {
+      "model": "logreg",
+      "params": {
+        "C": 1.0
+      },
+      "cv": {
+        "threshold": 0.5974,
+        "precision": 0.2762063227953411,
+        "recall": 0.2292817679558011,
+        "f1": 0.25056603773584907,
+        "fpr": 0.026770878207889717,
+        "tp": 166,
+        "fp": 435,
+        "fn": 558,
+        "tn": 15814
+      }
+    }
+  },
+  "best_model": {
+    "model": "logreg",
+    "params": {
+      "C": 1.0
+    }
+  },
+  "eval_metrics_frozen_threshold": {
+    "threshold": 0.5974,
+    "precision": 0.9285714285714286,
+    "recall": 0.26,
+    "f1": 0.40625,
+    "fpr": 0.01,
+    "tp": 13,
+    "fp": 1,
+    "fn": 37,
+    "tn": 99
+  },
+  "eval_metrics_default_threshold_0.5": {
+    "threshold": 0.5,
+    "precision": 0.8181818181818182,
+    "recall": 0.36,
+    "f1": 0.5,
+    "fpr": 0.04,
+    "tp": 18,
+    "fp": 4,
+    "fn": 32,
+    "tn": 96
+  },
+  "second_best_model_eval": {
+    "model": "logreg",
+    "params": {
+      "C": 0.1
+    },
+    "metrics": {
+      "threshold": 0.6156,
+      "precision": 0.75,
+      "recall": 0.3,
+      "f1": 0.4285714285714285,
+      "fpr": 0.05,
+      "tp": 15,
+      "fp": 5,
+      "fn": 35,
+      "tn": 95
+    }
+  },
+  "baseline_all_secure_accuracy": 0.6666666666666666,
+  "llm_deepseek_chat_baseline": {
+    "precision": 0.538,
+    "recall": 0.14,
+    "f1": 0.222,
+    "fpr": 0.06
+  },
+  "elapsed_s": 127.5
+}

@@ -1,0 +1,23 @@
+=== gc-max | GigaChat-2-Max | 2026-08-26 16:49:51 ===
+
+--- кейс 3 (150 фрагментов, фиксированный набор) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/case3_verdicts.xlsx
+  json -> out/case3_verdicts.json
+  llm usage: {"calls": 182, "cache_hits": 0, "prompt_tokens": 101274, "completion_tokens": 34993, "total_tokens": 136267, "cost_usd": 0.0}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.643  recall(vulnerable)=0.180  f1(vulnerable)=0.281  fpr=0.050  accuracy=0.693
+baseline «всё secure»: accuracy=0.667 на 50 истинных vulnerable из 150 (мы выше)
+escalation_rate (verdict=uncertain): 0.020 (3 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.000 (верно 0 из 6 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic}] [--base-url BASE_URL]
+                   [--api-key-env API_KEY_ENV] [--cache-path CACHE_PATH]
+evaluate.py: error: argument --backend: invalid choice: 'gigachat' (choose from openai_compat, anthropic)
+
+--- кейс 2 (n=1000) ---
