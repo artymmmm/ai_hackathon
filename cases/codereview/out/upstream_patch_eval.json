@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "n_candidates": 7,
+    "n_with_upstream_fix": 6,
+    "mean_touched_decile_overlap": 0.4056,
+    "mean_text_similarity_to_upstream": 0.7992,
+    "mean_new_token_overlap": 0.1333,
+    "same_triage_resolution_outcome_share": 1.0
+  },
+  "details": [
+    {
+      "doc_id": "181024",
+      "code": "frag6_print(netdissect_options *ndo, register const u_char *bp, register const u_char *bp2)\n{\nregister const struct ip6_frag *dp;\nregister const struct ip6_hdr *ip6;\n\ndp = (const struct ip6_frag *)bp;\nip6 = (const struct ip6_hdr *)bp2;\n\n\tND_TCHECK(dp->ip6f_offlg);\n\nif (ndo->ndo_vflag) {\nND_PRINT((ndo, \"frag (0x%08x:%d|%ld)\",\nEXTRACT_32BITS(&dp->ip6f_ident),\nEXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK,\nsizeof(struct ip6_hdr) + EXTRACT_16BITS(&ip6->ip6_plen) -\n(long)(bp - bp2) - sizeof(struct ip6_frag)));\n} else {\nND_PRINT((ndo, \"frag (%d|%ld)\",\nEXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK,\nsizeof(struct ip6_hdr) + EXTRACT_16BITS(&ip6->ip6_plen) -\n(long)(bp - bp2) - sizeof(struct ip6_frag)));\n}\n\n/* it is meaningless to decode non-first fragment */\nif ((EXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK) != 0)\nreturn -1;\nelse\n{\nND_PRINT((ndo, \" \"));\nreturn sizeof(struct ip6_frag);\n}\ntrunc:\nND_PRINT((ndo, \"[|frag]\"));\nreturn -1;\n}\n",
+      "patched_code": "frag6_print(netdissect_options *ndo, register const u_char *bp, register const u_char *bp2)\n{\nregister const struct ip6_frag *dp;\nregister const struct ip6_hdr *ip6;\n\ndp = (const struct ip6_frag *)bp;\nip6 = (const struct ip6_hdr *)bp2;\n\n\tND_TCHECK(dp->ip6f_offlg);\n\tND_TCHECK(ip6->ip6_plen);\n\nif (ndo->ndo_vflag) {\nND_PRINT((ndo, \"frag (0x%08x:%d|%ld)\",\nEXTRACT_32BITS(&dp->ip6f_ident),\nEXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK,\nsizeof(struct ip6_hdr) + EXTRACT_16BITS(&ip6->ip6_plen) -\n(long)(bp - bp2) - sizeof(struct ip6_frag)));\n} else {\nND_PRINT((ndo, \"frag (%d|%ld)\",\nEXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK,\nsizeof(struct ip6_hdr) + EXTRACT_16BITS(&ip6->ip6_plen) -\n(long)(bp - bp2) - sizeof(struct ip6_frag)));\n}\n\n/* it is meaningless to decode non-first fragment */\nif ((EXTRACT_16BITS(&dp->ip6f_offlg) & IP6F_OFF_MASK) != 0)\nreturn -1;\nelse\n{\nND_PRINT((ndo, \" \"));\nreturn sizeof(struct ip6_frag);\n}\ntrunc:\nND_PRINT((ndo, \"[|frag]\"));\nreturn -1;\n}\n",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-125",
+      "upstream_project": "tcpdump",
+      "touched_decile_overlap": 0.1,
+      "text_similarity_to_upstream": 0.9773,
+      "new_token_overlap": null,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    },
+    {
+      "doc_id": "178828",
+      "code": "xfs_acl_from_disk(struct xfs_acl *aclp)\n{\n\tstruct posix_acl_entry *acl_e;\n\tstruct posix_acl *acl;\n\tstruct xfs_acl_entry *ace;\n \tint count, i;\n \n \tcount = be32_to_cpu(aclp->acl_cnt);\n \n \tacl = posix_acl_alloc(count, GFP_KERNEL);\n \tif (!acl)\n\t\treturn ERR_PTR(-ENOMEM);\n\n\tfor (i = 0; i < count; i++) {\n\t\tacl_e = &acl->a_entries[i];\n\t\tace = &aclp->acl_entry[i];\n\n\t\t/*\n\t\t * The tag is 32 bits on disk and 16 bits in core.\n\t\t *\n\t\t * Because every access to it goes through the core\n\t\t * format first this is not a problem.\n\t\t */\n\t\tacl_e->e_tag = be32_to_cpu(ace->ae_tag);\n\t\tacl_e->e_perm = be16_to_cpu(ace->ae_perm);\n\n\t\tswitch (acl_e->e_tag) {\n\t\tcase ACL_USER:\n\t\tcase ACL_GROUP:\n\t\t\tacl_e->e_id = be32_to_cpu(ace->ae_id);\n\t\t\tbreak;\n\t\tcase ACL_USER_OBJ:\n\t\tcase ACL_GROUP_OBJ:\n\t\tcase ACL_MASK:\n\t\tcase ACL_OTHER:\n\t\t\tacl_e->e_id = ACL_UNDEFINED_ID;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tgoto fail;\n\t\t}\n\t}\n\treturn acl;\n\nfail:\n\tposix_acl_release(acl);\n\treturn ERR_PTR(-EINVAL);\n}\n",
+      "patched_code": "xfs_acl_from_disk(struct xfs_acl *aclp)\n{\n\tstruct posix_acl_entry *acl_e;\n\tstruct posix_acl *acl;\n\tstruct xfs_acl_entry *ace;\n \tint count, i;\n \n \tcount = be32_to_cpu(aclp->acl_cnt);\n \tif (count > XFS_ACL_MAX_ENTRIES)\n\t\treturn ERR_PTR(-EINVAL);\n \n \tacl = posix_acl_alloc(count, GFP_KERNEL);\n \tif (!acl)\n\t\treturn ERR_PTR(-ENOMEM);\n\n\tfor (i = 0; i < count; i++) {\n\t\tacl_e = &acl->a_entries[i];\n\t\tace = &aclp->acl_entry[i];\n\n\t\tacl_e->e_tag = be32_to_cpu(ace->ae_tag);\n\t\tacl_e->e_perm = be16_to_cpu(ace->ae_perm);\n\n\t\tswitch (acl_e->e_tag) {\n\t\tcase ACL_USER:\n\t\tcase ACL_GROUP:\n\t\t\tacl_e->e_id = be32_to_cpu(ace->ae_id);\n\t\t\tbreak;\n\t\tcase ACL_USER_OBJ:\n\t\tcase ACL_GROUP_OBJ:\n\t\tcase ACL_MASK:\n\t\tcase ACL_OTHER:\n\t\t\tacl_e->e_id = ACL_UNDEFINED_ID;\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tgoto fail;\n\t\t}\n\t}\n\treturn acl;\n\nfail:\n\tposix_acl_release(acl);\n\treturn ERR_PTR(-EINVAL);\n}\n",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-189",
+      "upstream_project": "linux",
+      "touched_decile_overlap": 0.3333333333333333,
+      "text_similarity_to_upstream": 0.9048,
+      "new_token_overlap": 0.6666666666666666,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    },
+    {
+      "doc_id": "179612",
+      "code": "BOOL license_read_scope_list(wStream* s, SCOPE_LIST* scopeList)\n{\n\tUINT32 i;\n\tUINT32 scopeCount;\n\n\tif (Stream_GetRemainingLength(s) < 4)\n\t\treturn FALSE;\n \n \tStream_Read_UINT32(s, scopeCount); /* ScopeCount (4 bytes) */\n \n \tscopeList->count = scopeCount;\n \tscopeList->array = (LICENSE_BLOB*) malloc(sizeof(LICENSE_BLOB) * scopeCount);\n \n\t/* ScopeArray */\n\tfor (i = 0; i < scopeCount; i++)\n\t{\n\t\tscopeList->array[i].type = BB_SCOPE_BLOB;\n\n\t\tif (!license_read_binary_blob(s, &scopeList->array[i]))\n\t\t\treturn FALSE;\n\t}\n\n\treturn TRUE;\n}\n",
+      "patched_code": "BOOL license_read_scope_list(wStream* s, SCOPE_LIST* scopeList)\n{\n\tUINT32 i;\n\tUINT32 scopeCount;\n\n\tif (Stream_GetRemainingLength(s) < 4)\n\t\treturn FALSE;\n\n\tStream_Read_UINT32(s, scopeCount); /* ScopeCount (4 bytes) */\n\n\tif (scopeCount > (UINT32)(UINT16_MAX / sizeof(LICENSE_BLOB)))\n\t\treturn FALSE;\n\n\tscopeList->count = scopeCount;\n\tscopeList->array = (LICENSE_BLOB*) malloc(sizeof(LICENSE_BLOB) * scopeCount);\n\n\tif (!scopeList->array)\n\t\treturn FALSE;\n\n\t/* ScopeArray */\n\tfor (i = 0; i < scopeCount; i++)\n\t{\n\t\tscopeList->array[i].type = BB_SCOPE_BLOB;\n\n\t\tif (!license_read_binary_blob(s, &scopeList->array[i]))\n\t\t\treturn FALSE;\n\t}\n\n\treturn TRUE;\n}\n",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": false
+    },
+    {
+      "doc_id": "178922",
+      "code": "static int sgi_clock_set(clockid_t clockid, struct timespec *tp)\n{\n\nu64 nsec;\n\tu64 rem;\n\nnsec = rtc_time() * sgi_clock_period;\n\n\tsgi_clock_offset.tv_sec = tp->tv_sec - div_long_long_rem(nsec, NSEC_PER_SEC, &rem);\n\nif (rem <= tp->tv_nsec)\nsgi_clock_offset.tv_nsec = tp->tv_sec - rem;\nelse {\nsgi_clock_offset.tv_nsec = tp->tv_sec + NSEC_PER_SEC - rem;\nsgi_clock_offset.tv_sec--;\n}\nreturn 0;\n}\n",
+      "patched_code": "static int sgi_clock_set(clockid_t clockid, struct timespec *tp)\n{\n    u64 nsec;\n    u64 rem;\n\n    if (!tp)\n        return -EINVAL;\n    if (tp->tv_nsec < 0 || tp->tv_nsec >= NSEC_PER_SEC)\n        return -EINVAL;\n\n    nsec = rtc_time() * sgi_clock_period;\n\n    sgi_clock_offset.tv_sec = tp->tv_sec - div_long_long_rem(nsec, NSEC_PER_SEC, &rem);\n\n    if (rem <= tp->tv_nsec)\n        sgi_clock_offset.tv_nsec = tp->tv_nsec - rem;\n    else {\n        sgi_clock_offset.tv_nsec = tp->tv_nsec + NSEC_PER_SEC - rem;\n        sgi_clock_offset.tv_sec--;\n    }\n    return 0;\n}",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-189",
+      "upstream_project": "linux",
+      "touched_decile_overlap": 0.9,
+      "text_similarity_to_upstream": 0.4447,
+      "new_token_overlap": 0.0,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    },
+    {
+      "doc_id": "182881",
+      "code": "static int burl_normalize_2F_to_slash_fix (buffer *b, int qs, int i)\n{\nchar * const s = b->ptr;\nconst int blen = (int)buffer_string_length(b);\nconst int used = qs < 0 ? blen : qs;\nint j = i;\nfor (; i < used; ++i, ++j) {\ns[j] = s[i];\nif (s[i] == '%' && s[i+1] == '2' && s[i+2] == 'F') {\ns[j] = '/';\ni+=2;\n}\n}\nif (qs >= 0) {\n        memmove(s+j, s+qs, blen - qs);\n        j += blen - qs;\n}\nbuffer_string_set_length(b, j);\nreturn qs;\n}\n",
+      "patched_code": "static int burl_normalize_2F_to_slash_fix (buffer *b, int qs, int i)\n{\nchar * const s = b->ptr;\nconst int blen = (int)buffer_string_length(b);\nconst int used = qs < 0 ? blen : qs;\nint j = i;\nfor (; i < used; ++i, ++j) {\ns[j] = s[i];\nif (s[i] == '%' && i+2 < used && s[i+1] == '2' && s[i+2] == 'F') {\ns[j] = '/';\ni+=2;\n}\n}\nif (qs >= 0) {\n        memmove(s+j, s+qs, blen - qs);\n        j += blen - qs;\n}\nbuffer_string_set_length(b, j);\nreturn qs;\n}",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-190",
+      "upstream_project": "lighttpd1.4",
+      "touched_decile_overlap": 0.1111111111111111,
+      "text_similarity_to_upstream": 0.7579,
+      "new_token_overlap": 0.0,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    },
+    {
+      "doc_id": "179607",
+      "code": "static int raw_cmd_copyin(int cmd, void __user *param,\nstruct floppy_raw_cmd **rcmd)\n{\nstruct floppy_raw_cmd *ptr;\nint ret;\nint i;\n\n*rcmd = NULL;\n\nloop:\nptr = kmalloc(sizeof(struct floppy_raw_cmd), GFP_USER);\nif (!ptr)\nreturn -ENOMEM;\n*rcmd = ptr;\nret = copy_from_user(ptr, param, sizeof(*ptr));\n\tif (ret)\n\t\treturn -EFAULT;\nptr->next = NULL;\nptr->buffer_length = 0;\nparam += sizeof(struct floppy_raw_cmd);\nif (ptr->cmd_count > 33)\n/* the command may now also take up the space\n* initially intended for the reply & the\n* reply count. Needed for long 82078 commands\n* such as RESTORE, which takes ... 17 command\n* bytes. Murphy's law #137: When you reserve\n* 16 bytes for a structure, you'll one day\n* discover that you really need 17...\n*/\nreturn -EINVAL;\n\nfor (i = 0; i < 16; i++)\nptr->reply[i] = 0;\nptr->resultcode = 0;\n\tptr->kernel_data = NULL;\n\nif (ptr->flags & (FD_RAW_READ | FD_RAW_WRITE)) {\nif (ptr->length <= 0)\nreturn -EINVAL;\nptr->kernel_data = (char *)fd_dma_mem_alloc(ptr->length);\nfallback_on_nodma_alloc(&ptr->kernel_data, ptr->length);\nif (!ptr->kernel_data)\nreturn -ENOMEM;\nptr->buffer_length = ptr->length;\n}\nif (ptr->flags & FD_RAW_WRITE) {\nret = fd_copyin(ptr->data, ptr->kernel_data, ptr->length);\nif (ret)\nreturn ret;\n}\n\nif (ptr->flags & FD_RAW_MORE) {\nrcmd = &(ptr->next);\nptr->rate &= 0x43;\ngoto loop;\n}\n\nreturn 0;\n}\n",
+      "patched_code": "static int raw_cmd_copyin(int cmd, void __user *param,\nstruct floppy_raw_cmd **rcmd)\n{\nstruct floppy_raw_cmd *ptr;\nint ret;\nint i;\n\n*rcmd = NULL;\n\nloop:\nptr = kmalloc(sizeof(struct floppy_raw_cmd), GFP_USER);\nif (!ptr)\nreturn -ENOMEM;\n*rcmd = ptr;\nret = copy_from_user(ptr, param, sizeof(*ptr));\n\tif (ret)\n\t\treturn -EFAULT;\nptr->next = NULL;\nptr->buffer_length = 0;\nparam += sizeof(struct floppy_raw_cmd);\nif (ptr->cmd_count > 33 || ptr->cmd_count < 0)\n/* the command may now also take up the space\n* initially intended for the reply & the\n* reply count. Needed for long 82078 commands\n* such as RESTORE, which takes ... 17 command\n* bytes. Murphy's law #137: When you reserve\n* 16 bytes for a structure, you'll one day\n* discover that you really need 17...\n*/\nreturn -EINVAL;\n\nfor (i = 0; i < 16; i++)\nptr->reply[i] = 0;\nptr->resultcode = 0;\n\tptr->kernel_data = NULL;\n\nif (ptr->flags & (FD_RAW_READ | FD_RAW_WRITE)) {\nif (ptr->length <= 0)\nreturn -EINVAL;\nptr->kernel_data = (char *)fd_dma_mem_alloc(ptr->length);\nfallback_on_nodma_alloc(&ptr->kernel_data, ptr->length);\nif (!ptr->kernel_data)\nreturn -ENOMEM;\nptr->buffer_length = ptr->length;\n}\nif (ptr->flags & FD_RAW_WRITE) {\nret = fd_copyin(ptr->data, ptr->kernel_data, ptr->length);\nif (ret)\nreturn ret;\n}\n\nif (ptr->flags & FD_RAW_MORE) {\nrcmd = &(ptr->next);\nptr->rate &= 0x43;\ngoto loop;\n}\n\nreturn 0;\n}\n",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-264",
+      "upstream_project": "linux",
+      "touched_decile_overlap": 0.1,
+      "text_similarity_to_upstream": 0.9418,
+      "new_token_overlap": 0.0,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    },
+    {
+      "doc_id": "178070",
+      "code": "set_text_distance(gs_point *pdist, double dx, double dy, const gs_matrix *pmat)\n{\n    int code = gs_distance_transform_inverse(dx, dy, pmat, pdist);\ndouble rounded;\n\nif (code == gs_error_undefinedresult) {\n/* The CTM is degenerate.\nCan't know the distance in user space.\n} else if (code < 0)\nreturn code;\n/* If the distance is very close to integers, round it. */\nif (fabs(pdist->x - (rounded = floor(pdist->x + 0.5))) < 0.0005)\npdist->x = rounded;\nif (fabs(pdist->y - (rounded = floor(pdist->y + 0.5))) < 0.0005)\npdist->y = rounded;\nreturn 0;\n}\n",
+      "patched_code": "set_text_distance(gs_point *pdist, double dx, double dy, const gs_matrix *pmat)\n{\n    int code;\n    double rounded;\n\n    if (pdist == NULL)\n        return gs_error_invalidaccess;\n\n    code = gs_distance_transform_inverse(dx, dy, pmat, pdist);\n    if (code == gs_error_undefinedresult) {\n        /* The CTM is degenerate.\n           Can't know the distance in user space. */\n        return code;\n    } else if (code < 0)\n        return code;\n\n    /* If the distance is very close to integers, round it. */\n    if (fabs(pdist->x - (rounded = floor(pdist->x + 0.5))) < 0.0005)\n        pdist->x = rounded;\n    if (fabs(pdist->y - (rounded = floor(pdist->y + 0.5))) < 0.0005)\n        pdist->y = rounded;\n    return 0;\n}",
+      "source": "bare_baseline_eval150",
+      "has_upstream_fix": true,
+      "upstream_cwe": "CWE-119",
+      "upstream_project": "ghostscript",
+      "touched_decile_overlap": 0.8888888888888888,
+      "text_similarity_to_upstream": 0.7684,
+      "new_token_overlap": 0.0,
+      "our_patch_status_vs_original": "not_applicable",
+      "upstream_fix_status_vs_original": "not_applicable",
+      "same_triage_resolution_outcome": true
+    }
+  ]
+}

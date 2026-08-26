@@ -1,0 +1,61 @@
+{
+  "near_duplicate": {
+    "n_eval": 150,
+    "top1_similarity": {
+      "mean": 0.535,
+      "median": 0.4907,
+      "p90": 0.875,
+      "max": 1.0,
+      "min": 0.1696,
+      "frac_above_0.9": 0.0933,
+      "frac_above_0.7": 0.24,
+      "frac_above_0.5": 0.4667
+    },
+    "topk_mean_similarity_k5": {
+      "mean": 0.397,
+      "median": 0.3809,
+      "p90": 0.5566,
+      "max": 0.7778,
+      "min": 0.1656,
+      "frac_above_0.9": 0.0,
+      "frac_above_0.7": 0.0133,
+      "frac_above_0.5": 0.2067
+    },
+    "same_project_as_top1_neighbor_share": 0.8933
+  },
+  "cross_project": {
+    "eval_chrome_n": 46,
+    "eval_chrome_n_vulnerable": 10,
+    "pool_no_chrome_n": 10480,
+    "in_distribution_pool_all_projects": {
+      "threshold": 0.5,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "fpr": 0.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 8,
+      "tn": 36,
+      "n_pool": 16973,
+      "n_pool_vulnerable": 724,
+      "n_eval": 46,
+      "n_eval_vulnerable": 10
+    },
+    "cross_project_pool_excludes_chrome": {
+      "threshold": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 10,
+      "tn": 36,
+      "n_pool": 10480,
+      "n_pool_vulnerable": 548,
+      "n_eval": 46,
+      "n_eval_vulnerable": 10
+    }
+  }
+}

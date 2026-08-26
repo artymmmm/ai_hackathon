@@ -1,0 +1,109 @@
+{
+  "table": [
+    {
+      "review_budget_pct": 0.0,
+      "n_escalated_to_human": 0,
+      "escalated_share_pct": 0.0,
+      "vulnerabilities_caught": 7,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 14.0
+    },
+    {
+      "review_budget_pct": 5.0,
+      "n_escalated_to_human": 8,
+      "escalated_share_pct": 5.3,
+      "vulnerabilities_caught": 10,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 20.0
+    },
+    {
+      "review_budget_pct": 10.0,
+      "n_escalated_to_human": 15,
+      "escalated_share_pct": 10.0,
+      "vulnerabilities_caught": 13,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 26.0
+    },
+    {
+      "review_budget_pct": 15.0,
+      "n_escalated_to_human": 23,
+      "escalated_share_pct": 15.3,
+      "vulnerabilities_caught": 16,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 32.0
+    },
+    {
+      "review_budget_pct": 20.0,
+      "n_escalated_to_human": 30,
+      "escalated_share_pct": 20.0,
+      "vulnerabilities_caught": 19,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 38.0
+    },
+    {
+      "review_budget_pct": 25.0,
+      "n_escalated_to_human": 38,
+      "escalated_share_pct": 25.3,
+      "vulnerabilities_caught": 19,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 38.0
+    },
+    {
+      "review_budget_pct": 30.0,
+      "n_escalated_to_human": 45,
+      "escalated_share_pct": 30.0,
+      "vulnerabilities_caught": 21,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 42.0
+    },
+    {
+      "review_budget_pct": 35.0,
+      "n_escalated_to_human": 53,
+      "escalated_share_pct": 35.3,
+      "vulnerabilities_caught": 23,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 46.0
+    },
+    {
+      "review_budget_pct": 40.0,
+      "n_escalated_to_human": 60,
+      "escalated_share_pct": 40.0,
+      "vulnerabilities_caught": 24,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 48.0
+    },
+    {
+      "review_budget_pct": 50.0,
+      "n_escalated_to_human": 75,
+      "escalated_share_pct": 50.0,
+      "vulnerabilities_caught": 29,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 58.0
+    },
+    {
+      "review_budget_pct": 60.0,
+      "n_escalated_to_human": 90,
+      "escalated_share_pct": 60.0,
+      "vulnerabilities_caught": 33,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 66.0
+    },
+    {
+      "review_budget_pct": 80.0,
+      "n_escalated_to_human": 120,
+      "escalated_share_pct": 80.0,
+      "vulnerabilities_caught": 41,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 82.0
+    },
+    {
+      "review_budget_pct": 100.0,
+      "n_escalated_to_human": 150,
+      "escalated_share_pct": 100.0,
+      "vulnerabilities_caught": 50,
+      "vulnerabilities_total": 50,
+      "catch_rate_pct": 100.0
+    }
+  ],
+  "note": "Текущая 3-way политика (эскалация только verdict=uncertain): escalation_rate=23.3%, catch_rate=40.0% (7 vulnerable+13 uncertain из 50) — см. report/model_benchmark.md. Непрерывная ручка по confidence при том же бюджете ~23% даёт catch_rate, показанный в таблице выше на ближайшей строке."
+}

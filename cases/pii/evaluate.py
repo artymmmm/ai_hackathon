@@ -231,7 +231,7 @@ def main():
     )
     ap.add_argument("--dry-run", action="store_true", help="только вместе с --ablation")
     ap.add_argument("--model", default="openai/gpt-4o-mini", help="только вместе с --ablation")
-    ap.add_argument("--backend", default="openai_compat", choices=["openai_compat", "anthropic"])
+    ap.add_argument("--backend", default="openai_compat", choices=["openai_compat", "anthropic", "gigachat"])
     ap.add_argument("--base-url", default="https://openrouter.ai/api/v1")
     ap.add_argument("--api-key-env", default="OPENROUTER_API_KEY")
     ap.add_argument("--cache-path", default="out/llm_cache.sqlite3")

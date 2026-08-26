@@ -112,19 +112,27 @@ _MANUAL_DIFFERENTIATION = {
 }
 
 
+def _trim(text: str, cap: int) -> str:
+    if len(text) <= cap:
+        return text
+    cut = text[:cap].rsplit(" ", 1)[0]
+    return cut + "..."
+
+
 def build_prompt_text(card: dict) -> str:
-    lines = [f"{card['cwe_id']} — {card['name']}", card["description"]]
-    if card.get("related_weaknesses"):
-        rel = ", ".join(
-            f"{r['nature']} CWE-{r['cwe_id']}" for r in card["related_weaknesses"] if r.get("cwe_id")
-        )
-        if rel:
-            lines.append(f"Связанные CWE: {rel}.")
+    """Компактная карточка для промпта: имя + короткое описание + отличие от смежных CWE.
+    Мitigations сознательно не включены — они не помогают классификации, только раздувают
+    промпт (полный текст всё равно есть в kb/cwe_cards.json для человека)."""
+    lines = [f"{card['cwe_id']} — {card['name']}: {_trim(card['description'], 220)}"]
+    unique_related = sorted({
+        r["cwe_id"] for r in card.get("related_weaknesses", [])
+        if r.get("cwe_id") and r["cwe_id"] != card["cwe_id"].removeprefix("CWE-")
+    }, key=int)
+    if unique_related:
+        lines.append(f"Смежные: {', '.join('CWE-' + c for c in unique_related[:4])}.")
     manual = _MANUAL_DIFFERENTIATION.get(card["cwe_id"].removeprefix("CWE-"))
     if manual:
-        lines.append(f"Отличие от смежных: {manual}")
-    if card.get("mitigations"):
-        lines.append(f"Типичное исправление: {card['mitigations'][0]}")
+        lines.append(f"Отличие: {manual}")
     return " ".join(lines)
 
 

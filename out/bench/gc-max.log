@@ -21,3 +21,9 @@ usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
 evaluate.py: error: argument --backend: invalid choice: 'gigachat' (choose from openai_compat, anthropic)
 
 --- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/case2_verdicts.xlsx
+  json -> out/case2_verdicts.json
+  llm usage: {"calls": 44, "cache_hits": 0, "prompt_tokens": 13144, "completion_tokens": 3955, "total_tokens": 17099, "cost_usd": 0.0}
+
+=== готово: gc-max ===
