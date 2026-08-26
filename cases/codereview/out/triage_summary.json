@@ -1,0 +1,29 @@
+{
+  "total_fragments": 18864,
+  "risk_level_distribution": {
+    "none": 18162,
+    "low": 371,
+    "medium": 229,
+    "high": 102
+  },
+  "category_hit_counts": {
+    "unsafe_func": 144,
+    "memcpy_unchecked": 292,
+    "format_string": 50,
+    "unchecked_alloc": 101,
+    "double_free": 29,
+    "use_after_free": 45,
+    "size_int_overflow": 214
+  },
+  "category_hit_share": {
+    "unsafe_func": 0.0076,
+    "memcpy_unchecked": 0.0155,
+    "format_string": 0.0027,
+    "unchecked_alloc": 0.0054,
+    "double_free": 0.0015,
+    "use_after_free": 0.0024,
+    "size_int_overflow": 0.0113
+  },
+  "mean_risk_score": 0.185,
+  "median_risk_score": 0.0
+}
