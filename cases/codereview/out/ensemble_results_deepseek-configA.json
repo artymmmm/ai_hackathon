@@ -1,0 +1,62 @@
+{
+  "tag": "deepseek-configA",
+  "n": 150,
+  "n_vulnerable_gold": 50,
+  "llm_only": {
+    "precision": 0.5,
+    "recall": 0.26,
+    "f1": 0.3421,
+    "fpr": 0.13,
+    "tp": 13,
+    "fp": 13,
+    "fn": 37,
+    "tn": 87
+  },
+  "logreg_only": {
+    "precision": 0.8182,
+    "recall": 0.36,
+    "f1": 0.5,
+    "fpr": 0.04,
+    "tp": 18,
+    "fp": 4,
+    "fn": 32,
+    "tn": 96
+  },
+  "union": {
+    "precision": 0.6341,
+    "recall": 0.52,
+    "f1": 0.5714,
+    "fpr": 0.15,
+    "tp": 26,
+    "fp": 15,
+    "fn": 24,
+    "tn": 85,
+    "cwe_correct": 0,
+    "cwe_comparable": 10
+  },
+  "intersection": {
+    "precision": 0.7143,
+    "recall": 0.1,
+    "f1": 0.1754,
+    "fpr": 0.02,
+    "tp": 5,
+    "fp": 2,
+    "fn": 45,
+    "tn": 98,
+    "cwe_correct": 0,
+    "cwe_comparable": 4
+  },
+  "weighted": {
+    "precision": 0.6944,
+    "recall": 0.5,
+    "f1": 0.5814,
+    "fpr": 0.11,
+    "tp": 25,
+    "fp": 11,
+    "fn": 25,
+    "tn": 89,
+    "best_w_llm": 0.6,
+    "cwe_correct": 0,
+    "cwe_comparable": 10
+  }
+}
