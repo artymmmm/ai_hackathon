@@ -1,0 +1,24 @@
+конфигурация,P,R,F1,FPR,эскалация,tp,fp,fn,tn,число_вызовов_LLM,к_человеку_n,к_человеку_доля_корпуса,уязвимых_доходит_до_человека,чистого_кода_в_очереди,файл_вердиктов
+голая LLM,0.5385,0.14,0.2222,0.06,0.2333,7,6,43,94,150,48,0.32,0.4,0.28,out/bench/case3_deepseek-chat.json
+скринер без знаний (SENSITIVE),0.4839,0.3,0.3704,0.16,0.56,15,16,35,84,150,115,0.7667,0.86,0.72,out/bench/case3_deepseek-chat_sensitive.json
+конфигурация A (CWE+CERT+flawfinder),0.5,0.26,0.3421,0.13,0.5467,13,13,37,87,150,108,0.72,0.86,0.65,out/bench/case3_deepseek-chat_configA.json
+cwe_only,0.6,0.36,0.45,0.12,0.54,18,12,32,88,150,111,0.74,0.82,0.7,out/bench/case3_deepseek-chat_cwe_only.json
+cert_only,0.6562,0.42,0.5122,0.11,0.5933,21,11,29,89,150,121,0.8067,0.88,0.77,out/bench/case3_deepseek-chat_cert_only.json
+каскад cert_only+ступень2(uncertain) k>=1/5,0.5185,0.56,0.5385,0.26,0.0,28,26,22,74,595,54,0.36,0.56,0.26,out/bench/case3_deepseek-chat_cascade_B_k1of5.json
+каскад cert_only+ступень2(uncertain) k>=2/5,0.587,0.54,0.5625,0.19,0.0,27,19,23,81,595,46,0.3067,0.54,0.19,out/bench/case3_deepseek-chat_cascade_B_k2of5.json
+каскад cert_only+ступень2(uncertain) k>=3/5,0.6757,0.5,0.5747,0.12,0.0,25,12,25,88,595,37,0.2467,0.5,0.12,out/bench/case3_deepseek-chat_cascade_B_k3of5.json
+каскад cert_only+ступень2(uncertain) k>=4/5,0.6667,0.44,0.5301,0.11,0.0,22,11,28,89,595,33,0.22,0.44,0.11,out/bench/case3_deepseek-chat_cascade_B_k4of5.json
+combo: union(vulnerable у любого),0.5641,0.44,0.4944,0.17,0.5667,22,17,28,83,300,124,0.8267,0.9,0.79,out/bench/case3_combo_union.json
+combo: intersection(vulnerable у обоих),0.5833,0.28,0.3784,0.1,0.6667,14,10,36,90,300,124,0.8267,0.9,0.79,out/bench/case3_combo_intersection.json
+combo: cascade на union(uncertain обоих) k>=1/5,0.5185,0.56,0.5385,0.26,0.0,28,26,22,74,795,54,0.36,0.56,0.26,out/bench/case3_combo_cascade_union_k1of5.json
+combo: cascade на union(uncertain обоих) k>=2/5,0.5714,0.48,0.5217,0.18,0.0,24,18,26,82,795,42,0.28,0.48,0.18,out/bench/case3_combo_cascade_union_k2of5.json
+combo: cascade на union(uncertain обоих) k>=3/5,0.6333,0.38,0.475,0.11,0.0,19,11,31,89,795,30,0.2,0.38,0.11,out/bench/case3_combo_cascade_union_k3of5.json
+combo: cascade на union(uncertain обоих) k>=4/5,0.6154,0.32,0.4211,0.1,0.0,16,10,34,90,795,26,0.1733,0.32,0.1,out/bench/case3_combo_cascade_union_k4of5.json
+cert_only+ступень2(uncertain∪secure_all) k>=1/5,0.5091,0.56,0.5333,0.27,0.0,28,27,22,73,740,55,0.3667,0.56,0.27,out/bench/case3_stage2_secure_all_k1of5.json
+cert_only+ступень2(uncertain∪secure_all) k>=2/5,0.587,0.54,0.5625,0.19,0.0,27,19,23,81,740,46,0.3067,0.54,0.19,out/bench/case3_stage2_secure_all_k2of5.json
+cert_only+ступень2(uncertain∪secure_all) k>=3/5,0.6757,0.5,0.5747,0.12,0.0,25,12,25,88,740,37,0.2467,0.5,0.12,out/bench/case3_stage2_secure_all_k3of5.json
+cert_only+ступень2(uncertain∪secure_all) k>=4/5,0.6667,0.44,0.5301,0.11,0.0,22,11,28,89,740,33,0.22,0.44,0.11,out/bench/case3_stage2_secure_all_k4of5.json
+cert_only+ступень2(uncertain∪secure_lowconf) k>=1/5,0.5091,0.56,0.5333,0.27,0.0,28,27,22,73,605,55,0.3667,0.56,0.27,out/bench/case3_stage2_secure_lowconf_k1of5.json
+cert_only+ступень2(uncertain∪secure_lowconf) k>=2/5,0.587,0.54,0.5625,0.19,0.0,27,19,23,81,605,46,0.3067,0.54,0.19,out/bench/case3_stage2_secure_lowconf_k2of5.json
+cert_only+ступень2(uncertain∪secure_lowconf) k>=3/5,0.6757,0.5,0.5747,0.12,0.0,25,12,25,88,605,37,0.2467,0.5,0.12,out/bench/case3_stage2_secure_lowconf_k3of5.json
+cert_only+ступень2(uncertain∪secure_lowconf) k>=4/5,0.6667,0.44,0.5301,0.11,0.0,22,11,28,89,605,33,0.22,0.44,0.11,out/bench/case3_stage2_secure_lowconf_k4of5.json

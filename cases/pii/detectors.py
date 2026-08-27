@@ -248,7 +248,10 @@ CONTEXT = [
     # наравне с "account number is X"; добавлена как алиас с тем же needs_digit-фильтром.
     (
         "account_number",
-        _ctx(r"account\s*number|accountNumber|bank\s*account", rf"(?:{IBAN_VALUE}|{ID_VALUE})"),
+        # ", " разрешена между "account" и "number" — встречается в данных как "the company's
+        # account, number 371289562104" (баг, пойманный на реальных данных: голое `\s*` не
+        # покрывало запятую-разделитель).
+        _ctx(r"account[,\s]*number|accountNumber|bank\s*account", rf"(?:{IBAN_VALUE}|{ID_VALUE})"),
         True,
     ),
     # "user id"/"user_id"/"userID" в данных размечены тем же лейблом, что и "customer id"
@@ -261,7 +264,9 @@ CONTEXT = [
         _ctx(r"health\s*plan\s*beneficiary\s*number", ID_VALUE),
         True,
     ),
-    ("national_id", _ctx(r"national\s*id", ID_VALUE), True),
+    # gap поднят 20->40 той же логикой, что и customer_id/api_key/phone выше: "national id
+    # verification, such as X" — 24 символа между ключевой фразой и значением, шире дефолта.
+    ("national_id", _ctx(r"national\s*id", ID_VALUE, gap=40), True),
     ("tax_id", _ctx(r"tax\s*id(?:entification\s*number)?|\bTIN\b", ID_VALUE), True),
     (
         "certificate_license_number",
