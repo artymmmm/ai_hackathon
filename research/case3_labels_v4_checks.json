@@ -1,0 +1,29 @@
+{
+  "n_rows": 18864,
+  "label_balance_v4": {
+    "0": 17809,
+    "1": 1055
+  },
+  "n_diff_v3_vs_v4": 101,
+  "diff_by_v3_match_source": {
+    "diversevul_only": 79,
+    "bigvul_only": 16,
+    "both_agree": 6
+  },
+  "n_eval_ids": 150,
+  "eval_label_balance_v3": {
+    "0": 100,
+    "1": 50
+  },
+  "eval_label_balance_v4": {
+    "0": 104,
+    "1": 46
+  },
+  "eval_diff_ids": [
+    71857,
+    66318,
+    29969,
+    53312
+  ],
+  "n_eval_diff": 4
+}

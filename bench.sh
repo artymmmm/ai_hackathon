@@ -18,7 +18,12 @@ LOG="out/bench/${TAG}.log"
 mkdir -p out/bench
 
 # Значения по умолчанию — OpenRouter; переопределяются флагами после <модель>.
-DEFAULTS=(--base-url https://openrouter.ai/api/v1 --api-key-env OPENROUTER_API_KEY --max-concurrency 4)
+# cases/pii/evaluate.py не принимает --max-concurrency, поэтому флаг вынесен отдельно
+# и передаётся только в run.py.
+DEFAULTS=(--base-url https://openrouter.ai/api/v1 --api-key-env OPENROUTER_API_KEY)
+CONC=(--max-concurrency ${BENCH_CONCURRENCY:-4})
+# reasoning-моделям дефолтных 1024 не хватает: весь бюджет уходит в рассуждения.
+MAXTOK=(${BENCH_MAX_TOKENS:+--max-tokens $BENCH_MAX_TOKENS})
 
 set -a; [ -f .env ] && . ./.env; set +a
 
@@ -26,15 +31,15 @@ set -a; [ -f .env ] && . ./.env; set +a
 echo "=== $TAG | $MODEL | $(date '+%F %T') ==="
 
 echo; echo "--- кейс 3 (150 фрагментов, фиксированный набор) ---"
-$PY run.py --case 3 --ids-file out/bench/case3_eval_ids.txt --model "$MODEL" "${DEFAULTS[@]}" "$@" \
+$PY run.py --case 3 --ids-file out/bench/case3_eval_ids.txt --model "$MODEL" "${DEFAULTS[@]}" "${CONC[@]}" "${MAXTOK[@]}" "$@" \
   && cp out/case3_verdicts.json "out/bench/case3_${TAG}.json" \
   && $PY cases/codereview/evaluate.py --verdicts "out/bench/case3_${TAG}.json"
 
 echo; echo "--- кейс 1 (ablation, n=200) ---"
-$PY cases/pii/evaluate.py --n 200 --split test --ablation --model "$MODEL" "${DEFAULTS[@]}" "$@"
+$PY cases/pii/evaluate.py --n 200 --split test --ablation --model "$MODEL" "${DEFAULTS[@]}" "${CONC[@]}" "${MAXTOK[@]}" "$@"
 
 echo; echo "--- кейс 2 (n=1000) ---"
-$PY run.py --case 2 --sample 1000 --split test --model "$MODEL" "${DEFAULTS[@]}" "$@" \
+$PY run.py --case 2 --sample 1000 --split test --model "$MODEL" "${DEFAULTS[@]}" "${CONC[@]}" "${MAXTOK[@]}" "$@" \
   && cp out/case2_verdicts.json "out/bench/case2_${TAG}.json"
 
 echo; echo "=== готово: $TAG ==="

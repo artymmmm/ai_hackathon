@@ -46,7 +46,7 @@ from core.schema import Verdict  # noqa: E402
 from cases.codereview.cwe_map import normalize_cwe  # noqa: E402
 
 _ROOT = Path(__file__).resolve().parent.parent.parent
-_RECOVERED_LABELS_CSV = _ROOT / "research" / "case3_recovered_labels.csv"
+_RECOVERED_LABELS_CSV = _ROOT / "research" / "case3_recovered_labels_v4.csv"
 _LABELS = ["secure", "vulnerable"]
 _RAW_LABEL_TO_NAME = {"0": "secure", "1": "vulnerable"}
 
@@ -60,7 +60,7 @@ def load_gold(path: Path = _RECOVERED_LABELS_CSV) -> dict[str, dict]:
     df = pd.read_csv(path)
     gold: dict[str, dict] = {}
     for _, row in df.iterrows():
-        raw_label = row["recovered_label"] if pd.notna(row["recovered_label"]) else None
+        raw_label = str(row["recovered_label"]) if pd.notna(row["recovered_label"]) else None
         gold[str(int(row["unique_id"]))] = {
             "label": _RAW_LABEL_TO_NAME.get(raw_label),
             "raw_label": raw_label,

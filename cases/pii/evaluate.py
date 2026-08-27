@@ -235,6 +235,15 @@ def main():
     ap.add_argument("--base-url", default="https://openrouter.ai/api/v1")
     ap.add_argument("--api-key-env", default="OPENROUTER_API_KEY")
     ap.add_argument("--cache-path", default="out/llm_cache.sqlite3")
+    # reasoning-модели тратят весь бюджет на внутренние рассуждения: при 1024 они не успевают
+    # выдать ответ и падают с пустым content (см. core/llm.py).
+    ap.add_argument("--max-tokens", type=int, default=1024)
+    ap.add_argument("--max-concurrency", type=int, default=4)
+    # Те же флаги, что у run.py: bench.sh прокидывает их всем трём кейсам одинаково.
+    ap.add_argument("--provider", default=None, help="OpenRouter: фиксация провайдера-исполнителя")
+    ap.add_argument("--allow-fallbacks", action="store_true")
+    ap.add_argument("--price-in", type=float, default=None)
+    ap.add_argument("--price-out", type=float, default=None)
     args = ap.parse_args()
 
     df = _load(args.split, args.n, args.seed)
@@ -243,6 +252,10 @@ def main():
         llm_client = LLMClient(LLMConfig(
             model=args.model, backend=args.backend, base_url=args.base_url,
             api_key_env=args.api_key_env, dry_run=args.dry_run, cache_path=args.cache_path,
+            max_tokens=args.max_tokens, max_concurrency=args.max_concurrency,
+            price_per_1m_input=args.price_in, price_per_1m_output=args.price_out,
+            provider_order=tuple(x.strip() for x in args.provider.split(",")) if args.provider else None,
+            allow_fallbacks=args.allow_fallbacks,
         ))
         result = evaluate_ablation(df, llm_client, model=args.model)
         llm_client.close()

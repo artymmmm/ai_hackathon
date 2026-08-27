@@ -18,6 +18,8 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
+
 from core.data import load_case1
 from core.pipeline import CasePlugin, PipelineContext, Record
 from core.schema import Verdict
@@ -57,51 +59,55 @@ def route(records: list[Record], ctx: PipelineContext) -> tuple[list[Verdict], l
     return [], records
 
 
+def _anonymize_one(rec: Record, ctx: PipelineContext, model: str | None) -> Verdict:
+    doc_id = str(rec["doc_id"])
+    text = rec["text"]
+    detector_spans = rec["detector_spans"]
+    llm_spans = detect_pii_llm(
+        text,
+        ctx.llm,
+        document_type=rec.get("document_type") or "",
+        domain=rec.get("domain") or "",
+        model=model,
+    )
+    spans = merge_spans(detector_spans, llm_spans)
+    salt = doc_salt(doc_id)
+    anon_text, vault = anonymize(text, spans, salt)
+
+    return Verdict(
+        doc_id=doc_id,
+        verdict="anonymized",
+        confidence=1.0,  # пересчитается в validate по факту self-audit
+        action="pass",
+        evidence=sorted({sp["label"] for sp in spans}),
+        rationale=(
+            f"Детекторы нашли {len(detector_spans)} форматных PII-сущностей, "
+            f"LLM-слой добавил {len(llm_spans)}, свёрнуто в {len(vault)} уникальных "
+            f"сущностей."
+        ),
+        artifacts={
+            "original_text": text,
+            "anonymized_text": anon_text,
+            "pii_found": spans,
+            "detector_pii_found": detector_spans,
+            "llm_pii_found": llm_spans,
+            "vault": vault,
+            "domain": rec.get("domain"),
+        },
+    )
+
+
 def llm(records: list[Record], ctx: PipelineContext) -> list[Verdict]:
     """Второй проход (`llm_layer.detect_pii_llm`) + слияние + подстановка. Вызывается всегда:
     в dry-run (по умолчанию, ключей нет) `ctx.llm` не делает сети и не находит ничего значимого
-    поверх детекторов — эта стадия обязательная часть архитектуры, а не «включаемая опция»."""
-    model = ctx.config.get("model")
-    verdicts = []
-    for rec in records:
-        doc_id = str(rec["doc_id"])
-        text = rec["text"]
-        detector_spans = rec["detector_spans"]
-        llm_spans = detect_pii_llm(
-            text,
-            ctx.llm,
-            document_type=rec.get("document_type") or "",
-            domain=rec.get("domain") or "",
-            model=model,
-        )
-        spans = merge_spans(detector_spans, llm_spans)
-        salt = doc_salt(doc_id)
-        anon_text, vault = anonymize(text, spans, salt)
+    поверх детекторов — эта стадия обязательная часть архитектуры, а не «включаемая опция».
 
-        verdicts.append(
-            Verdict(
-                doc_id=doc_id,
-                verdict="anonymized",
-                confidence=1.0,  # пересчитается в validate по факту self-audit
-                action="pass",
-                evidence=sorted({sp["label"] for sp in spans}),
-                rationale=(
-                    f"Детекторы нашли {len(detector_spans)} форматных PII-сущностей, "
-                    f"LLM-слой добавил {len(llm_spans)}, свёрнуто в {len(vault)} уникальных "
-                    f"сущностей."
-                ),
-                artifacts={
-                    "original_text": text,
-                    "anonymized_text": anon_text,
-                    "pii_found": spans,
-                    "detector_pii_found": detector_spans,
-                    "llm_pii_found": llm_spans,
-                    "vault": vault,
-                    "domain": rec.get("domain"),
-                },
-            )
-        )
-    return verdicts
+    Запросы к LLM независимы и блокирующие, поэтому распараллелены через ThreadPoolExecutor
+    (лимит — LLMConfig.max_concurrency); ex.map сохраняет порядок результатов.
+    """
+    model = ctx.config.get("model")
+    with ThreadPoolExecutor(max_workers=ctx.llm.config.max_concurrency) as ex:
+        return list(ex.map(lambda rec: _anonymize_one(rec, ctx, model), records))
 
 
 def validate(verdicts: list[Verdict], ctx: PipelineContext) -> list[Verdict]:

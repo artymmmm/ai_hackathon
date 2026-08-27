@@ -1,0 +1,30 @@
+=== qwen3-30b | qwen/qwen3-30b-a3b-instruct-2507 | 2026-08-27 15:19:10 ===
+
+--- кейс 3 (150 фрагментов, фиксированный набор) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/case3_verdicts.xlsx
+  json -> out/case3_verdicts.json
+  llm usage: {"calls": 199, "cache_hits": 174, "prompt_tokens": 317017, "completion_tokens": 68873, "total_tokens": 385890, "cost_usd": 0.005798}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.407  recall(vulnerable)=0.239  f1(vulnerable)=0.301  fpr=0.154  accuracy=0.660
+baseline «всё secure»: accuracy=0.693 на 46 истинных vulnerable из 150 (!! МЫ НЕ БЬЁМ БАЗОВУЮ ЛИНИЮ !!)
+escalation_rate (verdict=uncertain): 0.107 (16 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.300 (верно 3 из 10 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic,gigachat}]
+                   [--base-url BASE_URL] [--api-key-env API_KEY_ENV]
+                   [--cache-path CACHE_PATH]
+evaluate.py: error: unrecognized arguments: --price-in 0.048 --price-out 0.193
+
+--- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/case2_verdicts.xlsx
+  json -> out/case2_verdicts.json
+  llm usage: {"calls": 44, "cache_hits": 44, "prompt_tokens": 41426, "completion_tokens": 6556, "total_tokens": 47982, "cost_usd": 0.0}
+
+=== готово: qwen3-30b ===

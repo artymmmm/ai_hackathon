@@ -1,0 +1,36 @@
+=== кейс 1: qwen3-30b ===
+n_docs=200  dry_run=False
+config            precision   recall       f1
+detectors_only        0.966    0.472    0.634
+llm_only              0.766    0.395    0.521
+hybrid                0.875    0.872    0.874
+
+llm usage: {"calls": 408, "cache_hits": 200, "prompt_tokens": 611711, "completion_tokens": 41610, "total_tokens": 653321, "cost_usd": 0.019386}
+сохранено: /Users/artemmartynov/claude/ai_hackathon/out/pii/ablation_metrics.json
+=== кейс 1: deepseek-or ===
+n_docs=200  dry_run=False
+config            precision   recall       f1
+detectors_only        0.966    0.472    0.634
+llm_only              0.902    0.418    0.571
+hybrid                0.940    0.890    0.914
+
+llm usage: {"calls": 400, "cache_hits": 200, "prompt_tokens": 540188, "completion_tokens": 28544, "total_tokens": 568732, "cost_usd": 0.0841}
+сохранено: /Users/artemmartynov/claude/ai_hackathon/out/pii/ablation_metrics.json
+=== кейс 1: gpt5-nano ===
+n_docs=200  dry_run=False
+config            precision   recall       f1
+detectors_only        0.966    0.472    0.634
+llm_only              0.871    0.418    0.565
+hybrid                0.925    0.890    0.907
+
+llm usage: {"calls": 400, "cache_hits": 200, "prompt_tokens": 510640, "completion_tokens": 903742, "total_tokens": 1414382, "cost_usd": 0.193514}
+сохранено: /Users/artemmartynov/claude/ai_hackathon/out/pii/ablation_metrics.json
+=== кейс 1: gpt5-mini ===
+n_docs=200  dry_run=False
+config            precision   recall       f1
+detectors_only        0.966    0.472    0.634
+llm_only              0.779    0.429    0.553
+hybrid                0.877    0.901    0.889
+
+llm usage: {"calls": 400, "cache_hits": 200, "prompt_tokens": 510640, "completion_tokens": 523432, "total_tokens": 1034072, "cost_usd": 0.587262}
+сохранено: /Users/artemmartynov/claude/ai_hackathon/out/pii/ablation_metrics.json

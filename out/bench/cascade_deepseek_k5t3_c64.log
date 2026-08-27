@@ -1,0 +1,7 @@
+ids: 150
+stage1: 150 вердиктов за 30.8s (model=deepseek-chat, backend=openai_compat)
+uncertain: 85 из 150
+stage2: 425 вызовов (85 фрагментов x k=5) за 53.7s (model=deepseek-chat, backend=openai_compat, k_threshold=3)
+verdicts -> out/bench/cascade_deepseek_k5t3_c64_verdicts.json (150)
+diversity -> out/bench/cascade_deepseek_k5t3_c64_diversity.json: {'k': 5, 'avg_unique_responses_per_fragment': 5.0, 'fragments_with_all_k_identical': 0, 'collapsed_doc_ids': []}
+usage -> out/bench/cascade_deepseek_k5t3_c64_usage.json

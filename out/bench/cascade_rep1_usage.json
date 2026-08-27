@@ -1,0 +1,29 @@
+{
+  "stage1": {
+    "model": "deepseek-chat",
+    "backend": "openai_compat",
+    "usage": {
+      "calls": 157,
+      "cache_hits": 0,
+      "prompt_tokens": 368334,
+      "completion_tokens": 92065,
+      "total_tokens": 460399,
+      "cost_usd": 0.200722
+    }
+  },
+  "stage2": {
+    "model": "deepseek-chat",
+    "backend": "openai_compat",
+    "usage": {
+      "calls": 409,
+      "cache_hits": 0,
+      "prompt_tokens": 919331,
+      "completion_tokens": 235764,
+      "total_tokens": 1155095,
+      "cost_usd": 0.50756
+    },
+    "k": 5,
+    "k_threshold": 3,
+    "n_calls": 405
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "n_total_case3": 18864,
+  "exact_code_match_share": 1.0,
+  "n_known_intersection": 17594,
+  "n_agree_as_is": 17493,
+  "agree_as_is": 0.9942594066158917,
+  "n_agree_flipped": 101,
+  "agree_flipped": 0.005740593384108219,
+  "n_eval_ids": 150,
+  "n_eval_intersection": 150,
+  "n_eval_agree_as_is": 146,
+  "eval_agree_as_is": 0.9733333333333334,
+  "eval_mismatch_ids": [
+    71857,
+    66318,
+    29969,
+    53312
+  ],
+  "n_unlabeled_before": 1270,
+  "n_new_labels_from_realvul": 1270,
+  "mismatch_by_match_source": {
+    "diversevul_only": 79,
+    "bigvul_only": 16,
+    "both_agree": 6
+  }
+}

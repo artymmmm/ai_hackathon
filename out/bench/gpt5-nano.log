@@ -1,0 +1,31 @@
+=== gpt5-nano | openai/gpt-5-nano | 2026-08-27 15:33:42 ===
+
+--- кейс 3 (150 фрагментов, фиксированный набор) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/case3_verdicts.xlsx
+  json -> out/case3_verdicts.json
+  llm usage: {"calls": 207, "cache_hits": 0, "prompt_tokens": 266500, "completion_tokens": 759415, "total_tokens": 1025915, "cost_usd": 0.317091}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.368  recall(vulnerable)=0.457  f1(vulnerable)=0.408  fpr=0.346  accuracy=0.593
+baseline «всё secure»: accuracy=0.693 на 46 истинных vulnerable из 150 (!! МЫ НЕ БЬЁМ БАЗОВУЮ ЛИНИЮ !!)
+escalation_rate (verdict=uncertain): 0.147 (22 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.158 (верно 3 из 19 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic,gigachat}]
+                   [--base-url BASE_URL] [--api-key-env API_KEY_ENV]
+                   [--cache-path CACHE_PATH] [--max-tokens MAX_TOKENS]
+                   [--max-concurrency MAX_CONCURRENCY]
+evaluate.py: error: unrecognized arguments: --provider OpenAI --price-in 0.05 --price-out 0.40
+
+--- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/case2_verdicts.xlsx
+  json -> out/case2_verdicts.json
+  llm usage: {"calls": 44, "cache_hits": 0, "prompt_tokens": 36940, "completion_tokens": 43135, "total_tokens": 80075, "cost_usd": 0.019101}
+
+=== готово: gpt5-nano ===

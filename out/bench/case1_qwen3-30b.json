@@ -1,0 +1,1699 @@
+{
+  "n_docs": 200,
+  "dry_run": false,
+  "overall_by_config": {
+    "detectors_only": {
+      "precision_exact": 0.9664,
+      "recall_exact": 0.4723,
+      "f1_exact": 0.6345,
+      "recall_span_only": 0.4833,
+      "tp_exact": 777,
+      "fp_exact": 27,
+      "fn_exact": 868
+    },
+    "llm_only": {
+      "precision_exact": 0.7665,
+      "recall_exact": 0.3951,
+      "f1_exact": 0.5215,
+      "recall_span_only": 0.4304,
+      "tp_exact": 650,
+      "fp_exact": 198,
+      "fn_exact": 995
+    },
+    "hybrid": {
+      "precision_exact": 0.875,
+      "recall_exact": 0.8723,
+      "f1_exact": 0.8737,
+      "recall_span_only": 0.904,
+      "tp_exact": 1435,
+      "fp_exact": 205,
+      "fn_exact": 210
+    }
+  },
+  "per_type_by_config": {
+    "detectors_only": [
+      {
+        "label": "first_name",
+        "gold_count": 153,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "date",
+        "gold_count": 138,
+        "pred_count": 125,
+        "tp": 124,
+        "fp": 1,
+        "recall": 0.8986,
+        "precision": 0.992,
+        "covered_by_design": true
+      },
+      {
+        "label": "last_name",
+        "gold_count": 112,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "email",
+        "gold_count": 107,
+        "pred_count": 107,
+        "tp": 107,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "company_name",
+        "gold_count": 100,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "url",
+        "gold_count": 70,
+        "pred_count": 70,
+        "tp": 70,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "occupation",
+        "gold_count": 61,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "time",
+        "gold_count": 54,
+        "pred_count": 42,
+        "tp": 41,
+        "fp": 1,
+        "recall": 0.7593,
+        "precision": 0.9762,
+        "covered_by_design": true
+      },
+      {
+        "label": "phone_number",
+        "gold_count": 47,
+        "pred_count": 58,
+        "tp": 46,
+        "fp": 12,
+        "recall": 0.9787,
+        "precision": 0.7931,
+        "covered_by_design": true
+      },
+      {
+        "label": "city",
+        "gold_count": 47,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "country",
+        "gold_count": 44,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "customer_id",
+        "gold_count": 44,
+        "pred_count": 43,
+        "tp": 41,
+        "fp": 2,
+        "recall": 0.9318,
+        "precision": 0.9535,
+        "covered_by_design": true
+      },
+      {
+        "label": "account_number",
+        "gold_count": 41,
+        "pred_count": 35,
+        "tp": 35,
+        "fp": 0,
+        "recall": 0.8537,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "street_address",
+        "gold_count": 40,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "state",
+        "gold_count": 38,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "political_view",
+        "gold_count": 29,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "user_name",
+        "gold_count": 29,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "date_of_birth",
+        "gold_count": 28,
+        "pred_count": 28,
+        "tp": 27,
+        "fp": 1,
+        "recall": 0.9643,
+        "precision": 0.9643,
+        "covered_by_design": true
+      },
+      {
+        "label": "date_time",
+        "gold_count": 28,
+        "pred_count": 29,
+        "tp": 27,
+        "fp": 2,
+        "recall": 0.9643,
+        "precision": 0.931,
+        "covered_by_design": true
+      },
+      {
+        "label": "biometric_identifier",
+        "gold_count": 27,
+        "pred_count": 27,
+        "tp": 27,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "coordinate",
+        "gold_count": 26,
+        "pred_count": 23,
+        "tp": 22,
+        "fp": 1,
+        "recall": 0.8462,
+        "precision": 0.9565,
+        "covered_by_design": true
+      },
+      {
+        "label": "credit_debit_card",
+        "gold_count": 23,
+        "pred_count": 26,
+        "tp": 23,
+        "fp": 3,
+        "recall": 1.0,
+        "precision": 0.8846,
+        "covered_by_design": true
+      },
+      {
+        "label": "education_level",
+        "gold_count": 21,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "employment_status",
+        "gold_count": 20,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "bank_routing_number",
+        "gold_count": 18,
+        "pred_count": 17,
+        "tp": 17,
+        "fp": 0,
+        "recall": 0.9444,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "race_ethnicity",
+        "gold_count": 18,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "county",
+        "gold_count": 17,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "health_plan_beneficiary_number",
+        "gold_count": 16,
+        "pred_count": 14,
+        "tp": 13,
+        "fp": 1,
+        "recall": 0.8125,
+        "precision": 0.9286,
+        "covered_by_design": true
+      },
+      {
+        "label": "postcode",
+        "gold_count": 16,
+        "pred_count": 8,
+        "tp": 8,
+        "fp": 0,
+        "recall": 0.5,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "vehicle_identifier",
+        "gold_count": 14,
+        "pred_count": 13,
+        "tp": 13,
+        "fp": 0,
+        "recall": 0.9286,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "fax_number",
+        "gold_count": 14,
+        "pred_count": 14,
+        "tp": 13,
+        "fp": 1,
+        "recall": 0.9286,
+        "precision": 0.9286,
+        "covered_by_design": true
+      },
+      {
+        "label": "age",
+        "gold_count": 13,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "license_plate",
+        "gold_count": 12,
+        "pred_count": 10,
+        "tp": 10,
+        "fp": 0,
+        "recall": 0.8333,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "language",
+        "gold_count": 12,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "mac_address",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 12,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "http_cookie",
+        "gold_count": 12,
+        "pred_count": 9,
+        "tp": 8,
+        "fp": 1,
+        "recall": 0.6667,
+        "precision": 0.8889,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv4",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 12,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "religious_belief",
+        "gold_count": 11,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "national_id",
+        "gold_count": 11,
+        "pred_count": 11,
+        "tp": 10,
+        "fp": 1,
+        "recall": 0.9091,
+        "precision": 0.9091,
+        "covered_by_design": true
+      },
+      {
+        "label": "cvv",
+        "gold_count": 10,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 0.9,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "pin",
+        "gold_count": 10,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 0.7,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "employee_id",
+        "gold_count": 10,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 0.9,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ssn",
+        "gold_count": 9,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "medical_record_number",
+        "gold_count": 8,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 0.875,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "password",
+        "gold_count": 8,
+        "pred_count": 6,
+        "tp": 6,
+        "fp": 0,
+        "recall": 0.75,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "sexuality",
+        "gold_count": 8,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "blood_type",
+        "gold_count": 8,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "device_identifier",
+        "gold_count": 8,
+        "pred_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "recall": 0.375,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "api_key",
+        "gold_count": 7,
+        "pred_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "recall": 0.4286,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv6",
+        "gold_count": 7,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "gender",
+        "gold_count": 5,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "swift_bic",
+        "gold_count": 5,
+        "pred_count": 5,
+        "tp": 5,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "unique_id",
+        "gold_count": 3,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 0.6667,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "tax_id",
+        "gold_count": 2,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "certificate_license_number",
+        "gold_count": 2,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      }
+    ],
+    "llm_only": [
+      {
+        "label": "first_name",
+        "gold_count": 153,
+        "pred_count": 152,
+        "tp": 149,
+        "fp": 3,
+        "recall": 0.9739,
+        "precision": 0.9803,
+        "covered_by_design": false
+      },
+      {
+        "label": "date",
+        "gold_count": 138,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "last_name",
+        "gold_count": 112,
+        "pred_count": 109,
+        "tp": 106,
+        "fp": 3,
+        "recall": 0.9464,
+        "precision": 0.9725,
+        "covered_by_design": false
+      },
+      {
+        "label": "email",
+        "gold_count": 107,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "company_name",
+        "gold_count": 100,
+        "pred_count": 94,
+        "tp": 68,
+        "fp": 26,
+        "recall": 0.68,
+        "precision": 0.7234,
+        "covered_by_design": false
+      },
+      {
+        "label": "url",
+        "gold_count": 70,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "occupation",
+        "gold_count": 61,
+        "pred_count": 148,
+        "tp": 32,
+        "fp": 116,
+        "recall": 0.5246,
+        "precision": 0.2162,
+        "covered_by_design": false
+      },
+      {
+        "label": "time",
+        "gold_count": 54,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "phone_number",
+        "gold_count": 47,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "city",
+        "gold_count": 47,
+        "pred_count": 49,
+        "tp": 47,
+        "fp": 2,
+        "recall": 1.0,
+        "precision": 0.9592,
+        "covered_by_design": false
+      },
+      {
+        "label": "country",
+        "gold_count": 44,
+        "pred_count": 43,
+        "tp": 41,
+        "fp": 2,
+        "recall": 0.9318,
+        "precision": 0.9535,
+        "covered_by_design": false
+      },
+      {
+        "label": "customer_id",
+        "gold_count": 44,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "account_number",
+        "gold_count": 41,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "street_address",
+        "gold_count": 40,
+        "pred_count": 27,
+        "tp": 21,
+        "fp": 6,
+        "recall": 0.525,
+        "precision": 0.7778,
+        "covered_by_design": false
+      },
+      {
+        "label": "state",
+        "gold_count": 38,
+        "pred_count": 36,
+        "tp": 34,
+        "fp": 2,
+        "recall": 0.8947,
+        "precision": 0.9444,
+        "covered_by_design": false
+      },
+      {
+        "label": "political_view",
+        "gold_count": 29,
+        "pred_count": 23,
+        "tp": 23,
+        "fp": 0,
+        "recall": 0.7931,
+        "precision": 1.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "user_name",
+        "gold_count": 29,
+        "pred_count": 34,
+        "tp": 24,
+        "fp": 10,
+        "recall": 0.8276,
+        "precision": 0.7059,
+        "covered_by_design": false
+      },
+      {
+        "label": "date_of_birth",
+        "gold_count": 28,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "date_time",
+        "gold_count": 28,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "biometric_identifier",
+        "gold_count": 27,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "coordinate",
+        "gold_count": 26,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "credit_debit_card",
+        "gold_count": 23,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "education_level",
+        "gold_count": 21,
+        "pred_count": 15,
+        "tp": 13,
+        "fp": 2,
+        "recall": 0.619,
+        "precision": 0.8667,
+        "covered_by_design": false
+      },
+      {
+        "label": "employment_status",
+        "gold_count": 20,
+        "pred_count": 28,
+        "tp": 13,
+        "fp": 15,
+        "recall": 0.65,
+        "precision": 0.4643,
+        "covered_by_design": false
+      },
+      {
+        "label": "bank_routing_number",
+        "gold_count": 18,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "race_ethnicity",
+        "gold_count": 18,
+        "pred_count": 18,
+        "tp": 16,
+        "fp": 2,
+        "recall": 0.8889,
+        "precision": 0.8889,
+        "covered_by_design": false
+      },
+      {
+        "label": "county",
+        "gold_count": 17,
+        "pred_count": 16,
+        "tp": 15,
+        "fp": 1,
+        "recall": 0.8824,
+        "precision": 0.9375,
+        "covered_by_design": false
+      },
+      {
+        "label": "health_plan_beneficiary_number",
+        "gold_count": 16,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "postcode",
+        "gold_count": 16,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "vehicle_identifier",
+        "gold_count": 14,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "fax_number",
+        "gold_count": 14,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "age",
+        "gold_count": 13,
+        "pred_count": 11,
+        "tp": 9,
+        "fp": 2,
+        "recall": 0.6923,
+        "precision": 0.8182,
+        "covered_by_design": false
+      },
+      {
+        "label": "license_plate",
+        "gold_count": 12,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "language",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 11,
+        "fp": 1,
+        "recall": 0.9167,
+        "precision": 0.9167,
+        "covered_by_design": false
+      },
+      {
+        "label": "mac_address",
+        "gold_count": 12,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "http_cookie",
+        "gold_count": 12,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv4",
+        "gold_count": 12,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "religious_belief",
+        "gold_count": 11,
+        "pred_count": 12,
+        "tp": 11,
+        "fp": 1,
+        "recall": 1.0,
+        "precision": 0.9167,
+        "covered_by_design": false
+      },
+      {
+        "label": "national_id",
+        "gold_count": 11,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "cvv",
+        "gold_count": 10,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "pin",
+        "gold_count": 10,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "employee_id",
+        "gold_count": 10,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ssn",
+        "gold_count": 9,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "medical_record_number",
+        "gold_count": 8,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "password",
+        "gold_count": 8,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "sexuality",
+        "gold_count": 8,
+        "pred_count": 8,
+        "tp": 7,
+        "fp": 1,
+        "recall": 0.875,
+        "precision": 0.875,
+        "covered_by_design": false
+      },
+      {
+        "label": "blood_type",
+        "gold_count": 8,
+        "pred_count": 6,
+        "tp": 6,
+        "fp": 0,
+        "recall": 0.75,
+        "precision": 1.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "device_identifier",
+        "gold_count": 8,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "api_key",
+        "gold_count": 7,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv6",
+        "gold_count": 7,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "gender",
+        "gold_count": 5,
+        "pred_count": 7,
+        "tp": 4,
+        "fp": 3,
+        "recall": 0.8,
+        "precision": 0.5714,
+        "covered_by_design": false
+      },
+      {
+        "label": "swift_bic",
+        "gold_count": 5,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "unique_id",
+        "gold_count": 3,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "tax_id",
+        "gold_count": 2,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "certificate_license_number",
+        "gold_count": 2,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "covered_by_design": true
+      }
+    ],
+    "hybrid": [
+      {
+        "label": "first_name",
+        "gold_count": 153,
+        "pred_count": 151,
+        "tp": 149,
+        "fp": 2,
+        "recall": 0.9739,
+        "precision": 0.9868,
+        "covered_by_design": false
+      },
+      {
+        "label": "date",
+        "gold_count": 138,
+        "pred_count": 125,
+        "tp": 124,
+        "fp": 1,
+        "recall": 0.8986,
+        "precision": 0.992,
+        "covered_by_design": true
+      },
+      {
+        "label": "last_name",
+        "gold_count": 112,
+        "pred_count": 108,
+        "tp": 106,
+        "fp": 2,
+        "recall": 0.9464,
+        "precision": 0.9815,
+        "covered_by_design": false
+      },
+      {
+        "label": "email",
+        "gold_count": 107,
+        "pred_count": 107,
+        "tp": 107,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "company_name",
+        "gold_count": 100,
+        "pred_count": 91,
+        "tp": 76,
+        "fp": 15,
+        "recall": 0.76,
+        "precision": 0.8352,
+        "covered_by_design": false
+      },
+      {
+        "label": "url",
+        "gold_count": 70,
+        "pred_count": 70,
+        "tp": 70,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "occupation",
+        "gold_count": 61,
+        "pred_count": 153,
+        "tp": 32,
+        "fp": 121,
+        "recall": 0.5246,
+        "precision": 0.2092,
+        "covered_by_design": false
+      },
+      {
+        "label": "time",
+        "gold_count": 54,
+        "pred_count": 42,
+        "tp": 41,
+        "fp": 1,
+        "recall": 0.7593,
+        "precision": 0.9762,
+        "covered_by_design": true
+      },
+      {
+        "label": "phone_number",
+        "gold_count": 47,
+        "pred_count": 58,
+        "tp": 46,
+        "fp": 12,
+        "recall": 0.9787,
+        "precision": 0.7931,
+        "covered_by_design": true
+      },
+      {
+        "label": "city",
+        "gold_count": 47,
+        "pred_count": 49,
+        "tp": 47,
+        "fp": 2,
+        "recall": 1.0,
+        "precision": 0.9592,
+        "covered_by_design": false
+      },
+      {
+        "label": "country",
+        "gold_count": 44,
+        "pred_count": 43,
+        "tp": 41,
+        "fp": 2,
+        "recall": 0.9318,
+        "precision": 0.9535,
+        "covered_by_design": false
+      },
+      {
+        "label": "customer_id",
+        "gold_count": 44,
+        "pred_count": 43,
+        "tp": 41,
+        "fp": 2,
+        "recall": 0.9318,
+        "precision": 0.9535,
+        "covered_by_design": true
+      },
+      {
+        "label": "account_number",
+        "gold_count": 41,
+        "pred_count": 35,
+        "tp": 35,
+        "fp": 0,
+        "recall": 0.8537,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "street_address",
+        "gold_count": 40,
+        "pred_count": 27,
+        "tp": 21,
+        "fp": 6,
+        "recall": 0.525,
+        "precision": 0.7778,
+        "covered_by_design": false
+      },
+      {
+        "label": "state",
+        "gold_count": 38,
+        "pred_count": 35,
+        "tp": 34,
+        "fp": 1,
+        "recall": 0.8947,
+        "precision": 0.9714,
+        "covered_by_design": false
+      },
+      {
+        "label": "political_view",
+        "gold_count": 29,
+        "pred_count": 23,
+        "tp": 23,
+        "fp": 0,
+        "recall": 0.7931,
+        "precision": 1.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "user_name",
+        "gold_count": 29,
+        "pred_count": 26,
+        "tp": 24,
+        "fp": 2,
+        "recall": 0.8276,
+        "precision": 0.9231,
+        "covered_by_design": false
+      },
+      {
+        "label": "date_of_birth",
+        "gold_count": 28,
+        "pred_count": 28,
+        "tp": 27,
+        "fp": 1,
+        "recall": 0.9643,
+        "precision": 0.9643,
+        "covered_by_design": true
+      },
+      {
+        "label": "date_time",
+        "gold_count": 28,
+        "pred_count": 29,
+        "tp": 27,
+        "fp": 2,
+        "recall": 0.9643,
+        "precision": 0.931,
+        "covered_by_design": true
+      },
+      {
+        "label": "biometric_identifier",
+        "gold_count": 27,
+        "pred_count": 27,
+        "tp": 27,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "coordinate",
+        "gold_count": 26,
+        "pred_count": 23,
+        "tp": 22,
+        "fp": 1,
+        "recall": 0.8462,
+        "precision": 0.9565,
+        "covered_by_design": true
+      },
+      {
+        "label": "credit_debit_card",
+        "gold_count": 23,
+        "pred_count": 26,
+        "tp": 23,
+        "fp": 3,
+        "recall": 1.0,
+        "precision": 0.8846,
+        "covered_by_design": true
+      },
+      {
+        "label": "education_level",
+        "gold_count": 21,
+        "pred_count": 15,
+        "tp": 13,
+        "fp": 2,
+        "recall": 0.619,
+        "precision": 0.8667,
+        "covered_by_design": false
+      },
+      {
+        "label": "employment_status",
+        "gold_count": 20,
+        "pred_count": 25,
+        "tp": 13,
+        "fp": 12,
+        "recall": 0.65,
+        "precision": 0.52,
+        "covered_by_design": false
+      },
+      {
+        "label": "bank_routing_number",
+        "gold_count": 18,
+        "pred_count": 17,
+        "tp": 17,
+        "fp": 0,
+        "recall": 0.9444,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "race_ethnicity",
+        "gold_count": 18,
+        "pred_count": 18,
+        "tp": 16,
+        "fp": 2,
+        "recall": 0.8889,
+        "precision": 0.8889,
+        "covered_by_design": false
+      },
+      {
+        "label": "county",
+        "gold_count": 17,
+        "pred_count": 16,
+        "tp": 15,
+        "fp": 1,
+        "recall": 0.8824,
+        "precision": 0.9375,
+        "covered_by_design": false
+      },
+      {
+        "label": "health_plan_beneficiary_number",
+        "gold_count": 16,
+        "pred_count": 14,
+        "tp": 13,
+        "fp": 1,
+        "recall": 0.8125,
+        "precision": 0.9286,
+        "covered_by_design": true
+      },
+      {
+        "label": "postcode",
+        "gold_count": 16,
+        "pred_count": 8,
+        "tp": 8,
+        "fp": 0,
+        "recall": 0.5,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "vehicle_identifier",
+        "gold_count": 14,
+        "pred_count": 13,
+        "tp": 13,
+        "fp": 0,
+        "recall": 0.9286,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "fax_number",
+        "gold_count": 14,
+        "pred_count": 14,
+        "tp": 13,
+        "fp": 1,
+        "recall": 0.9286,
+        "precision": 0.9286,
+        "covered_by_design": true
+      },
+      {
+        "label": "age",
+        "gold_count": 13,
+        "pred_count": 11,
+        "tp": 9,
+        "fp": 2,
+        "recall": 0.6923,
+        "precision": 0.8182,
+        "covered_by_design": false
+      },
+      {
+        "label": "license_plate",
+        "gold_count": 12,
+        "pred_count": 10,
+        "tp": 10,
+        "fp": 0,
+        "recall": 0.8333,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "language",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 11,
+        "fp": 1,
+        "recall": 0.9167,
+        "precision": 0.9167,
+        "covered_by_design": false
+      },
+      {
+        "label": "mac_address",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 12,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "http_cookie",
+        "gold_count": 12,
+        "pred_count": 9,
+        "tp": 8,
+        "fp": 1,
+        "recall": 0.6667,
+        "precision": 0.8889,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv4",
+        "gold_count": 12,
+        "pred_count": 12,
+        "tp": 12,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "religious_belief",
+        "gold_count": 11,
+        "pred_count": 12,
+        "tp": 11,
+        "fp": 1,
+        "recall": 1.0,
+        "precision": 0.9167,
+        "covered_by_design": false
+      },
+      {
+        "label": "national_id",
+        "gold_count": 11,
+        "pred_count": 11,
+        "tp": 10,
+        "fp": 1,
+        "recall": 0.9091,
+        "precision": 0.9091,
+        "covered_by_design": true
+      },
+      {
+        "label": "cvv",
+        "gold_count": 10,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 0.9,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "pin",
+        "gold_count": 10,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 0.7,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "employee_id",
+        "gold_count": 10,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 0.9,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ssn",
+        "gold_count": 9,
+        "pred_count": 9,
+        "tp": 9,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "medical_record_number",
+        "gold_count": 8,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 0.875,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "password",
+        "gold_count": 8,
+        "pred_count": 6,
+        "tp": 6,
+        "fp": 0,
+        "recall": 0.75,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "sexuality",
+        "gold_count": 8,
+        "pred_count": 8,
+        "tp": 7,
+        "fp": 1,
+        "recall": 0.875,
+        "precision": 0.875,
+        "covered_by_design": false
+      },
+      {
+        "label": "blood_type",
+        "gold_count": 8,
+        "pred_count": 6,
+        "tp": 6,
+        "fp": 0,
+        "recall": 0.75,
+        "precision": 1.0,
+        "covered_by_design": false
+      },
+      {
+        "label": "device_identifier",
+        "gold_count": 8,
+        "pred_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "recall": 0.375,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "api_key",
+        "gold_count": 7,
+        "pred_count": 3,
+        "tp": 3,
+        "fp": 0,
+        "recall": 0.4286,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "ipv6",
+        "gold_count": 7,
+        "pred_count": 7,
+        "tp": 7,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "gender",
+        "gold_count": 5,
+        "pred_count": 7,
+        "tp": 4,
+        "fp": 3,
+        "recall": 0.8,
+        "precision": 0.5714,
+        "covered_by_design": false
+      },
+      {
+        "label": "swift_bic",
+        "gold_count": 5,
+        "pred_count": 5,
+        "tp": 5,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "unique_id",
+        "gold_count": 3,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 0.6667,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "tax_id",
+        "gold_count": 2,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      },
+      {
+        "label": "certificate_license_number",
+        "gold_count": 2,
+        "pred_count": 2,
+        "tp": 2,
+        "fp": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "covered_by_design": true
+      }
+    ]
+  },
+  "llm_usage": {
+    "calls": 408,
+    "cache_hits": 200,
+    "prompt_tokens": 611711,
+    "completion_tokens": 41610,
+    "total_tokens": 653321,
+    "cost_usd": 0.019386
+  }
+}

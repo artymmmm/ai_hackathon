@@ -1,0 +1,30 @@
+=== deepseek-or | deepseek/deepseek-chat | 2026-08-27 15:24:04 ===
+
+--- кейс 3 (150 фрагментов, фиксированный набор) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/case3_verdicts.xlsx
+  json -> out/case3_verdicts.json
+  llm usage: {"calls": 163, "cache_hits": 0, "prompt_tokens": 266622, "completion_tokens": 27983, "total_tokens": 294605, "cost_usd": 0.097316}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.444  recall(vulnerable)=0.087  f1(vulnerable)=0.145  fpr=0.048  accuracy=0.687
+baseline «всё secure»: accuracy=0.693 на 46 истинных vulnerable из 150 (!! МЫ НЕ БЬЁМ БАЗОВУЮ ЛИНИЮ !!)
+escalation_rate (verdict=uncertain): 0.280 (42 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.000 (верно 0 из 4 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic,gigachat}]
+                   [--base-url BASE_URL] [--api-key-env API_KEY_ENV]
+                   [--cache-path CACHE_PATH]
+evaluate.py: error: unrecognized arguments: --price-in 0.257 --price-out 1.029
+
+--- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/case2_verdicts.xlsx
+  json -> out/case2_verdicts.json
+  llm usage: {"calls": 44, "cache_hits": 0, "prompt_tokens": 39659, "completion_tokens": 4476, "total_tokens": 44135, "cost_usd": 0.014798}
+
+=== готово: deepseek-or ===

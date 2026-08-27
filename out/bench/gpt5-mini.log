@@ -1,0 +1,31 @@
+=== gpt5-mini | openai/gpt-5-mini | 2026-08-27 16:04:38 ===
+
+--- кейс 3 (150 фрагментов, фиксированный набор) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/case3_verdicts.xlsx
+  json -> out/case3_verdicts.json
+  llm usage: {"calls": 193, "cache_hits": 0, "prompt_tokens": 263524, "completion_tokens": 269600, "total_tokens": 533124, "cost_usd": 0.605081}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.512  recall(vulnerable)=0.478  f1(vulnerable)=0.494  fpr=0.202  accuracy=0.700
+baseline «всё secure»: accuracy=0.693 на 46 истинных vulnerable из 150 (мы выше)
+escalation_rate (verdict=uncertain): 0.573 (86 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.158 (верно 3 из 19 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic,gigachat}]
+                   [--base-url BASE_URL] [--api-key-env API_KEY_ENV]
+                   [--cache-path CACHE_PATH] [--max-tokens MAX_TOKENS]
+                   [--max-concurrency MAX_CONCURRENCY]
+evaluate.py: error: unrecognized arguments: --provider OpenAI --price-in 0.25 --price-out 2.00
+
+--- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/case2_verdicts.xlsx
+  json -> out/case2_verdicts.json
+  llm usage: {"calls": 45, "cache_hits": 0, "prompt_tokens": 37832, "completion_tokens": 24087, "total_tokens": 61919, "cost_usd": 0.057632}
+
+=== готово: gpt5-mini ===

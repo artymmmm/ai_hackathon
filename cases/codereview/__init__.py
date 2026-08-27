@@ -31,6 +31,7 @@ LLM означало бы терять ~90% реальных уязвимост�
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pandas as pd
@@ -127,33 +128,38 @@ def load(ctx: PipelineContext) -> list[Record]:
     return records
 
 
+def _validate_one(v: Verdict, ctx: PipelineContext) -> Verdict:
+    a = v.artifacts
+    if v.verdict != "vulnerable" or not a.get("patched_code"):
+        return v
+
+    original_code = a.get("code", "")
+    patched_code = a["patched_code"]
+    static_check = check_patch(original_code, patched_code)
+    opinion = second_opinion(patched_code, ctx)
+
+    new_artifacts = {**a, "patch_check": static_check, "second_opinion": opinion}
+
+    # Патч не прошёл статическую проверку ИЛИ второе независимое мнение всё ещё видит
+    # уязвимость → не заявляем «уязвимость закрыта» без проверки: уводим на ручную проверку
+    # и понижаем уверенность, но саму находку не отбрасываем.
+    still_vulnerable = opinion.get("contains_vulnerability") is True
+    patch_untrusted = not static_check["passed"] or still_vulnerable
+    confidence = min(v.confidence, 0.4) if patch_untrusted else v.confidence
+    action = "manual_review" if patch_untrusted else v.action
+
+    return v.model_copy(update={"confidence": confidence, "action": action, "artifacts": new_artifacts})
+
+
 def validate(verdicts: list[Verdict], ctx: PipelineContext) -> list[Verdict]:
     """Проверка патча для каждого verdict=="vulnerable" с непустым patched_code (PLAN.md §5,
-    «Проверка патча — наша отличительная фича»). secure/uncertain не трогаем — патча нет."""
-    out = []
-    for v in verdicts:
-        a = v.artifacts
-        if v.verdict != "vulnerable" or not a.get("patched_code"):
-            out.append(v)
-            continue
+    «Проверка патча — наша отличительная фича»). secure/uncertain не трогаем — патча нет.
 
-        original_code = a.get("code", "")
-        patched_code = a["patched_code"]
-        static_check = check_patch(original_code, patched_code)
-        opinion = second_opinion(patched_code, ctx)
-
-        new_artifacts = {**a, "patch_check": static_check, "second_opinion": opinion}
-
-        # Патч не прошёл статическую проверку ИЛИ второе независимое мнение всё ещё видит
-        # уязвимость → не заявляем «уязвимость закрыта» без проверки: уводим на ручную проверку
-        # и понижаем уверенность, но саму находку не отбрасываем.
-        still_vulnerable = opinion.get("contains_vulnerability") is True
-        patch_untrusted = not static_check["passed"] or still_vulnerable
-        confidence = min(v.confidence, 0.4) if patch_untrusted else v.confidence
-        action = "manual_review" if patch_untrusted else v.action
-
-        out.append(v.model_copy(update={"confidence": confidence, "action": action, "artifacts": new_artifacts}))
-    return out
+    `second_opinion` внутри — независимый сетевой вызов, поэтому распараллелено через
+    ThreadPoolExecutor (лимит — LLMConfig.max_concurrency); ex.map сохраняет порядок результатов.
+    """
+    with ThreadPoolExecutor(max_workers=ctx.llm.config.max_concurrency) as ex:
+        return list(ex.map(lambda v: _validate_one(v, ctx), verdicts))
 
 
 def export_columns(v: Verdict) -> dict:

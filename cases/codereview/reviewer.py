@@ -16,6 +16,8 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
+
 from core.pipeline import PipelineContext, Record
 from core.schema import Verdict
 from cases.codereview.cwe_map import cwe_name, normalize_cwe
@@ -221,25 +223,32 @@ def _to_verdict(doc_id: str, parsed: dict, *, full_code: str, truncated: bool, o
         return _fallback(doc_id, f"llm_schema_error:{e}")
 
 
+def _review_one(rec: Record, ctx: PipelineContext) -> Verdict:
+    doc_id = rec["doc_id"]
+    code, truncated, original_length = _prepare_code(rec["code"])
+    truncation_note = (
+        f"[ВНИМАНИЕ: фрагмент усечён с {original_length} до {MAX_CODE_CHARS} символов — "
+        "анализируй по видимой части, при нехватке контекста используй verdict=uncertain.]\n"
+        if truncated else ""
+    )
+    prompt = USER_TEMPLATE.format(
+        doc_id=doc_id, hint_block=_hint_block(rec), truncation_note=truncation_note, code=code,
+    )
+    try:
+        parsed = ctx.llm.complete_json(prompt, example=_JSON_EXAMPLE, system=SYSTEM_PROMPT)
+        return _to_verdict(
+            doc_id, parsed, full_code=rec["code"], truncated=truncated, original_length=original_length,
+        )
+    except Exception as e:
+        return _fallback(doc_id, f"llm_call_failed:{e}", code=rec["code"])
+
+
 def review_fragments(records: list[Record], ctx: PipelineContext) -> list[Verdict]:
-    """Стадия `llm` плагина: по одному запросу на фрагмент, JSON по контракту Verdict."""
-    verdicts = []
-    for rec in records:
-        doc_id = rec["doc_id"]
-        code, truncated, original_length = _prepare_code(rec["code"])
-        truncation_note = (
-            f"[ВНИМАНИЕ: фрагмент усечён с {original_length} до {MAX_CODE_CHARS} символов — "
-            "анализируй по видимой части, при нехватке контекста используй verdict=uncertain.]\n"
-            if truncated else ""
-        )
-        prompt = USER_TEMPLATE.format(
-            doc_id=doc_id, hint_block=_hint_block(rec), truncation_note=truncation_note, code=code,
-        )
-        try:
-            parsed = ctx.llm.complete_json(prompt, example=_JSON_EXAMPLE, system=SYSTEM_PROMPT)
-            verdicts.append(_to_verdict(
-                doc_id, parsed, full_code=rec["code"], truncated=truncated, original_length=original_length,
-            ))
-        except Exception as e:
-            verdicts.append(_fallback(doc_id, f"llm_call_failed:{e}", code=rec["code"]))
-    return verdicts
+    """Стадия `llm` плагина: по одному запросу на фрагмент, JSON по контракту Verdict.
+
+    Запросы к LLM независимы и блокирующие, поэтому распараллелены через ThreadPoolExecutor
+    (лимит — LLMConfig.max_concurrency); ex.map сохраняет порядок результатов, ошибка на
+    отдельной записи по-прежнему гасится в `_review_one` и не роняет остальные.
+    """
+    with ThreadPoolExecutor(max_workers=ctx.llm.config.max_concurrency) as ex:
+        return list(ex.map(lambda rec: _review_one(rec, ctx), records))

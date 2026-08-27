@@ -1,0 +1,30 @@
+=== gigachat-3-ultra | GigaChat-3-Ultra | https://api.giga.chat/v1 | 2026-08-27 14:24:14 ===
+
+--- кейс 3 (150 фрагментов) ---
+case 3 (codereview): 150 вердиктов
+  xlsx -> out/gc/case3_verdicts.xlsx
+  json -> out/gc/case3_verdicts.json
+  llm usage: {"calls": 165, "cache_hits": 0, "prompt_tokens": 100573, "completion_tokens": 26739, "total_tokens": 127312, "cost_usd": 0.0}
+Прогон: 150 вердиктов; найдено в gold: 150; размечено однозначно (secure/vulnerable): 150 (conflict исключено: 0, unmatched исключено: 0)
+precision(vulnerable)=0.417  recall(vulnerable)=0.100  f1(vulnerable)=0.161  fpr=0.070  accuracy=0.653
+baseline «всё secure»: accuracy=0.667 на 50 истинных vulnerable из 150 (!! МЫ НЕ БЬЁМ БАЗОВУЮ ЛИНИЮ !!)
+escalation_rate (verdict=uncertain): 0.067 (10 фрагментов)
+CWE accuracy на пойманных true positive vulnerable: 0.000 (верно 0 из 4 сравнимых пар)
+
+полные метрики -> cases/codereview/out/eval_metrics.json
+
+--- кейс 1 (ablation, n=200) ---
+usage: evaluate.py [-h] [--n N] [--split SPLIT] [--seed SEED] [--ablation]
+                   [--dry-run] [--model MODEL]
+                   [--backend {openai_compat,anthropic,gigachat}]
+                   [--base-url BASE_URL] [--api-key-env API_KEY_ENV]
+                   [--cache-path CACHE_PATH]
+evaluate.py: error: unrecognized arguments: --max-concurrency 1
+
+--- кейс 2 (n=1000) ---
+case 2 (guard): 1000 вердиктов
+  xlsx -> out/gc/case2_verdicts.xlsx
+  json -> out/gc/case2_verdicts.json
+  llm usage: {"calls": 44, "cache_hits": 0, "prompt_tokens": 23250, "completion_tokens": 4375, "total_tokens": 27625, "cost_usd": 0.0}
+
+=== готово: gigachat-3-ultra ===

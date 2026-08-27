@@ -7,6 +7,8 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
+
 from core.pipeline import PipelineContext, Record
 from core.schema import Verdict
 from cases.guard.taxonomy import TAGS
@@ -117,16 +119,23 @@ def _to_verdict(doc_id: str, parsed: dict) -> Verdict:
         return _fallback(doc_id, f"llm_schema_error:{e}")
 
 
+def _classify_one(rec: Record, ctx: PipelineContext) -> Verdict:
+    doc_id = rec["doc_id"]
+    prompt = USER_TEMPLATE.format(doc_id=doc_id, text=rec["text"])
+    try:
+        parsed = ctx.llm.complete_json(prompt, example=_JSON_EXAMPLE, system=SYSTEM_PROMPT)
+        parsed.setdefault("doc_id", doc_id)
+        return _to_verdict(doc_id, parsed)
+    except Exception as e:
+        return _fallback(doc_id, f"llm_call_failed:{e}")
+
+
 def classify_grey_zone(records: list[Record], ctx: PipelineContext) -> list[Verdict]:
-    """Стадия `llm` плагина: по одному запросу на запись серой зоны, JSON по контракту Verdict."""
-    verdicts = []
-    for rec in records:
-        doc_id = rec["doc_id"]
-        prompt = USER_TEMPLATE.format(doc_id=doc_id, text=rec["text"])
-        try:
-            parsed = ctx.llm.complete_json(prompt, example=_JSON_EXAMPLE, system=SYSTEM_PROMPT)
-            parsed.setdefault("doc_id", doc_id)
-            verdicts.append(_to_verdict(doc_id, parsed))
-        except Exception as e:
-            verdicts.append(_fallback(doc_id, f"llm_call_failed:{e}"))
-    return verdicts
+    """Стадия `llm` плагина: по одному запросу на запись серой зоны, JSON по контракту Verdict.
+
+    Запросы к LLM независимы и блокирующие, поэтому распараллелены через ThreadPoolExecutor
+    (лимит — LLMConfig.max_concurrency); ex.map сохраняет порядок результатов, ошибка на
+    отдельной записи по-прежнему гасится в `_classify_one` и не роняет остальные.
+    """
+    with ThreadPoolExecutor(max_workers=ctx.llm.config.max_concurrency) as ex:
+        return list(ex.map(lambda rec: _classify_one(rec, ctx), records))

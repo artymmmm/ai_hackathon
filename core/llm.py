@@ -205,8 +205,26 @@ def _openai_compat_call(*, base_url: str, api_key_env: str, model: str, system: 
     except (urllib.error.URLError, TimeoutError) as e:
         raise _TransientError(f"сетевая ошибка: {e}")
 
-    text = payload["choices"][0]["message"]["content"]
+    choice = payload["choices"][0]
+    text = choice["message"].get("content")
     usage = payload.get("usage") or {}
+    if not text:
+        # Reasoning-модели (gpt-5-nano и т.п.) при finish_reason == "length" могут потратить
+        # весь max_tokens на внутренние рассуждения и вернуть content: null — это не сетевая
+        # ошибка и не брак модели по существу, повтор с теми же max_tokens ничего не изменит.
+        finish_reason = choice.get("finish_reason")
+        if finish_reason == "length":
+            reasoning_tokens = (usage.get("completion_tokens_details") or {}).get("reasoning_tokens")
+            reasoning_note = (
+                f", из них на рассуждения ушло {reasoning_tokens}" if reasoning_tokens is not None else ""
+            )
+            raise LLMError(
+                f"пустой content у модели {model}: finish_reason=length, "
+                f"весь max_tokens={max_tokens} израсходован до генерации ответа"
+                f"{reasoning_note}. Повтор с тем же max_tokens не поможет — увеличить max_tokens."
+            )
+        # Пустой content при любом другом finish_reason похож на сбой провайдера — ретраим.
+        raise _TransientError(f"пустой content у модели {model}, finish_reason={finish_reason!r}")
     prompt_tokens = usage.get("prompt_tokens") or _estimate_tokens(prompt + (system or ""))
     completion_tokens = usage.get("completion_tokens") or _estimate_tokens(text)
     return text, prompt_tokens, completion_tokens
