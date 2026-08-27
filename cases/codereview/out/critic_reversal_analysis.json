@@ -1,0 +1,56 @@
+{
+  "critic_all": {
+    "vulnerable_to_secure (downgrade)": {
+      "n": 21,
+      "n_gold_known": 21,
+      "n_correct": 7,
+      "n_wrong": 14
+    },
+    "secure_to_vulnerable (upgrade)": {
+      "n": 0,
+      "n_gold_known": 0,
+      "n_correct": 0,
+      "n_wrong": 0
+    },
+    "uncertain_to_vulnerable (resolved)": {
+      "n": 7,
+      "n_gold_known": 7,
+      "n_correct": 2,
+      "n_wrong": 5
+    },
+    "uncertain_to_secure (resolved)": {
+      "n": 82,
+      "n_gold_known": 82,
+      "n_correct": 61,
+      "n_wrong": 21
+    },
+    "unchanged": 40
+  },
+  "critic_blind": {
+    "vulnerable_to_secure (downgrade)": {
+      "n": 20,
+      "n_gold_known": 20,
+      "n_correct": 7,
+      "n_wrong": 13
+    },
+    "secure_to_vulnerable (upgrade)": {
+      "n": 0,
+      "n_gold_known": 0,
+      "n_correct": 0,
+      "n_wrong": 0
+    },
+    "uncertain_to_vulnerable (resolved)": {
+      "n": 4,
+      "n_gold_known": 4,
+      "n_correct": 1,
+      "n_wrong": 3
+    },
+    "uncertain_to_secure (resolved)": {
+      "n": 85,
+      "n_gold_known": 85,
+      "n_correct": 63,
+      "n_wrong": 22
+    },
+    "unchanged": 41
+  }
+}

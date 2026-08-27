@@ -1,0 +1,114 @@
+{
+  "critic_all": {
+    "precision_vulnerable": 0.5,
+    "recall_vulnerable": 0.18,
+    "f1_vulnerable": 0.2647,
+    "fpr_vulnerable": 0.09,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 91,
+        "true_vulnerable": 41
+      },
+      "pred_vulnerable": {
+        "true_secure": 9,
+        "true_vulnerable": 9
+      }
+    }
+  },
+  "critic_on_uncertain": {
+    "precision_vulnerable": 0.5897,
+    "recall_vulnerable": 0.46,
+    "f1_vulnerable": 0.5169,
+    "fpr_vulnerable": 0.16,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 84,
+        "true_vulnerable": 27
+      },
+      "pred_vulnerable": {
+        "true_secure": 16,
+        "true_vulnerable": 23
+      }
+    }
+  },
+  "critic_blind": {
+    "precision_vulnerable": 0.5625,
+    "recall_vulnerable": 0.18,
+    "f1_vulnerable": 0.2727,
+    "fpr_vulnerable": 0.07,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 93,
+        "true_vulnerable": 41
+      },
+      "pred_vulnerable": {
+        "true_secure": 7,
+        "true_vulnerable": 9
+      }
+    }
+  },
+  "critic_vote_k1of5": {
+    "precision_vulnerable": 0.4286,
+    "recall_vulnerable": 0.48,
+    "f1_vulnerable": 0.4528,
+    "fpr_vulnerable": 0.32,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 68,
+        "true_vulnerable": 26
+      },
+      "pred_vulnerable": {
+        "true_secure": 32,
+        "true_vulnerable": 24
+      }
+    }
+  },
+  "critic_vote_k2of5": {
+    "precision_vulnerable": 0.5161,
+    "recall_vulnerable": 0.32,
+    "f1_vulnerable": 0.3951,
+    "fpr_vulnerable": 0.15,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 85,
+        "true_vulnerable": 34
+      },
+      "pred_vulnerable": {
+        "true_secure": 15,
+        "true_vulnerable": 16
+      }
+    }
+  },
+  "critic_vote_k3of5": {
+    "precision_vulnerable": 0.5833,
+    "recall_vulnerable": 0.14,
+    "f1_vulnerable": 0.2258,
+    "fpr_vulnerable": 0.05,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 95,
+        "true_vulnerable": 43
+      },
+      "pred_vulnerable": {
+        "true_secure": 5,
+        "true_vulnerable": 7
+      }
+    }
+  },
+  "critic_vote_k4of5": {
+    "precision_vulnerable": 0.6667,
+    "recall_vulnerable": 0.12,
+    "f1_vulnerable": 0.2034,
+    "fpr_vulnerable": 0.03,
+    "confusion_matrix": {
+      "pred_secure": {
+        "true_secure": 97,
+        "true_vulnerable": 44
+      },
+      "pred_vulnerable": {
+        "true_secure": 3,
+        "true_vulnerable": 6
+      }
+    }
+  }
+}

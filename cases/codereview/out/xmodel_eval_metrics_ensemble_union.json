@@ -1,0 +1,185 @@
+{
+  "n_run": 150,
+  "n_gold_found": 150,
+  "n_scoreable": 150,
+  "n_conflict_excluded": 0,
+  "n_unmatched_excluded": 0,
+  "confusion_matrix": {
+    "pred_secure": {
+      "true_secure": 77,
+      "true_vulnerable": 27
+    },
+    "pred_vulnerable": {
+      "true_secure": 23,
+      "true_vulnerable": 23
+    }
+  },
+  "precision_vulnerable": 0.5,
+  "recall_vulnerable": 0.46,
+  "f1_vulnerable": 0.4792,
+  "fpr_vulnerable": 0.23,
+  "accuracy": 0.6667,
+  "baseline_all_secure_accuracy": 0.6667,
+  "beats_baseline": false,
+  "n_true_vulnerable_in_scoreable": 50,
+  "n_uncertain_verdicts": 0,
+  "escalation_rate": 0.0,
+  "cwe_pairs_comparable": 19,
+  "cwe_correct": 3,
+  "cwe_accuracy": 0.1579,
+  "classification_report": {
+    "secure": {
+      "precision": 0.7403846153846154,
+      "recall": 0.77,
+      "f1-score": 0.7549019607843137,
+      "support": 100.0
+    },
+    "vulnerable": {
+      "precision": 0.5,
+      "recall": 0.46,
+      "f1-score": 0.4791666666666667,
+      "support": 50.0
+    },
+    "accuracy": 0.6666666666666666,
+    "macro avg": {
+      "precision": 0.6201923076923077,
+      "recall": 0.615,
+      "f1-score": 0.6170343137254902,
+      "support": 150.0
+    },
+    "weighted avg": {
+      "precision": 0.6602564102564104,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6629901960784313,
+      "support": 150.0
+    }
+  },
+  "escalation_curve": [
+    {
+      "threshold": 0.0,
+      "escalation_rate": 0.0,
+      "auto_count": 150,
+      "auto_accuracy": 0.6666666666666666
+    },
+    {
+      "threshold": 0.05,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.1,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.15,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.2,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.25,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.3,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.35,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.4,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.45,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.5,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.55,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.6,
+      "escalation_rate": 0.006666666666666667,
+      "auto_count": 149,
+      "auto_accuracy": 0.6711409395973155
+    },
+    {
+      "threshold": 0.65,
+      "escalation_rate": 0.5666666666666667,
+      "auto_count": 65,
+      "auto_accuracy": 0.676923076923077
+    },
+    {
+      "threshold": 0.7,
+      "escalation_rate": 0.5666666666666667,
+      "auto_count": 65,
+      "auto_accuracy": 0.676923076923077
+    },
+    {
+      "threshold": 0.75,
+      "escalation_rate": 0.6466666666666666,
+      "auto_count": 53,
+      "auto_accuracy": 0.7169811320754716
+    },
+    {
+      "threshold": 0.8,
+      "escalation_rate": 0.6466666666666666,
+      "auto_count": 53,
+      "auto_accuracy": 0.7169811320754716
+    },
+    {
+      "threshold": 0.85,
+      "escalation_rate": 0.72,
+      "auto_count": 42,
+      "auto_accuracy": 0.6904761904761905
+    },
+    {
+      "threshold": 0.9,
+      "escalation_rate": 0.72,
+      "auto_count": 42,
+      "auto_accuracy": 0.6904761904761905
+    },
+    {
+      "threshold": 0.95,
+      "escalation_rate": 0.96,
+      "auto_count": 6,
+      "auto_accuracy": 0.8333333333333334
+    },
+    {
+      "threshold": 1.0,
+      "escalation_rate": 1.0,
+      "auto_count": 0,
+      "auto_accuracy": NaN
+    }
+  ]
+}

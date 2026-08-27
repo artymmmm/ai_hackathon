@@ -1,0 +1,231 @@
+{
+  "target": {
+    "f1": 0.7,
+    "note": "tp~35 при fp<=14, эталон 150 (50 vulnerable/100 secure)"
+  },
+  "rows": [
+    {
+      "variant": "голая LLM",
+      "precision": 0.538,
+      "recall": 0.14,
+      "f1": 0.222,
+      "fpr": 0.06,
+      "tp": 7,
+      "fp": 6,
+      "fn": 43,
+      "tn": 94
+    },
+    {
+      "variant": "cert_only (ступень 1)",
+      "precision": 0.656,
+      "recall": 0.42,
+      "f1": 0.512,
+      "fpr": 0.11,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89
+    },
+    {
+      "variant": "каскад k>=3/5 (стадия 2)",
+      "precision": 0.676,
+      "recall": 0.5,
+      "f1": 0.575,
+      "fpr": 0.12,
+      "tp": 25,
+      "fp": 12,
+      "fn": 25,
+      "tn": 88
+    },
+    {
+      "variant": "court_base",
+      "precision": 0.6667,
+      "recall": 0.04,
+      "f1": 0.0755,
+      "fpr": 0.01,
+      "tp": 2,
+      "fp": 1,
+      "fn": 48,
+      "tn": 99
+    },
+    {
+      "variant": "court_no_defense",
+      "precision": 1.0,
+      "recall": 0.04,
+      "f1": 0.0769,
+      "fpr": 0.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 48,
+      "tn": 100
+    },
+    {
+      "variant": "court_vote_k1of5",
+      "precision": 0.6,
+      "recall": 0.06,
+      "f1": 0.1091,
+      "fpr": 0.02,
+      "tp": 3,
+      "fp": 2,
+      "fn": 47,
+      "tn": 98
+    },
+    {
+      "variant": "court_vote_k2of5",
+      "precision": 0.75,
+      "recall": 0.06,
+      "f1": 0.1111,
+      "fpr": 0.01,
+      "tp": 3,
+      "fp": 1,
+      "fn": 47,
+      "tn": 99
+    },
+    {
+      "variant": "court_vote_k3of5",
+      "precision": 0.6667,
+      "recall": 0.04,
+      "f1": 0.0755,
+      "fpr": 0.01,
+      "tp": 2,
+      "fp": 1,
+      "fn": 48,
+      "tn": 99
+    },
+    {
+      "variant": "court_vote_k4of5",
+      "precision": 1.0,
+      "recall": 0.04,
+      "f1": 0.0769,
+      "fpr": 0.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 48,
+      "tn": 100
+    },
+    {
+      "variant": "court_on_uncertain_base",
+      "precision": 0.6562,
+      "recall": 0.42,
+      "f1": 0.5122,
+      "fpr": 0.11,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89
+    },
+    {
+      "variant": "court_on_uncertain_vote_k1of5",
+      "precision": 0.6364,
+      "recall": 0.42,
+      "f1": 0.506,
+      "fpr": 0.12,
+      "tp": 21,
+      "fp": 12,
+      "fn": 29,
+      "tn": 88
+    },
+    {
+      "variant": "court_on_uncertain_vote_k2of5",
+      "precision": 0.6562,
+      "recall": 0.42,
+      "f1": 0.5122,
+      "fpr": 0.11,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89
+    },
+    {
+      "variant": "court_on_uncertain_vote_k3of5",
+      "precision": 0.6562,
+      "recall": 0.42,
+      "f1": 0.5122,
+      "fpr": 0.11,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89
+    },
+    {
+      "variant": "court_on_uncertain_vote_k4of5",
+      "precision": 0.6562,
+      "recall": 0.42,
+      "f1": 0.5122,
+      "fpr": 0.11,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89
+    }
+  ],
+  "usage": {
+    "calls": 1355,
+    "cache_hits": 136,
+    "prompt_tokens": 2224995,
+    "completion_tokens": 215447,
+    "total_tokens": 2440442,
+    "cost_usd": 0.0
+  },
+  "sampling_diversity_check": {
+    "avg_unique_responses_per_fragment": 4.94,
+    "n_samples_per_fragment": 5,
+    "n_fragments": 150,
+    "fragments_with_all_identical": 0,
+    "collapsed_doc_ids": []
+  },
+  "fp_tp_flip_analysis": {
+    "stage1_cert_only_vulnerable_predicted": {
+      "total": 32,
+      "tp": 21,
+      "fp": 11
+    },
+    "court_base": {
+      "fp_killed": 10,
+      "fp_kept": 1,
+      "tp_kept": 2,
+      "tp_lost": 19
+    },
+    "court_no_defense": {
+      "fp_killed": 11,
+      "fp_kept": 0,
+      "tp_kept": 2,
+      "tp_lost": 19
+    },
+    "court_vote_k1of5": {
+      "fp_killed": 10,
+      "fp_kept": 1,
+      "tp_kept": 3,
+      "tp_lost": 18
+    },
+    "court_vote_k2of5": {
+      "fp_killed": 10,
+      "fp_kept": 1,
+      "tp_kept": 3,
+      "tp_lost": 18
+    },
+    "court_vote_k3of5": {
+      "fp_killed": 10,
+      "fp_kept": 1,
+      "tp_kept": 2,
+      "tp_lost": 19
+    },
+    "court_vote_k4of5": {
+      "fp_killed": 11,
+      "fp_kept": 0,
+      "tp_kept": 2,
+      "tp_lost": 19
+    },
+    "note": "прокурор/защита/судья независимы от вердикта stage1 (cert_only) — это сравнение результатов ПОЛНОГО суда на всех 150 с подмножеством, на котором stage1 сказал vulnerable (tp=21+fp=11=32), чтобы ответить на вопрос координатора буквально."
+  },
+  "uncertain_basket_analysis": {
+    "n": 89,
+    "n_true_vulnerable_in_basket": 23,
+    "court_base_said_vulnerable": 0,
+    "court_vote_k1of5_said_vulnerable": 1,
+    "court_vote_k2of5_said_vulnerable": 0,
+    "court_vote_k3of5_said_vulnerable": 0,
+    "court_vote_k4of5_said_vulnerable": 0,
+    "conclusion": "суд не нашёл НИ ОДНОЙ новой уязвимости в корзине uncertain (0-1 из 89 помечены vulnerable, из них верных 0) -> court_on_uncertain числами буквально совпадает со stage1 cert_only (tp=21,fp=11,fn=29,tn=89), то есть суд не добавил ничего поверх трактовки uncertain=secure."
+  }
+}

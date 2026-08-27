@@ -85,14 +85,32 @@ STANDALONE = [
     # который иначе перехватывает более общий ipv6-паттерн (colon-separated hex), если идёт
     # первым — баг, пойманный на реальных данных (0% recall на mac_address).
     ("mac_address", re.compile(r"\b(?:[0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}\b"), None),
-    ("ipv6", re.compile(r"\b(?:[0-9A-Fa-f]{1,4}:){2,7}[0-9A-Fa-f]{0,4}\b"), _ipv6_validator),
+    # ipv6: без "::"-альтернативы движок не может перепрыгнуть compression (нужен hex-символ
+    # между каждой парой двоеточий) и режет сжатый адрес на два отдельных совпадения — баг,
+    # пойманный на реальных данных (каждый FN сопровождался ровно двумя FP от этого разреза).
+    # Первая альтернатива обязана требовать буквальный "::" на стыке (`{1,7}` группа кончается
+    # двоеточием, следом ещё один буквальный ":" от `(?::...)+ `), иначе она перехватывает и
+    # обычные "12:34:56"-подобные строки времени без всякого сжатия.
+    (
+        "ipv6",
+        re.compile(
+            r"\b(?:[0-9A-Fa-f]{1,4}:){1,7}(?::[0-9A-Fa-f]{1,4})+\b"
+            r"|\b(?:[0-9A-Fa-f]{1,4}:){2,7}[0-9A-Fa-f]{0,4}\b"
+        ),
+        _ipv6_validator,
+    ),
     (
         "ipv4",
         re.compile(r"\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b"),
         None,
     ),
-    ("credit_debit_card", re.compile(r"(?<!\d)(?:\d[ -]?){13,19}(?!\d)"), _card_validator),
     ("vehicle_identifier", re.compile(r"\b[A-HJ-NPR-Z0-9]{17}\b"), _vin_validator),
+    # postcode (UK-формат "TR14 8BE"): единственный формат почтового индекса в данных, который
+    # опознаётся без подписи-контекста — форма (буквы+цифры, пробел, цифра+2 буквы) достаточно
+    # редкая, чтобы не пересекаться со случайным текстом. Остальные (голые 5-значные US ZIP в
+    # прозе адреса без слова "postcode/zip") намеренно не тронуты — неотличимы от произвольных
+    # чисел без адресного парсинга, см. `out/pii/detectors_diagnostics.json`.
+    ("postcode", re.compile(r"\b[A-Z]{1,2}\d[A-Z0-9]?\s\d[A-Z]{2}\b"), None),
     ("swift_bic", re.compile(r"\b[A-Z]{6}[A-Z0-9]{2,6}\b"), _has_digit),
     (
         "unique_id",
@@ -106,6 +124,24 @@ STANDALONE = [
         None,
     ),
 ]
+
+
+# credit_debit_card: вытащен из общего STANDALONE-прохода и применяется ПОСЛЕ CONTEXT (см.
+# `detect_pii`) — иначе его generic-паттерн "любые 13-19 цифр" перехватывает account_number,
+# device_identifier, national_id и т.п. раньше, чем более специфичный контекстный детектор
+# успевает распознать подписанное поле (баг, пойманный на реальных данных — 9 из 15 FP на
+# n=200 были ровно этим перехватом). Луна как фильтр НЕ применяется: на выборке n=1000 только
+# 11.6% эталонных номеров карт проходят проверку (синтетические данные), фильтр по Луну убил
+# бы recall почти вдвое.
+# Паттерн переписан так, чтобы каждое повторение обязательно кончалось цифрой — старый вариант
+# `(?:\d[ -]?){13,19}` мог захватить висящий разделитель после последней цифры, если дальше по
+# тексту не было ещё одной цифры (баг: "4928 7456 2319 5786 for" матчился с хвостовым
+# пробелом — off-by-one против эталонной границы).
+CREDIT_CARD_STANDALONE = (
+    "credit_debit_card",
+    re.compile(r"(?<!\d)\d(?:[ -]?\d){12,18}(?!\d)"),
+    _card_validator,
+)
 
 
 def _phone_validator(raw: str) -> bool:
@@ -138,6 +174,22 @@ GENERIC_GAP = None  # маркер: использовать свободный 
 # и есть пароль. Проверено на данных: без этого сужения self-audit находит буквальные утечки
 # из-за ложных срабатываний детектора на первом проходе, а не из-за проблем подстановки.
 ASSIGNMENT_GAP = r"[\s*]{0,3}(?:is|was)[\s*]{0,3}|[\s*]{0,3}[:,][\s*]{0,3}"
+# password: расширенный разделитель — та же логика (не свободный разрыв), но с тремя формами,
+# найденными в данных и не покрытыми ASSIGNMENT_GAP: "password, for example X" (запятая+фраза),
+# "| Password | X |" (markdown-таблица, пайп) и голое "the password X" (только пробел, без
+# двоеточия/is/was). Последняя форма структурно совпадает с опасным случаем "the password should
+# be strong" — защищена не разделителем, а PASSWORD_VALUE (см. ниже): требует цифру/символ в
+# значении, которого у обычных английских слов нет.
+PASSWORD_GAP = (
+    rf"{ASSIGNMENT_GAP}"
+    r"|[\s*]{0,3},\s*for\s+example[\s*]{0,3}"
+    r"|[\s*]{0,3}\|[\s*]{0,3}"
+    r"|[\s*]{1,3}"
+)
+# Значение обязано содержать хотя бы один не-буквенный символ (цифру/спецсимвол) — это то, что
+# отличает реальный пароль ("River99#") от случайного слова-связки ("should") при голом
+# пробельном разделителе из PASSWORD_GAP.
+PASSWORD_VALUE = r"(?=[^\s,;.\n]*[^A-Za-z\s,;.\n])[^\s,;.\n]{4,30}"
 
 
 def _ctx(keywords: str, value: str, gap: int = 20, delim: str | None = GENERIC_GAP) -> re.Pattern:
@@ -167,6 +219,14 @@ ID_VALUE = (
 )
 PHONE_VALUE = r"\+?[\d][\d\s().-]{6,17}\d"
 
+# account_number: IBAN-формат ("NL37 RABO 1234 5678 90", "FR76 3000 6000 0112 3456 789") —
+# несколько пробел-разделённых групп по 2-4 буквенно-цифровых символа. ID_VALUE рассчитан на
+# ОДИН короткий пробельный хвост и обрезает такие значения после первой группы (баг, пойманный
+# на реальных данных). Отдельный паттерн только для account_number — не трогаем общий ID_VALUE,
+# которым пользуются остальные CONTEXT-типы (national_id, customer_id и т.д.), не разобранные
+# в этой задаче.
+IBAN_VALUE = r"[A-Z]{2}\d{2}(?:\s[A-Z0-9]{2,4}){2,8}"
+
 # http_cookie: значение — цепочка "key=value; key=value; ...". Ключевая идея, найденная на
 # реальных данных: свободный `[^\n]{1,100}` жадно утекает в текст предложения ПОСЛЕ cookie
 # ("...fx7bk2j9m, will be utilized to manage..."), потому что после значения обычно идёт
@@ -184,8 +244,16 @@ COOKIE_VALUE = rf"(?:{_COOKIE_DATE_ATTR}|[\w-]+=[\w./%-]+)(?:;\s*(?:{_COOKIE_DAT
 
 # (label, regex, требуется_цифра_в_значении)
 CONTEXT = [
-    ("account_number", _ctx(r"account\s*number|accountNumber", ID_VALUE), True),
-    ("customer_id", _ctx(r"customer\s*id", ID_VALUE), True),
+    # "bank account X" (без слова "number" рядом) — отдельная фраза, встречается в данных
+    # наравне с "account number is X"; добавлена как алиас с тем же needs_digit-фильтром.
+    (
+        "account_number",
+        _ctx(r"account\s*number|accountNumber|bank\s*account", rf"(?:{IBAN_VALUE}|{ID_VALUE})"),
+        True,
+    ),
+    # "user id"/"user_id"/"userID" в данных размечены тем же лейблом, что и "customer id"
+    # (те же значения, разная подпись поля — таблицы/JSON-ключи используют "user").
+    ("customer_id", _ctx(r"customer\s*id|user[\s_]*id", ID_VALUE, gap=40), True),
     ("employee_id", _ctx(r"employee\s*id", ID_VALUE), True),
     ("medical_record_number", _ctx(r"medical\s*record\s*number|\bMRN\b", ID_VALUE), True),
     (
@@ -207,8 +275,11 @@ CONTEXT = [
     # api_key: значение само по себе достаточно специфично (12-48 разнорегистровых
     # алфанум-символов подряд) — обычное слово-связка после "API key" под этот паттерн не
     # подходит по длине/составу, поэтому свободный разрыв безопасен (в отличие от password).
-    ("api_key", _ctx(r"api\s*key|apiKey", r"[A-Za-z0-9_.]{12,48}", gap=10), False),
-    ("password", _ctx(r"password", r"[^\s,;.\n]{4,30}", delim=ASSIGNMENT_GAP), False),
+    # Последний символ не может быть точкой — иначе конец предложения ("...key is X.") утекает
+    # в значение (баг, пойманный на реальных данных). gap поднят 10->40: реальная фраза "API key
+    # used for production environment is X" даёт ~35 символов между ключевым словом и значением.
+    ("api_key", _ctx(r"api\s*key|apiKey", r"[A-Za-z0-9_.]{11,47}[A-Za-z0-9_]", gap=40), False),
+    ("password", _ctx(r"password", PASSWORD_VALUE, delim=PASSWORD_GAP), False),
     ("device_identifier", _ctx(r"device\s*identifier|device\s*id", ID_VALUE), True),
     ("biometric_identifier", _ctx(r"biometric\s*identifier", ID_VALUE), True),
     # license_plate: в отличие от большинства ID, номера часто начинаются с буквенной группы
@@ -234,21 +305,54 @@ CONTEXT = [
         ),
         True,
     ),
-    ("fax_number", _ctx(r"fax(?:\s*number)?", PHONE_VALUE), True),
-    ("phone_number", _ctx(r"phone(?:\s*number)?|\btel\b|\bmobile\b", PHONE_VALUE), True),
+    # gap поднят 20->40: "please fax the necessary documentation to X" — 32 символа между
+    # ключевым словом и значением; при узком gap fax/phone теряли контекстное совпадение, и
+    # генерик-детекторы (credit_debit_card/PHONE_STANDALONE) подхватывали значение раньше и
+    # без "+"-префикса (баг, пойманный на реальных данных — рост FP у phone_number).
+    ("fax_number", _ctx(r"fax(?:\s*number)?", PHONE_VALUE, gap=40), True),
+    ("phone_number", _ctx(r"phone(?:\s*number)?|\btel\b|\bmobile\b", PHONE_VALUE, gap=40), True),
     ("http_cookie", _ctx(r"cookie", COOKIE_VALUE, gap=40), False),
     ("unique_id", _ctx(r"unique\s*(?:bug\s*)?id", ID_VALUE), True),
 ]
 
 # -------------------------------------------------------------------- даты
 
+WEEKDAY = r"(?:Mon|Tue|Tues|Wed|Thu|Thurs|Fri|Sat|Sun)[a-z]*,?\s+"
+# \d{1,2}\.\d{1,2}\.\d{4} (точка-разделитель, "15.07.2024") добавлена отдельной веткой: без неё
+# такие даты не распознаёт ни DATE_RE, ни (что важнее) исключение внутри `_phone_validator` —
+# PHONE_STANDALONE перехватывал их как телефон раньше, чем сюда доходила очередь (баг, пойманный
+# на реальных данных). Необязательный `WEEKDAY`-префикс — гэлд размечает "Wed, 15 Oct 2024"
+# ОДНИМ спаном вместе с днём недели, а не отдельно.
 DATE_ALT = (
+    rf"(?:{WEEKDAY})?(?:"
     rf"\d{{4}}-\d{{2}}-\d{{2}}|\d{{1,2}}/\d{{1,2}}/\d{{4}}|\d{{1,2}}-\d{{1,2}}-\d{{4}}|"
-    rf"{MONTH}\s+\d{{1,2}},?\s+\d{{4}}|\d{{1,2}}\s+{MONTH}\s+\d{{4}}"
+    rf"\d{{1,2}}\.\d{{1,2}}\.\d{{4}}|"
+    rf"{MONTH}\s+\d{{1,2}},?\s+\d{{4}}|\d{{1,2}}\s+{MONTH}\s+\d{{4}})"
 )
 DATE_RE = re.compile(rf"\b(?:{DATE_ALT})\b", re.IGNORECASE)
 DOB_CONTEXT_RE = re.compile(r"born|birth|dob", re.IGNORECASE)
-TIME_RE = re.compile(r"\b\d{1,2}:\d{2}(?::\d{2})?\s*(?:[APap]\.?[Mm]\.?)?\b")
+# Два бага, пойманных на реальных данных: (1) `\s*` перед необязательной группой AM/PM жадно
+# заглатывает пробел/перевод строки, ДАЖЕ когда AM/PM дальше нет ("18:30 for" -> "18:30 " с
+# висящим пробелом) — вынесен ВНУТРЬ необязательной группы, чтобы съедался только вместе с ней.
+# (2) хвостовая точка в "p.m."/"a.m." никогда не входила в совпадение: `\b` после необязательной
+# `\.?` требует границы слово/не-слово, а точка перед пробелом/переводом строки/пайпом даёт
+# не-слово/не-слово — не граница. Заменено на `(?!\d)`, которая делает ровно то же самое (не
+# срастись со следующей цифрой), но не блокирует финальную точку.
+# Меридием — две отдельные ветки, а не общий "точки не обязательны": "p.m." (точка после
+# каждой буквы, последняя опциональна — по ней же и восстанавливаем финальную точку) и "pm" без
+# единой точки. Раньше общий `\.?...\.?` мог доесть точку конца предложения после голого "pm"
+# ("8:30pm." -> "8:30pm." вместо эталонных "8:30pm") — теперь опциональная точка разрешена
+# только когда паттерн уже "в режиме точек" (после первой буквы стоит точка).
+_MERIDIEM = r"(?:[APap]\.[Mm]\.?|[APap][Mm])"
+# Секунды — опциональная дробная часть (".123"); офсет часового пояса ("+02:00"/"-0500") —
+# отдельная опциональная хвостовая группа для ISO-подобных отметок времени с зоной.
+TIME_RE = re.compile(
+    rf"\b\d{{1,2}}:\d{{2}}(?::\d{{2}}(?:\.\d+)?)?(?:\s*{_MERIDIEM})?(?:[+-]\d{{2}}:?\d{{2}})?(?!\d)"
+    rf"|\b\d{{1,2}}\s*{_MERIDIEM}\b"  # голый час без минут: "9 AM"
+)
+# Разделитель для диапазона времени ("00:00 - 00:10", "9:00 AM to 11:00 AM") — эталон размечает
+# диапазон ОДНИМ спаном; используется в `detect_pii` для склейки двух соседних TIME_RE-совпадений.
+TIME_RANGE_SEP = re.compile(r"\s*(?:-|to)\s*")
 
 
 # -------------------------------------------------------------------- движок
@@ -286,6 +390,15 @@ def detect_pii(text: str) -> list[dict]:
                 continue
             claim(s, e, label)
 
+    card_label, card_pattern, card_validator = CREDIT_CARD_STANDALONE
+    for m in card_pattern.finditer(text):
+        s, e = m.start(), m.end()
+        if _overlaps(s, e, occupied):
+            continue
+        if not card_validator(m.group(0)):
+            continue
+        claim(s, e, card_label)
+
     phone_label, phone_pattern, phone_validator = PHONE_STANDALONE
     for m in phone_pattern.finditer(text):
         s, e = m.start(), m.end()
@@ -307,6 +420,13 @@ def detect_pii(text: str) -> list[dict]:
         s, e = m.span()
         if _overlaps(s, e, occupied):
             continue
+        # диапазон времени ("00:00 - 00:10") эталон размечает одним спаном — если сразу после
+        # найденного времени идёт "-"/"to" и ещё одно время, склеиваем в один span.
+        sep = TIME_RANGE_SEP.match(text, e)
+        if sep:
+            m2 = TIME_RE.match(text, sep.end())
+            if m2:
+                e = m2.end()
         claim(s, e, "time")
 
     results.sort(key=lambda r: r["start"])

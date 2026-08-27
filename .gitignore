@@ -16,6 +16,8 @@ case 3/
 
 # кеши и мусор ОС
 .DS_Store
+# сырой дамп предыдущей сессии, содержимое разнесено по STATE.md и journal.md
+last_session.txt
 .idea/
 .cache/
 

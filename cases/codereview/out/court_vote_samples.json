@@ -1,0 +1,4802 @@
+{
+  "182410": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "222fbcc108da"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "33086d9eb5b1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "94ea2dac7cc6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5d84b2898fa3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "df0ade3f0daa"
+    }
+  ],
+  "179607": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "dc342027c877"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "e93ce0790b25"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "4d3187cebe11"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "5761f0f45184"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4034a84c5490"
+    }
+  ],
+  "178755": [
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "280dbfb19356"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "3d99273bc873"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "ad26490811da"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "e95ea6e68706"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "2e48a091e04d"
+    }
+  ],
+  "29969": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "693e7299f1f2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "fce097509bec"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5128456c7d5f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    }
+  ],
+  "178922": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "53432d8b2917"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "cf0d4aa4caae"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "50793618e09d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "1c817fb82780"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3cad226bd914"
+    }
+  ],
+  "186120": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "efb4c1915bc5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f71d0eaab2ea"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    }
+  ],
+  "180577": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "990acfc466ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f89714035348"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d5c00a8ba9f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "eb0f55eebd26"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    }
+  ],
+  "178879": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6147224946b8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "3744202d3942"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "080d4fa1ab5b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    }
+  ],
+  "71857": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "ca5e2049924f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c7effc8168eb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "00b27e44850c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c01e6386388e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "45834e5e6569"
+    }
+  ],
+  "178070": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4220d6f2b9b1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "23e4f500c89d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "c515a0adf1e2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "3f129f02c360"
+    }
+  ],
+  "187608": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "63c61fab1cc1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "34f1147139a7"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "887eff1d264f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "fa80c5d98264"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "86687e70e0e6"
+    }
+  ],
+  "187034": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "1f768b0a17cc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "41264e6eef46"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "a7cf6ea46f83"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "f0ed884ec92a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "a196c7aec5fa"
+    }
+  ],
+  "181360": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "197971547e64"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "487075243187"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "e26b4fdf3fe1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "e97d0dfbac05"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a4cec956324c"
+    }
+  ],
+  "183206": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "948f27ab42f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "ad8466e224d0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "8356a67d5717"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "5fe9e9e1d9d3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "f0fe84f7ea60"
+    }
+  ],
+  "180059": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9fb90fb2dba8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6c8df83df431"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "0c32f0b64a2d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "541337544a76"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ba3dc2512c61"
+    }
+  ],
+  "185419": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "24da852ae758"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1b5a7d1c0145"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "2012c72aaf61"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "31c295f6f8ce"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "437814e5206a"
+    }
+  ],
+  "181881": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "159d7815da74"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "8b7bb21664be"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9b1207d5c7bc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "439909ffaac8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "a37ff7c9222e"
+    }
+  ],
+  "187288": [
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "5beace98bd73"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "fdc0517fa0c9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f6df4006acbd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e58ad7aef996"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "035b28d5098d"
+    }
+  ],
+  "182881": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "2b4a39bd5668"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "1951252ddf27"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "c04ea35b8a77"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "c99bf7891997"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "46e8946cdbd7"
+    }
+  ],
+  "181024": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "6000f3f29496"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "cb2d040bee90"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "81e0119b8c55"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "e499a014c4ae"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "022bc80cbc6b"
+    }
+  ],
+  "181777": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "2c6d8aac588c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "e35c34ac9b7d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "0172eac3fc52"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "85d8a2cd2cad"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "a4b187ec23c9"
+    }
+  ],
+  "180123": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7d996840cf1a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "80cdef1ede0b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "61ff1d055ad2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "cd22feccc8cc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "5d8b681dfabe"
+    }
+  ],
+  "183419": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "578e09034ac0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "2dc07a5da7d0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "5db53d711524"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f22340c8a33a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "943ad9723d83"
+    }
+  ],
+  "181433": [
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-787",
+      "text_sha256_short": "c9bbe94b8273"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "5eefe9df29d0"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "26907b2c544a"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "74ba24e46729"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.7,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "6bbe532b69eb"
+    }
+  ],
+  "179721": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7512feee64ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "245584b1c619"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a02dcbdd7291"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4668648b81da"
+    }
+  ],
+  "180668": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1c44fa729a5f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b08796819235"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9e64828c2380"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "2f66a61249bc"
+    }
+  ],
+  "178828": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "58b3730cd929"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "1dc9631b6814"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "c65ce9940ca8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "41c1231055ca"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "37dc9ef0bdd4"
+    }
+  ],
+  "182627": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "afa4c2b108fd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "f0dd8ead97f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "9c5665ed61bb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "a4c6073775f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "b661e10077e2"
+    }
+  ],
+  "182006": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "32638beee187"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "a8bd3177a76b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "5b42b2ea9b2b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "1cb4f14ab1b9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "24274b6794b7"
+    }
+  ],
+  "179999": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a318774402cc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "12bc41f043cd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "31a4f2a9e726"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "947d156f9e36"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "956bc0b942b7"
+    }
+  ],
+  "183260": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8fb62c5894cf"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0a55dfcfa575"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d5c00a8ba9f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "eb0f55eebd26"
+    }
+  ],
+  "183907": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "1a164f819869"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7fe009a766bd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "332cc27d4417"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "abd46bf5a22b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "a297cd25a6ba"
+    }
+  ],
+  "179612": [
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "8d7c4a5a02c9"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.95,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "9ec38aab6a51"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "e17e412d0a39"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.8,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "ca84e6d6da05"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "73b8e6ed78d6"
+    }
+  ],
+  "180825": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f95fc2efe4dd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3535bf7ab592"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9116a6849d4e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6b513f158816"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "520f007a6c81"
+    }
+  ],
+  "185326": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "0a3b79d248dc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1d92d0623f74"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e7eaebc0e9c1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    }
+  ],
+  "185976": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "9cfd8ce7e5c9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "634ffbec1336"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1fcb2518c828"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1960cf54954e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "94e7300cba4e"
+    }
+  ],
+  "185114": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3620157de028"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f39c1e3bbff6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "887caf1da877"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "74ba8ef4ace0"
+    }
+  ],
+  "178602": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "bb973dcdb57e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5d477efab6d5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6318e69fbfd4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1d792dd6bd6c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "88941094320b"
+    }
+  ],
+  "185238": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f0dc28564c12"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "950baa94646f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    }
+  ],
+  "181397": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "fc30e772b7c7"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b4687693e049"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "88be6041ad22"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "df97a6b8af5d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "62b04e4f0026"
+    }
+  ],
+  "185125": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ee581b70c5f0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6e56d1329a3a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "bc5a913a6091"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5609897ae5dc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "cb3c9400246a"
+    }
+  ],
+  "178356": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "ad49c4eb709c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8ef4d79ceb07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "5d97a78092b4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "150b14aac018"
+    }
+  ],
+  "177803": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "0b10bacd1662"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "d46349881dd9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7fa5ed2add99"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ba922d051c8a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "93454267318b"
+    }
+  ],
+  "53312": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5623003bfd23"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "ab394d1e36e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3021f1643b1d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "58fa1709caf6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1b4d62577c0b"
+    }
+  ],
+  "183051": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4d7ecf73fae1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c06aea14c187"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "aa4d372562ea"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "38bfc04b6943"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "30be628901f7"
+    }
+  ],
+  "178183": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7a627893caf8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1a208c6ebbb8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ddafa25d1b70"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "c41fcf44fc40"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "3d10bca8d927"
+    }
+  ],
+  "182416": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "26c652a7ae61"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.7,
+      "cwe_id": "CWE-190",
+      "text_sha256_short": "398ab3a8084e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "2cf1ab286fa3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "4ff12ceeb6ce"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.9,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "0f3f5aa85298"
+    }
+  ],
+  "66318": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7d2f524f3ce3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1edc088c0a8c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7bdb9898bf4f"
+    }
+  ],
+  "181051": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "f3a0053eb250"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "b272141bfc4a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "6e5b7fa07228"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "e94dcf52d58f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "565e89830664"
+    }
+  ],
+  "182060": [
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "18e3851f3cac"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "7154bd5fdf02"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "d6615dfbfc87"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "ecaace3f4a23"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "5c1dffe4f4b8"
+    }
+  ],
+  "4540": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d5c00a8ba9f6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f5d7725c02e8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "8584b5e9479a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6547cc5e0b2e"
+    }
+  ],
+  "165881": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "5c1535232cb6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "54ca10f17130"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "64876622f8ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "34f4823df80c"
+    }
+  ],
+  "163873": [
+    {
+      "verdict": "secure",
+      "confidence": 0.98,
+      "cwe_id": null,
+      "text_sha256_short": "f0b180832736"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a06fcb52a0c7"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "cf8a73b1b030"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e2fde0d18049"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "fee8180e5d28"
+    }
+  ],
+  "71774": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "96db091c786c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "c98c6afb1486"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "296923deb46a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "20edfbee6d9b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "03c401245a82"
+    }
+  ],
+  "169289": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b6ae11c3e76a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4c9596466aba"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1c44fa729a5f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "24270664a176"
+    }
+  ],
+  "22304": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4b730bc64b31"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4830b96dd9f4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "eb0f55eebd26"
+    }
+  ],
+  "148566": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f665c1f24b21"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9e19a05f23c0"
+    }
+  ],
+  "134604": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "22dcfcd2a0ef"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "8030b4d0e34a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "960edd59c4ab"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1722341f3da5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "081cb3b90835"
+    }
+  ],
+  "168751": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "b08d4ddfac39"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5f92753caf17"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "12d24f8a2111"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e65a751d6c0e"
+    }
+  ],
+  "38251": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "b2e94aadcf93"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b3fa3a4ef7d8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "64876622f8ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5e188efeccd4"
+    }
+  ],
+  "68119": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6931f116662d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "bf46351b3d67"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6931f116662d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "c632692a28c3"
+    }
+  ],
+  "92981": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e025a6af79ff"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a59f1f639279"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b7f8b6eb6856"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "bbc67135f641"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "56e7062ff564"
+    }
+  ],
+  "108048": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1fcb2518c828"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ac88a5e077bd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b08796819235"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "58a580b2d8b0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a6d07c297d72"
+    }
+  ],
+  "86085": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4ac8f800245d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5a2ef06c2d8d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "ffcc07278bcc"
+    }
+  ],
+  "174242": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "95e4f05057e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "3b91b38e3d6b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "b47538a58f74"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "22e0e3e76847"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "70bb53bb52a3"
+    }
+  ],
+  "159030": [
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "e1ef3e694758"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "36952bd61782"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "3046a36f0e31"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "2984ee28b2c0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "4e9158e67a16"
+    }
+  ],
+  "19967": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "c0502759046e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "64bd742f7835"
+    }
+  ],
+  "143229": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6d1eddb5c4bf"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f89714035348"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "080d4fa1ab5b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    }
+  ],
+  "72005": [
+    {
+      "verdict": "secure",
+      "confidence": 0.97,
+      "cwe_id": null,
+      "text_sha256_short": "9e4010395d93"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "22e50c9daadc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "84f9d78634b5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e52cc09426e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7b463bb540c2"
+    }
+  ],
+  "125798": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "32e0fe81f656"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9eb148b286b8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "8a51be88d3b5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6b8507b30cbd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "32e4c690ead4"
+    }
+  ],
+  "104395": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3f65432d06de"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "2d263c016777"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "7f6674c9a9f3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "2d131e1f7185"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "783b62574e24"
+    }
+  ],
+  "106855": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "ac4b0690d7de"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "374e9ad22b16"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e41c9cc4f705"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    }
+  ],
+  "24630": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "9477f3fffec4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "6b36a0e0185d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4168638b9d0b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4bd704ef28a5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "c216dafbd895"
+    }
+  ],
+  "21365": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b333d373cc7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5d8626889ab7"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "eab0ad00d7eb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ce2034cd72c3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0177d604a1b0"
+    }
+  ],
+  "84824": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "2b83a08caabf"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "2a39627d4557"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7512feee64ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f13979253eb7"
+    }
+  ],
+  "2795": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1456d93bd518"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1fcb2518c828"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9680689b2dd3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    }
+  ],
+  "120384": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "dda1130ff215"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "36e13d2482a8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "078df979c0da"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "e9d77d82391e"
+    }
+  ],
+  "148687": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b08796819235"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "bbdb5c6ee75a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "26d50d0190b2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "948df8a0fc25"
+    }
+  ],
+  "47724": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f37dbdc1326e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    }
+  ],
+  "40201": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "64876622f8ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5a2ef06c2d8d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4830b96dd9f4"
+    }
+  ],
+  "81788": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "36185ba305a5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "a68baf18f85e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "407a38041847"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d128225d3b3b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "96e2028849ee"
+    }
+  ],
+  "87": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "7997d8def421"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "46adc7a2dc75"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "372434e5553c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "ae08c41f8858"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "f44ed4ca9547"
+    }
+  ],
+  "20974": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "64876622f8ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "990acfc466ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9a2f9cf65aa5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ea53bbd8e285"
+    }
+  ],
+  "157783": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4bdf7a4547aa"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "02389ae91912"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "06f38e320f2c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5f0c04cf5713"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "56b954d3a080"
+    }
+  ],
+  "39298": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f2d1da1809ab"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d7ce2b2197ae"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "55a500b83855"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "948453b9e09b"
+    }
+  ],
+  "76878": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "5ea206900d47"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a19d10893807"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4b04247c7809"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "472fb5a4df02"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "8f0b0ac3a39e"
+    }
+  ],
+  "1982": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "862e8caffa84"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f91f0fdcfc9b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d8501a60e662"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "8b94c219e0ae"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "640b211b2cef"
+    }
+  ],
+  "52015": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aee0ef4fa9a2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.97,
+      "cwe_id": null,
+      "text_sha256_short": "fe88c52059f0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f804679283a5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "7208c542e9a6"
+    }
+  ],
+  "74458": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "10879dd56834"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8108f35f00ef"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ef82540e0684"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "fb0bb683f9e2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "6363047086f0"
+    }
+  ],
+  "79696": [
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "70aaa4254984"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "916d91695dcb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "7bac1c8e7eeb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "6dc9ffa2ca3b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "f3cd6a6eedc1"
+    }
+  ],
+  "138774": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "3f30da168f36"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "ceb5c18f75bc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "9477f3fffec4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "41d2985e141c"
+    }
+  ],
+  "32484": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9a2f9cf65aa5"
+    }
+  ],
+  "26953": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "bf7950dd118a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1eab826cb1c6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "24270664a176"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "080d4fa1ab5b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6dc2dc1dcbb4"
+    }
+  ],
+  "8467": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "60a88fddbac1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "b32569f6c549"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "60542416874c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "52cf821d0457"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6e0a8681d435"
+    }
+  ],
+  "30180": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "f3ed0230650e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c7eed181ecde"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b6ae11c3e76a"
+    }
+  ],
+  "174050": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "c0d94e9853fb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "d5380f921e45"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    }
+  ],
+  "134178": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "45e1d89c08a8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a7ef7686d7dc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "e7611eb89782"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "12f5cfdb2046"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "ae1cf3b59e69"
+    }
+  ],
+  "173859": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "242a9529d0d9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "06ed539418bf"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "8a115ca8c710"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "132fdd066ab8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "cc5b316e15dc"
+    }
+  ],
+  "78906": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "e8703e817d58"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b5ef2ae0a0a1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "caaa75e4e22c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "310ed37a6497"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    }
+  ],
+  "10628": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4830b96dd9f4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "28aa9af0599c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9f17983e450d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "579a4cb954bd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7ea860c1336c"
+    }
+  ],
+  "91124": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "744595d52b59"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5249f4a8c09e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "c7ad40f91283"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4105fb9d42d3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "0628e92fe865"
+    }
+  ],
+  "80100": [
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.6,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "cffe3b7817bc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "368c1d34fd12"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.7,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "cd65b09e740f"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.85,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "bb806f858dda"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "f1fe2a24209b"
+    }
+  ],
+  "41532": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "dc0a3d49d070"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4c9596466aba"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "34f4823df80c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "2bc220b70ef7"
+    }
+  ],
+  "75842": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "e3ee08249b2b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "0db8d8863b35"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "747abf9b2c03"
+    },
+    {
+      "verdict": "vulnerable",
+      "confidence": 0.8,
+      "cwe_id": "CWE-119",
+      "text_sha256_short": "a1751afe9569"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "49978f98d406"
+    }
+  ],
+  "38776": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "e8f9e224cf3b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "35c58bce0eed"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "732ee7e63f1c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "083eed944082"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "45f9843f01eb"
+    }
+  ],
+  "136922": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "2b60a8ee6d9f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    }
+  ],
+  "133548": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "eb0f55eebd26"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "dbf1058c393a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7b88a504eddb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    }
+  ],
+  "81444": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "fdec049a4d86"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "51cfa037f7dd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "e37bacc8aa9f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "648cfadfc1b0"
+    }
+  ],
+  "17362": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "7256ef3bfe74"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "3757c27189a8"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d2e214664c91"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "df5a9a7b099b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "bf7950dd118a"
+    }
+  ],
+  "26648": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "111b32cc39a7"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "5295fef9d1bb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "28b243e2d6a9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "1eb2548a0fe1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "37aa9faf3ff5"
+    }
+  ],
+  "102376": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4bd704ef28a5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6b8507b30cbd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "959188cf0e40"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    }
+  ],
+  "126053": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b2db653899c9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "73a9eaee3421"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "497d79f3b081"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "68d93d813806"
+    }
+  ],
+  "99095": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d6ed1212939e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "080d4fa1ab5b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5b0b89c9a93b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "56da8b863c3b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "684f12580468"
+    }
+  ],
+  "40647": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f37dbdc1326e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "aa9526539341"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9a2f9cf65aa5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0dd760d9da2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8494a9ebbc80"
+    }
+  ],
+  "136258": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4c85b7e82672"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "18f28e78be96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "c87831ba0d70"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9ca6c488128f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6cf265ec4047"
+    }
+  ],
+  "82741": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "88be6041ad22"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "cf44df888fcd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4fe513f9c834"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "73b8d169b020"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "298be0fd85db"
+    }
+  ],
+  "48117": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4bf98e08aaa0"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a7f45ba3db02"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "d0b0daaa029f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "6ef1cde7d97e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "323adaa9cac7"
+    }
+  ],
+  "171593": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "c9d184c09c1a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "caaccf484aee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "65ce3ce5bece"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "3d698c78b80f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "0b741b41edda"
+    }
+  ],
+  "158156": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4e59dfd10757"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "ff567eca4d46"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "85abc0eb2d9d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f92c2ead9837"
+    }
+  ],
+  "49163": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "712052b4747a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "64876622f8ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c8dffc3b7630"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    }
+  ],
+  "126551": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "47fffdcb4732"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "55ce5dad3504"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "26752ba0bef9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "d11f1acdbb1a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "ae5036b10c15"
+    }
+  ],
+  "89548": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "db43c41fc9b5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "253223955cce"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "33d68b793f32"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "51feb2678d07"
+    }
+  ],
+  "90352": [
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "b65eb5a9cf42"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "852b60df350e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "8bf7e984880b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "4edaa3bdd232"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "185d0de44598"
+    }
+  ],
+  "26773": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "6ecfb206b77f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "273f07ea0972"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6b8507b30cbd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "45cf27c9444b"
+    }
+  ],
+  "154666": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d2e214664c91"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "de4da62d5cdb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1edc088c0a8c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a205bab0c058"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6b8507b30cbd"
+    }
+  ],
+  "109013": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "2aad472935e3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d2b595d52fe1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.97,
+      "cwe_id": null,
+      "text_sha256_short": "957c5f0a30b2"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "6fd3eb13b039"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "fcd8087f24cf"
+    }
+  ],
+  "100303": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "e502c98c0bfb"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "287fb2bfe0f5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "27cc3a0670bc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a5b39d806506"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48c5e954d811"
+    }
+  ],
+  "7475": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5445fa56f823"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "f89714035348"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "970aba801c45"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "fe78d02c5452"
+    }
+  ],
+  "88590": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "a6e8a8ba5349"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "fcd33c7fbb19"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c8322467f55b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "db7d3e9c22d9"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "0b116d0e1233"
+    }
+  ],
+  "109073": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5ed999f96ae5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "27746fc53898"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "7e24777acc95"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "634efc8174ab"
+    }
+  ],
+  "89729": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a47954bbd1ac"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "317b73d68ec1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "9f5e9400aaae"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "64bd742f7835"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ef0c596b7bda"
+    }
+  ],
+  "172075": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a4530577af95"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "489c410e3c2c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "13d2d38761d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "ea145d8d2e4e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "513347247402"
+    }
+  ],
+  "155664": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "66f3fc021cc5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "28aa9af0599c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "142791073476"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4a43004f1f5d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "91350528bdd4"
+    }
+  ],
+  "63286": [
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "974aa5e5b163"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "02e69060a448"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.6,
+      "cwe_id": null,
+      "text_sha256_short": "7a8a92069234"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "6a06e32f9c9c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.75,
+      "cwe_id": null,
+      "text_sha256_short": "d47cbc00900f"
+    }
+  ],
+  "67566": [
+    {
+      "verdict": "secure",
+      "confidence": 0.98,
+      "cwe_id": null,
+      "text_sha256_short": "d3e9d71f4a8d"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5a2dc7875cfc"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "990acfc466ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "43a03d1d30a6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "647576e3e2a8"
+    }
+  ],
+  "38002": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "b5d7f24d828a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7512feee64ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "5254102e159a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48c5e954d811"
+    }
+  ],
+  "18612": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0fdce167f99"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "93b0078b4607"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "734f41901516"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "245283080027"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ade6d0c470e1"
+    }
+  ],
+  "1373": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "312b72017ec1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "838c0fad8f61"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "600cf97b3273"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0a75e0f129fd"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    }
+  ],
+  "110340": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "e36b4d1cd4fa"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "9e2aee604526"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "ace84fb99947"
+    }
+  ],
+  "133704": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "7fa7dbc7a598"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "bdd7a7f3678e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "66f3fc021cc5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7512feee64ee"
+    }
+  ],
+  "143602": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "c46820c9c59a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "832507eeee5f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "8e9986a2e2e6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1368b2570d7b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1de22ff9a7af"
+    }
+  ],
+  "165575": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0b65d1b4a068"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7512feee64ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "081230c2ed64"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "bd3c5c44fac2"
+    }
+  ],
+  "49928": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "7679626712d1"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "4bd704ef28a5"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "990acfc466ee"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "4e138e6253e4"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "5bf94eda9a70"
+    }
+  ],
+  "69939": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "28aa9af0599c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.99,
+      "cwe_id": null,
+      "text_sha256_short": "ec91affefdbe"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "1960cf54954e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "7df82ccebf58"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "28aa9af0599c"
+    }
+  ],
+  "76444": [
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "567013ebb944"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b6ae11c3e76a"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "1de22ff9a7af"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "d0af66da9e96"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    }
+  ],
+  "52644": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "72e6ed634498"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "571745708000"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "cdbdbeaab25b"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "d921aff60e07"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "b030f7d46015"
+    }
+  ],
+  "155891": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "14a8632b5923"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "32ed2a4895f3"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "34b63712d7c6"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "f37dbdc1326e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "b6ae11c3e76a"
+    }
+  ],
+  "8680": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "6112a07efb1e"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "a43e78f22a98"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.7,
+      "cwe_id": null,
+      "text_sha256_short": "2691d4592752"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.8,
+      "cwe_id": null,
+      "text_sha256_short": "2020d1d209ff"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.85,
+      "cwe_id": null,
+      "text_sha256_short": "1e3a6838822a"
+    }
+  ],
+  "9005": [
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "48987721fc68"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "187bf521b56f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "2a39627d4557"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "a8d56c56c006"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 0.95,
+      "cwe_id": null,
+      "text_sha256_short": "dc0fed62e23e"
+    }
+  ],
+  "151244": [
+    {
+      "verdict": "secure",
+      "confidence": 0.9,
+      "cwe_id": null,
+      "text_sha256_short": "26a7bbd17b01"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "0d3601cab89c"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "d85eaf7f2f0f"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "7b05c54c4099"
+    },
+    {
+      "verdict": "secure",
+      "confidence": 1.0,
+      "cwe_id": null,
+      "text_sha256_short": "450b2e470fc3"
+    }
+  ]
+}

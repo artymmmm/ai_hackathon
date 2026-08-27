@@ -1,0 +1,116 @@
+{
+  "description": "Проверка гипотезы 'склейка знаний в config_A размывает сигнал, flawfinder — источник шума' на полном эталонном наборе out/bench/case3_eval_ids.txt (150 фрагментов), deepseek-chat, SYSTEM_PROMPT_SENSITIVE. На n=40 (component_decomposition_results.json) cert_only (F1 0.600) и cwe_cards_only (F1 0.444) обгоняли полный стек config_A (F1 0.261). Здесь то же самое проверено на n=150 — наборе, сравнимом с остальными строками out/bench/results.csv.",
+  "hypothesis_confirmed": true,
+  "hypothesis_check": "cert_only (F1 0.512, P 0.656, R 0.420, FPR 0.110) обгоняет полный config_A (F1 0.342, P 0.500, R 0.260, FPR 0.130) на n=150. cwe_only (F1 0.450) и cwe_cert без flawfinder (F1 0.351) тоже выше config_A. Наибольший прирост даёт именно изолированный CERT-блок; добавление CWE-карточек к CERT (cwe_cert) не улучшает, а ухудшает результат относительно cert_only (F1 0.351 < 0.512) -- то есть даже склейка двух 'хороших' блоков (без flawfinder) хуже одного лучшего блока. Гипотеза подтверждена: полный стек знаний размывает сигнал, лучший компонент (CERT-правила) в одиночку сильнее любой комбинации.",
+  "results": {
+    "bare_llm_deepseek": {
+      "n_scoreable": 150,
+      "precision": 0.5385,
+      "recall": 0.14,
+      "f1": 0.2222,
+      "fpr": 0.06,
+      "escalation_rate": 0.2333,
+      "tp": 7,
+      "fp": 6,
+      "fn": 43,
+      "tn": 94,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_deepseek_bare.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat.json"
+    },
+    "sensitive_screener": {
+      "n_scoreable": 150,
+      "precision": 0.4839,
+      "recall": 0.3,
+      "f1": 0.3704,
+      "fpr": 0.16,
+      "escalation_rate": 0.56,
+      "tp": 15,
+      "fp": 16,
+      "fn": 35,
+      "tn": 84,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_sensitive_full.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat_sensitive.json"
+    },
+    "config_A_full_stack": {
+      "n_scoreable": 150,
+      "precision": 0.5,
+      "recall": 0.26,
+      "f1": 0.3421,
+      "fpr": 0.13,
+      "escalation_rate": 0.5467,
+      "tp": 13,
+      "fp": 13,
+      "fn": 37,
+      "tn": 87,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_configA_full.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat_configA.json"
+    },
+    "cert_only": {
+      "n_scoreable": 150,
+      "precision": 0.6562,
+      "recall": 0.42,
+      "f1": 0.5122,
+      "fpr": 0.11,
+      "escalation_rate": 0.5933,
+      "tp": 21,
+      "fp": 11,
+      "fn": 29,
+      "tn": 89,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_cert_only_full.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat_cert_only.json"
+    },
+    "cwe_only": {
+      "n_scoreable": 150,
+      "precision": 0.6,
+      "recall": 0.36,
+      "f1": 0.45,
+      "fpr": 0.12,
+      "escalation_rate": 0.54,
+      "tp": 18,
+      "fp": 12,
+      "fn": 32,
+      "tn": 88,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_cwe_only_full.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat_cwe_only.json"
+    },
+    "cwe_cert_no_flawfinder": {
+      "n_scoreable": 150,
+      "precision": 0.5417,
+      "recall": 0.26,
+      "f1": 0.3514,
+      "fpr": 0.11,
+      "escalation_rate": 0.56,
+      "tp": 13,
+      "fp": 11,
+      "fn": 37,
+      "tn": 89,
+      "source_metrics_file": "cases/codereview/out/eval_metrics_cwe_cert_full.json",
+      "source_verdicts_file": "out/bench/case3_deepseek-chat_cwe_cert.json"
+    }
+  },
+  "runner": "cases/codereview/run_knowledge_variants_full.py",
+  "eval_script": "cases/codereview/evaluate.py",
+  "model": "deepseek-chat",
+  "eval_ids_file": "out/bench/case3_eval_ids.txt",
+  "gold_labels_file": "research/case3_recovered_labels.csv",
+  "token_usage_this_run": {
+    "cert_only_run": {
+      "calls": 155,
+      "cache_hits": 40,
+      "prompt_tokens": 361026,
+      "completion_tokens": 87487,
+      "total_tokens": 448513,
+      "cost_usd": 0.0
+    },
+    "cwe_only_plus_cwe_cert_run": {
+      "calls": 312,
+      "cache_hits": 177,
+      "prompt_tokens": 908256,
+      "completion_tokens": 172764,
+      "total_tokens": 1081020,
+      "cost_usd": 0.0
+    },
+    "total_tokens_all_three_new_variants": 1529533,
+    "note": "cost_usd=0.0 - в _PRICING_PER_1M (core/llm.py) нет записи для deepseek-chat, цена не считалась."
+  }
+}

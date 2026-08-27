@@ -1,0 +1,127 @@
+{
+  "n_eval_ids": 150,
+  "n_fragments_scored": 150,
+  "1_coverage": {
+    "n_fragments": 150,
+    "cwe_cards_block_nonempty_frac": 0.9933,
+    "cert_rules_block_nonempty_frac": 1.0,
+    "flawfinder_block_nonempty_frac": 0.0933,
+    "cert_rules_fallback_frac": 0.0
+  },
+  "2_sizes": {
+    "token_estimate_method": "len(text) / 4 (грубая оценка символы->токены, не настоящий токенизатор)",
+    "code_fragment": {
+      "chars_median": 441.5,
+      "chars_p90": 3218.0,
+      "tokens_est_median": 110.375,
+      "tokens_est_p90": 804.5
+    },
+    "cwe_cards_block": {
+      "chars_median": 2246.0,
+      "chars_p90": 2246.0,
+      "tokens_est_median": 561.5,
+      "tokens_est_p90": 561.5
+    },
+    "cert_rules_block": {
+      "chars_median": 510.0,
+      "chars_p90": 510.0,
+      "tokens_est_median": 127.5,
+      "tokens_est_p90": 127.5
+    },
+    "flawfinder_block": {
+      "chars_median": 0.0,
+      "chars_p90": 0.0,
+      "tokens_est_median": 0.0,
+      "tokens_est_p90": 0.0
+    },
+    "knowledge_stack_block": {
+      "chars_median": 2758.0,
+      "chars_p90": 2758.0,
+      "tokens_est_median": 689.5,
+      "tokens_est_p90": 689.5
+    },
+    "knowledge_share_of_prompt": {
+      "knowledge_stack_block_variant": {
+        "median": 0.8607990851010874,
+        "p90": 0.9546555901696089
+      },
+      "cert_rules_block_variant": {
+        "median": 0.5334733870570665,
+        "p90": 0.7956318252730109
+      },
+      "definition": "block_len / (code_len + block_len), медиана и p90 по 150 фрагментам"
+    }
+  },
+  "3_diversity": {
+    "n_distinct_cwe_card_sets": 6,
+    "n_distinct_cert_rule_sets": 3,
+    "most_common_cwe_card_set": [
+      "119;787;125;120;20",
+      140
+    ],
+    "most_common_cwe_card_set_frac": 0.9333,
+    "most_common_cert_rule_set": [
+      "ENV01-C;MEM10-C;ARR00-C;ERR07-C;FIO30-C",
+      146
+    ],
+    "most_common_cert_rule_set_frac": 0.9733,
+    "top5_cwe_card_sets": [
+      [
+        "119;787;125;120;20",
+        140
+      ],
+      [
+        "787;125;119;120;20",
+        4
+      ],
+      [
+        "190;119;787;125;120",
+        2
+      ],
+      [
+        "120;119;787;125;20",
+        2
+      ],
+      [
+        "787;125;119;190;120",
+        1
+      ]
+    ],
+    "top5_cert_rule_sets": [
+      [
+        "ENV01-C;MEM10-C;ARR00-C;ERR07-C;FIO30-C",
+        146
+      ],
+      [
+        "ENV01-C;INT18-C;MEM10-C;ARR00-C;ERR07-C",
+        3
+      ],
+      [
+        "FIO30-C;FIO47-C",
+        1
+      ]
+    ]
+  },
+  "4_truth_link_candidate_cwe": {
+    "n_true_vulnerable_with_known_cwe": 41,
+    "n_true_cwe_in_candidates": 18,
+    "hit_rate": 0.439,
+    "rank_distribution": {
+      "1": 10,
+      "3": 5,
+      "5": 3
+    },
+    "rank_median": 1.0,
+    "note": "candidate_cwe_ids(code) — полный список кандидатов до обрезки MAX_CWE_CARDS=5 в cwe_cards_block; rank учитывает порядок появления в candidate_cwe_ids",
+    "n_true_cwe_in_shown_top5": 18,
+    "hit_rate_top5_shown": 0.439
+  },
+  "5_flawfinder": {
+    "avg_hits_per_fragment": 0.2867,
+    "median_hits_per_fragment": 0.0,
+    "frac_fragments_with_any_hit": 0.0933,
+    "n_true_secure": 100,
+    "n_true_secure_with_flawfinder_hit": 5,
+    "false_alarm_rate_on_true_secure": 0.05
+  }
+}
