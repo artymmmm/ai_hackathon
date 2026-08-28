@@ -34,3 +34,7 @@ certs/
 # база знаний: крупный XML качается заново одной командой, в репозиторий не кладём
 kb/*.xml
 kb/*.zip
+
+# веса и датасеты HF, скачанные для замера дообученной модели (589 МБ)
+cases/codereview/out/hf_model_*/
+cases/codereview/out/hf_dataset_*/
