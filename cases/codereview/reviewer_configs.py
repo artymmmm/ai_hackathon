@@ -22,8 +22,12 @@
 
 from __future__ import annotations
 
-from core.pipeline import PipelineContext
+from concurrent.futures import ThreadPoolExecutor
+
+from core.pipeline import PipelineContext, Record
 from core.schema import Verdict
+
+from cases.codereview.knowledge import cert_rules_block
 
 from cases.codereview.reviewer import (
     EVIDENCE_TAGS, MAX_CODE_CHARS, SYSTEM_PROMPT as SYSTEM_PROMPT_BASELINE,
@@ -187,3 +191,23 @@ def review_one(doc_id: str, code: str, ctx: PipelineContext, *, system_prompt: s
                             original_length=original_length)
     except Exception as e:
         return _fallback(doc_id, f"llm_call_failed:{e}", code=code)
+
+
+def review_fragments_cert_only(records: list[Record], ctx: PipelineContext) -> list[Verdict]:
+    """Стадия `llm` плагина в ПОСТАВОЧНОЙ конфигурации `cert_only` (F1 0.386 на eval600).
+
+    Ровно то же, что делает ступень 1 каскада в `run_cascade.run_stage1`: SYSTEM_PROMPT_SENSITIVE
+    + `cert_rules_block`, один вызов на фрагмент, без hint_block. Раньше плагин ходил через
+    `reviewer.review_fragments` (базовый промпт, F1 0.265) — расхождение между измеренной
+    конфигурацией и production-путём стоило 0.121 F1 на полном прогоне.
+
+    Параллелизм как в `reviewer.review_fragments`: лимит из LLMConfig.max_concurrency,
+    ex.map сохраняет порядок, ошибка отдельной записи гасится внутри `review_one`.
+    """
+    def _one(rec: Record) -> Verdict:
+        code = rec["code"]
+        return review_one(rec["doc_id"], code, ctx, system_prompt=SYSTEM_PROMPT_SENSITIVE,
+                           use_json_example_sensitive=True, knowledge_block=cert_rules_block(code))
+
+    with ThreadPoolExecutor(max_workers=ctx.llm.config.max_concurrency) as ex:
+        return list(ex.map(_one, records))

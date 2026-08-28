@@ -4,16 +4,19 @@
 Стадии:
   load       — core.data.load_case3 (весь корпус, без built-in сэмплирования), обогащённый:
                * подсказкой сигнатурного триажа (triage.py, cases/codereview/out/triage_scores.csv,
-                 если посчитан заранее) — деривативный признак самого кода, идёт В ПРОМПТ как
-                 необязательная подсказка (reviewer.py, _hint_block) — не решающий фактор;
+                 если посчитан заранее) — деривативный признак самого кода; в промпт
+                 поставочной конфигурации `cert_only` НЕ попадает (hint_block пуст), остаётся
+                 в записи для экспорта и разбора;
                * восстановленным лейблом (research/case3_recovered_labels.csv, если файл есть) —
                  используется ТОЛЬКО для (а) стратифицированного --sample, чтобы мини-прогон не
                  терял редкие vulnerable (4.1% корпуса — research/case3_label_matching.md), и
                  (б) evaluate.py. НИКОГДА не читается в reviewer.py/patch_check.py и не попадает
                  в промпт LLM — иначе ревью перестало бы быть независимым от эталона, которым же
                  его потом и меряют.
-  llm        — cases.codereview.reviewer.review_fragments; единственная точка сетевого вызова,
-               и та — через ctx.llm (core/llm.py), по умолчанию dry_run=True (без сети).
+  llm        — cases.codereview.reviewer_configs.review_fragments_cert_only (поставочная
+               конфигурация `cert_only`, F1 0.386 на eval600: SYSTEM_PROMPT_SENSITIVE +
+               cert_rules_block, один вызов на фрагмент, без hint_block); единственная точка
+               сетевого вызова, и та — через ctx.llm (core/llm.py), по умолчанию dry_run=True.
   validate   — patch_check.check_patch + patch_check.second_opinion: для verdict=="vulnerable"
                с непустым patched_code — три статические проверки патча (сигнатура, наличие
                функциональности, исчез ли паттерн триажа) плюс независимый второй вызов LLM
@@ -41,7 +44,7 @@ from core.pipeline import CasePlugin, PipelineContext, Record
 from core.schema import Verdict
 
 from cases.codereview.patch_check import check_patch, second_opinion
-from cases.codereview.reviewer import review_fragments
+from cases.codereview.reviewer_configs import review_fragments_cert_only
 
 _ROOT = Path(__file__).resolve().parent.parent.parent
 _RECOVERED_LABELS_CSV = _ROOT / "research" / "case3_recovered_labels.csv"
@@ -193,7 +196,7 @@ def export_columns(v: Verdict) -> dict:
 PLUGIN = CasePlugin(
     name="codereview",
     load=load,
-    llm=review_fragments,
+    llm=review_fragments_cert_only,
     validate=validate,
     export_columns=export_columns,
 )
