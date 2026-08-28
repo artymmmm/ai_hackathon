@@ -38,3 +38,6 @@ kb/*.zip
 # веса и датасеты HF, скачанные для замера дообученной модели (589 МБ)
 cases/codereview/out/hf_model_*/
 cases/codereview/out/hf_dataset_*/
+
+# временные файлы Word (замок открытого документа)
+~$*

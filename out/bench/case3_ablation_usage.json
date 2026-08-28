@@ -1,0 +1,8 @@
+{
+  "calls": 2501,
+  "cache_hits": 0,
+  "prompt_tokens": 5731323,
+  "completion_tokens": 1384476,
+  "total_tokens": 7115799,
+  "cost_usd": 0.0
+}

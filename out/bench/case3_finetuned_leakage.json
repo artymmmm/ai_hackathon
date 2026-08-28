@@ -1,0 +1,16 @@
+{
+  "n_checked": 600,
+  "n_matched_in_train_split": 225,
+  "fraction_matched": 0.375,
+  "train_split_source": "mahdin70/balanced_merged_bigvul_primevul (train, HF datasets)",
+  "train_split_local_path": "cases/codereview/out/hf_dataset_bigvul_primevul/data/train-00000-of-00001.parquet",
+  "train_split_rows": 124780,
+  "model_card_url": "https://huggingface.co/mahdin70/CodeBERT-PrimeVul-BigVul",
+  "normalization": "убраны // и /* */ комментарии, схлопнуты пробельные символы, MD5 нормализованного тела",
+  "auxiliary_val_test_not_used_in_training": {
+    "n_matched_validation_split": 70,
+    "n_matched_test_split": 64,
+    "note": "val/test того же датасета не входили в обновление весов модели; приведены только для картины общего пересечения корпусов, в основной вывод об утечке не входят"
+  },
+  "note": "Сплит опубликован автором модели как отдельный датасет (та же карточка модели прямо ссылается на mahdin70/balanced_merged_bigvul_primevul как train). Это train-часть, на которой модель реально обновляла веса — не held-out. Совпадение по нормализованному MD5 означает, что модель видела этот же фрагмент кода (возможно, под другим unique_id/CVE) во время обучения."
+}

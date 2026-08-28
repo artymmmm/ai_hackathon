@@ -1,0 +1,113 @@
+{
+  "model": {
+    "name": "mahdin70/CodeBERT-PrimeVul-BigVul",
+    "url": "https://huggingface.co/mahdin70/CodeBERT-PrimeVul-BigVul",
+    "why_chosen": "Единственный найденный на HF готовый дообученный бинарный классификатор уязвимостей C/C++ на уровне функции, для которого автор опубликовал и модель, и точный train/val/test сплит (mahdin70/balanced_merged_bigvul_primevul), что сделало возможной честную проверку утечки. Обучен на объединении BigVul (происхождение нашего корпуса) и PrimeVul. Архитектура: MultiTaskCodeBERT (microsoft/codebert-base + 2 головы: бинарная vulnerable/secure + CWE, 134 класса). Заявленные автором метрики на своём test: F1 63.38%, recall 54.00%, precision 76.69%.",
+    "other_candidates_considered": [
+      "mahdin70/codebert-devign-code-vulnerability-detector (обучен на Devign, не BigVul; автор публикует agg-метрики, но не train split как отдельный датасет — утечку проверить было бы нельзя)",
+      "claudios/VulBERTa-MLP-Devign/D2A/MVD (обучены не на BigVul; удалось найти только веса, без опубликованного train split)"
+    ]
+  },
+  "leakage_check": {
+    "file": "out/bench/case3_finetuned_leakage.json",
+    "n_checked": 600,
+    "n_matched_in_train_split": 225,
+    "fraction_matched": 0.375,
+    "method": "MD5 нормализованного (без комментариев и лишних пробелов) тела функции, сравнение с train-сплитом mahdin70/balanced_merged_bigvul_primevul (124780 строк)",
+    "verdict": "Утечка установлена и подтверждена числом: 37.5% (225/600) эталонных фрагментов побайтово (после нормализации) совпадают с примерами, на которых модель обновляла веса."
+  },
+  "runs": [
+    {
+      "config": "finetuned_codebert_bigvul_primevul (thr=0.5, default)",
+      "precision": 0.94,
+      "recall": 0.235,
+      "f1": 0.376,
+      "fpr": 0.0075,
+      "tp": 47,
+      "fp": 3,
+      "fn": 153,
+      "tn": 397,
+      "threshold": 0.5,
+      "predictions_file": "out/bench/case3_finetuned_600.json"
+    },
+    {
+      "config": "finetuned_codebert_bigvul_primevul (thr подобран под FPR~cert_only)",
+      "precision": 0.6688,
+      "recall": 0.515,
+      "f1": 0.5819,
+      "fpr": 0.1275,
+      "tp": 103,
+      "fp": 51,
+      "fn": 97,
+      "tn": 349,
+      "threshold": 0.0058569228,
+      "predictions_file": "out/bench/case3_finetuned_600_thrfpr.json"
+    },
+    {
+      "config": "cert_only (LLM, поставка) — справочно, не перепрогонялось",
+      "precision": 0.541,
+      "recall": 0.3,
+      "f1": 0.386,
+      "fpr": 0.128,
+      "tp": null,
+      "fp": null,
+      "fn": null,
+      "tn": null,
+      "threshold": null,
+      "predictions_file": "out/bench/case3_cert_only_600.json"
+    },
+    {
+      "config": "базовый промпт (LLM) — справочно, не перепрогонялось",
+      "precision": 0.673,
+      "recall": 0.165,
+      "f1": 0.265,
+      "fpr": 0.04,
+      "tp": null,
+      "fp": null,
+      "fn": null,
+      "tn": null,
+      "threshold": null,
+      "predictions_file": null
+    }
+  ],
+  "leaked_vs_clean_breakdown": {
+    "note": "Диагностика (не входит в основную таблицу): метрики отдельно на 225 фрагментах, попавших в train сплит модели, и на 375 остальных. Считано тем же evaluate.py на подмножествах out/bench/case3_finetuned_600*.json.",
+    "threshold_0.5": {
+      "leaked_225": {
+        "precision": 1.0,
+        "recall": 0.271,
+        "f1": 0.426,
+        "fpr": 0.0
+      },
+      "clean_375": {
+        "precision": 0.857,
+        "recall": 0.194,
+        "f1": 0.316,
+        "fpr": 0.011
+      }
+    },
+    "threshold_fpr_matched": {
+      "leaked_225": {
+        "precision": 0.844,
+        "recall": 0.608,
+        "f1": 0.707,
+        "fpr": 0.102
+      },
+      "clean_375": {
+        "precision": 0.493,
+        "recall": 0.409,
+        "f1": 0.447,
+        "fpr": 0.138
+      }
+    }
+  },
+  "conclusion": "При равном FPR (~0.128, как у нашего cert_only) дообученный CodeBERT даёт F1=0.582 против нашего 0.386 — заметно выше. Но 37.5% эталона модель видела на обучении: на этой утечённой части F1=0.707, на чистой (незнакомой модели) части F1=0.447. Даже консервативная нижняя оценка на чистой части (0.447) выше нашего 0.386, так что вывод не сводится целиком к утечке — но заявлять 0.582 (или тем более авторские 0.91-0.92 из литературы на всём BigVul) как честное качество на новом коде нельзя: число завышено памятью корпуса минимум на разницу 0.582-0.447=0.135 F1.",
+  "timing_and_cost": {
+    "leakage_check_seconds": "~15s (локально, offline)",
+    "inference_600_fragments_seconds": 317,
+    "model_load_seconds": 2.7,
+    "hardware": "CPU (Apple Intel Mac, без GPU)",
+    "paid_api_calls": 0,
+    "note": "Установка torch/transformers заняла отдельное время (загрузка пакетов + модели 499MB + датасета ~118MB), инференс сам по себе — 317s на 600 фрагментов."
+  }
+}

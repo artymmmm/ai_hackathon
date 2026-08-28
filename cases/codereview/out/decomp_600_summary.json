@@ -1,0 +1,30 @@
+[
+  {
+    "конфигурация": "nudge_control",
+    "precision": 0.3828,
+    "recall": 0.245,
+    "f1": 0.2988,
+    "fpr": 0.1975,
+    "tp": 49,
+    "fp": 79,
+    "fn": 151,
+    "tn": 321,
+    "escalation_rate": 0.5383,
+    "вызовов_LLM_на_фрагмент": 1,
+    "файл_вердиктов": "out/bench/case3_decomp_nudge_control_600.json"
+  },
+  {
+    "конфигурация": "decomp_nudge",
+    "precision": 0.3902,
+    "recall": 0.24,
+    "f1": 0.2972,
+    "fpr": 0.1875,
+    "tp": 48,
+    "fp": 75,
+    "fn": 152,
+    "tn": 325,
+    "escalation_rate": 0.5233,
+    "вызовов_LLM_на_фрагмент": 2,
+    "файл_вердиктов": "out/bench/case3_decomp_two_call_600.json"
+  }
+]

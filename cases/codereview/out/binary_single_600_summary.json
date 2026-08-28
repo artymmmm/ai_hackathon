@@ -1,0 +1,44 @@
+[
+  {
+    "конфигурация": "cert_only (uncertain=secure)",
+    "precision": 0.5405,
+    "recall": 0.3,
+    "f1": 0.3859,
+    "fpr": 0.1275,
+    "tp": 60,
+    "fp": 51,
+    "fn": 140,
+    "tn": 349,
+    "escalation_rate": 0.5983,
+    "вызовов_LLM_на_фрагмент": 1,
+    "файл_вердиктов": "out/bench/case3_cert_only_600.json"
+  },
+  {
+    "конфигурация": "cert_only (uncertain=vulnerable)",
+    "precision": 0.3553,
+    "recall": 0.835,
+    "f1": 0.4985,
+    "fpr": 0.7575,
+    "tp": 167,
+    "fp": 303,
+    "fn": 33,
+    "tn": 97,
+    "escalation_rate": 0.0,
+    "вызовов_LLM_на_фрагмент": 1,
+    "файл_вердиктов": "out/bench/case3_cert_only_600_uncertain_as_vulnerable.json"
+  },
+  {
+    "конфигурация": "binary_cert_only_single",
+    "precision": 0.6207,
+    "recall": 0.18,
+    "f1": 0.2791,
+    "fpr": 0.055,
+    "tp": 36,
+    "fp": 22,
+    "fn": 164,
+    "tn": 378,
+    "escalation_rate": 0.0067,
+    "вызовов_LLM_на_фрагмент": 1,
+    "файл_вердиктов": "out/bench/case3_binary_cert_only_600.json"
+  }
+]

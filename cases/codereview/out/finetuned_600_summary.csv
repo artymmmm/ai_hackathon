@@ -1,0 +1,5 @@
+﻿config,precision,recall,f1,fpr,tp,fp,fn,tn,threshold,predictions_file
+"finetuned_codebert_bigvul_primevul (thr=0.5, default)",0.94,0.235,0.376,0.0075,47.0,3.0,153.0,397.0,0.5,out/bench/case3_finetuned_600.json
+finetuned_codebert_bigvul_primevul (thr подобран под FPR~cert_only),0.6688,0.515,0.5819,0.1275,103.0,51.0,97.0,349.0,0.0058569228,out/bench/case3_finetuned_600_thrfpr.json
+"cert_only (LLM, поставка) — справочно, не перепрогонялось",0.541,0.3,0.386,0.128,,,,,,out/bench/case3_cert_only_600.json
+"базовый промпт (LLM) — справочно, не перепрогонялось",0.673,0.165,0.265,0.04,,,,,,

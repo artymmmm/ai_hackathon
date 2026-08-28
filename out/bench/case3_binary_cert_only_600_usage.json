@@ -1,0 +1,17 @@
+{
+  "model": "deepseek-chat",
+  "backend": "openai_compat",
+  "n_fragments": 600,
+  "elapsed_seconds": 224.5,
+  "n_disobeyed_binary_instruction": 0,
+  "usage": {
+    "calls": 621,
+    "cache_hits": 0,
+    "prompt_tokens": 1440564,
+    "completion_tokens": 379449,
+    "total_tokens": 1820013,
+    "cost_usd": 0.0
+  },
+  "cost_usd_computed_deepseek_standard_pricing": 0.8063,
+  "cost_usd_pricing_note": "core/llm.py._PRICING_PER_1M has no deepseek-chat entry -> usage.cost_usd returned 0.0; rate 0.27 USD/1M input, 1.10 USD/1M output tokens reverse-derived from out/bench/cascade600_usage.json stage1 totals."
+}

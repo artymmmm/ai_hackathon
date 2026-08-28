@@ -1,0 +1,14 @@
+{
+  "model": "qwen/qwen3-30b-a3b",
+  "backend": "openai_compat",
+  "n_fragments": 600,
+  "elapsed_seconds": 371.6,
+  "usage": {
+    "calls": 680,
+    "cache_hits": 0,
+    "prompt_tokens": 1696387,
+    "completion_tokens": 865759,
+    "total_tokens": 2562146,
+    "cost_usd": 0.0
+  }
+}

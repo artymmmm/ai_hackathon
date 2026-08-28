@@ -1,0 +1,3602 @@
+{
+  "188373": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "134499": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "41354": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "3740": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179624": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185961": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145236": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "142535": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "55952": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "176272": {
+    "buffers_and_lifetime": "dictionary (SeededNumberDictionary*), store (FixedArrayBase*)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "77074": {
+    "buffers_and_lifetime": "arg (char*), ofpacts (struct ofpbuf*)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184316": {
+    "buffers_and_lifetime": "new_service_runtime создается через new ServiceRuntime, но явного освобождения памяти в коде нет",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180246": {
+    "buffers_and_lifetime": "intern->u.file.current_line, intern->u.file.current_zval, first (указатель на zval)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185247": {
+    "buffers_and_lifetime": "pipe_name - буфер строки, создается через append; security_attributes - структура, инициализируется в коде; client и server - умные указатели, управляемые ScopedHandle и scoped_ptr соответственно",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "94753": {
+    "buffers_and_lifetime": "image->properties выделяется через NewSplayTree и освобождается через RelinquishMagickMemory. geometry выделяется через GetPageGeometry и освобождается через DestroyString. profile выделяется через FileToStringInfo и освобождается через DestroyImageInfo.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "153772": {
+    "buffers_and_lifetime": "firsts (указатель на GLint), counts (указатель на GLsizei) — входные параметры функции; память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "14326": {
+    "buffers_and_lifetime": "s->txq_descr[qidx].txq_stats - структура статистики, память для неё управляется вне функции; s->tx_pkt - указатель на пакет, управляется вне функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "87586": {
+    "buffers_and_lifetime": "data - указатель на буфер с данными, передается как аргумент функции. Память не выделяется и не освобождается внутри функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "36574": {
+    "buffers_and_lifetime": "нет буферов, выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "83203": {
+    "buffers_and_lifetime": "uthese, uinfo, uts - указатели на пользовательские данные; s32, s, t, info - локальные буферы на стеке; память не выделяется и не освобождается явно в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "21746": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188265": {
+    "buffers_and_lifetime": "m_editions (указатель типа Editions), выделение и освобождение памяти не показаны в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186706": {
+    "buffers_and_lifetime": "input16 (base::string16) создается и резервирует память через input16.reserve(host.length()). out16 (base::string16) создается без явного резервирования. Память для строк управляется автоматически (нет явных alloc/free).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "129090": {
+    "buffers_and_lifetime": "result (scoped_ptr<base::ListValue>) выделяется через new base::ListValue(), освобождается через release() при передаче в SetResult. target_list - вектор указателей DevToolsTargetImpl*, элементы удаляются через STLDeleteContainerPointers.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "172403": {
+    "buffers_and_lifetime": "указатели min_buff_count, actual_buff_count, buff_size передаются как параметры функции, память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "84378": {
+    "buffers_and_lifetime": "client->unique_id_policy (GHashTable), unique_id (const char*), g_strdup(unique_id) (выделение памяти для строки)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181799": {
+    "buffers_and_lifetime": "filename[MagickPathExtent] - локальный буфер, память выделяется на стеке и освобождается при выходе из функции; image - создается через AcquireImage, уничтожается через DestroyImage/DestroyImageList; read_info - создается через CloneImageInfo, уничтожается через DestroyImageInfo; file - открывается через fdopen, закрывается через fclose",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "146264": {
+    "buffers_and_lifetime": "creation_info (структура ContextProviderCreationInfo), url (объект KURL), task_runner (RefPtr<WebTaskRunner>). Память выделяется для url через метод Copy(), освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182770": {
+    "buffers_and_lifetime": "buffer[MagickPathExtent], magick[MagickPathExtent], pixels[2048], pixels (allocated via GetQuantumPixels), quantum_info (allocated via AcquireQuantumInfo and freed via DestroyQuantumInfo), type[MagickPathExtent]",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "107093": {
+    "buffers_and_lifetime": "webPageProxy - указатель на объект, память освобождается вызовом метода close()",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184222": {
+    "buffers_and_lifetime": "scoped_refptr<FrameConsumerProxy> consumer_proxy выделяется через new FrameConsumerProxy. rectangle_decoder_ выделяется через new RectangleUpdateDecoder. view_ выделяется через new PepperView. Освобождение памяти не показано в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "58317": {
+    "buffers_and_lifetime": "bitmap выделяется через kzalloc(bitmap_size, GFP_KERNEL) и освобождается через kfree(bitmap) в случае ошибки. pages выделяется через kzalloc(nr_pages * sizeof(struct page *), GFP_KERNEL) и освобождается через kfree(pages) в случае ошибки. ptr получает значение либо от __alloc_from_contiguous, либо от __alloc_remap_buffer, но явного освобождения в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "57551": {
+    "buffers_and_lifetime": "result — указатель на handle_t, выделяется в ext4_journal_start, освобождение не показано",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "123071": {
+    "buffers_and_lifetime": "backing_store — указатель на указатель типа BackingStore, память для него выделяется в BackingStoreManager::GetBackingStore",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "69967": {
+    "buffers_and_lifetime": "c->reply_bytes и c->reply используются как буферы, память для них выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "134049": {
+    "buffers_and_lifetime": "blacklisted_extensions_ — контейнер, вероятно, для хранения указателей на объекты Extension. Память для extension выделяется и освобождается вне данного фрагмента.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "106273": {
+    "buffers_and_lifetime": "first и second — указатели на объекты типа RefPtr<SerializedScriptValue>, создаются через SerializedScriptValue::create. tx и txx — указатели на объекты типа Array*, создаются через toArray. Память не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178988": {
+    "buffers_and_lifetime": "В коде используются указатели: regs, tsk, mm, vma, pgd, pgd_k, pmd, pmd_k. Память выделяется и освобождается через функции down_read(&mm->mmap_sem) и up_read(&mm->mmap_sem) для управления семафором. Явных вызовов alloc/free/new/delete/kfree/kmalloc не обнаружено.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181267": {
+    "buffers_and_lifetime": "ov выделяется через strdup(node->value) и освобождается через free(ov) в конце функции. node->value выделяется через strdup(\"\"), strdup(r_str_bool(b)), strdup(value) и освобождается через free(node->value) в нескольких местах. node создается через r_config_node_new(name, value) и не освобождается в функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180915": {
+    "buffers_and_lifetime": "struct rusage r и struct waitid_info info — локальные буферы, память для них выделяется на стеке при вызове функции и освобождается при завершении. Указатели infop и ru передаются как аргументы функции, память для них выделяется и освобождается вне этой функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "82478": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187874": {
+    "buffers_and_lifetime": "m_pCues выделяется с помощью оператора new (std::nothrow) в конце функции, освобождение не показано в данном фрагменте",
+    "bounds_checks": "есть такие: проверка (off < 0), проверка (total < 0) || (pos >= total), проверка (pos + 1) > avail, проверка (segment_stop >= 0) && ((pos + len) > segment_stop), проверка (pos + len) > avail, проверка (segment_stop >= 0) && (element_stop > segment_stop), проверка (total >= 0) && (element_stop > total), проверка element_stop > avail",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "164044": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "1786": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "7100": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "147513": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183820": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "65400": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183639": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187285": {
+    "buffers_and_lifetime": "context_ выделяется через base::MakeUnique<Context>",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "3702": {
+    "buffers_and_lifetime": "s->scratch буфер, очищается через memset",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "46745": {
+    "buffers_and_lifetime": "ctx выделяется через crypto_blkcipher_ctx, walk инициализируется через blkcipher_walk_init, src64 и dst64 являются указателями на буферы, полученные из walk.src.virt.addr и walk.dst.virt.addr соответственно. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "108285": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "43431": {
+    "buffers_and_lifetime": "mm_struct *mm выделяется через mm_alloc(), освобождается через mmdrop(mm) в блоке err",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "45631": {
+    "buffers_and_lifetime": "ctx выделяется через crypto_tfm_ctx(tfm), освобождается crypto_free_aead(ctx->child)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "51594": {
+    "buffers_and_lifetime": "skb выделяется и передается в функцию tcp_rcv_state_process. Память освобождается через consume_skb(skb) и __kfree_skb(skb). Также есть вызов tcp_drop(sk, skb), который может освобождать память.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "8163": {
+    "buffers_and_lifetime": "args[] - массив объектов Object, память для которого выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "15273": {
+    "buffers_and_lifetime": "buf (выделяется в php_stream_get_record, освобождается неявно в RETURN_STRINGL), str (передается в zend_parse_parameters, освобождается неявно)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "84036": {
+    "buffers_and_lifetime": "ptr->config выделяется через gf_odf_hevc_cfg_read_bs и освобождается через gf_odf_hevc_cfg_del",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184339": {
+    "buffers_and_lifetime": "npEvent и mouse — локальные переменные, память для них выделяется на стеке при входе в функцию и освобождается автоматически при выходе. Указатель npEvent.data инициализируется адресом переменной mouse.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "2519": {
+    "buffers_and_lifetime": "result (типа StringInfo) создается через makeStringInfo(), память для него выделяется внутри этой функции. Буфер result->data используется в cstring_to_text_with_len(), но явного освобождения в этом фрагменте нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188453": {
+    "buffers_and_lifetime": "m_clusters (указатель на массив указателей Cluster*), выделяется память через new Cluster*[n], освобождается через delete[] m_clusters; qq (временный указатель на массив Cluster*) выделяется через new Cluster*[n]",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183301": {
+    "buffers_and_lifetime": "hdl выделяется через calloc(1,sizeof(hsm_com_client_hdl_t)), hdl->scr.scratch, hdl->recv_buf и hdl->send_buf выделяются через malloc(max_data_len). Освобождение памяти происходит в блоке cleanup: free(hdl->scr.scratch), free(hdl->recv_buf) и free(hdl).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "64743": {
+    "buffers_and_lifetime": "DnsPacket *p (передается как аргумент), указатель DNS_PACKET_DATA(p) (используется для вычисления адреса), указатель ret (может быть разыменован), указатель start (может быть разыменован). Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "есть проверка p->rindex + sz > p->size перед использованием p->rindex и p->size",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "158579": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187918": {
+    "buffers_and_lifetime": "data - указатель на входной буфер, передается как параметр; coverage - ссылка на вектор, передается как параметр",
+    "bounds_checks": "kEndCountOffset > size проверка перед чтением segCount; kHeaderSize + segCount * kSegmentSize > size проверка перед циклом; actualRangeOffset + 2 > size проверка перед чтением glyphId",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187096": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов, связанных с выделением или освобождением памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "122659": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "163986": {
+    "buffers_and_lifetime": "contact_profiles_ и available_instruments — буферы, представленные как векторы. Память выделяется и освобождается через std::unique_ptr для элементов вектора available_instruments.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178620": {
+    "buffers_and_lifetime": "prefix, auth_proto, auth_string — указатели на буферы, выделяются через арифметику указателей из stuff. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183634": {
+    "buffers_and_lifetime": "ctxt->input->buf->buffer->content используется как буфер для данных. Память выделяется через xmlParserInputBufferPush и освобождается через xmlPopInput.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179638": {
+    "buffers_and_lifetime": "frag->data (указатель на данные), run->mmio.data (буфер данных), vcpu->mmio_fragments (массив структур). Память не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186788": {
+    "buffers_and_lifetime": "pic_param и iq_matrix_buf — локальные буферы, выделяемые на стеке. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "168794": {
+    "buffers_and_lifetime": "params выделяется через new ResizeParams и управляется через std::unique_ptr, память освобождается автоматически при выходе из области видимости.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "33711": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145312": {
+    "buffers_and_lifetime": "info (структура ExtensionMsg_ExternalConnectionInfo), channel_name (std::string), port_id (int). Память не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "106246": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "56938": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "82056": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "59619": {
+    "buffers_and_lifetime": "temp выделяется через вызов resultFilename(filename, \"\", \".res\") и освобождается через free(temp) в двух местах: при ошибке открытия файла и в блоке done.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182898": {
+    "buffers_and_lifetime": "структура ipmi_user передается в функцию ipmi_destroy_user, затем вызывается _ipmi_destroy_user, cleanup_srcu_struct и kref_put с функцией free_user для освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181311": {
+    "buffers_and_lifetime": "cb_info, serv, sv_ops — указатели на структуры. Память выделяется через svc_create(&nfs4_callback_program, NFS4_CALLBACK_BUFSIZE, sv_ops) и сохраняется в serv. Память освобождается через svc_destroy(), но вызов svc_destroy() не виден в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "174935": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186152": {
+    "buffers_and_lifetime": "info_ptr->mod_time используется как буфер для копирования данных из mod_time с помощью png_memcpy. Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "82432": {
+    "buffers_and_lifetime": "нет буферов, выделения или освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185693": {
+    "buffers_and_lifetime": "нет явного выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "142967": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "115053": {
+    "buffers_and_lifetime": "pre_download_ids — указатель на ListValue, память для которого выделяется вне данного фрагмента. download_service — указатель на DownloadService, создается через DownloadServiceFactory::GetForProfile. new AllDownloadsCompleteObserver — выделение памяти для объекта AllDownloadsCompleteObserver.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179651": {
+    "buffers_and_lifetime": "skb выделяется через __skb_recv_datagram и освобождается через skb_free_datagram_locked или skb_kill_datagram. msg->msg_iov используется как буфер для копирования данных через skb_copy_datagram_iovec и skb_copy_and_csum_datagram_iovec.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184775": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте кода.",
+    "bounds_checks": "Проверка args.Length() < 1 перед использованием args.Holder() и MAYBE_MISSING_PARAMETER(args, 0, DefaultIsUndefined).",
+    "use_paths": "Нет таких",
+    "error": null
+  },
+  "185848": {
+    "buffers_and_lifetime": "default_wallpaper_image_ — unique_ptr, освобождается через reset(). small_wallpaper_image и large_wallpaper_image — unique_ptr, передаются как параметры, память управляется через reset() и создание новых объектов UserImage.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150149": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186112": {
+    "buffers_and_lifetime": "args — массив указателей v8::Local<v8::Value>, выделяется на стеке. Память для объекта this освобождается через delete this.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "13625": {
+    "buffers_and_lifetime": "buf — буфер, передаваемый в функцию как аргумент; память для него выделяется и освобождается вне функции, внутри функции только используется",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "152022": {
+    "buffers_and_lifetime": "navigation_requests_ — контейнер, вероятно std::map или std::unordered_map, содержащий указатели на NavigationRequest. Память для элементов контейнера выделяется и освобождается вне данного фрагмента. Внутри фрагмента используется std::move для перемещения элемента контейнера в navigation_request_ и erase для удаления элемента из контейнера.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180824": {
+    "buffers_and_lifetime": "walk.dst.virt.addr и walk.src.virt.addr — указатели на буферы, используемые для шифрования. Память для них выделяется и освобождается внутри функций blkcipher_walk_init, blkcipher_walk_virt_block и blkcipher_walk_done.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "104454": {
+    "buffers_and_lifetime": "params — указатель на буфер, память для которого выделяется вне данного фрагмента. В коде нет явного выделения или освобождения памяти.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "79803": {
+    "buffers_and_lifetime": "par->vbe_modes выделяется через kzalloc с размером sizeof(struct vbe_mode_ib) * par->vbe_modes_cnt. Освобождение памяти не показано в данном фрагменте. Указатели: mode (указывает на данные внутри par->vbe_ib), task->buf (указывает на par->vbe_modes + off), mib (указывает на task->buf).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "53859": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "50866": {
+    "buffers_and_lifetime": "буфер p передается как параметр функции, память не выделяется и не освобождается внутри фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181521": {
+    "buffers_and_lifetime": "skb — указатель на структуру sk_buff, передаётся как аргумент функции llc_sap_rcv. ev — указатель на структуру llc_sap_state_ev, выделяется через вызов функции llc_sap_ev(skb). Память не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188107": {
+    "buffers_and_lifetime": "ps_dec->au1_intra_quant_matrix и ps_dec->au1_inter_quant_matrix — буферы, используемые для хранения матриц квантования. Память для них не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "62212": {
+    "buffers_and_lifetime": "update_policy_text — статический буфер размером 4096 байт, выделяется на стеке при вызове функции UpdateCallback. Память не освобождается явно, так как это автоматическая переменная. Указатели hFrequency и hBeta — статические переменные, их память управляется системой. Указатель rsz — временный указатель на структуру REQRESIZE, память для которой выделяется системой.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "100506": {
+    "buffers_and_lifetime": "m_allResources — буфер, управляемый методом grow(), который увеличивает его размер при необходимости.",
+    "bounds_checks": "есть проверка m_allResources.size() <= queueIndex перед доступом к m_allResources[queueIndex].",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "119963": {
+    "buffers_and_lifetime": "base и fragment — указатели на строки, передаваемые в функцию IsRelativeURL и далее в DoIsRelativeURL. Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183024": {
+    "buffers_and_lifetime": "pptr — указатель на входные данные, передаваемый в функцию ldp_pdu_print. tptr и msg_tptr — указатели на данные, вычисляемые внутри функции. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "ND_TCHECK(*ldp_com_header) перед использованием ldp_com_header. ND_TCHECK2(*tptr, sizeof(struct ldp_msg_header)) перед использованием tptr для декодирования ldp_msg_header. ND_TCHECK2(*tptr, msg_len) перед использованием tptr для декодирования сообщения.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "42892": {
+    "buffers_and_lifetime": "srccon и dstcon — буферы типа security_context_t, память для них выделяется внутри функций getpidcon_raw и fgetfilecon_raw соответственно. newcon — указатель на security_context_t, память для него выделяется внутри функции security_compute_create_raw. Освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "175951": {
+    "buffers_and_lifetime": "le_key — локальная структура, память для неё выделяется на стеке при входе в функцию и освобождается при выходе. p_cb->ltk — буфер, копируемый в le_key.ltk, но его выделение и освобождение не показаны в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "144624": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "118548": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Указатели: frame, document_state, navigation_state, internal_data, render_view_->observers().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "172220": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "74050": {
+    "buffers_and_lifetime": "geometry[MagickPathExtent] и header_ole[4] — локальные буферы на стеке. image выделяется через AcquireImage и может быть освобожден через DestroyImageList или DestroyImage. tile_image выделяется через CloneImage и освобождается через DestroyImage. pixels выделяется через DecodeImage, но освобождение не показано в фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "118815": {
+    "buffers_and_lifetime": "destruction_observers_ — контейнер (вероятно, map или unordered_map), в который добавляется новый элемент с ключом web_contents и значением, создаваемым через new DestructionObserver(this, web_contents). Память выделяется через new, но освобождение не показано в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188370": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "131726": {
+    "buffers_and_lifetime": "нет буферов, выделения или освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181897": {
+    "buffers_and_lifetime": "buf — локальный буфер фиксированного размера MIF_MAGICLEN, выделяется на стеке при вызове функции mif_validate, освобождается автоматически при завершении функции. Указатель in передается в функцию как аргумент, память для него выделяется и освобождается вне функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "85001": {
+    "buffers_and_lifetime": "name[XT_TABLE_MAXNAMELEN] — локальный буфер, выделяется на стеке; t — указатель на структуру xt_table, возвращается функцией xt_request_find_table_lock; info — локальная структура ipt_getinfo, выделяется на стеке; tmp — локальная структура xt_table_info, выделяется на стеке.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185049": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Упоминаются объекты runtime_data_lock_, runtime_data_, и строка function_name, но они не связаны с управлением памятью.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "10320": {
+    "buffers_and_lifetime": "ras.ycells - массив указателей на PCell, ras.gray_spans - буфер, используемый в ras.render_span. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "114850": {
+    "buffers_and_lifetime": "args (DictionaryValue*) передаётся как параметр, память не выделяется и не освобождается в этом фрагменте. reply_message (IPC::Message*) также передаётся как параметр, память не выделяется и не освобождается. web_contents (WebContents*) получается через вызов browser->GetWebContentsAt(tab_index), память не выделяется и не освобождается. Создаётся новый объект AutofillDisplayedObserver, но память для него не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "34556": {
+    "buffers_and_lifetime": "skb — указатель на структуру sk_buff, память выделяется через sock_alloc_send_pskb, освобождение не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "74450": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178060": {
+    "buffers_and_lifetime": "default_values и instance_values выделяются через FT_ALLOC и освобождаются через FT_FREE. Буферы используются для хранения значений осей и экземпляров шрифта.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "67839": {
+    "buffers_and_lifetime": "dc выделяется через SCCalloc(1, sizeof(*dc)). dc->frag_pool инициализируется через PoolInit(frag_pool_size, frag_pool_prealloc, sizeof(Frag), NULL, DefragFragInit, dc, NULL, NULL). Освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "45111": {
+    "buffers_and_lifetime": "argsbuffer — локальный буфер фиксированного размера HUGE_STRING_LEN, выделяется на стеке при входе в блок if (ap_should_client_block(r)). Память автоматически освобождается при выходе из функции.",
+    "bounds_checks": "есть проверка (rpos + len_read) > length перед использованием rsize для определения значения rsize.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185160": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Указатели и буферы: RenderBlockFlow* parentBlockFlow, RenderBlockFlow* currBlock, RenderBox* renderer, FloatingObjectSetIterator it, FloatingObjectSetIterator end.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "151650": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "122649": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "115477": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "148687": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183238": {
+    "buffers_and_lifetime": "psf->container_data, psf->codec_data, psf->interleave, psf->dither, psf->peak_info, psf->broadcast_16k, psf->loop_info, psf->instrument, psf->cues, psf->channel_map, psf->format_desc, psf->strings.storage, psf->wchunks.chunks, psf->rchunks.chunks, psf->iterator, psf->cart_16k выделяются с помощью malloc/calloc/realloc и освобождаются с помощью free. Память для psf также освобождается с помощью free.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "4982": {
+    "buffers_and_lifetime": "buffer — указатель на guint8, выделяется через приведение типа child->data, память не выделяется и не освобождается явно в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "96540": {
+    "buffers_and_lifetime": "ctx (указатель на mbedtls_ecdsa_context) передается в функцию mbedtls_ecp_keypair_init",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180776": {
+    "buffers_and_lifetime": "handle - указатель на структуру SecHandle, pointer - локальная переменная-указатель",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "66132": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "47918": {
+    "buffers_and_lifetime": "entry (указатель на union kvm_ioapic_redirect_entry), irqe (структура kvm_lapic_irq), ioapic (указатель на struct kvm_ioapic). Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150531": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179913": {
+    "buffers_and_lifetime": "r->the_request (указатель, выделяется через ap_rgetline, освобождается через пул r->pool), http[5] (локальный буфер), uri (указатель, управляется через ap_getword_white), pro (указатель, может указывать на ll или на строковый литерал \"HTTP/0.9\")",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "39426": {
+    "buffers_and_lifetime": "нет буферов и операций с памятью",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "134320": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "98919": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "177881": {
+    "buffers_and_lifetime": "fwstr выделяется через kstrdup(edid_firmware, GFP_KERNEL), освобождение не показано в фрагменте. Указатели: connector_name, edidname, last, colon, fwstr, edidstr, fallback.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181555": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "174002": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "105040": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184981": {
+    "buffers_and_lifetime": "name (const xmlChar *) получает значение через вызов xmlParseName(ctxt). ent (xmlEntityPtr) получает значение через вызовы xmlGetPredefinedEntity(name), ctxt->sax->getEntity(ctxt->userData, name), xmlSAX2GetEntity(ctxt, name). Память для name и ent не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "7951": {
+    "buffers_and_lifetime": "buf->buffer — указатель на буфер, используемый в функции buffer_advance. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "142762": {
+    "buffers_and_lifetime": "media_source_ (указатель типа HTMLMediaElement)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "149094": {
+    "buffers_and_lifetime": "pPrg выделяется через sqlite3DbMallocZero, pProgram выделяется через sqlite3DbMallocZero, pSubParse выделяется через sqlite3StackAllocZero. Освобождение: pWhen освобождается через sqlite3ExprDelete, pSubParse освобождается через sqlite3StackFree.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181876": {
+    "buffers_and_lifetime": "matrix (jas_matrix_t), rowstart (jas_seqent_t*), data (jas_seqent_t*)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "112374": {
+    "buffers_and_lifetime": "registered_temp_files_ (тип DeletableFilesMap), map (ссылка на элемент registered_temp_files_), found (итератор DeletableFilesMap)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181386": {
+    "buffers_and_lifetime": "data - указатель на буфер, передаваемый в функцию usb_control_msg; память для data выделяется и освобождается вне данной функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "166009": {
+    "buffers_and_lifetime": "web_transceivers — вектор уникальных указателей на blink::WebRTCRtpTransceiver, выделяется через конструктор std::vector с размером transceiver_states.size(). Память освобождается автоматически при выходе из области видимости, так как используется std::unique_ptr.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "49372": {
+    "buffers_and_lifetime": "nfnl - указатель на структуру sock, выделяется через netlink_kernel_create, освобождение не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187295": {
+    "buffers_and_lifetime": "file_system_name, file_system_root, file_full_path - строковые буферы, создаются через v8::String::Utf8Value. Память управляется V8, явных выделений/освобождений нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "140173": {
+    "buffers_and_lifetime": "std::unique_ptr<net::CanonicalCookie> cookie создается с помощью net::CanonicalCookie::Create и автоматически освобождается при выходе из области видимости",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150130": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "52631": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "28165": {
+    "buffers_and_lifetime": "block - указатель на входной буфер типа int16_t; pixels - указатель на выходной буфер типа uint8_t с модификатором av_restrict; память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "52023": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "1297": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179999": {
+    "buffers_and_lifetime": "rr (SSL3_RECORD) is a pointer to s->s3->rrec; p is a pointer to s->packet; s->s3->rbuf is used but not allocated/freed in this fragment; s->packet is used but not allocated/freed in this fragment",
+    "bounds_checks": "yes, checks include: rr->length > SSL3_RT_MAX_ENCRYPTED_LENGTH before processing record; rr->length > s->packet_length-DTLS1_RT_HEADER_LENGTH before reading data",
+    "use_paths": "no such",
+    "error": null
+  },
+  "8957": {
+    "buffers_and_lifetime": "структура NetTxPkt *pkt содержит указатель на массив iovec (pkt->vec), структура iovec *dst передаётся как параметр",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181255": {
+    "buffers_and_lifetime": "buf (массив или указатель, зависит от _MSC_VER), выделяется через grub_malloc при _MSC_VER, освобождается неявно при выходе из области видимости; indir (указатель на grub_uint32_t), выделяется через grub_malloc, освобождается через grub_free в двух местах",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185645": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в явном виде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "14373": {
+    "buffers_and_lifetime": "tab выделяется через av_malloc(tap_count * sizeof(*tab)) и освобождается через av_free(tab)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185187": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "8905": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "104320": {
+    "buffers_and_lifetime": "output (указатель на FilePath::StringType), память управляется вне функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "171594": {
+    "buffers_and_lifetime": "mString (указатель), память освобождается через SharedBuffer::bufferFromData(mString)->release()",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185794": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "60394": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "32091": {
+    "buffers_and_lifetime": "addr (указатель на unsigned char), dev->dev_addr (указатель на unsigned char), ha->addr (указатель на unsigned char). Память не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186614": {
+    "buffers_and_lifetime": "application_name (base::string16) создается в начале функции и возвращается в двух местах без явного освобождения (предполагается, что деструктор base::string16 обрабатывает освобождение).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "61033": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "121606": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "161668": {
+    "buffers_and_lifetime": "handle.native_pixmap_handle.fds - массив файловых дескрипторов, память управляется через base::ScopedFD (автоматическое освобождение)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "67549": {
+    "buffers_and_lifetime": "struct pagevec pvec (инициализируется через pagevec_init, освобождается через pagevec_release), массив pvec.pages (используется в цикле, освобождается через pagevec_release)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "51716": {
+    "buffers_and_lifetime": "str - указатель на строку, выделяется через date_time_from_opaque или wmem_strdup_printf, освобождается вне функции (предположительно через wmem_free или аналогичное, но в коде явного освобождения нет)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181077": {
+    "buffers_and_lifetime": "ep и ah — указатели на структуры, память для них не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "есть проверка длины перед использованием ah: if (length < sizeof(struct aodv_hello)) goto trunc;",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "122441": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "64669": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "13393": {
+    "buffers_and_lifetime": "d (I6300State) создается через макрос WATCHDOG_I6300ESB_DEVICE, память под d->timer выделяется через timer_new_ns, память под d->io_mem инициализируется через memory_region_init_io",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "73950": {
+    "buffers_and_lifetime": "rtadv_prefix - указатель на структуру, память освобождается через XFREE с параметром MTYPE_RTADV_PREFIX",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "47599": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "29612": {
+    "buffers_and_lifetime": "skb (struct sk_buff) is allocated and freed via kfree_skb(skb) in multiple places: when hop_limit <= 1, when packet is too big, and in error/drop paths. dst (struct dst_entry) is obtained from skb_dst(skb) and used but not explicitly allocated/freed in this fragment. hdr (struct ipv6hdr) and opt (struct inet6_skb_parm) are pointers into skb data.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "38346": {
+    "buffers_and_lifetime": "ah выделяется через ib_create_ah_from_wc и освобождается через ib_destroy_ah. m выделяется через ib_create_send_mad, но явного освобождения в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179594": {
+    "buffers_and_lifetime": "В коде фигурируют буферы и указатели: ct (struct nf_conn *), skb (const struct sk_buff *), dh (struct dccp_hdr *), _dh (struct dccp_hdr). Память выделяется через skb_header_pointer для dh, но освобождение памяти явно не показано в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183800": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "32921": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "111212": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "99555": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186881": {
+    "buffers_and_lifetime": "state_stack_ — буфер, память для которого выделяется через push_back при добавлении элемента CanvasRenderingContext2DState::Create()",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "55818": {
+    "buffers_and_lifetime": "buffer[64] - локальный массив на стеке, не требует явного освобождения. Указатели: m->private, numa_priv, proc_priv, vma, md, file, mm, walk, pol. Память выделяется и освобождается вне функции (например, m->private, vma, file, mm, pol).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "174141": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "60403": {
+    "buffers_and_lifetime": "struct sk_buff *skb выделяется через skb_dequeue и освобождается через kfree_skb(skb) или передаётся в bnep_rx_frame/bnep_tx_frame. struct net_device *dev освобождается через free_netdev(dev).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "62033": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181412": {
+    "buffers_and_lifetime": "p используется как указатель на данные, передаваемые в функцию; head и rqstp->rq_vec используются как буферы для данных; память для буферов не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "есть проверка границ: проверка len > NFSSVC_MAXBLKSIZE_V2 перед использованием len; проверка dlen < XDR_QUADLEN(len)*4 перед использованием dlen.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "85862": {
+    "buffers_and_lifetime": "struct dm_target_io *tio выделяется где-то вне этого фрагмента (не видно где), освобождается через free_tio(tio). struct dm_io *io и struct mapped_device *md получаются из tio, но их выделение/освобождение не видно. struct bio *bio передается в функцию, его управление памятью не видно.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182577": {
+    "buffers_and_lifetime": "octets[4] - локальный массив на стеке, не требует явного освобождения; ipv4_addr - локальная переменная на стеке; node->nd_ipv4_address - копируется из ipv4_addr, память управляется вне функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "160939": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Указатели: frame, local_root, widget, client, layer_tree_view.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "14900": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180907": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "148614": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179612": {
+    "buffers_and_lifetime": "scopeList->array выделяется через malloc(sizeof(LICENSE_BLOB) * scopeCount), освобождения памяти в коде нет",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179820": {
+    "buffers_and_lifetime": "buf (gss_buffer_t), der_mechTypes (gss_buffer_desc), mechToken (gss_buffer_t), mechListMIC (gss_buffer_t), sc (spnego_gss_ctx_id_t). Память выделяется в create_spnego_ctx() и освобождается через gss_release_buffer(), gss_release_oid_set().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145501": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "22806": {
+    "buffers_and_lifetime": "inode и fattr передаются как указатели, память для них выделяется и освобождается вне функции. Внутри функции используется memcpy для копирования данных из inode в fattr.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185383": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов, требующих управления памятью",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180305": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "168031": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в явном виде",
+    "bounds_checks": "есть проверка next_index < form->field_count() перед использованием form->field(next_index)",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "60161": {
+    "buffers_and_lifetime": "RBinSection *section, RListIter *iter, ut64 from, to - локальные переменные, память не выделяется/освобождается в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "81091": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185222": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов с управлением памятью в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "65105": {
+    "buffers_and_lifetime": "PixelPacket *q (указатель на буфер пикселей), выделяется через QueueAuthenticPixels, освобождается через SyncAuthenticPixels",
+    "bounds_checks": "есть проверка границ перед использованием q: (x + i) < (ssize_t) dds_info->width && (y + j) < (ssize_t) dds_info->height",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182136": {
+    "buffers_and_lifetime": "struct crypto_report_akcipher rakcipher - буфер на стеке, память выделяется при входе в функцию и освобождается при выходе; skb - указатель на структуру, переданный как аргумент, память управляется вне функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "60005": {
+    "buffers_and_lifetime": "urb->transfer_buffer используется как буфер для данных, память для него управляется вне этого фрагмента. Память для mixer выделяется и освобождается вне этого фрагмента.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182115": {
+    "buffers_and_lifetime": "key (char*), nkey (size_t), it (item*), suffix (char*), new_list (item**), new_suffix_list (char**), c->ilist (item**), c->suffixlist (char**). Память выделяется через realloc (для new_list и new_suffix_list) и do_cache_alloc (для suffix). Освобождение памяти через item_remove для it и элементов c->ilist.",
+    "bounds_checks": "есть проверка nkey > KEY_MAX_LENGTH перед использованием key и nkey, проверка i >= c->isize перед использованием c->ilist, проверка i >= c->suffixsize перед использованием c->suffixlist.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "44580": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182119": {
+    "buffers_and_lifetime": "pktdata и pkthdr - указатели на буферы, передаваемые в функцию. Память выделяется и освобождается вне данной функции.",
+    "bounds_checks": "есть проверка границ: (*pkthdr)->len > MAXPACKET и (*pkthdr)->len < (*pkthdr)->caplen перед использованием значений len и caplen",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145291": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "101231": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "73067": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "91713": {
+    "buffers_and_lifetime": "url (gchar*) выделяется через lasso_provider_get_metadata_one(), освобождение не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "58654": {
+    "buffers_and_lifetime": "output - указатель на буфер типа BYTE, память для него выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "6039": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "82786": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187517": {
+    "buffers_and_lifetime": "remote — буфер типа struct sockaddr_un, выделяется на стеке при вызове функции accept_server_socket и автоматически освобождается при завершении функции. pfd — структура типа struct pollfd, выделяется на стеке и автоматически освобождается при завершении функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "122975": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов, связанных с выделением/освобождением памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187775": {
+    "buffers_and_lifetime": "m_inp_mem_ptr, m_out_mem_ptr, m_heap_ptr, m_platform_list, m_platform_entry, m_pmem_info, psource_frame, pdest_frame, m_inp_heap_ptr, m_phdr_pmem_ptr, first_buffer, m_device_file_ptr, m_display_id, iDivXDrmDecrypt, m_desc_buffer_ptr, m_other_extradata, m_vendor_config.pData, out_dynamic_list — указатели, инициализированные NULL. Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186259": {
+    "buffers_and_lifetime": "context_provider_ выделяется через WTF::WrapUnique(new WebGraphicsContext3DProviderWrapper(std::move(context_provider)))",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181293": {
+    "buffers_and_lifetime": "структурный указатель insn передаётся как параметр, память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "86884": {
+    "buffers_and_lifetime": "o->attr используется как буфер, память для него выделяется вне функции, освобождение не показано",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "19118": {
+    "buffers_and_lifetime": "skb - указатель на структуру sk_buff, передается в функцию; iph - указатель на структуру ipv6hdr, инициализируется вызовом ipv6_hdr(skb); th - указатель на структуру tcphdr, инициализируется вызовом tcp_hdr(skb)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179854": {
+    "buffers_and_lifetime": "value (указатель на u16), data (указатель void)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "31297": {
+    "buffers_and_lifetime": "inst - указатель на struct crypto_instance, память освобождается через kfree(inst)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "58903": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185326": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "125138": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178282": {
+    "buffers_and_lifetime": "указатели: obj, str, d_ret, str_ret, error; буферы: str (входной параметр), *str_ret (выделяется внутри функции через g_ascii_strup); память выделяется: *str_ret через g_ascii_strup; освобождения памяти в коде нет",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "2316": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "33736": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "139935": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178540": {
+    "buffers_and_lifetime": "нет буферов, указателей или выделения/освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "103232": {
+    "buffers_and_lifetime": "codec_context_ (указатель), event_handler_ (указатель), pending_input_buffers_ (переменная), pending_output_buffers_ (переменная). Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187576": {
+    "buffers_and_lifetime": "bdstr (массив char), link_key (массив байт), remote_bd_addr (указатель на структуру bt_bdaddr_t). Память для bdstr выделяется на стеке, для link_key передаётся как параметр. Явных операций освобождения памяти в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "149705": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183781": {
+    "buffers_and_lifetime": "ContentSettingsObserver* content_settings, DevToolsAgent*, ExtensionHelper*, PageLoadHistograms*, PrintWebViewHelper*, SearchBox*, SpellCheckProvider*, safe_browsing::MalwareDOMDetails*, TextInputClientObserver*, PasswordAutofillManager* password_autofill_manager, AutofillAgent* autofill_agent, PageClickTracker* page_click_tracker, TranslateHelper* translate, ChromeRenderViewObserver*, AutomationRendererHelper* - все создаются через оператор new, но нет явного освобождения памяти в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "95588": {
+    "buffers_and_lifetime": "msg - буфер фиксированного размера MAXPRINTMSG, выделяется на стеке при вызове функции, освобождается автоматически при выходе из функции",
+    "bounds_checks": "есть проверка размера перед использованием буфера msg в Q_vsnprintf с помощью sizeof(msg)",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179914": {
+    "buffers_and_lifetime": "msr_data, cs, ss, cs_sel, ss_sel, efer - локальные переменные, память для них выделяется на стеке при входе в функцию и освобождается при выходе. Указатели ctxt и ops используются, но их память управляется вне функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "52942": {
+    "buffers_and_lifetime": "fp->private_data выделяется через kzalloc(sizeof(struct qib_filedata), GFP_KERNEL); память не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "79230": {
+    "buffers_and_lifetime": "stream указатель на структуру TcpStream, sb буфер внутри структуры TcpStream",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "136479": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150714": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "47272": {
+    "buffers_and_lifetime": "ctx->lzo_comp_mem — буфер, память для которого освобождается с помощью kvfree",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "146055": {
+    "buffers_and_lifetime": "data — буфер типа MaybeShared<DOMArrayBufferView>, память для него выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "8631": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "157460": {
+    "buffers_and_lifetime": "username16 и password16 — буферы типа base::string16, создаются через ConvertJavaStringToUTF16",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "167950": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180111": {
+    "buffers_and_lifetime": "obj — указатель на структуру _store_object, память для которой выделяется в объекте EG(objects_store).object_buckets. Освобождение памяти происходит через вызов obj->free_storage(obj->object TSRMLS_CC), если obj->free_storage определено.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "80491": {
+    "buffers_and_lifetime": "tmp — указатель на буфер, выделенный макросом ISOM_DECL_BOX_ALLOC",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179987": {
+    "buffers_and_lifetime": "data_set — указатель на буфер, который инициализируется значением GSS_C_NO_BUFFER_SET. ctx — указатель, полученный из context_handle. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "108568": {
+    "buffers_and_lifetime": "winfont — указатель на структуру LOGFONT, память для него выделяется вне данного фрагмента кода.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "30023": {
+    "buffers_and_lifetime": "br_group — локальная структура, память для неё выделяется на стеке при вызове функции и освобождается при завершении функции. Других буферов, указателей или индексов в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "37629": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "88434": {
+    "buffers_and_lifetime": "src и dst — буферы, передаваемые как указатели. Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "есть проверка i<srcsize и k<*dstsize перед каждым использованием src[i] и dst[k] в цикле while.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "1645": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "81000": {
+    "buffers_and_lifetime": "eb — локальная переменная типа u32, память для неё выделяется на стеке при вызове функции и освобождается при завершении функции. Указатели: vcpu, to_vmx(vcpu), get_vmcs12(vcpu). Память для них не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187347": {
+    "buffers_and_lifetime": "В коде используются буферы и указатели: URL, filename, escURL, prop, elements, element, end, res, style. Память выделяется с помощью функций xmlStrdup, xmlBuildURI, xmlURIEscapeStr, xsltNewStylesheet, xmlNewDoc, htmlNewDoc, htmlNewDocNoDtD, xmlStrndup. Память освобождается с помощью функций xmlFree, xsltFreeStylesheet, xmlFreeDoc, xmlXPathFreeCompExpr.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "30602": {
+    "buffers_and_lifetime": "struct sk_buff *this выделяется через присваивание из list_skb, освобождается через kfree_skb(this). struct sk_buff *list_skb инициализируется как list->next, память не выделяется и не освобождается явно.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "108714": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "123939": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "152041": {
+    "buffers_and_lifetime": "overlay_routing_token_ — указатель, используется в Send, но выделение и освобождение памяти не показаны в фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "30473": {
+    "buffers_and_lifetime": "dev_rose — массив указателей на struct net_device, память выделяется вне фрагмента, освобождается через kfree(dev_rose). Каждый элемент массива dev_rose[i] освобождается через free_netdev(dev).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "142703": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Используются объекты типа ResourceRequest, KURL, WebCachePolicy, FrameLoadType, ClientRedirectPolicy, Referrer, но их создание и уничтожение не показаны в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180320": {
+    "buffers_and_lifetime": "buf выделяется память через ws_buffer_assure_space(buf, NETSCREEN_MAX_PACKET_LEN). pd указывает на начало буфера через pd = ws_buffer_start_ptr(buf). line и dststr — локальные массивы фиксированного размера NETSCREEN_LINE_LENGTH и 13 соответственно. err_info выделяется память через g_strdup в случае ошибки.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "55697": {
+    "buffers_and_lifetime": "zip->uncompressed_buffer, zip->decrypted_buffer, zip->iv, zip->erd, zip->v_data выделяются через malloc/realloc и освобождаются через free. zip->zip_entries и его элементы выделяются через malloc/realloc и освобождаются через free. zip выделяется через malloc/realloc и освобождается через free.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "88435": {
+    "buffers_and_lifetime": "ms->buffer используется как буфер, память для него выделяется и освобождается вне данного фрагмента. prevstate используется как временный буфер для сохранения состояния ms.",
+    "bounds_checks": "есть проверка ms->pos < ms->buffer_size_longs перед использованием ms->buffer[ms->pos].",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "175526": {
+    "buffers_and_lifetime": "ps_user_data_registered_itu_t_t35 указывает на элемент массива as_user_data_registered_itu_t_t35, который является частью структуры s_sei_params. Память для массива as_user_data_registered_itu_t_t35, вероятно, выделяется где-то вне этого фрагмента, так как в коде нет явного выделения памяти. Освобождение памяти также не происходит в этом фрагменте.",
+    "bounds_checks": "есть проверка границ перед использованием u4_payload_size: if(u4_payload_size > MAX_USERDATA_PAYLOAD) { u4_payload_size = MAX_USERDATA_PAYLOAD; }. Нет явной проверки границ перед использованием индекса j в массиве u1_itu_t_t35_payload_byte.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "61617": {
+    "buffers_and_lifetime": "mxf_timecode — указатель на структуру MXFTimecodeComponent, память для которой выделяется вне данного фрагмента кода. В коде нет явного выделения или освобождения памяти.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "161999": {
+    "buffers_and_lifetime": "mem — указатель на объект типа base::SharedMemory, передаётся в функцию GetBitmapForSharedMemory и используется для создания объекта ClientSharedBitmap. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182495": {
+    "buffers_and_lifetime": "buf[L_BUF_SIZE] — локальный буфер, выделяется на стеке; emptystring[] — локальный буфер, выделяется на стеке; title — указатель, выделяется через stringNew(plottitle); sa — указатель на SARRAY, выделяется через sarrayCreate(n); datastr — указатель, выделяется через sarrayToString(sa, 0); память освобождается через sarrayDestroy(&sa) и L_INSERT/L_COPY флаги в sarrayAddString.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187451": {
+    "buffers_and_lifetime": "p — указатель на буфер, передаваемый как аргумент функции skt_write. Память для p выделяется и освобождается вне функции, так как это входной параметр.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "53723": {
+    "buffers_and_lifetime": "skb выделяется вне функции и передается как аргумент. opt_skb выделяется через skb_clone(skb, sk_gfp_atomic(sk, GFP_ATOMIC)) при условии np->rxopt.all. opt_skb освобождается через __kfree_skb(opt_skb) или kfree_skb(opt_skb) в нескольких местах. skb освобождается через kfree_skb(skb) в discard.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "177971": {
+    "buffers_and_lifetime": "core->mac - буфер, доступ к которому осуществляется через индексы r->dh и r->dt. Выделение и освобождение памяти не показаны в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "111696": {
+    "buffers_and_lifetime": "нет явного выделения или освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179758": {
+    "buffers_and_lifetime": "Буфер m инициализируется через buffer_init(&m), освобождается через buffer_free(&m) в двух местах: при успехе и при неудаче.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "173859": {
+    "buffers_and_lifetime": "messages (std::list<omx_message>) создается в коде и используется для хранения сообщений. Память для элементов списка выделяется и освобождается автоматически через методы std::list. msg (omx_message) создается в цикле и добавляется в список messages. msg.fenceFd может быть дублирован с использованием ::dup, если haveFence > 0.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "25172": {
+    "buffers_and_lifetime": "rt — указатель на структуру rtable, память освобождается через вызов call_rcu_bh с функцией dst_rcu_free",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "143068": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "100645": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде. Указатели: current, stayWithin, child, ancestor, sibling.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178656": {
+    "buffers_and_lifetime": "state->input, state->incoming_packet, state->compression_buffer используются как буферы. Память выделяется через sshbuf_reserve и sshbuf_putb, освобождается через sshbuf_reset и sshbuf_consume.",
+    "bounds_checks": "есть такие: проверка state->packlen < 1 + 4 || state->packlen > PACKET_MAX_SIZE перед использованием state->packlen, проверка sshbuf_len(state->input) < block_size перед использованием state->input, проверка sshbuf_len(state->input) < aadlen + need + authlen + maclen перед использованием state->input.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "22674": {
+    "buffers_and_lifetime": "ctrs[], events[], flags[] — массивы указателей и значений, передаваемые в функцию как параметры. Память для них выделяется и освобождается вне данной функции.",
+    "bounds_checks": "Перед каждым использованием индекса n для доступа к элементам массивов ctrs[], events[], flags[] выполняется проверка if (n >= max_count).",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "8522": {
+    "buffers_and_lifetime": "data — указатель на буфер, передаваемый в функцию; память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184753": {
+    "buffers_and_lifetime": "Буферы: data, output, png_ptr->zbuf. Указатели: png_ptr, data, output, png_ptr->zbuf, png_ptr->zstream.next_in, png_ptr->zstream.next_out, png_ptr->zstream.msg, msg. Память выделяется и освобождается вне функции, в коде фрагмента нет явных вызовов alloc/free/new/delete/kfree/kmalloc.",
+    "bounds_checks": "Проверка output_size > count перед использованием output и png_ptr->zbuf в png_memcpy.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180353": {
+    "buffers_and_lifetime": "key[9] и entity[LONGEST_ENTITY_LENGTH + 2] — локальные буферы, выделенные на стеке. Память не освобождается явно, так как это автоматические переменные.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "128142": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "115274": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде.",
+    "bounds_checks": "Проверка границ: position <= GetTextLength() перед использованием position в PosFromChar(position).",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "51382": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185741": {
+    "buffers_and_lifetime": "delayed_work_queue_ используется как контейнер для задач, но явного выделения или освобождения памяти в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182310": {
+    "buffers_and_lifetime": "В коде используются буферы и указатели: mailbox, s, value, status, mx.mbox, inc. Память выделяется с помощью функций mutt_str_strdup и imap_mboxcache_get. Память освобождается с помощью макроса FREE для указателей value и mx.mbox.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "43752": {
+    "buffers_and_lifetime": "нет явного выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "106794": {
+    "buffers_and_lifetime": "compositionString и underlines передаются как аргументы функции, память для них выделяется и освобождается вне данного фрагмента.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181287": {
+    "buffers_and_lifetime": "Буфер d передается как аргумент функции iwjpeg_scan_exif. Память для буфера d выделяется и освобождается вне функции, так как он передается как указатель на константный массив байт. Структура e создается на стеке и не требует явного освобождения.",
+    "bounds_checks": "Проверка границ выполняется перед доступом к буферу d: if(d_len<8) return;",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "86696": {
+    "buffers_and_lifetime": "bitmap->map выделяется где-то вне этого фрагмента и освобождается через kfree(bitmap->map)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "108115": {
+    "buffers_and_lifetime": "vertex_attrib_infos_ — массив (буфер) типа VertexAttribInfo*, память для него выделяется вне данного фрагмента кода. Освобождение памяти не показано в данном фрагменте.",
+    "bounds_checks": "есть проверка границ: условие if (index < max_vertex_attribs_) перед использованием vertex_attrib_infos_[index].",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "111596": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "111832": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "16897": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде. Указатели: bs, cluster_sector_num, cluster_nb_sectors, bdi.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "167697": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "176851": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "11811": {
+    "buffers_and_lifetime": "data (указатель типа RemoveComponentData), память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178079": {
+    "buffers_and_lifetime": "name — буфер типа V9fsString, инициализируется через v9fs_string_init, освобождение не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "67268": {
+    "buffers_and_lifetime": "dentry: выделяется через container_of, освобождается через kmem_cache_free",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "177745": {
+    "buffers_and_lifetime": "В коде используются буферы и указатели: *ret, *error, phar, entry, etemp, ret, link, ufp, filter, filtername, dummy, fd_ptr, my_realpath, save. Память выделяется с помощью функций emalloc, estrndup, php_stream_fopen_tmpfile, php_stream_open_wrapper. Память освобождается с помощью efree, php_stream_close.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181433": {
+    "buffers_and_lifetime": "buf используется как указатель на данные из params->buf. af_params выделяется через kzalloc и освобождается через kfree.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "141574": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Указатели: profile_, service, foreign_session_updated_subscription_.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184075": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "168665": {
+    "buffers_and_lifetime": "queue_ — контейнер для хранения операций, память управляется стандартными методами C++ (std::move, std::queue::pop).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "79625": {
+    "buffers_and_lifetime": "ctx->hdrs[i]->data используется как указатель на строку, но выделение и освобождение памяти для него не показано в коде. bcache передаётся в функцию mutt_bcache_del, но выделение и освобождение памяти для него также не показано.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182878": {
+    "buffers_and_lifetime": "В коде используются буферы и указатели: nal->raw_data, nal->raw_size, s->ref, s->sh.slice_type, s->ps.sps->ctb_width, s->ps.sps->ctb_height. Память не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "36041": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "34369": {
+    "buffers_and_lifetime": "path выделяется через btrfs_alloc_path() и освобождается через btrfs_free_path(path). leaf, fi, key, disk_bytenr, backref_offset, extent_end, num_bytes, slot, found_type используются как локальные переменные без явного выделения/освобождения памяти.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "115963": {
+    "buffers_and_lifetime": "нет выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179912": {
+    "buffers_and_lifetime": "src указатель на args->value, bp выделяется через xfs_buf_get и освобождается через xfs_buf_relse, args->flist инициализируется через xfs_bmap_init и освобождается через xfs_bmap_cancel или xfs_bmap_finish",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "6337": {
+    "buffers_and_lifetime": "format — указатель на строку, передаётся в zend_parse_parameters; string — указатель на строку, выделяется в php_format_date, освобождается в RETVAL_STRING",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "43008": {
+    "buffers_and_lifetime": "vi->rq используется как массив структур, память для которого выделяется вне данного фрагмента. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "121787": {
+    "buffers_and_lifetime": "core_->read_iobuffer_ используется для доступа к данным через метод data(), но память не выделяется и не освобождается в этом фрагменте. recv_from_address_ используется как указатель, но память для него также не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179031": {
+    "buffers_and_lifetime": "В коде нет явного выделения или освобождения памяти через функции типа alloc/free/new/delete/kfree/kmalloc.",
+    "bounds_checks": "Проверка границ выполняется перед использованием переменных: проверка vma на NULL и vma->vm_start > addr, проверка old_len > vma->vm_end - addr, проверка new_len > old_len, проверка locked > lock_limit, проверка charged через security_vm_enough_memory.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "71740": {
+    "buffers_and_lifetime": "Буферы: id[MaxTextExtent], token[MaxTextExtent], color, units, tokens, svg_info->scale. Память выделяется: svg_info->scale через ResizeQuantumMemory, color и units через AcquireString, tokens через GetTransformTokens. Освобождение памяти: text через DestroyString, draw_info через DestroyDrawInfo.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "68417": {
+    "buffers_and_lifetime": "record указатель на данные из data->raw->frag.data, память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "144483": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187810": {
+    "buffers_and_lifetime": "configData используется как указатель на различные структуры (OMX_QCOM_CONFIG_INTERLACETYPE, QOMX_VIDEO_QUERY_DECODER_INSTANCES, OMX_QCOM_FRAME_PACK_ARRANGEMENT, OMX_CONFIG_RECTTYPE, OMX_QCOM_VIDEO_CONFIG_PERF_LEVEL). Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "163970": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "154488": {
+    "buffers_and_lifetime": "params - указатель на буфер, передаваемый в функцию; память для params управляется вне данной функции (нет выделения/освобождения в коде).",
+    "bounds_checks": "есть проверка длины перед использованием params: if (length < 1) в начале функции; if (length < 4) перед std::copy для GL_VIEWPORT и GL_SCISSOR_BOX.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "135436": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "61522": {
+    "buffers_and_lifetime": "bim_profile передается как указатель на структуру StringInfo, память для которой выделяется и освобождается вне функции. datum и q — указатели на данные внутри bim_profile. p — указатель, используемый для итерации по данным.",
+    "bounds_checks": "есть проверка длины перед использованием данных: if (length < 16) return; и if (cnt < (ssize_t) (length-12)) перед копированием памяти.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "93994": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "57664": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "147245": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "162888": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "144434": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186115": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "170333": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов с управлением памятью в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "137883": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "5974": {
+    "buffers_and_lifetime": "mac_reg_access - указатель на массив uint16_t, память для него не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178011": {
+    "buffers_and_lifetime": "s->io_buffer, s->sg, s->bus->dma->aiocb (используются, но явного выделения/освобождения в фрагменте нет)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "87050": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "2129": {
+    "buffers_and_lifetime": "rcc->send_data.item - указатель, освобождается через вызов red_channel_client_release_item",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186285": {
+    "buffers_and_lifetime": "initialize_waitable_event_ выделяется через std::make_unique<base::WaitableEvent> и освобождается через присваивание nullptr. impl_on_gpu_ управляется через base::Unretained, освобождение не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "38700": {
+    "buffers_and_lifetime": "bf, lastbf, bf_held, ds, ts - буферы и структуры, используемые в функции. Память для них выделяется на стеке (автоматические переменные). Явных вызовов alloc/free нет, но есть вызов ath_tx_return_buffer для освобождения bf_held.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187616": {
+    "buffers_and_lifetime": "image->input_memory выделяется через malloc (предположительно, так как освобождается через free) и освобождается через free. image->tmpfile_name - буфер фиксированного размера (предположительно), очищается присваиванием нулевого символа. image->input_file - файловый дескриптор, освобождается через fclose.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "104257": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "129059": {
+    "buffers_and_lifetime": "client_hosts_ (контейнер для хранения указателей ExtensionDevToolsClientHost*)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "136051": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "177815": {
+    "buffers_and_lifetime": "buf выделяется через map_file(fd, len, MAX_MAP_SIZE, CSUM_CHUNK) и освобождается через unmap_file(buf). sum передается как параметр и используется для хранения результата. m инициализируется через md5_begin(&m) или mdfour_begin(&m) и используется для вычисления хеша.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185634": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "47418": {
+    "buffers_and_lifetime": "stream->workspace выделяется через vzalloc(zlib_inflate_workspacesize()) и освобождается через vfree(stream->workspace) в случае ошибки инициализации zlib_inflateInit2.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "127041": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "123749": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "41284": {
+    "buffers_and_lifetime": "comedi_file_info_table - буфер, очищаемый через memset; память для comedi_cdev инициализируется через cdev_init и управляется через cdev_add/cdev_del; регистрация устройств через register_chrdev_region/unregister_chrdev_region",
+    "bounds_checks": "есть проверка границ для comedi_num_legacy_minors (if (comedi_num_legacy_minors < 0 || comedi_num_legacy_minors > COMEDI_NUM_BOARD_MINORS))",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "119399": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "143700": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186653": {
+    "buffers_and_lifetime": "pixels (типа MaybeShared<DOMArrayBufferView>) передается как параметр, память управляется вне этой функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "73457": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "проверка y < 0L перед возвратом 0L; проверка y >= (ssize_t) rows перед возвратом (ssize_t) (rows-1)",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "13782": {
+    "buffers_and_lifetime": "property - указатель на zval, выделяется через ALLOC_PERMANENT_ZVAL или ALLOC_ZVAL, освобождение не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "102702": {
+    "buffers_and_lifetime": "pixels (указатель на буфер), rect (объект IntRect, содержащий координаты и размеры)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178872": {
+    "buffers_and_lifetime": "p = kzalloc(sizeof(*p), GFP_KERNEL) выделяет память для структуры nfs4_opendata. Освобождение памяти происходит в err_free: kfree(p). Также используется dget_parent(path->dentry) для получения parent, который освобождается в err: dput(parent).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "165893": {
+    "buffers_and_lifetime": "WebURLRequest failed_request (получается через document_loader->GetRequest()), base::string16 error_description (передается по указателю в GetErrorDescription)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "136616": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "126489": {
+    "buffers_and_lifetime": "tab_data_ (std::vector<TabData>), tab (TabGtk*), tabstrip_ (GtkContainer*), tab->widget() (GtkWidget*). Память для tab освобождается через MessageLoop::current()->DeleteSoon().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "48642": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185775": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185440": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180612": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Указатели и буферы: mm, start, end, addr, base_pages_to_flush, tlb_single_page_flush_ceiling, mm_cpumask(mm), smp_processor_id(), nr_cpu_ids.",
+    "bounds_checks": "Нет явных проверок границ перед использованием буферов или индексов.",
+    "use_paths": "Нет таких",
+    "error": null
+  },
+  "148877": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "60086": {
+    "buffers_and_lifetime": "edata выделяется через calloc и освобождается через R_FREE. data выделяется через calloc и освобождается через free. sdb выделяется через sdb_new0 и освобождается через sdb_free в случае ошибок, но возвращается в конце функции без освобождения. svn, svna, svd, svda — локальные буферы фиксированного размера, выделяются на стеке и не требуют явного освобождения.",
+    "bounds_checks": "есть проверка shdr->sh_link > bin->ehdr.e_shnum перед использованием link_shdr. есть проверка shdr->sh_name < bin->shstrtab_size перед использованием section_name. есть проверка link_shdr->sh_name < bin->shstrtab_size перед использованием link_section_name. есть проверка offset > bin->size || offset + sizeof(vn) > bin->size перед чтением svn. есть проверка a_off > bin->size || a_off + sizeof(vna) > bin->size перед чтением svna. есть проверка offset > bin->size || offset + sizeof(vd) > bin->size перед чтением svd. есть проверка off_vda > bin->size || off_vda + sizeof(vda) > bin->size перед чтением svda. есть проверка vna.vna_name > bin->strtab_size перед использованием bin->strtab. есть проверка vda.vda_name > bin->strtab_size перед использованием bin->strtab.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "59616": {
+    "buffers_and_lifetime": "pattern[500], prefix[500], result[500], err[500] - статические буферы на стеке; globbuf - структура glob_t, память выделяется в glob() и освобождается в globfree(&globbuf); reader - xmlTextReaderPtr, память выделяется в xmlReaderForFile() и освобождается в xmlFreeTextReader(reader).",
+    "bounds_checks": "есть проверка len > 499 || len < 5 перед memcpy(prefix, base, len); есть проверка len > 6 перед base2[len - 6] == '_'; есть явное ограничение snprintf(pattern, 499, ...), snprintf(result, 499, ...), snprintf(err, 499, ...) с последующим pattern[499] = 0, result[499] = 0, err[499] = 0.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "54151": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "130421": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "95944": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188568": {
+    "buffers_and_lifetime": "video_ выделяется через new libvpx_test::WebMVideoSource, decoder_ выделяется через new libvpx_test::VP9Decoder",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "58010": {
+    "buffers_and_lifetime": "ctx, skb, nlh, nla, net, nfmsg, afi, table",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "22649": {
+    "buffers_and_lifetime": "usd_rq_weight — указатель на массив, передаётся как параметр; tg->se и tg->cfs_rq — указатели на массивы структур, доступ через индекс cpu; память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "171616": {
+    "buffers_and_lifetime": "src и dst — входные указатели на буферы, их память управляется вызывающим кодом. Внутри функции память не выделяется и не освобождается.",
+    "bounds_checks": "есть проверка u8cur < u8end перед каждым чтением из src, есть проверка u16cur < u16end перед каждой записью в dst, есть дополнительная проверка u16cur >= u16end перед второй записью surrogate pair",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "118977": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "84107": {
+    "buffers_and_lifetime": "буфер ms выделяется в _multi_string_alloc_and_copy(lpszDSN) и освобождается в free(ms)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "143137": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "73779": {
+    "buffers_and_lifetime": "input - указатель на входные данные, передается как параметр; zrtpPacket - указатель на структуру bzrtpPacket_t, выделяется через malloc, освобождение не показано в коде",
+    "bounds_checks": "есть проверка границ inputLength перед использованием input: if ((inputLength<ZRTP_MIN_PACKET_LENGTH) || (inputLength>ZRTP_MAX_PACKET_LENGTH)); есть проверка отдельных байтов input: if ((input[0]>>4 != 0x01) || ...); есть проверка sequenceNumber: if (sequenceNumber <= lastValidSequenceNumber); есть проверка CRC: if (bzrtp_CRC32((uint8_t *)input, inputLength - 4) != packetCRC); есть проверка message header: if ((input[ZRTP_PACKET_HEADER_LENGTH]!=0x50) || (input[ZRTP_PACKET_HEADER_LENGTH+1]!=0x5a))",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187159": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "136904": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "51550": {
+    "buffers_and_lifetime": "skb (struct sk_buff) передается как параметр функции, память для него выделяется и освобождается вне данной функции. Других буферов или указателей с явным выделением/освобождением памяти в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "134880": {
+    "buffers_and_lifetime": "StringBuilder result используется для построения строки, память для которой управляется внутри StringBuilder. Память для param и element передается в функцию, но не выделяется и не освобождается внутри функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "116245": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "137342": {
+    "buffers_and_lifetime": "textfield_ выделяется через new TestTextfield(), widget_ через new Widget(), container через new View(), textfield в цикле через new Textfield(). Освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "85930": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов, связанных с выделением/освобождением памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "33731": {
+    "buffers_and_lifetime": "session (указатель на struct hidp_session), src (указатель на bdaddr_t), dst (указатель на bdaddr_t), conn (указатель на struct hci_conn), hdev (указатель на struct hci_dev). Память выделяется и освобождается через hci_get_route (выделение), hci_dev_put (освобождение), hci_conn_hold_device (удержание соединения).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "90450": {
+    "buffers_and_lifetime": "buf - указатель на пользовательский буфер, передаваемый в функцию ib_uverbs_comp_event_read. Память для buf выделяется и освобождается вне данной функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178127": {
+    "buffers_and_lifetime": "blit_ctx->vertices - массив из 4 элементов, каждый из которых является массивом массивов; память выделяется через glGenVertexArrays, glGenFramebuffers, glGenBuffers, но освобождение не показано в фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179482": {
+    "buffers_and_lifetime": "buf (тип gss_buffer_t) передается как параметр, его значение используется через buf->value и buf->length. supportedMech (тип gss_OID) выделяется и освобождается через generic_gss_release_oid. responseToken и mechListMIC (тип gss_buffer_t) проверяются на GSS_C_NO_BUFFER.",
+    "bounds_checks": "есть проверка REMAIN > INT_MAX перед использованием REMAIN в g_verify_token_header и get_negTokenResp.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "122449": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "6973": {
+    "buffers_and_lifetime": "table (входной параметр), p (локальный указатель), keys (указатель на table + 6), subs (указатель на p после обработки keys), glyph_ids (указатель на subs + (max_subs + 1) * 8). Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "есть проверка table + 2 + 2 > valid->limit перед использованием table; есть проверка table + length > valid->limit || length < 6 + 512 перед использованием table; есть проверка glyph_ids > valid->limit перед использованием glyph_ids; есть проверка first_code >= 256 || first_code + code_count > 256 перед использованием first_code и code_count; есть проверка ids < glyph_ids || ids + code_count*2 > table + length перед использованием ids; есть проверка idx >= TT_VALID_GLYPH_COUNT(valid) перед использованием idx.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150469": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "25908": {
+    "buffers_and_lifetime": "bp (struct perf_event *) выделяется через register_user_hw_breakpoint, освобождается через ptrace_put_breakpoints. t->ptrace_bps[nr] (массив указателей на struct perf_event) используется для хранения и передачи bp.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "11348": {
+    "buffers_and_lifetime": "dest, src, mask - указатели на буферы типа CARD32, передаваемые в функцию fbCombineConjointOutC и далее в fbCombineConjointGeneralC. Выделение/освобождение памяти не показано в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "17362": {
+    "buffers_and_lifetime": "temp_string выделяется через get_working_directory и освобождается через free. home_string и temp_string используются как указатели на строки, но их выделение не показано в коде. temp_var и home_var — указатели на структуры SHELL_VAR, выделение которых не показано.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188529": {
+    "buffers_and_lifetime": "input_ и output_ — указатели на буферы, память освобождается через vpx_free(input_ - 1) и vpx_free(output_)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178090": {
+    "buffers_and_lifetime": "d и Device выделяются через Xmalloc, sav сохраняет указатель на d перед перезаписью. Device освобождается неявно (нет явного вызова free/Xfree в коде).",
+    "bounds_checks": "есть такие: проверка rep.length < (INT_MAX >> 2) перед выделением памяти для d, проверка r->num_valuators >= (INT_MAX / (3 * sizeof(int))) перед вычислением val_size, проверка (sizeof(xDeviceResolutionState) + val_size) > nbytes, проверка sizeof(xDeviceAbsCalibState) > nbytes, проверка sizeof(xDeviceAbsAreaState) > nbytes, проверка sizeof(xDeviceCoreState) > nbytes, проверка d->length > nbytes.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181620": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183903": {
+    "buffers_and_lifetime": "form_xml (std::string), request_data (FormRequestData)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "107259": {
+    "buffers_and_lifetime": "нет явных операций выделения/освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "62623": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "11421": {
+    "buffers_and_lifetime": "bits - указатель на буфер типа FbBits; pixel - переменная типа CARD32; indexed->rgba - массив, доступный через указатель indexed",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "154444": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186511": {
+    "buffers_and_lifetime": "entry_ указатель на SendTabToSelfEntry, память не выделяется и не освобождается в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "156438": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "121346": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178902": {
+    "buffers_and_lifetime": "В коде используются структуры tun_struct и net_device, но явного выделения или освобождения памяти нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187420": {
+    "buffers_and_lifetime": "mNextClient (указатель типа sp<Client>), mAudioOutput (указатель), mPlayer (указатель), c (указатель типа sp<Client>)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "105731": {
+    "buffers_and_lifetime": "engines - указатель на список GList, память освобождается через g_list_free; cursor->data - данные в списке, освобождаются через g_object_unref",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "116701": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "132736": {
+    "buffers_and_lifetime": "data (scoped_ptr<base::DictionaryValue>) выделяется через new base::DictionaryValue(), освобождается автоматически через scoped_ptr при выходе из области видимости",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "36752": {
+    "buffers_and_lifetime": "gss_buffer_t attr, gss_buffer_t value, gss_buffer_t display_value",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188212": {
+    "buffers_and_lifetime": "params используется как указатель на различные типы структур (OMX_AUDIO_PARAM_PORTFORMATTYPE, OMX_AUDIO_PARAM_AACPROFILETYPE, OMX_AUDIO_PARAM_PCMMODETYPE) в зависимости от значения index. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "есть такие: проверка formatParams->nPortIndex > 1 перед использованием formatParams->nPortIndex; проверка formatParams->nIndex > 0 перед использованием formatParams->nIndex; проверка aacParams->nPortIndex != 1 перед использованием aacParams->nPortIndex; проверка pcmParams->nPortIndex != 0 перед использованием pcmParams->nPortIndex.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "57251": {
+    "buffers_and_lifetime": "struct nfs4_state *state выделяется и управляется вне функции (передается через opendata->state). struct nfs_delegation *delegation получается через rcu_dereference(nfsi->delegation) и освобождается через rcu_read_unlock(). nfs4_stateid stateid инициализируется через nfs4_stateid_copy().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183889": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "96086": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181132": {
+    "buffers_and_lifetime": "буфер bs (входной параметр), буфер tp->e_bs (выделяется через calloc(1, nlen + 1)), буфер tp->e_nxt (выделяется через calloc(1, sizeof(*tp))). Освобождения памяти в коде нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "35022": {
+    "buffers_and_lifetime": "getaddrs (struct sctp_getaddrs_old) - буфер, заполняемый через copy_from_user; temp (union sctp_addr) - временный буфер для копирования данных; to (void __user *) - указатель на пользовательский буфер, увеличивается на addrlen в цикле",
+    "bounds_checks": "проверка len != sizeof(struct sctp_getaddrs_old) перед copy_from_user; проверка getaddrs.addr_num <= 0 перед циклом; проверка cnt >= getaddrs.addr_num внутри цикла",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "3346": {
+    "buffers_and_lifetime": "нет явных буферов, указателей или индексов с выделением/освобождением памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "85427": {
+    "buffers_and_lifetime": "В коде используются указатели и структуры: struct f2fs_sb_info *sbi, struct seg_entry *se, block_t blkaddr. Память выделяется и освобождается вне данного фрагмента (функции get_seg_entry, get_sec_entry, SIT_I возвращают указатели, но их выделение/освобождение не показано).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "13167": {
+    "buffers_and_lifetime": "buf[64] - локальный буфер на стеке, память автоматически освобождается при выходе из функции; p - указатель, инициализируется адресом buf и перемещается по буферу; s - входной указатель, перемещается по строке",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "64778": {
+    "buffers_and_lifetime": "skcipher - указатель на структуру skcipher_instance, память освобождается вызовом skcipher->free(skcipher)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185986": {
+    "buffers_and_lifetime": "Буферы и указатели: java_update_request_path, java_start_url, java_scope, java_name, java_short_name, java_primary_icon_url, java_primary_icon_bitmap, java_badge_icon_url, java_badge_icon_bitmap, java_icon_urls, java_icon_hashes, java_web_manifest_url, java_webapk_package, java_callback. Память выделяется через ConvertJavaStringToUTF8, ConvertJavaStringToUTF16, AppendJavaStringArrayToStringVector, CreateSkBitmapFromJavaBitmap. Освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "13736": {
+    "buffers_and_lifetime": "tmp — указатель на zval, выделяется память через MAKE_STD_ZVAL, освобождение памяти не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181172": {
+    "buffers_and_lifetime": "buf — указатель на входной буфер, передается как аргумент функции. Память для buf не выделяется и не освобождается в этом фрагменте. ctx->mb_scan_index — массив, используемый для хранения индексов сканирования. Память для ctx->mb_scan_index не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "Проверка buf_size < 0x280 перед использованием buf. Проверка buf_size < ctx->cid_table->coding_unit_size перед использованием buf. Проверка buf_size < ctx->data_offset перед использованием buf. Проверка ctx->mb_height > FF_ARRAY_ELEMS(ctx->mb_scan_index) перед использованием ctx->mb_scan_index. Проверка buf_size - ctx->data_offset < ctx->mb_scan_index[i] перед использованием ctx->mb_scan_index[i].",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "51860": {
+    "buffers_and_lifetime": "tvb (тип tvbuff_t*) - буфер данных, передается как параметр функции. Память для tvb выделяется и освобождается вне данной функции. timing_advance_ti (тип proto_item*) - создается через proto_tree_add_uint, освобождается вне функции (предположительно системой).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "105847": {
+    "buffers_and_lifetime": "wide_url (std::wstring) создается в функции UTF8ToWide и уничтожается при выходе из блока if. moniker_ и bind_context_ управляются с помощью base::win::ScopedComPtr, которая автоматически освобождает ресурсы при выходе из области видимости. stream, self и info также управляются base::win::ScopedComPtr.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "70392": {
+    "buffers_and_lifetime": "нет явных операций выделения/освобождения памяти в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184744": {
+    "buffers_and_lifetime": "priv->children (тип не указан, но используется как контейнер), widget (GtkWidget*)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183495": {
+    "buffers_and_lifetime": "pending_requests_ (указатель, очищается через STLDeleteValues), blocked_requests_map_ (контейнер, итерируется), ids (контейнер, создается и используется локально)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "81879": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "54499": {
+    "buffers_and_lifetime": "buf[20] - локальный буфер на стеке, не требует явного освобождения",
+    "bounds_checks": "проверка genre < 1 || genre > ID3v1_GENRE_MAX перед использованием genre как индекса в ff_id3v1_genre_str",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "101580": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180033": {
+    "buffers_and_lifetime": "chunk (struct sctp_chunk *), skb (struct sk_buff *), ch (sctp_chunkhdr_t *), err (sctp_errhdr_t *), ch_end (__u8 *)",
+    "bounds_checks": "есть проверка границ: if (ntohs(ch->length) < sizeof(sctp_chunkhdr_t)) перед использованием ch->length; if (ch_end > skb_tail_pointer(skb)) перед использованием ch_end",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185398": {
+    "buffers_and_lifetime": "distiller_js_service_ указатель, память управляется через mojo::GetProxy",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "53948": {
+    "buffers_and_lifetime": "msg->opts_start (указатель, память управляется вне функции)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "45845": {
+    "buffers_and_lifetime": "queue->cpu_queue выделяется через alloc_percpu, освобождение не показано в фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "7094": {
+    "buffers_and_lifetime": "table (указатель на FT_Byte), cmap->cmap.data (указатель на FT_Byte), cmap->num_groups (целочисленное значение). Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181061": {
+    "buffers_and_lifetime": "указатель ptr инициализируется как (const uint16_t *)dat, память не выделяется и не освобождается в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "21853": {
+    "buffers_and_lifetime": "data (указатель на sse128_t) передаётся как параметр функции, память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188151": {
+    "buffers_and_lifetime": "mName (выделяется через ADebug::GetDebugName), mNumPortBuffers[2], mDebugLevelBumpPendingBuffers[2], mMetadataType[2], mSecureBufferType[2] (все массивы инициализируются, но память не выделяется явно в этом фрагменте)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178769": {
+    "buffers_and_lifetime": "exec2_list выделяется через kmalloc или drm_malloc_ab, освобождается через drm_free_large",
+    "bounds_checks": "проверка args->buffer_count < 1 перед выделением памяти для exec2_list",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "82886": {
+    "buffers_and_lifetime": "image_tls_directory выделяется через R_NEW0 и освобождается через free в случае ошибки чтения. Буфер bin->b используется для чтения данных через r_buf_read_at.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185533": {
+    "buffers_and_lifetime": "index (uint32), entry (HpackEntry*), header_table_ (предположительно контейнер для HpackEntry)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "626": {
+    "buffers_and_lifetime": "data (struct asn1_data *), nesting (вложенная структура в data), ofs (поле в data), lowest (локальная переменная)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "143752": {
+    "buffers_and_lifetime": "",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "123464": {
+    "buffers_and_lifetime": "bitmap (указатель на ImageBitmap), sx, sy, sw, sh (целочисленные параметры)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "111962": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "147403": {
+    "buffers_and_lifetime": "нет явных операций выделения/освобождения памяти в данном фрагменте",
+    "bounds_checks": "есть проверка info.Length() перед доступом к info[0] и info[1]",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "146709": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188576": {
+    "buffers_and_lifetime": "input_block, input_extreme_block, output_ref_block, output_block (выделяются через DECLARE_ALIGNED_ARRAY, освобождение не показано)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "174302": {
+    "buffers_and_lifetime": "mSource (указатель на объект), i (индекс в цикле)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "27625": {
+    "buffers_and_lifetime": "midi_devs, synth_devs - массивы указателей; память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "83325": {
+    "buffers_and_lifetime": "ModChannel *pChn (указатель на элемент массива m_PlayState.Chn), параметры функции nChn, param, doFinePortamentoAsRegular",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "106360": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178086": {
+    "buffers_and_lifetime": "buf и buf_head выделяются через Xmalloc(nbytesRead), mon выделяется через Xmalloc(rbytes). Освобождение: buf и mon освобождаются через Xfree() в условии if (buf == NULL || mon == NULL), buf_head освобождается через Xfree(buf_head) в конце функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "110968": {
+    "buffers_and_lifetime": "r — локальный буфер типа RECT, выделяется на стеке при вызове функции GetBounds() и освобождается при завершении функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179281": {
+    "buffers_and_lifetime": "bdev (struct block_device *) выделяется через blkdev_get_by_dev, память освобождается вне функции (предположительно вызывающей стороной); b (char[BDEVNAME_SIZE]) — автоматический массив на стеке, освобождается при выходе из функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188375": {
+    "buffers_and_lifetime": "m_pSeekHead — указатель, память для него не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "11188": {
+    "buffers_and_lifetime": "oldpath выделяется через estrndup(phar->fname, phar->fname_len) и освобождается через efree(oldpath) в нескольких местах. basename выделяется через estrndup(oldname, oldname_len) и освобождается через efree(basename). newname выделяется через spprintf(&newname, 0, \"%s.%s\", strtok(basename, \".\"), ext) и освобождается через efree(newname). basepath выделяется через estrndup(oldpath, (strlen(oldpath) - oldname_len)) и освобождается через efree(basepath). newpath выделяется через spprintf(&newpath, 0, \"%s%s\", basepath, newname) и освобождается через efree(newpath). error выделяется через phar_flush и освобождается через efree(error).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "144602": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180601": {
+    "buffers_and_lifetime": "Буфер n выделяется через xmalloc(len) и возвращается из функции. Буфер m является указателем на часть буфера n, вычисляется как n + len - (nlen + 1). Память для n освобождается вне функции, так как она возвращается вызывающему коду.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185114": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187747": {
+    "buffers_and_lifetime": "png_pixels выделяется через malloc(row_bytes * height * sizeof(png_byte)) и освобождается через free(png_pixels). row_pointers выделяется через malloc(height * sizeof(png_bytep)) и освобождается через free(row_pointers). png_ptr создается через png_create_write_struct и уничтожается через png_destroy_write_struct. info_ptr создается через png_create_info_struct и уничтожается через png_destroy_write_struct.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "19283": {
+    "buffers_and_lifetime": "skb выделяется через skb_recv_datagram и освобождается через skb_free_datagram",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "81831": {
+    "buffers_and_lifetime": "Буферы и указатели: a, n, c, residue, r. Память выделяется и освобождается вне функции, так как указатели передаются в качестве аргументов.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "46348": {
+    "buffers_and_lifetime": "pages выделяется через alloc_pages и освобождается через __free_page в цикле и в блоке add_error. data — это указатель на память страниц, полученный через page_address(pages).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185940": {
+    "buffers_and_lifetime": "нет явных буферов, указателей или индексов, связанных с выделением или освобождением памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "97200": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184097": {
+    "buffers_and_lifetime": "screen_lock_lib_ — указатель на объект ScreenLockLibrary, память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180289": {
+    "buffers_and_lifetime": "arg_pattern, replace, string, option_str, pat_buf, re, regs, out_buf, eval_buf, description, err_str, v, subpats, retval_ptr. Память выделяется через onig_region_new() для regs, smart_str_appendl() для out_buf и eval_buf, zend_eval_stringl() для v, MAKE_STD_ZVAL() для subpats. Память освобождается через efree() для description, onig_region_free() для regs, smart_str_free() для eval_buf и out_buf, zval_dtor() для v, zval_ptr_dtor() для retval_ptr и subpats.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "92492": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182980": {
+    "buffers_and_lifetime": "buf выделяется через xmalloc(pkglen + 1) и освобождается через xfree(buf)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "70": {
+    "buffers_and_lifetime": "str выделяется через calloc(1, end - begin + 1) и освобождается через free(str)",
+    "bounds_checks": "есть проверка len < max_length перед каждым увеличением *ptr и len в цикле while",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180140": {
+    "buffers_and_lifetime": "value выделяется через kmalloc(size, GFP_NOFS) и освобождается через kfree(value) в блоке out_free.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "142370": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в данном фрагменте. Используются строки: domain, возвращаемое значение функции l10n_util::GetStringFUTF16 и ASCIIToUTF16(domain).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "45587": {
+    "buffers_and_lifetime": "inst выделяется через kzalloc(sizeof(*inst) + sizeof(*spawn), GFP_KERNEL). Память освобождается через kfree(inst) в случае ошибки в метке out_free_inst.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182912": {
+    "buffers_and_lifetime": "buf выделяется через g_try_malloc(size), где size увеличена на 16 байт. Память не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "161716": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "45694": {
+    "buffers_and_lifetime": "ctx выделяется через crypto_tfm_ctx(tfm), cipher выделяется через crypto_spawn_skcipher(spawn). Освобождение памяти не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "38577": {
+    "buffers_and_lifetime": "В коде используются указатели: sdata, local, sta, tmp. Память не выделяется и не освобождается явно.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "175418": {
+    "buffers_and_lifetime": "Указатель state используется для записи значения adev->mic_mute. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "109349": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185424": {
+    "buffers_and_lifetime": "Нет явных буферов, указателей или индексов в коде. Функция RegisterStringPref регистрирует строковое значение, но не выделяет память явно.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "128778": {
+    "buffers_and_lifetime": "m_value (указатель типа String*) инициализируется в конструкторе StringCapturingFunction, но память не выделяется и не освобождается в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "162662": {
+    "buffers_and_lifetime": "spec, port, output, out_port — указатели/объекты, передаваемые в функцию. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181622": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "176337": {
+    "buffers_and_lifetime": "нет буферов, выделения или освобождения памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184521": {
+    "buffers_and_lifetime": "ack_handle создается как объект типа invalidation::AckHandle с инициализацией строкой \"fakedata\". Память не выделяется явно через alloc/free/new/delete/kfree/kmalloc.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187404": {
+    "buffers_and_lifetime": "ctx->fragments.ptrs[0], ctx->fragments.sizes[0], ctx->yv12_frame_buffers, pbi->common.yv12_fb[pc->lst_fb_idx], pbi->common.yv12_fb[pc->new_fb_idx], pc->prev_mip, pbi->mb_row_di[i].mbd.dst. Память выделяется через vp8_alloc_frame_buffers, vpx_calloc, vp8mt_alloc_temp_buffers, vp8_alloc_overlap_lists. Освобождение памяти происходит через vp8_de_alloc_frame_buffers.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187667": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186915": {
+    "buffers_and_lifetime": "FetchDataLoaderAsWasmModule* loader выделяется через new, но не освобождается в коде. response->BodyBuffer() используется для загрузки данных через StartLoading, но явного выделения или освобождения памяти для буфера не показано.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183712": {
+    "buffers_and_lifetime": "нет явного выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "105496": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "12715": {
+    "buffers_and_lifetime": "msg_hdr указывает на s->d1->r_msg_hdr, память для которого выделяется вне функции. p указывает на s->init_buf->data, память для которого также выделяется вне функции. Память для буферов не выделяется и не освобождается внутри функции.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179906": {
+    "buffers_and_lifetime": "bp выделяется через вызов xfs_attr3_leaf_read, но явного освобождения в коде нет. leaf, entry, name_rmt, name_loc, name — указатели на структуры или данные, но их выделение и освобождение не показано в коде.",
+    "bounds_checks": "есть проверка args->index < ichdr.count и args->index >= 0 перед использованием args->index для доступа к entry через xfs_attr3_leaf_entryp(leaf)[args->index].",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188279": {
+    "buffers_and_lifetime": "m_entries выделяется через new BlockEntry*[m_entries_size] и освобождается через delete[] m_entries. entries выделяется через new BlockEntry*[entries_size].",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "154703": {
+    "buffers_and_lifetime": "params — указатель на буфер для хранения параметров, передаётся в функцию glGetSamplerParameterfvRobustANGLEFn. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "75827": {
+    "buffers_and_lifetime": "strvec — указатель на структуру vector_t, память для него выделяется и освобождается вне данного фрагмента. global_data->instance_name — указатель, память для которого выделяется в функции set_value, если он был NULL.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178612": {
+    "buffers_and_lifetime": "in_devices — указатель на массив CARD16, выделяется через приведение типа &stuff[1]. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "89352": {
+    "buffers_and_lifetime": "буферы: t.val (строка), *dst (указатель на строку); память не выделяется и не освобождается явно в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "87376": {
+    "buffers_and_lifetime": "matvar->data выделяется через malloc в нескольких местах: для MAT_C_DOUBLE, MAT_C_CHAR и MAT_C_SPARSE. Для MAT_C_SPARSE дополнительно выделяются sparse->ir, sparse->jc и sparse->data через malloc. Освобождение памяти происходит через free для matvar->data, sparse->ir, sparse->jc и sparse->data в случае ошибок.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "52025": {
+    "buffers_and_lifetime": "tvb указатель передается в функцию как параметр, память не выделяется и не освобождается в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187651": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188557": {
+    "buffers_and_lifetime": "decoder создается через вызов codec_->CreateDecoder(dec_cfg, 0) и освобождается через delete decoder в конце функции. Буфер video->cxdata() используется в decoder->DecodeFrame, но его выделение и освобождение не показаны в данном фрагменте. Указатель img инициализируется NULL и используется в цикле while через dec_iter.Next().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186630": {
+    "buffers_and_lifetime": "cache, newest_complete_cache_, tmp_cache, old_caches_, newly_deletable_response_ids_ фигурируют в коде. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "150462": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185450": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "80701": {
+    "buffers_and_lifetime": "Нет явного выделения или освобождения памяти в коде. Указатель p используется для приведения типа указателя a.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178616": {
+    "buffers_and_lifetime": "stuff указывает на структуру xXFixesQueryVersionReq, память для которой выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "158368": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "18502": {
+    "buffers_and_lifetime": "page — указатель на структуру page, x — указатель на указатель int. Память выделяется через alloc_page(GFP_HIGHUSER_MOVABLE), освобождение памяти не показано.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "73732": {
+    "buffers_and_lifetime": "src — указатель на буфер, передаётся как параметр. Память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "121821": {
+    "buffers_and_lifetime": "sender - статический объект типа ImageEventSender, создается через DEFINE_STATIC_LOCAL",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184062": {
+    "buffers_and_lifetime": "DOMStringList* listArg создается через toDOMStringList, память управляется вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "77126": {
+    "buffers_and_lifetime": "rule выделяется и освобождается через ofproto_rule_unref(rule), temp_rule используется как указатель на rule",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "137173": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "128285": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в явном виде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185473": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "16500": {
+    "buffers_and_lifetime": "ConfigTab — буфер, который инициализируется с помощью memset. extra_info — указатель, память для которого выделяется через new ExtraParamTable() или new DummyExtraParamTable() в зависимости от значения wantExtraInfo.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "119093": {
+    "buffers_and_lifetime": "buf[17] — локальный буфер, выделяется на стеке при вызове функции OutputPointer, освобождается автоматически при завершении функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "117255": {
+    "buffers_and_lifetime": "framebuffer — указатель на FramebufferManager::FramebufferInfo; attachment — указатель на FramebufferManager::FramebufferInfo::Attachment; offscreen_target_frame_buffer_ — умный указатель; surface_ — указатель на объект. Память не выделяется и не освобождается явно в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185973": {
+    "buffers_and_lifetime": "std::unique_ptr<base::DictionaryValue> filter, std::unique_ptr<content::V8ValueConverter> converter, std::unique_ptr<base::Value> filter_value - создаются и управляются через std::unique_ptr, память освобождается автоматически при выходе из области видимости. base::DictionaryValue* filter_weak - слабая ссылка на filter, не управляет памятью.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "20520": {
+    "buffers_and_lifetime": "orig_data выделяется через kstrdup(data, GFP_KERNEL) и освобождается через kfree(orig_data) в двух местах: перед return 0 и перед return err. Также освобождаются элементы массива old_opts.s_qf_names[i] и sbi->s_qf_names[i] через kfree внутри #ifdef CONFIG_QUOTA.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181475": {
+    "buffers_and_lifetime": "Packet *p, Packet *tp, DefragTracker *tracker; память выделяется через BuildTestPacket и Defrag, освобождается через SCFree(p), SCFree(tp)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "80863": {
+    "buffers_and_lifetime": "GF_TextBoxBox *p (указатель, приведение типа от a), FILE *trace (переданный параметр)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178244": {
+    "buffers_and_lifetime": "pathto (строка, выделяется через zend_parse_parameters), filename (строка, может быть выделена через Z_STRVAL_P), tmp (строка, выделяется через estrndup, освобождается через efree), error (строка, выделяется через phar_extract_file, освобождается через efree), fp (поток, выделяется через php_stream_open_wrapper, освобождается через php_stream_close)",
+    "bounds_checks": "есть проверка pathto_len < 1 перед использованием pathto, есть проверка pathto_len >= MAXPATHLEN перед использованием pathto",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145668": {
+    "buffers_and_lifetime": "ExtensionViewGuest object is allocated with 'new' in Create function",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "170159": {
+    "buffers_and_lifetime": "username_element, password_element, password_info, username_query_prefix_",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179270": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178900": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180780": {
+    "buffers_and_lifetime": "В коде используются буферы: v (union), peercred (struct ucred), address (char[128]). Память выделяется на стеке для этих переменных и освобождается автоматически при выходе из функции. Явных вызовов функций выделения/освобождения памяти (alloc/free/new/delete/kfree/kmalloc и т.п.) в коде нет.",
+    "bounds_checks": "Проверка границ выполняется перед использованием буферов: проверка len < 0 перед memset, проверка len > sizeof(peercred) перед использованием peercred, проверка lv < len перед использованием address, проверка len > lv перед copy_to_user.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "35283": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178472": {
+    "buffers_and_lifetime": "pgsql_notify (PGnotify *) выделяется через PQnotifies(pgsql) и освобождается через PQfreemem(pgsql_notify). escaped (char *) выделяется через safe_emalloc и освобождается через efree(escaped). src (char *) выделяется через estrdup и освобождается через efree(src). querystr (smart_str) инициализируется и освобождается через smart_str_free(&querystr). pg_result (PGresult *) выделяется через PQexec и освобождается через PQclear(pg_result). elem (zval *) выделяется через MAKE_STD_ZVAL, но освобождение не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "46303": {
+    "buffers_and_lifetime": "struct ext4_map_blocks map; struct extent_status es;",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "26370": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "109673": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "104985": {
+    "buffers_and_lifetime": "нет буферов, указателей или индексов, связанных с выделением/освобождением памяти",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "62566": {
+    "buffers_and_lifetime": "p - указатель на буфер типа const u_char, передается как аргумент функции. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "есть проверка длины буфера: if (length < 2) перед доступом к p[0] и p[1] через макрос ND_TCHECK2(*p, 2).",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "46722": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "66224": {
+    "buffers_and_lifetime": "gstr выделяется через mmap_string_new(\"\") и освобождается через mmap_string_free(gstr) в двух местах: при успешном завершении и в случае ошибки (метка free_gstr). str выделяется через strdup(gstr->str) и передаётся наружу через *result, освобождение не показано в фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181881": {
+    "buffers_and_lifetime": "matrix создается через jas_matrix_create и возвращается из функции jas_seq2d_create",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "115955": {
+    "buffers_and_lifetime": "нет буферов, выделения или освобождения памяти в данном фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "25218": {
+    "buffers_and_lifetime": "skb и opt_skb — буферы типа struct sk_buff. Память для skb выделяется вне функции, а освобождается через kfree_skb(skb) в метке discard и через __kfree_skb(opt_skb) в нескольких местах. Память для opt_skb выделяется через skb_clone(skb, GFP_ATOMIC) и освобождается через __kfree_skb(opt_skb) и kfree_skb(opt_skb).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "40852": {
+    "buffers_and_lifetime": "w->ptr - указатель на буфер, используется для чтения данных типа double. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "88616": {
+    "buffers_and_lifetime": "wep_key (структура mwifiex_wep_key), bss_config->wep_cfg[i].key (буфер, копируемый через memcpy), priv->wep_key[i] (массив структур mwifiex_wep_key). Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182539": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180177": {
+    "buffers_and_lifetime": "header[18] - автоматический массив, память выделяется при входе в функцию и освобождается при выходе; tga->ident - указатель, память выделяется через gdMalloc(tga->identsize * sizeof(char)) при условии tga->identsize > 0, освобождение не показано в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "68944": {
+    "buffers_and_lifetime": "per_cpu(slab_reap_work, cpu) используется для доступа к структуре slab_reap_work, память для которой выделяется вне данного фрагмента. Память не выделяется и не освобождается в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "182438": {
+    "buffers_and_lifetime": "В коде используются буферы и указатели: `p`, `end`, `ssl->in_msg`, `hash`, `params`. Память выделяется и освобождается вне данного фрагмента кода, явных вызовов функций выделения/освобождения памяти в коде нет.",
+    "bounds_checks": "Проверка границ выполняется перед использованием указателя `p` в следующих местах: 1) перед вызовом `ssl_parse_server_psk_hint(ssl, &p, end)`; 2) перед вызовом `ssl_parse_server_dh_params(ssl, &p, end)`; 3) перед вызовом `ssl_parse_server_ecdh_params(ssl, &p, end)`; 4) перед вызовом `mbedtls_ecjpake_read_round_two(&ssl->handshake->ecjpake_ctx, p, end - p)`; 5) перед чтением `sig_len` и использованием `p` в проверке `if (end != p + sig_len)`.",
+    "use_paths": "Нет таких",
+    "error": null
+  },
+  "31677": {
+    "buffers_and_lifetime": "В коде используются переменные idx, ctrl_val и mask. Память не выделяется и не освобождается явно.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "177751": {
+    "buffers_and_lifetime": "tree (типа cmap_splay*) - указатель на массив структур, выделяется через fz_resize_array, память перевыделяется при необходимости увеличения размера (cmap->tcap). delete_node используется для освобождения узлов.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "113327": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "143561": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181957": {
+    "buffers_and_lifetime": "new_client выделяется через calloc(1, sizeof(crm_client_t)), new_client->remote выделяется через calloc(1, sizeof(crm_remote_t)). Память освобождается в функции lrmd_remote_client_destroy (указана в структуре mainloop_fd_callbacks). Буферы addr_str[INET6_ADDRSTRLEN] и addr_str[INET_ADDRSTRLEN] являются локальными автоматическими массивами.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "179881": {
+    "buffers_and_lifetime": "path выделяется через calloc(1, bufsz) и освобождается через free(path) в конце функции или в out_error. parts выделяется через calloc(subsystem_count + 1, sizeof(char *)) и освобождается через free(parts) в конце цикла или в out_error. dirname выделяется через lxc_string_join и освобождается через free(dirname) в конце цикла или в out_error. abs_path выделяется через lxc_append_paths и освобождается через free(abs_path) в конце цикла или в out_error. abs_path2 выделяется через lxc_append_paths и освобождается через free(abs_path2) в конце цикла или в out_error.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "163757": {
+    "buffers_and_lifetime": "std::unique_ptr<viz::CopyOutputRequest> request создается с помощью viz::CopyOutputRequest::CreateRequest и автоматически освобождается при выходе из области видимости",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "22845": {
+    "buffers_and_lifetime": "struct nfs4_lookup_arg args и struct nfs4_lookup_res res создаются на стеке и автоматически освобождаются при выходе из функции. Указатели dirfh, name, fhandle, fattr передаются в функцию и используются, но их выделение/освобождение не показано в коде.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "161216": {
+    "buffers_and_lifetime": "content — указатель на буфер, передаваемый в функцию; office_version — строка, создаваемая внутри функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "55338": {
+    "buffers_and_lifetime": "netdev->dev_addr, adapter->hw.mac_addr - буферы для копирования MAC-адреса; память выделяется и управляется вне функции (нет явных alloc/free внутри фрагмента)",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "87910": {
+    "buffers_and_lifetime": "bi->page выделяется через dev_alloc_page(), освобождается через __free_page() в случае ошибки маппинга DMA. dma_map_page() используется для маппинга страницы.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "185122": {
+    "buffers_and_lifetime": "contextPtr (RefPtrWillBeRawPtr<ExecutionContext>), wrapper (RefPtr<CallbackWrapper>) - создаются через RefPtrWillBeRawPtr и adoptRef, освобождение не показано",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "188250": {
+    "buffers_and_lifetime": "def (OMX_PARAM_PORTDEFINITIONTYPE), profile (OMX_AUDIO_PARAM_AACPROFILETYPE), presentation (OMX_AUDIO_PARAM_ANDROID_AACPRESENTATIONTYPE) — локальные переменные, память для них выделяется на стеке и освобождается автоматически при выходе из функции. Явных вызовов alloc/free нет.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "130326": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "145110": {
+    "buffers_and_lifetime": "picture (тип RefPtr<SkPicture>) создается через вызов m_testSurface->getPicture(), память управляется через RefPtr и освобождается автоматически при выходе из области видимости.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "186550": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "64472": {
+    "buffers_and_lifetime": "нет выделения/освобождения памяти в явном виде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178033": {
+    "buffers_and_lifetime": "face->ttf_data выделяется через FT_ALLOC с размером 12 байт. Память для loader.charstrings.block, loader.charstrings.elements, loader.charstrings.lengths, loader.glyph_names.block, loader.glyph_names.elements передается в type1->charstrings_block, type1->charstrings, type1->charstrings_len, type1->glyph_names_block, type1->glyph_names соответственно. Освобождение памяти происходит через t42_loader_done(&loader).",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187712": {
+    "buffers_and_lifetime": "buffer - буфер, передаваемый в функцию; память не выделяется и не освобождается внутри функции",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "103840": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "180664": {
+    "buffers_and_lifetime": "структура ext4_inode_info *ei инициализируется из параметра foo, память не выделяется и не освобождается в этом фрагменте",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "29671": {
+    "buffers_and_lifetime": "ps->area, ps->zero_area, ps->header_area выделяются с помощью vmalloc и освобождаются с помощью vfree в функции free_area",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "114392": {
+    "buffers_and_lifetime": "message — указатель на объект типа IPC::Message, память для которого выделяется и освобождается вне данного фрагмента",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "131786": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "113084": {
+    "buffers_and_lifetime": "Нет явных буферов, указателей или индексов, связанных с выделением или освобождением памяти в данном фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187878": {
+    "buffers_and_lifetime": "m_pInfo, m_pTracks, m_pCues, m_pSeekHead, m_pChapters выделяются через new (std::nothrow) и не освобождаются в этом фрагменте",
+    "bounds_checks": "есть проверки перед использованием указателей и индексов: (pos + 1) > available, (pos + len) > segment_stop, (pos + len) > available, (pos + size) > segment_stop, (pos + size) > available",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "183595": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "33087": {
+    "buffers_and_lifetime": "skb - буфер, передаваемый в функцию; память для него выделяется и освобождается вне функции. ua - указатель на данные внутри skb, выделяется через nlmsg_data(nlh). nlh - указатель на заголовок сообщения, выделяется через nlmsg_put().",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178650": {
+    "buffers_and_lifetime": "membuf - буфер, полученный через php_stream_memory_get_buffer; ts->innerstream - освобождается через php_stream_free_enclosed с флагом PHP_STREAM_FREE_CLOSE",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "181054": {
+    "buffers_and_lifetime": "buf[MAXHOSTNAMELEN + 100] — локальный буфер, выделяется на стеке; vec[1] — локальный массив структур, выделяется на стеке; указатели bp, bp2, dp, ext_dp, ip, oip, ouh, obj_tptr, snapend_save, icmp_mpls_ext_object_header — используются для доступа к данным, память не выделяется и не освобождается в этом фрагменте.",
+    "bounds_checks": "ND_TCHECK используется для проверки границ перед доступом к полям структур: dp->icmp_code, dp->icmp_seq, dp->icmp_ip.ip_dst, dp->icmp_ip.ip_p, ouh->uh_dport, dp->icmp_pptr, dp->icmp_mask, dp->icmp_ttime, ext_dp->icmp_ext_version_res, icmp_mpls_ext_object_header->length.",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187866": {
+    "buffers_and_lifetime": "AudioTrack* pTrack выделяется через new (std::nothrow) и освобождается через delete pTrack в случае ошибки копирования info",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "132586": {
+    "buffers_and_lifetime": "нет таких",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "178356": {
+    "buffers_and_lifetime": "нет выделения или освобождения памяти в коде",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "76217": {
+    "buffers_and_lifetime": "buffer[8] - статический массив на стеке, память не выделяется и не освобождается явно; cgc - структура на стеке, память не выделяется и не освобождается явно",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "184672": {
+    "buffers_and_lifetime": "переменная 'message' типа string16, создается в начале функции и возвращается в конце; указатель 'extensions' передается в функцию; указатель 'e' получает значение из вызова extension_service_->GetExtensionById",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "12822": {
+    "buffers_and_lifetime": "b (тип BUF_MEM*) выделяется в asn1_d2i_read_bio (предположительно, так как передаётся по указателю) и освобождается через BUF_MEM_free(b). Указатель p инициализируется данными из b->data. ret инициализируется NULL, затем может быть перезаписан результатом ASN1_item_d2i.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "187608": {
+    "buffers_and_lifetime": "png_ptr выделяется через png_create_write_struct, освобождается через png_destroy_write_struct; info_ptr выделяется через png_create_info_struct, освобождается через png_destroy_write_struct; row выделяется через malloc, освобождается через free; gamma_table и palette - локальные массивы на стеке, не требуют явного освобождения",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "171213": {
+    "buffers_and_lifetime": "mRetransmitEndpoint — структура, которая копируется из endpoint через оператор присваивания. Память не выделяется и не освобождается явно в этом фрагменте.",
+    "bounds_checks": "нет таких",
+    "use_paths": "нет таких",
+    "error": null
+  },
+  "64612": {
+    "buffers_and_lifetime": "source_p, regex_start_p, regex_end_p, source_end_p - указатели на данные в памяти, выделяются вне функции. literal_p - указатель на структуру lexer_literal_t, память выделяется через parser_list_append. pattern_str_p - указатель на строку, память выделяется через ecma_new_ecma_string_from_utf8 и освобождается через ecma_deref_ecma_string. re_bytecode_p - указатель на скомпилированный байткод, память управляется вне функции.",
+    "bounds_checks": "есть проверка source_p >= source_end_p перед доступом к source_p[0]. есть проверка source_p + 1 >= source_end_p перед доступом к source_p[1]. есть проверка source_p < source_end_p перед доступом к source_p[0] в цикле while. есть проверка length > PARSER_MAXIMUM_STRING_LENGTH перед использованием length.",
+    "use_paths": "нет таких",
+    "error": null
+  }
+}

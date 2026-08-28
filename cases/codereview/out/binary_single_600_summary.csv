@@ -1,0 +1,4 @@
+конфигурация,precision,recall,f1,fpr,tp,fp,fn,tn,escalation_rate,вызовов_LLM_на_фрагмент,файл_вердиктов
+cert_only (uncertain=secure),0.5405,0.3,0.3859,0.1275,60,51,140,349,0.5983,1,out/bench/case3_cert_only_600.json
+cert_only (uncertain=vulnerable),0.3553,0.835,0.4985,0.7575,167,303,33,97,0.0,1,out/bench/case3_cert_only_600_uncertain_as_vulnerable.json
+binary_cert_only_single,0.6207,0.18,0.2791,0.055,36,22,164,378,0.0067,1,out/bench/case3_binary_cert_only_600.json
