@@ -1,0 +1,74 @@
+{
+  "current": {
+    "variant": "current",
+    "n_docs": 60,
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com/v1",
+    "cache_path": "/Users/artemmartynov/claude/ai_hackathon/out/pii/cache_prefix_current.sqlite3",
+    "started_utc": "2026-08-28T10:10:28.518904+00:00",
+    "finished_utc": "2026-08-28T10:10:55.996038+00:00",
+    "usage_after_warmup": {
+      "calls": 1,
+      "cache_hits": 0,
+      "prompt_tokens": 1198,
+      "completion_tokens": 129,
+      "total_tokens": 1327,
+      "cost_usd": 0.0,
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 686,
+      "prompt_cache_hit_rate": 0.4274
+    },
+    "usage_after_full_run": {
+      "calls": 62,
+      "cache_hits": 0,
+      "prompt_tokens": 85987,
+      "completion_tokens": 7536,
+      "total_tokens": 93523,
+      "cost_usd": 0.0,
+      "prompt_cache_hit_tokens": 39040,
+      "prompt_cache_miss_tokens": 46947,
+      "prompt_cache_hit_rate": 0.454
+    },
+    "steady_hit_tokens": 38528,
+    "steady_total_cache_tokens": 84789,
+    "steady_hit_rate": 0.4544,
+    "cost_estimate_usd": 0.029493,
+    "cost_estimate_note": "пиковый прайс DeepSeek $0.44/M miss, $0.014/M hit, $1.10/M output — допущение, не зашито в core/llm.py"
+  },
+  "reordered": {
+    "variant": "reordered",
+    "n_docs": 60,
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com/v1",
+    "cache_path": "/Users/artemmartynov/claude/ai_hackathon/out/pii/cache_prefix_reordered.sqlite3",
+    "started_utc": "2026-08-28T10:10:55.999058+00:00",
+    "finished_utc": "2026-08-28T10:11:25.670810+00:00",
+    "usage_after_warmup": {
+      "calls": 1,
+      "cache_hits": 0,
+      "prompt_tokens": 1198,
+      "completion_tokens": 91,
+      "total_tokens": 1289,
+      "cost_usd": 0.0,
+      "prompt_cache_hit_tokens": 512,
+      "prompt_cache_miss_tokens": 686,
+      "prompt_cache_hit_rate": 0.4274
+    },
+    "usage_after_full_run": {
+      "calls": 62,
+      "cache_hits": 0,
+      "prompt_tokens": 85964,
+      "completion_tokens": 7139,
+      "total_tokens": 93103,
+      "cost_usd": 0.0,
+      "prompt_cache_hit_tokens": 61952,
+      "prompt_cache_miss_tokens": 24012,
+      "prompt_cache_hit_rate": 0.7207
+    },
+    "steady_hit_tokens": 61440,
+    "steady_total_cache_tokens": 84766,
+    "steady_hit_rate": 0.7248,
+    "cost_estimate_usd": 0.019286,
+    "cost_estimate_note": "пиковый прайс DeepSeek $0.44/M miss, $0.014/M hit, $1.10/M output — допущение, не зашито в core/llm.py"
+  }
+}
