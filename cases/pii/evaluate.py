@@ -18,6 +18,7 @@ import ast
 import json
 import sys
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Callable
 
@@ -53,9 +54,14 @@ def _match_span_only(pred: dict, gold: dict) -> bool:
     return pred["start"] < gold["end"] and gold["start"] < pred["end"]
 
 
-def evaluate(df: pd.DataFrame, predict_fn: Callable[[pd.Series], list[dict]] | None = None) -> dict:
+def evaluate(df: pd.DataFrame, predict_fn: Callable[[pd.Series], list[dict]] | None = None,
+             max_workers: int = 1) -> dict:
     """`predict_fn(row) -> spans` — по умолчанию чистые детекторы (поведение не менялось).
-    Используется также `evaluate_ablation()` ниже с llm-only/hybrid predict_fn."""
+    Используется также `evaluate_ablation()` ниже с llm-only/hybrid predict_fn.
+
+    `max_workers` — предсказания независимы, поэтому считаются через ThreadPoolExecutor
+    (`ex.map` сохраняет порядок); по умолчанию 1 — то же последовательное исполнение, что и раньше.
+    """
     predict_fn = predict_fn or (lambda row: detect_pii(row["text"]))
     tp_exact = fp_exact = fn_exact = 0
     tp_span = fn_span = 0
@@ -64,9 +70,15 @@ def evaluate(df: pd.DataFrame, predict_fn: Callable[[pd.Series], list[dict]] | N
     per_type_pred: Counter = Counter()
     per_type_fp: Counter = Counter()
 
-    for _, row in df.iterrows():
+    rows = list(df.iterrows())
+    if max_workers > 1:
+        with ThreadPoolExecutor(max_workers=max_workers) as ex:
+            preds = list(ex.map(lambda item: predict_fn(item[1]), rows))
+    else:
+        preds = [predict_fn(row) for _, row in rows]
+
+    for (_, row), pred in zip(rows, preds):
         gold = _gold_spans(row)
-        pred = predict_fn(row)
 
         for g in gold:
             per_type_gold[g["label"]] += 1
@@ -210,7 +222,10 @@ def evaluate_ablation(df: pd.DataFrame, llm_client: LLMClient, model: str | None
         "llm_only": _llm_pred,
         "hybrid": _hybrid_pred,
     }
-    per_config = {name: evaluate(df, predict_fn=fn) for name, fn in configs.items()}
+    per_config = {
+        name: evaluate(df, predict_fn=fn, max_workers=llm_client.config.max_concurrency)
+        for name, fn in configs.items()
+    }
     return {
         "n_docs": len(df),
         "dry_run": llm_client.config.dry_run,

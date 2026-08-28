@@ -112,8 +112,13 @@ class UsageTotals:
     completion_tokens: int = 0
     total_tokens: int = 0
     cost_usd: float = 0.0
+    prompt_cache_hit_tokens: int = 0
+    """Токены промпта, попавшие в кеш префикса ПРОВАЙДЕРА (напр. DeepSeek). Не путать с
+    `cache_hits` — это наш собственный SQLite-кеш ответов, совсем другая сущность."""
+    prompt_cache_miss_tokens: int = 0
 
     def as_dict(self) -> dict:
+        cache_total = self.prompt_cache_hit_tokens + self.prompt_cache_miss_tokens
         return {
             "calls": self.calls,
             "cache_hits": self.cache_hits,
@@ -121,6 +126,11 @@ class UsageTotals:
             "completion_tokens": self.completion_tokens,
             "total_tokens": self.total_tokens,
             "cost_usd": round(self.cost_usd, 6),
+            "prompt_cache_hit_tokens": self.prompt_cache_hit_tokens,
+            "prompt_cache_miss_tokens": self.prompt_cache_miss_tokens,
+            "prompt_cache_hit_rate": (
+                round(self.prompt_cache_hit_tokens / cache_total, 4) if cache_total else 0.0
+            ),
         }
 
 
@@ -171,7 +181,7 @@ class _ResponseCache:
 
 def _openai_compat_call(*, base_url: str, api_key_env: str, model: str, system: str | None,
                          prompt: str, temperature: float, max_tokens: int, timeout_s: float,
-                         extra_params: dict) -> tuple[str, int, int]:
+                         extra_params: dict) -> tuple[str, int, int, int, int]:
     api_key = os.environ.get(api_key_env)
     if not api_key:
         raise LLMError(
@@ -227,7 +237,11 @@ def _openai_compat_call(*, base_url: str, api_key_env: str, model: str, system: 
         raise _TransientError(f"пустой content у модели {model}, finish_reason={finish_reason!r}")
     prompt_tokens = usage.get("prompt_tokens") or _estimate_tokens(prompt + (system or ""))
     completion_tokens = usage.get("completion_tokens") or _estimate_tokens(text)
-    return text, prompt_tokens, completion_tokens
+    # DeepSeek-специфичные поля учёта попаданий в кеш префикса. У провайдеров, которые их не
+    # присылают (OpenRouter, большинство прочих), остаются нулями — ничего не ломаем.
+    cache_hit_tokens = usage.get("prompt_cache_hit_tokens") or 0
+    cache_miss_tokens = usage.get("prompt_cache_miss_tokens") or 0
+    return text, prompt_tokens, completion_tokens, cache_hit_tokens, cache_miss_tokens
 
 
 def _anthropic_call(*, api_key_env: str, model: str, system: str | None, prompt: str,
@@ -258,7 +272,7 @@ def _anthropic_call(*, api_key_env: str, model: str, system: str | None, prompt:
     return text, resp.usage.input_tokens, resp.usage.output_tokens
 
 
-def _call_with_retries(fn: Callable[[], tuple[str, int, int]], max_retries: int) -> tuple[str, int, int]:
+def _call_with_retries(fn: Callable[[], tuple], max_retries: int) -> tuple:
     attempt = 0
     while True:
         try:
@@ -382,7 +396,7 @@ class LLMClient:
 
         t0 = time.monotonic()
         if self.config.backend == "openai_compat":
-            def call() -> tuple[str, int, int]:
+            def call() -> tuple[str, int, int, int, int]:
                 return _openai_compat_call(
                     base_url=self.config.base_url, api_key_env=self.config.api_key_env,
                     model=model, system=system, prompt=prompt, temperature=temperature,
@@ -406,7 +420,14 @@ class LLMClient:
         else:
             raise LLMError(f"неизвестный backend: {self.config.backend}")
 
-        text, prompt_tokens, completion_tokens = _call_with_retries(call, self.config.max_retries)
+        result = _call_with_retries(call, self.config.max_retries)
+        # openai_compat возвращает 5-элементный кортеж (с полями кеша провайдера), остальные
+        # бэкенды (anthropic, gigachat) — исходный 3-элементный. Нормализуем без их правки.
+        if len(result) == 5:
+            text, prompt_tokens, completion_tokens, cache_hit_tokens, cache_miss_tokens = result
+        else:
+            text, prompt_tokens, completion_tokens = result
+            cache_hit_tokens, cache_miss_tokens = 0, 0
         latency_ms = (time.monotonic() - t0) * 1000
 
         price_in, price_out = self._price(model)
@@ -421,6 +442,8 @@ class LLMClient:
         self.usage.completion_tokens += completion_tokens
         self.usage.total_tokens += prompt_tokens + completion_tokens
         self.usage.cost_usd += cost
+        self.usage.prompt_cache_hit_tokens += cache_hit_tokens
+        self.usage.prompt_cache_miss_tokens += cache_miss_tokens
 
         return LLMResponse(
             text=text, model=model, prompt_tokens=prompt_tokens, completion_tokens=completion_tokens,
