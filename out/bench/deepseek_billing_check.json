@@ -1,0 +1,13 @@
+{
+  "what": "Сверка фактического списания прямого DeepSeek с расчётом по токенам",
+  "run": "замер кеша префикса кейса 1, 28.08.2026 10:10-10:11 UTC, 2 варианта x 60 документов",
+  "source_artifact": "cases/pii/out/prefix_cache_measure.json",
+  "billed_usd_reported_by_user": 0.026003424,
+  "price_assumption_peak_usd_per_mtok": {"cache_miss": 0.44, "cache_hit": 0.014, "output": 1.10},
+  "tokens_total": {"prompt_cache_hit": 100992, "prompt_cache_miss": 70959, "completion": 14675},
+  "estimate_peak_usd": 0.048778,
+  "estimate_offpeak_50pct_usd": 0.024389,
+  "actual_to_peak": 0.5331,
+  "actual_to_offpeak": 1.0662,
+  "conclusion": "Списано 53% от пикового расчёта -> скидка off-peak -50% ФАКТИЧЕСКИ применена (прогон стартовал в 10:10 UTC, через 10 минут после конца пикового окна 06:00-10:00 UTC). Превышение над голым off-peak расчётом +6.6%, то есть поправка на занижение x1.11 из STATE консервативна, но по порядку верна."
+}
