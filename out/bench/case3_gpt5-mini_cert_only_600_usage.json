@@ -1,0 +1,17 @@
+{
+  "model": "openai/gpt-5-mini",
+  "backend": "openai_compat",
+  "n_fragments": 600,
+  "elapsed_seconds": 341.4,
+  "usage": {
+    "calls": 377,
+    "cache_hits": 17,
+    "prompt_tokens": 829246,
+    "completion_tokens": 920585,
+    "total_tokens": 1749831,
+    "cost_usd": 0.0,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 0,
+    "prompt_cache_hit_rate": 0.0
+  }
+}
