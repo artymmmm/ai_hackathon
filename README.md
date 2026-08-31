@@ -23,9 +23,9 @@
 
 ## 2. Где лежат сами выгрузки
 
-Файлы сдачи весят 69 МБ, поэтому вынесены в релиз
-**[v1.0-delivery](../../releases/tag/v1.0-delivery)** — там `case1_verdicts.xlsx`,
-`case2_verdicts.xlsx`, `case3_verdicts.xlsx` и json-версии с полными текстами.
+Файлы сдачи для репозитория слишком тяжёлые (одна только таблица кейса №1 — 57 МБ), поэтому
+они в релизе **[v1.0-delivery](../../releases/tag/v1.0-delivery)**: три таблицы `.xlsx`,
+полная `case3_verdicts.csv` и json-версии всех трёх кейсов.
 
 Чтобы посмотреть формат прямо здесь, без скачивания, — образцы по 200 строк:
 
@@ -93,8 +93,11 @@ CWE и патч достраиваются отдельным проходом �
 ```
 run.py --case 1|2|3          общий запуск
 core/                        ядро, одинаковое для трёх кейсов
-  llm.py                     ЕДИНСТВЕННАЯ точка контакта с моделью: кеш, ретраи,
-                             учёт токенов и стоимости, режим --dry-run без сети
+  llm.py                     ЕДИНСТВЕННАЯ точка контакта с моделью: ретраи, ограничение
+                             параллелизма, учёт токенов и стоимости, режим --dry-run без
+                             сети и кеш ответов в SQLite по хешу промпта (за счёт него
+                             падение прогона стоило времени, а не денег: перезапуск
+                             доплачивал только за неотвеченное)
   pipeline.py                стадии load -> prefilter -> route -> llm -> validate -> calibrate
   schema.py                  общий контракт вердикта для всех кейсов
   data.py, export.py         загрузка датасетов, выгрузка в xlsx и json
@@ -111,25 +114,46 @@ out/bench/                   метрики и сырые вердикты вс�
 
 ## 5. Как воспроизвести
 
+Двух вещей в репозитории нет намеренно: **датасетов организаторов** (не наши данные) и
+**выгрузок** (69 МБ). Что нужно доложить:
+
+| что | откуда | куда положить |
+|---|---|---|
+| датасеты кейсов 1 и 2 | ссылки из задания, Hugging Face | `case 1/data/`, `case 2/prompt-injection-safety/data/` |
+| датасет кейса 3 | приложен к заданию | `case 3/3 кейс_датасет.csv` |
+| выгрузки | [релиз v1.0-delivery](../../releases/tag/v1.0-delivery) | `out/` |
+
+Разметка кейса 3, результаты flawfinder и сигнатурного триажа **уже в репозитории**
+(`research/case3_recovered_labels_v4.csv`, `cases/codereview/out/*.csv`).
+
+### Пересчёт метрик по сданным файлам
+
+Сети не требует, ключей не требует, считает ровно те числа, что стоят в отчётах.
+
 ```bash
-# без сети и без ключей — проходит весь конвейер на заглушках
-.venv/bin/python run.py --case 1 --sample 20 --split test --dry-run
-
-# боевой прогон целиком (нужен DEEPSEEK_API_KEY в .env)
-./full_run.sh
-```
-
-Метрики пересчитываются по сданным файлам, **без обращения к сети**:
-
-```bash
-.venv/bin/python cases/pii/evaluate_delivered.py  out/case1_verdicts.json test out/pii/delivered_metrics_100k.json
-.venv/bin/python cases/guard/evaluate_delivered.py out/case2_verdicts.json test out/guard/delivered_metrics_10k.json
+# нужны только выгрузка кейса 3 из релиза — датасет для этого не нужен
 .venv/bin/python cases/codereview/evaluate_delivered.py out/case3_verdicts.json out/bench/case3_delivered_metrics.json
+
+# нужны выгрузки из релиза + соответствующие датасеты
+.venv/bin/python cases/pii/evaluate_delivered.py   out/case1_verdicts.json test out/pii/delivered_metrics_100k.json
+.venv/bin/python cases/guard/evaluate_delivered.py out/case2_verdicts.json test out/guard/delivered_metrics_10k.json
 .venv/bin/python cases/codereview/length_baseline.py out/case3_verdicts.json out/bench/case3_length_baseline.json
 ```
 
-Все ответы модели закешированы в SQLite по хешу промпта, поэтому повторный прогон бесплатен
-и мгновенен. Полный прогон трёх кейсов стоил **$22.31** и занял около часа.
+### Прогон с нуля
+
+```bash
+# конвейер целиком на заглушках: без сети и без ключей, нужны только датасеты
+.venv/bin/python run.py --case 1 --sample 20 --split test --dry-run
+
+# боевой прогон (нужен DEEPSEEK_API_KEY в .env)
+./full_run.sh
+```
+
+Полный прогон трёх кейсов стоил **$22.31** и занял около часа при 64 параллельных запросах.
+Повторный прогон у нас обходился бесплатно за счёт локального кеша ответов, но **сам кеш
+в репозиторий не попадает** — он содержит ответы модели на данные организаторов. Так что
+для постороннего повторный прогон стоит те же деньги.
 
 ## 6. Что почитать дальше
 
