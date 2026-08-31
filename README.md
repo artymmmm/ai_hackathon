@@ -23,8 +23,9 @@
 
 ## 2. Где лежат сами выгрузки
 
-Файлы сдачи весят 69 МБ, поэтому вынесены в **[Releases](../../releases/latest)** —
-там `case1_verdicts.xlsx`, `case2_verdicts.xlsx`, `case3_verdicts.xlsx` и json-версии.
+Файлы сдачи весят 69 МБ, поэтому вынесены в релиз
+**[v1.0-delivery](../../releases/tag/v1.0-delivery)** — там `case1_verdicts.xlsx`,
+`case2_verdicts.xlsx`, `case3_verdicts.xlsx` и json-версии с полными текстами.
 
 Чтобы посмотреть формат прямо здесь, без скачивания, — образцы по 200 строк:
 
@@ -131,7 +132,7 @@ out/bench/                   метрики и сырые вердикты вс�
 
 | Файл | О чём |
 |---|---|
-| [report/case1.md](report/case1.md) · [case2.md](report/case2.md) · [case3.md](report/case3.md) | отчёты по заданию: инструмент, промпт, алгоритм, ограничения |
+| [report/case1.md](report/case1.md) · [case2.md](report/case2.md) · [case3.md](report/case3.md) | отчёты по заданию: инструмент, промпт, алгоритм, ограничения. Рядом лежат те же отчёты в `.docx`: [case1](report/case1.docx) · [case2](report/case2.docx) · [case3](report/case3.docx) |
 | [report/journal.md](report/journal.md) | полный ход работы: все замеры, **включая опровергнутые гипотезы** |
 | [report/model_benchmark.md](report/model_benchmark.md) | сравнение моделей на одинаковых наборах |
 | [report/design_rationale.md](report/design_rationale.md) | почему архитектура такая |
