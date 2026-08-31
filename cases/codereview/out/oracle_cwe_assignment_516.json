@@ -1,0 +1,2582 @@
+{
+  "36041": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "14900": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "181061": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "108115": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "134499": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "119093": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "139935": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "163986": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "65105": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "626": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "38700": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "178540": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "88435": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "184744": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "178650": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "40852": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "187918": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "181054": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "58317": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "51382": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "179624": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "7951": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "6973": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "181799": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "142370": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "105040": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "33731": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "122975": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "79230": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "84036": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "50866": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "148877": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "104320": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "12715": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "143752": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "8905": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "130421": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "91713": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "180824": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "188250": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "150130": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "34556": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "88616": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "182898": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "106360": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-311",
+    "used_fallback_rule": true
+  },
+  "30602": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "87910": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "68417": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "186152": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "145668": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "60394": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "184753": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "187404": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "13167": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "188375": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "87586": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "116245": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "143068": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "123749": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "80491": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "134320": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "109673": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "41284": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "174141": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "64743": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "73732": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "187347": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "29612": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "146055": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "109349": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "100506": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "111696": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "158368": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "30473": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "29671": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "119399": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "146264": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "10320": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "184672": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "140173": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "142703": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "86884": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "85930": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "182495": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "86696": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "188107": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "32091": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "187810": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "76217": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "148687": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-285",
+    "used_fallback_rule": true
+  },
+  "136051": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "178769": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "150714": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "71740": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-415",
+    "used_fallback_rule": false
+  },
+  "8957": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "181433": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "106273": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "163970": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "11811": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "3740": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "144602": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "178616": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "2316": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "22674": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "25172": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "180353": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "13736": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "2519": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "179854": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "81091": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "178356": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "66132": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-19",
+    "used_fallback_rule": true
+  },
+  "1297": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "111962": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "60403": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "45587": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "136904": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "65400": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "33711": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "181412": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "58903": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-285",
+    "used_fallback_rule": true
+  },
+  "16897": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "47272": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "8522": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-772",
+    "used_fallback_rule": false
+  },
+  "101580": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "6039": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "188279": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "128285": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "150531": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "53859": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "47418": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "57664": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "111212": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "118548": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "52942": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "75827": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "53723": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "158579": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "174002": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "19283": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "176337": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "177881": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "181521": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "185114": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "48642": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "36752": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "178079": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "3702": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "103232": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "183024": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "14373": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "60161": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "178988": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "67268": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "153772": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "35283": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "171594": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "173859": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "57551": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "25908": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "178900": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "123071": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "154703": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "179881": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "145312": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "180776": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "144434": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "6337": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "7094": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "163757": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "18502": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "46745": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-254",
+    "used_fallback_rule": true
+  },
+  "3346": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "183301": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "178612": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "182539": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "143561": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "121346": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "118977": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "62623": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "178086": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "22845": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "57251": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "64669": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-415",
+    "used_fallback_rule": false
+  },
+  "123939": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "51550": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "35022": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "89352": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "115477": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "67839": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "152022": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "33087": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "161216": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "55697": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "150469": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "31677": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "185634": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "45111": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "30023": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "181881": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "180612": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "181386": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "98919": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "121606": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "110968": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "182310": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "5974": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "147245": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "161716": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "128778": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "179031": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "154488": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "13393": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "69967": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "77126": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "115963": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "45631": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "43431": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "84107": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "178127": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-772",
+    "used_fallback_rule": false
+  },
+  "187576": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "87376": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "149705": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "79625": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "34369": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "142967": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "174302": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "181255": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "180915": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "181897": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "68944": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "132586": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "31297": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "115274": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "45694": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "188529": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "183238": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "82056": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "171213": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "85427": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "182912": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "181555": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-346",
+    "used_fallback_rule": true
+  },
+  "38577": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "93994": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "42892": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "114392": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "164044": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-415",
+    "used_fallback_rule": false
+  },
+  "85001": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "28165": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "103840": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "55338": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "25218": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "80863": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "107093": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "111832": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "185961": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-94",
+    "used_fallback_rule": true
+  },
+  "131786": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-346",
+    "used_fallback_rule": true
+  },
+  "187285": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-311",
+    "used_fallback_rule": true
+  },
+  "134880": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "46348": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "157460": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "188151": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "82786": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "95588": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "85862": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "145291": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "188373": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "59616": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "180664": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "70": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "108714": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "141574": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "26370": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "151650": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "176272": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "181311": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-404",
+    "used_fallback_rule": false
+  },
+  "51860": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "105496": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "168031": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "154444": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "62212": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "161999": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "92492": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "62033": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-772",
+    "used_fallback_rule": false
+  },
+  "178090": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "46303": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "181077": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "187866": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "186788": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "177815": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-354",
+    "used_fallback_rule": true
+  },
+  "176851": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "168665": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "187451": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "60005": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "80701": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "170159": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "13625": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "49372": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "182119": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "119963": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "136616": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "137883": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "16500": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "74050": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "115053": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-285",
+    "used_fallback_rule": true
+  },
+  "11421": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "175951": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "114850": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "64612": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "160939": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "64472": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "186653": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "122659": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-254",
+    "used_fallback_rule": true
+  },
+  "162888": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "184097": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "47918": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "44580": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "74450": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "167950": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "181267": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "187096": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-254",
+    "used_fallback_rule": true
+  },
+  "180246": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "178011": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "59619": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "150149": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "112374": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "38346": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "174935": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "186630": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "11188": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "152041": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "108568": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "83325": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "150462": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "161668": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "81831": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "180780": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "127041": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "12822": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "52025": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "175526": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "21746": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "188212": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "51716": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "87050": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "73950": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "8163": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "142535": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "180177": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "165893": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "178282": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "104257": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "181622": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "13782": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "136479": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "137342": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-772",
+    "used_fallback_rule": false
+  },
+  "14326": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-94",
+    "used_fallback_rule": true
+  },
+  "146709": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "60086": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-354",
+    "used_fallback_rule": true
+  },
+  "11348": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-311",
+    "used_fallback_rule": true
+  },
+  "156438": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "45845": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "104985": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "47599": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "179281": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "90450": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "61033": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "96086": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "145110": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "170333": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "184981": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "132736": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "1786": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "100645": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "185326": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "19118": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "67549": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "106794": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "123464": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "178620": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "88434": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "94753": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "118815": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "113327": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "113084": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "187420": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "122441": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "125138": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "61617": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "53948": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "149094": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "180601": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "81000": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "182878": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "188453": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "144624": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "27625": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "107259": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "82478": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "172220": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "73779": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "58654": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "22806": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "22649": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "129090": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "145236": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "145501": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "84378": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "185986": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "178656": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "166009": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "175418": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "147513": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "130326": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "82886": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "4982": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-346",
+    "used_fallback_rule": true
+  },
+  "56938": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "79803": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "162662": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "121787": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "36574": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "70392": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "144483": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "101231": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "148614": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "180907": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "142762": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "168794": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "32921": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "17362": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "62566": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "122649": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  },
+  "181132": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "106246": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "116701": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "108285": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "117255": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "129059": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "52023": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "41354": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "179594": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "186511": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "122449": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-311",
+    "used_fallback_rule": true
+  },
+  "83203": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "147403": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "46722": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "7100": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-59",
+    "used_fallback_rule": false
+  },
+  "167697": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "105731": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "55952": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "15273": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "182438": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "58010": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-94",
+    "used_fallback_rule": true
+  },
+  "182770": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "64778": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "131726": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "183800": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "185383": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "73457": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-19",
+    "used_fallback_rule": true
+  },
+  "128142": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "51594": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-189",
+    "used_fallback_rule": true
+  },
+  "183820": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "2129": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "37629": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-79",
+    "used_fallback_rule": true
+  },
+  "66224": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "43008": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "143137": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "137173": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "61522": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "135436": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "172403": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "179270": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "115955": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "43752": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "73067": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "33736": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-404",
+    "used_fallback_rule": false
+  },
+  "20520": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "8631": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "52631": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "54499": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "182115": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-190",
+    "used_fallback_rule": false
+  },
+  "185187": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "104454": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "179820": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-18",
+    "used_fallback_rule": true
+  },
+  "54151": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "143700": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "105847": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "177751": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "96540": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-787",
+    "used_fallback_rule": true
+  },
+  "185122": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "55818": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-399",
+    "used_fallback_rule": true
+  },
+  "180140": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-285",
+    "used_fallback_rule": true
+  },
+  "81879": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "188265": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "97200": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "77074": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "181287": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-125",
+    "used_fallback_rule": false
+  },
+  "82432": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "39426": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "171616": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "21853": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "102702": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "179912": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-19",
+    "used_fallback_rule": true
+  },
+  "121821": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-416",
+    "used_fallback_rule": false
+  },
+  "99555": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "1645": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-476",
+    "used_fallback_rule": false
+  },
+  "186881": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-200",
+    "used_fallback_rule": true
+  },
+  "188568": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "182980": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-119",
+    "used_fallback_rule": false
+  },
+  "180289": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-415",
+    "used_fallback_rule": false
+  },
+  "178902": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "126489": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-284",
+    "used_fallback_rule": true
+  },
+  "185049": {
+    "is_vulnerable_gold": true,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "134049": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-20",
+    "used_fallback_rule": false
+  },
+  "111596": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-264",
+    "used_fallback_rule": true
+  },
+  "95944": {
+    "is_vulnerable_gold": false,
+    "oracle_cwe": "CWE-362",
+    "used_fallback_rule": true
+  }
+}

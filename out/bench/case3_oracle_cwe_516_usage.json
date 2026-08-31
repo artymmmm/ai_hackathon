@@ -1,0 +1,19 @@
+{
+  "model": "deepseek-chat",
+  "backend": "openai_compat",
+  "n_fragments": 516,
+  "elapsed_seconds": 108.5,
+  "usage": {
+    "calls": 534,
+    "cache_hits": 0,
+    "prompt_tokens": 1261219,
+    "completion_tokens": 286177,
+    "total_tokens": 1547396,
+    "cost_usd": 0.0,
+    "prompt_cache_hit_tokens": 933376,
+    "prompt_cache_miss_tokens": 327843,
+    "prompt_cache_hit_rate": 0.7401
+  },
+  "n_fallback_rule_vulnerable": 41,
+  "n_fallback_rule_total": 191
+}
