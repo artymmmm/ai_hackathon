@@ -240,7 +240,17 @@ def _alias_date(value: str, shift_days: int, salt: str, key: str) -> str:
         # даже если мы не смогли её распарсить и осмысленно сдвинуть.
         return _format_preserving(value, salt, key)
     dt, fmt = parsed
-    shifted = dt + timedelta(days=shift_days)
+    try:
+        shifted = dt + timedelta(days=shift_days)
+    except OverflowError:
+        # Дата у самой границы datetime (в test-сплите такая одна — "0007-03-01" при сдвиге
+        # -2990 дней уходит за MINYEAR). Сдвигаем в противоположную сторону: документ теряет
+        # знак сдвига на этой одной дате, зато результат остаётся правдоподобной датой, а не
+        # форматным мусором вида "9476-98-83", который дал бы _format_preserving.
+        try:
+            shifted = dt - timedelta(days=shift_days)
+        except OverflowError:
+            return _format_preserving(value, salt, key)
     return shifted.strftime(fmt)
 
 

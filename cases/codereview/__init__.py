@@ -165,6 +165,18 @@ def validate(verdicts: list[Verdict], ctx: PipelineContext) -> list[Verdict]:
         return list(ex.map(lambda v: _validate_one(v, ctx), verdicts))
 
 
+# Ячейка Excel не вмещает больше 32 767 символов, а 14 фрагментов корпуса длиннее (максимум —
+# 240 969). Файл при этом сохраняется, но Excel его не открывает. Полный код всегда остаётся
+# в json-выгрузке (`core.export.to_json` берёт `model_dump()`, а не эти колонки).
+_XLSX_CELL_LIMIT = 32000
+
+
+def _clip(text: str) -> str:
+    if len(text) <= _XLSX_CELL_LIMIT:
+        return text
+    return text[:_XLSX_CELL_LIMIT] + f"… [обрезано для xlsx, полностью — в json, всего {len(text)} символов]"
+
+
 def export_columns(v: Verdict) -> dict:
     a = v.artifacts
     pc = a.get("patch_check") or {}
@@ -176,9 +188,9 @@ def export_columns(v: Verdict) -> dict:
         "action": v.action,
         "cwe_id": a.get("cwe_id"),
         "cwe_name": a.get("cwe_name"),
-        "code": a.get("code", ""),
+        "code": _clip(a.get("code", "")),
         "exploitation_mechanism": a.get("exploitation_mechanism", ""),
-        "patched_code": a.get("patched_code", ""),
+        "patched_code": _clip(a.get("patched_code", "")),
         "patch_rationale": a.get("patch_rationale", ""),
         "patch_signature_status": pc.get("signature", {}).get("status"),
         "patch_functionality_status": pc.get("functionality", {}).get("status"),

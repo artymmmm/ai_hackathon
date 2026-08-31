@@ -37,11 +37,20 @@ def load(ctx: PipelineContext) -> list[Record]:
         n=cfg.get("n", 200),
         seed=cfg.get("seed", 42),
     )
+    # `uid` в датасете НЕ идентифицирует документ: 100 000 разных текстов приходятся на 50 000
+    # uid, каждый встречается ровно дважды с разными документами. Разводим их порядковым
+    # номером вхождения. Это не косметика: соль подстановки берётся из doc_id, и на общей соли
+    # один и тот же человек получал один псевдоним в обоих документах пары — то есть документы
+    # можно было связать между собой по псевдониму. Исходный uid сохраняем для прослеживаемости.
+    seen: dict[str, int] = {}
     records: list[Record] = []
     for _, row in df.iterrows():
+        uid = str(row["uid"])
+        seen[uid] = seen.get(uid, 0) + 1
         records.append(
             {
-                "doc_id": row["uid"],
+                "doc_id": f"{uid}#{seen[uid]}",
+                "source_uid": uid,
                 "text": row["text"],
                 "gold_spans": row["spans"],  # list[dict], уже распарсено load_case1
                 "domain": row["domain"],
@@ -86,6 +95,7 @@ def _anonymize_one(rec: Record, ctx: PipelineContext, model: str | None) -> Verd
             f"сущностей."
         ),
         artifacts={
+            "source_uid": rec.get("source_uid"),
             "original_text": text,
             "anonymized_text": anon_text,
             "pii_found": spans,
@@ -131,19 +141,40 @@ def validate(verdicts: list[Verdict], ctx: PipelineContext) -> list[Verdict]:
     return out
 
 
+# Ячейка Excel не вмещает больше 32 767 символов — файл сохранится, но не откроется.
+# Полный текст всегда остаётся в json-выгрузке (`core.export.to_json` берёт `model_dump()`,
+# а не эти колонки), поэтому в xlsx безопасно подрезать.
+_XLSX_CELL_LIMIT = 32000
+
+
+def _clip(text: str) -> str:
+    if len(text) <= _XLSX_CELL_LIMIT:
+        return text
+    return text[:_XLSX_CELL_LIMIT] + f"… [обрезано для xlsx, полностью — в json, всего {len(text)} символов]"
+
+
 def export_columns(v: Verdict) -> dict:
     a = v.artifacts
     vault = a.get("vault", [])
     return {
         "doc_id": v.doc_id,
+        "uid_датасета": a.get("source_uid"),
         "verdict": v.verdict,
         "action": v.action,
         "confidence": v.confidence,
         "pii_labels_found": sorted({e["label"] for e in a.get("pii_found", [])}),
+        # Задание требует именно список найденных персональных данных и использованные замены,
+        # а не только их типы и счётчик.
+        "pii_found": _clip("; ".join(f'{e["label"]}: {e["text"]}' for e in a.get("pii_found", []))),
+        "replacements": _clip("; ".join(
+            f'{" / ".join(entry.get("original_values", []))} → {entry.get("alias", "")}'
+            f' [{entry.get("label", "")}, {entry.get("occurrences", 0)} вхожд.]'
+            for entry in vault
+        )),
         "n_entities_replaced": len(vault),
         "n_llm_entities": len(a.get("llm_pii_found", [])),
         "true_leak_rate": a.get("self_audit", {}).get("true_leak_rate"),
-        "anonymized_text": a.get("anonymized_text", ""),
+        "anonymized_text": _clip(a.get("anonymized_text", "")),
     }
 
 
