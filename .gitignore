@@ -41,3 +41,4 @@ cases/codereview/out/hf_dataset_*/
 
 # временные файлы Word (замок открытого документа)
 ~$*
+!out/samples/
